@@ -25,3 +25,4 @@ FrameTemplates.xml
 RecipeRadar.xml
 OptionsFrame.lua
 Import.lua
+Report.lua

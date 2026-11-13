@@ -117,10 +117,10 @@ local function AddRecipe(recipe)
 
       local vendor = RRF_RecipesTab_FindVendor(location.Region, location.Vendor)
 
-      if (location.IsFiltered or not vendor) then
+      if (RRF_IsLocationHidden(recipe, location) or not vendor) then
 
-         -- unmap vendors that are filtered out
-         if (vendor and vendor.IsMapped) then
+         -- unmap vendors that are filtered out (not ones hidden by the search)
+         if (vendor and vendor.IsMapped and location.IsFiltered) then
             RRF_Maps_RemoveVendor(vendor)
          end
 
@@ -237,7 +237,7 @@ function RRF_RecipesTab_Update()
 
 end
 
-local function ShowContextMenu(owner, location)
+local function ShowContextMenu(owner, location, recipe)
 
    MenuUtil.CreateContextMenu(owner, function(_, root)
       if (location) then
@@ -262,6 +262,15 @@ local function ShowContextMenu(owner, location)
          RRF_RecipesTab_ExpandAll(false)
       end)
       collapse:SetEnabled(has_expanded)
+      if (location) then
+         local vendor = RRF_RecipesTab_FindVendor(location.Region, location.Vendor)
+         if (vendor) then
+            root:CreateDivider()
+            root:CreateButton(RRF_S("Report data problem"), function()
+               RRF_Report_Show("data", vendor, location.Region, recipe)
+            end)
+         end
+      end
    end)
 
 end
@@ -301,7 +310,7 @@ function RRF_RecipesTab_ServiceClickIndex(index, button, owner)
 
             for _, location in ipairs(recipe.Locations) do
                local vendor = RRF_RecipesTab_FindVendor(location.Region, location.Vendor)
-               if (not location.IsFiltered and vendor) then
+               if (vendor and not RRF_IsLocationHidden(recipe, location)) then
 
                   count = count + 1
 
@@ -320,7 +329,7 @@ function RRF_RecipesTab_ServiceClickIndex(index, button, owner)
                         RRF_SetSelection(vendor, recipe, location.Region)
                         RRF_ShowRecipeDetails()
                      elseif (button == "RightButton" and owner) then
-                        ShowContextMenu(owner, location)
+                        ShowContextMenu(owner, location, recipe)
                      end
                      return
                   end

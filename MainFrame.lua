@@ -19,7 +19,24 @@ function RRF_MainFrame_Init()
    RRFListScrollFrameScrollBar:SetValue(0)
 
    RRFOptionsButton:SetText(RRF_S("Options"))
-   RRFMapVendorIndicatorText:SetText(RRF_S("Locate Vendor on Map"))
+   -- the radio icon keeps its tooltip; its label makes room for the search box
+   RRFMapVendorIndicatorText:Hide()
+   RRFMapVendorIndicatorFrame:SetHitRectInsets(0, 0, 0, 0)
+
+   local search = CreateFrame("EditBox", "RRFSearchBox", RRFFrame, "SearchBoxTemplate")
+   search:SetSize(150, 20)
+   search:SetPoint("LEFT", RRFMapVendorIndicatorFrame, "RIGHT", 8, 0)
+   search:SetMaxLetters(40)
+   search.Instructions:SetText(RRF_S("Search recipes, vendors, zones"))
+   search:HookScript("OnTextChanged", function(self)
+      RRF_SetSearch(self:GetText())
+      RRF_RadarTab_ClearSelection()
+      RRF_RecipesTab_ClearSelection()
+      RRFListScrollFrameScrollBar:SetValue(0)
+      RRF_SelectFirstRecipe()
+      RRF_FrameUpdate()
+   end)
+
    RRF_UpdateLock()
 
    if (RecipeRadarForever_Options.ActiveTab == 2) then

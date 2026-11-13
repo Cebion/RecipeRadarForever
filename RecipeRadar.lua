@@ -190,6 +190,11 @@ function RRF_SlashHandler(msg)
 
    end
 
+   if (cmd == "report") then
+      RRF_Report_Show(sub == "data" and "data" or "bug")
+      return
+   end
+
    if (cmd == "verify") then
       RRF_ItemData_Verify()
       return
@@ -463,7 +468,7 @@ end
 function RRF_VendorHasRecipes(vendor)
 
    for _, recipe in ipairs(vendor.Recipes) do
-      if (not RRF_IsRecipeFiltered(recipe)) then
+      if (not RRF_IsRecipeFiltered(recipe, vendor)) then
          return true
       end
    end
@@ -475,7 +480,7 @@ end
 function RRF_RecipeHasLocations(recipe)
 
    for _, location in ipairs(recipe.Locations) do
-      if (not location.IsFiltered) then
+      if (not RRF_IsLocationHidden(recipe, location)) then
          return true
       end
    end

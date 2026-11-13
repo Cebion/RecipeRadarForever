@@ -462,6 +462,9 @@ function RRF_Maps_ShowContextMenu(owner, vendor)
          RRF_Maps_RemoveVendor(vendor)
          RRF_FrameUpdate()
       end)
+      root:CreateButton(RRF_S("Report data problem"), function()
+         RRF_Report_Show("data", vendor, mapped[vendor] and mapped[vendor].region)
+      end)
    end)
 
 end

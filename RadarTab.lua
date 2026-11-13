@@ -83,7 +83,8 @@ local function AddVendor(vendor)
 
    -- don't add the vendor if she or her recipes are filtered
    if (vendor.IsFiltered or not RRF_VendorHasRecipes(vendor)) then
-      if (vendor.IsMapped) then
+      -- searching only hides rows; it must not remove map pins
+      if (vendor.IsMapped and not RRF_IsSearchActive()) then
          RRF_Maps_RemoveVendor(vendor)
       end
       return
@@ -166,7 +167,7 @@ local function AddVendor(vendor)
    RRF_SortRecipes(vendor)
 
    for _, recipe in ipairs(vendor.Recipes) do
-      if (not RRF_IsRecipeFiltered(recipe)) then
+      if (not RRF_IsRecipeFiltered(recipe, vendor)) then
 
          row = row + 1
          index = row - offset
@@ -250,7 +251,7 @@ local function ToggleMapped(vendor)
 
 end
 
-local function ShowContextMenu(owner, vendor)
+local function ShowContextMenu(owner, vendor, recipe)
 
    MenuUtil.CreateContextMenu(owner, function(_, root)
       root:CreateTitle(vendor.Name)
@@ -266,6 +267,10 @@ local function ShowContextMenu(owner, vendor)
          RRF_RadarTab_ExpandAll(false)
       end)
       collapse:SetEnabled(has_expanded)
+      root:CreateDivider()
+      root:CreateButton(RRF_S("Report data problem"), function()
+         RRF_Report_Show("data", vendor, RecipeRadarForever_Options.CurrentRegion, recipe)
+      end)
    end)
 
 end
@@ -307,7 +312,7 @@ function RRF_RadarTab_ServiceClickIndex(index, button, owner)
             RRF_SortRecipes(vendor)
 
             for _, recipe in ipairs(vendor.Recipes) do
-               if (not RRF_IsRecipeFiltered(recipe)) then
+               if (not RRF_IsRecipeFiltered(recipe, vendor)) then
 
                   count = count + 1
 
@@ -322,7 +327,7 @@ function RRF_RadarTab_ServiceClickIndex(index, button, owner)
                         RRF_SetSelection(vendor, recipe)
                         RRF_ShowRecipeDetails()
                      elseif (button == "RightButton" and owner) then
-                        ShowContextMenu(owner, vendor)
+                        ShowContextMenu(owner, vendor, recipe)
                      end
                      return
                   end

@@ -3,7 +3,7 @@
 local addonName, ns = ...
 
 local frame = CreateFrame("Frame", "RRFOptionsFrame", UIParent, "BackdropTemplate")
-frame:SetSize(330, 384)
+frame:SetSize(330, 430)
 frame:SetPoint("CENTER")
 frame:SetFrameStrata("DIALOG")
 frame:SetToplevel(true)
@@ -134,9 +134,76 @@ local seasonalCheck = CreateCheck(RRF_S("Hide Seasonal Vendors/Recipes"), autoMa
    RRF_FrameUpdate()
 end)
 
+-----------------------------------------------------------------------------
+-- Character data: delete what is stored for a character on this realm
+-----------------------------------------------------------------------------
+
+local charLabel = frame:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+charLabel:SetPoint("TOPLEFT", frame, "TOPLEFT", 28, -318)
+charLabel:SetText(RRF_S("Stored character data (this realm)"))
+
+local selectedChar
+
+local charDropDown = CreateFrame("DropdownButton", nil, frame, "WowStyle1DropdownTemplate")
+charDropDown:SetSize(170, 22)
+charDropDown:SetPoint("TOPLEFT", charLabel, "BOTTOMLEFT", 0, -6)
+charDropDown:SetDefaultText(RRF_S("Choose a character"))
+charDropDown:SetupMenu(function(_, root)
+   local names = { }
+   for name in pairs(RecipeRadarForever_SkillDB[GetRealmName()] or { }) do
+      table.insert(names, name)
+   end
+   table.sort(names)
+   for _, name in ipairs(names) do
+      local label = name
+      if (name == UnitName("player")) then label = name .. " " .. RRF_Parens(RRF_S("this character")) end
+      root:CreateRadio(label, function(n) return n == selectedChar end,
+            function(n) selectedChar = n end, name)
+   end
+end)
+
+local deleteButton = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+deleteButton:SetSize(80, 22)
+deleteButton:SetPoint("LEFT", charDropDown, "RIGHT", 6, 0)
+deleteButton:SetText(DELETE)
+deleteButton:SetScript("OnClick", function()
+   if (selectedChar) then
+      StaticPopup_Show("RRF_DELETE_CHARACTER", selectedChar, nil, selectedChar)
+   end
+end)
+
+StaticPopupDialogs["RRF_DELETE_CHARACTER"] = {
+   text = RRF_S("Delete all Recipe Radar Forever data stored for %s?"),
+   button1 = YES,
+   button2 = NO,
+   OnAccept = function(_, name)
+      local realm = RecipeRadarForever_SkillDB[GetRealmName()]
+      if (realm and name) then
+         realm[name] = nil
+         RRF_Print(string.format(RRF_S("Recipe Radar Forever: deleted the data for %s."), name))
+         if (name == UnitName("player")) then RRF_SkillDB_ScanAll() end
+      end
+      selectedChar = nil
+      charDropDown:GenerateMenu()
+      RRF_RefreshIfShown()
+   end,
+   timeout = 0,
+   whileDead = true,
+   hideOnEscape = true,
+}
+
+local report = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+report:SetSize(130, 22)
+report:SetPoint("BOTTOMLEFT", 24, 18)
+report:SetText(RRF_S("Report a problem"))
+report:SetScript("OnClick", function()
+   frame:Hide()
+   RRF_Report_Show()
+end)
+
 local okay = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
 okay:SetSize(100, 22)
-okay:SetPoint("BOTTOM", 0, 18)
+okay:SetPoint("BOTTOMRIGHT", -24, 18)
 okay:SetText(OKAY)
 okay:SetScript("OnClick", function()
    PlaySound(SOUNDKIT.GS_TITLE_OPTION_OK)
@@ -156,6 +223,8 @@ frame:SetScript("OnShow", function()
    regionDropDown:SetEnabled(not opts.AutoSelectRegion)
    continentDropDown:GenerateMenu()
    regionDropDown:GenerateMenu()
+   selectedChar = nil
+   charDropDown:GenerateMenu()
 end)
 
 function RRF_OptionsFrame_Toggle()

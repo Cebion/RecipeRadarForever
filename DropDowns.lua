@@ -177,10 +177,55 @@ end
 -- Radar tab filtering code
 -----------------------------------------------------------------------------
 
-function RRF_IsRecipeFiltered(recipe)
+-----------------------------------------------------------------------------
+-- Search (the box in the main window): plain, case-insensitive substring match
+-----------------------------------------------------------------------------
+
+local search = ""
+
+function RRF_SetSearch(text)
+   search = string.lower(strtrim(text or ""))
+end
+
+function RRF_IsSearchActive()
+   return search ~= ""
+end
+
+local function Matches(text)
+   return text ~= nil and string.find(string.lower(text), search, 1, true) ~= nil
+end
+
+local function RecipeNameMatches(recipe)
+   return Matches((RRF_GetSafeItemInfo(recipe.ID)))
+end
+
+local function LocationMatches(location)
+   return Matches(location.Vendor) or Matches(RRF_GetRegionDisplayName(location.Region))
+end
+
+-- Radar tab passes the vendor: a matching vendor name shows all her recipes.
+-- Recipes tab passes no vendor: a recipe shows if its name or any location matches.
+local function HiddenBySearch(recipe, vendor)
+   if (search == "" or RecipeNameMatches(recipe)) then return false end
+   if (vendor) then return not Matches(vendor.Name) end
+   for _, location in ipairs(recipe.Locations or { }) do
+      if (LocationMatches(location)) then return false end
+   end
+   return true
+end
+
+-- A location row of the recipes tab: hidden by its filters, or by the search
+-- unless the recipe name itself matches.
+function RRF_IsLocationHidden(recipe, location)
+   if (location.IsFiltered) then return true end
+   if (search == "" or RecipeNameMatches(recipe)) then return false end
+   return not LocationMatches(location)
+end
+
+function RRF_IsRecipeFiltered(recipe, vendor)
 
    return recipe.IsFilteredByTeam or recipe.IsFilteredByProfession or
-         recipe.IsFilteredByAvailability
+         recipe.IsFilteredByAvailability or HiddenBySearch(recipe, vendor)
 
 end
 
