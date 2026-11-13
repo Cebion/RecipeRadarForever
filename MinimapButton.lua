@@ -49,7 +49,8 @@ function RRF_MinimapButton_OnEnter(self)
 
    GameTooltip:SetOwner(self, "ANCHOR_LEFT")
    GameTooltip:SetText(RRF_S("Recipe Radar Forever"))
-   GameTooltip:AddLine(RRF_S("Left-click: open") .. "\n" .. RRF_S("Right-click: options"), 1, 1, 1)
+   GameTooltip:AddLine(RRF_S("Left-click: open") .. "\n" .. RRF_S("Right-click: options") .. "
+" .. RRF_S("Drag: move"), 1, 1, 1)
    GameTooltip:Show()
 
 end
