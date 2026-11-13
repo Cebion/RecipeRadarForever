@@ -128,6 +128,7 @@ Map waypoints and window show/hide are not protected.
 9. Dropdowns: the checkbox menus keep open while you click, filters apply, and
    the recipes tab radio list switches profession.
 10. Seasonal vendors hide or show with the option.
+11. A fresh install creates the RecipeRadarForever_* saved variables without errors, and alts appear after one login each.
 12. Search: typing filters both tabs (recipe, vendor, zone); clearing restores the
    list; mapped vendors keep their pins while searching. Check that the search box does
    not overlap the radio icon or the dropdowns.
@@ -135,4 +136,3 @@ Map waypoints and window show/hide are not protected.
    availability tooltips. The options window's new rows don't overlap.
 14. `/rrf report` and right-click a vendor > Report data problem: link and details
    appear and can be copied with Ctrl+C.
-11. A fresh install creates the RecipeRadarForever_* saved variables without errors, and alts appear after one login each.
