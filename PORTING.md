@@ -9,9 +9,8 @@ Forever", SavedVariables `RecipeRadarForever_SkillDB`, `_NameCache`, `_ItemCache
 (account) and `RecipeRadarForever_Options`, `_Filters` (character), global prefix
 `RRF_` (functions, data tables, frames, the `RRF_S` localization lookup), key binding
 `RECIPERADARFOREVER_TOGGLE`. Saved data from earlier versions is not carried over
-(log in once per character to rebuild it). The command is now `/rrf` (`/rrdr`, the original
-2006 command, still works as an alias); `/reciperadar` was
-dropped. The window layout and art are unchanged.
+(log in once per character to rebuild it). The slash command is now `/rrf`; the
+original `/rrdr` and `/reciperadar` were dropped. The window layout and art are unchanged.
 
 ## Data (2.1)
 

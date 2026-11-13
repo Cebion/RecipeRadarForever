@@ -49,7 +49,7 @@ Copy or link the `RecipeRadarForever` folder into
 
 | Command | Action |
 |---|---|
-| `/rrf` (or `/rrdr`) | Toggle the window |
+| `/rrf` | Toggle the window |
 | `/rrf options` | Options dialog |
 | `/rrf radar` | Print the vendors in your current zone to chat |
 | `/rrf verify` | Ask the server about every recipe item and fill in required skills |

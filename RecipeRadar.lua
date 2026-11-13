@@ -11,7 +11,6 @@ function RRF_OnLoad(self)
    tinsert(UISpecialFrames, "RRFFrame")
 
    SLASH_RECIPERADARFOREVER1 = "/rrf"
-   SLASH_RECIPERADARFOREVER2 = "/rrdr"  -- the original 2006 command
    SlashCmdList["RECIPERADARFOREVER"] = RRF_SlashHandler
 
    self:RegisterEvent("ADDON_LOADED")
