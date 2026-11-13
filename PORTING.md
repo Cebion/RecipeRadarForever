@@ -127,4 +127,4 @@ Map waypoints and window show/hide are not protected.
 9. Dropdowns: the checkbox menus keep open while you click, filters apply, and
    the recipes tab radio list switches profession.
 10. Seasonal vendors hide or show with the option.
-11. Old saved variables from 1.x load without errors (the dbVersion migration).
+11. A fresh install creates the RecipeRadarForever_* saved variables without errors, and alts appear after one login each.
