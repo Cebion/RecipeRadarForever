@@ -9,7 +9,8 @@ Forever", SavedVariables `RecipeRadarForever_SkillDB`, `_NameCache`, `_ItemCache
 (account) and `RecipeRadarForever_Options`, `_Filters` (character), global prefix
 `RRF_` (functions, data tables, frames, the `RRF_S` localization lookup), key binding
 `RECIPERADARFOREVER_TOGGLE`. Saved data from earlier versions is not carried over
-(log in once per character to rebuild it). `/rrdr` is kept, `/reciperadar` was
+(log in once per character to rebuild it). The command is now `/rrf` (`/rrdr`, the original
+2006 command, still works as an alias); `/reciperadar` was
 dropped. The window layout and art are unchanged.
 
 ## Data (2.1)
@@ -41,7 +42,7 @@ ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
   (`C_Map.GetMapArtLayers`/`GetMapArtLayerTextures`); `Images/Regions` was removed.
 - **Live import**: with QuestieDB installed, `Import.lua` reads its vendor data in
   batches after login and adds anything the snapshot lacks (in memory only).
-  `/rrdr questie off` disables it.
+  `/rrf questie off` disables it.
 - NameMap.lua (craft window name to item name map) was removed. Known recipes
   are matched by item name from the tooltip scan.
 
@@ -70,7 +71,7 @@ ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 | Minimap button | shape checks for third-party minimap addons, permanent `OnUpdate` | Round placement only. `OnUpdate` exists only while the button flashes. Right-click opens the options |
 | Saved data | String compare of `Options.Version` | numeric `RecipeRadarForever_Options.dbVersion` for future migrations (unknown professions and regions are dropped on load) |
 
-New: `/rrdr options`, `/rrdr debug maps`, `/rrdr debug scan`, `/rrdr debug where`,
+New: `/rrf options`, `/rrf debug maps`, `/rrf debug scan`, `/rrf debug where`,
 AddOn compartment entry, `## IconTexture`.
 
 ## Removed and why
@@ -83,7 +84,7 @@ AddOn compartment entry, `## IconTexture`.
   API is gone. TomTom or the Blizzard waypoint replaces it.
 - **Third-party hooks** (EnhTooltip, RecipeBook, minimap shape addons):
   those addons don't exist on Forever.
-- **`/rrdr debug vendor`**: replaced by `/rrdr debug where`.
+- **`/rrf debug vendor`**: replaced by `/rrf debug where`.
 - **Professions, regions and vendors that are not in the vanilla game** were
   dropped from the data. Old saved data for them is removed by the migration.
 
@@ -103,23 +104,23 @@ Map waypoints and window show/hide are not protected.
 ## Needs in-game verification
 
 1. `/dump select(4, GetBuildInfo())`: confirm 16001.
-2. `/rrdr debug maps`: every vendor zone resolves to a game map (uiMapIDs come
+2. `/rrf debug maps`: every vendor zone resolves to a game map (uiMapIDs come
    from QuestieDB's Forever zone table; continents are 1414/1415).
 3. In-window map: the zone art draws from the client tiles and the scroll icons sit
-   on the vendors. Stand on a few vendors and compare with `/rrdr debug where`.
+   on the vendors. Stand on a few vendors and compare with `/rrf debug where`.
    Check Mount Hyjal, Riverglades and Zephras Isle, and one of the 26 classic-only
    vendor entries (for example Vendor-Tron 1000 in Desolace).
-3a. `/rrdr verify`: number of recipe items unknown to the server (should be 0) and
+3a. `/rrf verify`: number of recipe items unknown to the server (should be 0) and
    recipes still without a required skill after the tooltip scan.
 3b. Merchant's Favor: the Redridge/Barrens camp vendors show "30 Merchant's Favor"
    etc. Open one merchant window: prices of its recipes update (gold, Favor or token).
-3c. `/rrdr questie`: import status and how many recipes/vendors QuestieDB added.
+3c. `/rrf questie`: import status and how many recipes/vendors QuestieDB added.
 4. Specialization spell IDs in `ns.SpecialtySpells` (Globals.lua) with
    `/dump C_SpellBook.IsSpellKnown(9788)` etc. on a specialized character.
 5. Skill names returned by `C_SkillInfo.GetSkillLineInfo(i).name` match the
-   profession names (`/rrdr debug skills`).
+   profession names (`/rrf debug skills`).
 6. Reputation standings for Argent Dawn, Cenarion Circle, Thorium Brotherhood,
-   Timbermaw Hold and Zandalar Tribe appear in `/rrdr debug skills`.
+   Timbermaw Hold and Zandalar Tribe appear in `/rrf debug skills`.
 7. "Already known" detection: learn a vendor recipe, and within a second it moves
    from "Available Now" to "Already Known".
 8. TomTom (if used): `TomTom:AddWaypoint(mapID, x, y, opts)` works on Forever and

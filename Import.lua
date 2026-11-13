@@ -4,7 +4,7 @@
 -- installed, its current vendor data is read in small batches after login and
 -- anything the snapshot lacks (new recipes, new vendors for known recipes) is
 -- added in memory. Nothing is saved; the import runs again on the next login.
--- Turn it off with /rrdr questie off.
+-- Turn it off with /rrf questie off.
 
 local addonName, ns = ...
 
@@ -206,7 +206,7 @@ function RRF_Import_PrintStatus()
    if (not lib) then
       RRF_Print("Recipe Radar: QuestieDB not found (or incompatible); using the shipped data only.")
    elseif (RecipeRadarForever_Options.UseQuestie == false) then
-      RRF_Print("Recipe Radar: QuestieDB import is off (/rrdr questie on).")
+      RRF_Print("Recipe Radar: QuestieDB import is off (/rrf questie on).")
    elseif (ns.importRunning) then
       RRF_Print("Recipe Radar: QuestieDB import is running.")
    elseif (ns.importStats) then

@@ -10,7 +10,8 @@ function RRF_OnLoad(self)
 
    tinsert(UISpecialFrames, "RRFFrame")
 
-   SLASH_RECIPERADARFOREVER1 = "/rrdr"
+   SLASH_RECIPERADARFOREVER1 = "/rrf"
+   SLASH_RECIPERADARFOREVER2 = "/rrdr"  -- the original 2006 command
    SlashCmdList["RECIPERADARFOREVER"] = RRF_SlashHandler
 
    self:RegisterEvent("ADDON_LOADED")
@@ -158,7 +159,7 @@ function RRF_SlashHandler(msg)
             RRF_Print(zone .. ": no map position here.")
          end
       else
-         RRF_Print("/rrdr debug skills [name] | clear [name] | maps | scan | import | where")
+         RRF_Print("/rrf debug skills [name] | clear [name] | maps | scan | import | where")
       end
       return
 

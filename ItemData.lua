@@ -4,7 +4,7 @@
 --    once the client has the item, then cached in RecipeRadarForever_ItemCache.
 --  * Price: recorded from the merchant window when you visit a vendor that sells
 --    the recipe (gold, Merchant's Favor or token items), then cached.
---  * /rrdr verify: asks the server for every recipe item and reports IDs it
+--  * /rrf verify: asks the server for every recipe item and reports IDs it
 --    does not know.
 
 local addonName, ns = ...

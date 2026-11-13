@@ -33,7 +33,7 @@ by side.
 
 The addon works standalone with its built-in data. If **Questie** (QuestieDB) is
 installed, Recipe Radar also reads its current vendor data after login and adds
-anything newer, such as recipes or vendors added in a patch. `/rrdr questie off`
+anything newer, such as recipes or vendors added in a patch. `/rrf questie off`
 turns this off.
 
 Things the data can't know yet fill themselves in as you play:
@@ -49,16 +49,16 @@ Copy or link the `RecipeRadarForever` folder into
 
 | Command | Action |
 |---|---|
-| `/rrdr` | Toggle the window |
-| `/rrdr options` | Options dialog |
-| `/rrdr radar` | Print the vendors in your current zone to chat |
-| `/rrdr verify` | Ask the server about every recipe item and fill in required skills |
-| `/rrdr questie [on\|off]` | QuestieDB import status, or turn it on/off |
-| `/rrdr debug skills [name]` | Stored professions, specializations and reputation |
-| `/rrdr debug scan` | Rescan skills, reputation and known recipes |
-| `/rrdr debug maps` | Check that every zone resolves to a game map |
-| `/rrdr debug where` | Print your map position (for checking vendor coordinates) |
-| `/rrdr debug clear [name]` | Forget stored data for one character or the realm |
+| `/rrf` (or `/rrdr`) | Toggle the window |
+| `/rrf options` | Options dialog |
+| `/rrf radar` | Print the vendors in your current zone to chat |
+| `/rrf verify` | Ask the server about every recipe item and fill in required skills |
+| `/rrf questie [on\|off]` | QuestieDB import status, or turn it on/off |
+| `/rrf debug skills [name]` | Stored professions, specializations and reputation |
+| `/rrf debug scan` | Rescan skills, reputation and known recipes |
+| `/rrf debug maps` | Check that every zone resolves to a game map |
+| `/rrf debug where` | Print your map position (for checking vendor coordinates) |
+| `/rrf debug clear [name]` | Forget stored data for one character or the realm |
 
 The window also opens from the minimap button, the AddOn compartment, or a key
 binding (Key Bindings > AddOns > Recipe Radar Forever). Right-click the minimap button
