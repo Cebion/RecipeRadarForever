@@ -68,7 +68,7 @@ ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 | Chat link | `ChatFrameEditBox:Insert` | `ChatFrameUtil.InsertLink` with `IsModifiedClick("CHATLINK")` |
 | Window | `ShowUIPanel`/`HideUIPanel` | plain `Show`/`Hide`, still closes with Escape (`UISpecialFrames`) |
 | Minimap button | shape checks for third-party minimap addons, permanent `OnUpdate` | Round placement only. `OnUpdate` exists only while the button flashes. Right-click opens the options |
-| Saved data | String compare of `Options.Version` | `RecipeRadar_Options.dbVersion = 2` with a migration that drops unknown professions and regions from old saves |
+| Saved data | String compare of `Options.Version` | numeric `RecipeRadarForever_Options.dbVersion` for future migrations (unknown professions and regions are dropped on load) |
 
 New: `/rrdr options`, `/rrdr debug maps`, `/rrdr debug scan`, `/rrdr debug where`,
 AddOn compartment entry, `## IconTexture`.
