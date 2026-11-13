@@ -2,30 +2,30 @@
 
 local addonName, ns = ...
 
-RECIPERADAR_VERSION = C_AddOns.GetAddOnMetadata(addonName, "Version") or "?"
+RRF_VERSION = C_AddOns.GetAddOnMetadata(addonName, "Version") or "?"
 
--- bump this when the saved variable layout changes (see RecipeRadar_Globals_Init)
+-- bump this when the saved variable layout changes (see RRF_Globals_Init)
 local DB_VERSION = 3
 
-RECIPERADAR_VENDORS_DISPLAYED = 8
-RECIPERADAR_VENDOR_HEIGHT = 16
-RECIPERADAR_VENDOR_OFFSET = 20
-RECIPERADAR_IMAGE_ROOT = "Interface\\AddOns\\RecipeRadar\\Images\\"
+RRF_VENDORS_DISPLAYED = 8
+RRF_VENDOR_HEIGHT = 16
+RRF_VENDOR_OFFSET = 20
+RRF_IMAGE_ROOT = "Interface\\AddOns\\RecipeRadarForever\\Images\\"
 
-BINDING_HEADER_RECIPERADAR_HEADER = RRS("Recipe Radar")
-BINDING_NAME_RECIPERADAR_TOGGLE = RRS("Toggle Recipe Radar")
+BINDING_HEADER_RECIPERADARFOREVER_HEADER = RRF_S("Recipe Radar Forever")
+BINDING_NAME_RECIPERADARFOREVER_TOGGLE = RRF_S("Toggle Recipe Radar")
 
 -- SavedVariablesPerCharacter defaults (replaced by saved data after ADDON_LOADED)
-RecipeRadar_Options = { }
+RecipeRadarForever_Options = { }
 
-RecipeRadar_Filters = {
+RecipeRadarForever_Filters = {
    Teams = { },
    Professions = { },
    RealmAvails = { },
    PersonAvails = { },
 }
 
-RecipeRadar_Colors = {
+RRF_Colors = {
 
    MainFont           = { r = 1.0, g = 0.75, b = 0.0 },
    Alliance           = { r = 0.5, g = 0.625, b = 1.0 },
@@ -52,127 +52,127 @@ RecipeRadar_Colors = {
 
 }
 
-RecipeRadar_Continents = {
+RRF_Continents = {
 
-   [0] = RRS("Instances"),
-   [1] = RRS("Kalimdor"),
-   [2] = RRS("Eastern Kingdoms"),
+   [0] = RRF_S("Instances"),
+   [1] = RRF_S("Kalimdor"),
+   [2] = RRF_S("Eastern Kingdoms"),
 
 }
 
-RecipeRadar_Teams = {
+RRF_Teams = {
 
    ["Alliance"] = {
       Name = FACTION_ALLIANCE,
-      Color = RecipeRadar_Colors.Alliance,
+      Color = RRF_Colors.Alliance,
    },
    ["Horde"] = {
       Name = FACTION_HORDE,
-      Color = RecipeRadar_Colors.Horde,
+      Color = RRF_Colors.Horde,
    },
    ["Neutral"] = {
-      Name = RRS("Neutral"),
-      Color = RecipeRadar_Colors.Neutral,
+      Name = RRF_S("Neutral"),
+      Color = RRF_Colors.Neutral,
    },
 
 }
 
 local function Prof(name, icon)
-   return { Name = RRS(name), Icon = RECIPERADAR_IMAGE_ROOT .. "Icons\\" .. icon }
+   return { Name = RRF_S(name), Icon = RRF_IMAGE_ROOT .. "Icons\\" .. icon }
 end
 
-RecipeRadar_Professions = {
-   [RRS("Alchemy")]        = Prof("Alchemy", "Alchemy"),
-   [RRS("Blacksmithing")]  = Prof("Blacksmithing", "Blacksmithing"),
-   [RRS("Cooking")]        = Prof("Cooking", "Cooking"),
-   [RRS("Enchanting")]     = Prof("Enchanting", "Enchanting"),
-   [RRS("Engineering")]    = Prof("Engineering", "Engineering"),
-   [RRS("First Aid")]      = Prof("First Aid", "First-Aid"),
-   [RRS("Fishing")]        = Prof("Fishing", "Fishing"),
-   [RRS("Leatherworking")] = Prof("Leatherworking", "Leatherworking"),
-   [RRS("Tailoring")]      = Prof("Tailoring", "Tailoring"),
+RRF_Professions = {
+   [RRF_S("Alchemy")]        = Prof("Alchemy", "Alchemy"),
+   [RRF_S("Blacksmithing")]  = Prof("Blacksmithing", "Blacksmithing"),
+   [RRF_S("Cooking")]        = Prof("Cooking", "Cooking"),
+   [RRF_S("Enchanting")]     = Prof("Enchanting", "Enchanting"),
+   [RRF_S("Engineering")]    = Prof("Engineering", "Engineering"),
+   [RRF_S("First Aid")]      = Prof("First Aid", "First-Aid"),
+   [RRF_S("Fishing")]        = Prof("Fishing", "Fishing"),
+   [RRF_S("Leatherworking")] = Prof("Leatherworking", "Leatherworking"),
+   [RRF_S("Tailoring")]      = Prof("Tailoring", "Tailoring"),
 }
 
 -- Specialty name -> parent profession.
-RecipeRadar_Specialties = {
-   [RRS("Gnomish Engineer")] = RRS("Engineering"),
-   [RRS("Goblin Engineer")] = RRS("Engineering"),
-   [RRS("Tribal Leatherworking")] = RRS("Leatherworking"),
-   [RRS("Elemental Leatherworking")] = RRS("Leatherworking"),
-   [RRS("Dragonscale Leatherworking")] = RRS("Leatherworking"),
-   [RRS("Armorsmith")] = RRS("Blacksmithing"),
-   [RRS("Weaponsmith")] = RRS("Blacksmithing"),
-   [RRS("Master Axesmith")] = RRS("Blacksmithing"),
-   [RRS("Master Swordsmith")] = RRS("Blacksmithing"),
-   [RRS("Master Hammersmith")] = RRS("Blacksmithing"),
+RRF_Specialties = {
+   [RRF_S("Gnomish Engineer")] = RRF_S("Engineering"),
+   [RRF_S("Goblin Engineer")] = RRF_S("Engineering"),
+   [RRF_S("Tribal Leatherworking")] = RRF_S("Leatherworking"),
+   [RRF_S("Elemental Leatherworking")] = RRF_S("Leatherworking"),
+   [RRF_S("Dragonscale Leatherworking")] = RRF_S("Leatherworking"),
+   [RRF_S("Armorsmith")] = RRF_S("Blacksmithing"),
+   [RRF_S("Weaponsmith")] = RRF_S("Blacksmithing"),
+   [RRF_S("Master Axesmith")] = RRF_S("Blacksmithing"),
+   [RRF_S("Master Swordsmith")] = RRF_S("Blacksmithing"),
+   [RRF_S("Master Hammersmith")] = RRF_S("Blacksmithing"),
 }
 
 -- Specialty name -> spell ID of the specialization spell (vanilla IDs).
 -- Checked with C_SpellBook.IsSpellKnown instead of scanning the spellbook.
 ns.SpecialtySpells = {
-   [RRS("Gnomish Engineer")] = 20219,
-   [RRS("Goblin Engineer")] = 20222,
-   [RRS("Dragonscale Leatherworking")] = 10656,
-   [RRS("Elemental Leatherworking")] = 10658,
-   [RRS("Tribal Leatherworking")] = 10660,
-   [RRS("Armorsmith")] = 9788,
-   [RRS("Weaponsmith")] = 9787,
-   [RRS("Master Axesmith")] = 17041,
-   [RRS("Master Swordsmith")] = 17039,
-   [RRS("Master Hammersmith")] = 17040,
+   [RRF_S("Gnomish Engineer")] = 20219,
+   [RRF_S("Goblin Engineer")] = 20222,
+   [RRF_S("Dragonscale Leatherworking")] = 10656,
+   [RRF_S("Elemental Leatherworking")] = 10658,
+   [RRF_S("Tribal Leatherworking")] = 10660,
+   [RRF_S("Armorsmith")] = 9788,
+   [RRF_S("Weaponsmith")] = 9787,
+   [RRF_S("Master Axesmith")] = 17041,
+   [RRF_S("Master Swordsmith")] = 17039,
+   [RRF_S("Master Hammersmith")] = 17040,
 }
 
-RecipeRadar_Factions = {
-   RRS("Argent Dawn"),
-   RRS("Cenarion Circle"),
-   RRS("Thorium Brotherhood"),
-   RRS("Timbermaw Hold"),
-   RRS("Zandalar Tribe"),
+RRF_Factions = {
+   RRF_S("Argent Dawn"),
+   RRF_S("Cenarion Circle"),
+   RRF_S("Thorium Brotherhood"),
+   RRF_S("Timbermaw Hold"),
+   RRF_S("Zandalar Tribe"),
 }
 
-RecipeRadar_Availabilities = {
+RRF_Availabilities = {
 
    ["LearnableByPlayer"] = {
-      Text = RRS("Available Now (Player)"),
-      Tooltip = { Group = 1, Heading = RRS("Available For:") },
+      Text = RRF_S("Available Now (Player)"),
+      Tooltip = { Group = 1, Heading = RRF_S("Available For:") },
       DropDown = { POrder = 1, ROrder = 1 },
-      Color = RecipeRadar_Colors.LearnableByPlayer,
+      Color = RRF_Colors.LearnableByPlayer,
    },
    ["LearnableByAlt"] = {
-      Text = RRS("Available Now (Alts)"),
-      Tooltip = { Group = 1, Heading = RRS("Available For:") },
+      Text = RRF_S("Available Now (Alts)"),
+      Tooltip = { Group = 1, Heading = RRF_S("Available For:") },
       DropDown = { POrder = nil, ROrder = 2 },
-      Color = RecipeRadar_Colors.LearnableByAlt,
+      Color = RRF_Colors.LearnableByAlt,
    },
    ["ProspectForPlayer"] = {
-      Text = RRS("Future Prospect (Player)"),
-      Tooltip = { Group = 2, Heading = RRS("Future Prospect For:") },
+      Text = RRF_S("Future Prospect (Player)"),
+      Tooltip = { Group = 2, Heading = RRF_S("Future Prospect For:") },
       DropDown = { POrder = 2, ROrder = 3 },
-      Color = RecipeRadar_Colors.ProspectForPlayer,
+      Color = RRF_Colors.ProspectForPlayer,
    },
    ["ProspectForAlt"] = {
-      Text = RRS("Future Prospect (Alts)"),
-      Tooltip = { Group = 2, Heading = RRS("Future Prospect For:") },
+      Text = RRF_S("Future Prospect (Alts)"),
+      Tooltip = { Group = 2, Heading = RRF_S("Future Prospect For:") },
       DropDown = { POrder = nil, ROrder = 4 },
-      Color = RecipeRadar_Colors.ProspectForAlt,
+      Color = RRF_Colors.ProspectForAlt,
    },
    ["KnownByPlayer"] = {
-      Text = RRS("Already Known (Player)"),
-      Tooltip = { Group = 3, Heading = RRS("Already Known By:") },
+      Text = RRF_S("Already Known (Player)"),
+      Tooltip = { Group = 3, Heading = RRF_S("Already Known By:") },
       DropDown = { POrder = 3, ROrder = 5 },
-      Color = RecipeRadar_Colors.KnownByPlayer,
+      Color = RRF_Colors.KnownByPlayer,
    },
    ["KnownByAlt"] = {
-      Text = RRS("Already Known (Alts)"),
-      Tooltip = { Group = 3, Heading = RRS("Already Known By:") },
+      Text = RRF_S("Already Known (Alts)"),
+      Tooltip = { Group = 3, Heading = RRF_S("Already Known By:") },
       DropDown = { POrder = nil, ROrder = 6 },
-      Color = RecipeRadar_Colors.KnownByAlt,
+      Color = RRF_Colors.KnownByAlt,
    },
    ["NotApplicable"] = {
-      Text = RRS("Inapplicable Professions"),
+      Text = RRF_S("Inapplicable Professions"),
       Tooltip = { Group = 0 },  -- do not show in tooltip
       DropDown = { POrder = 4, ROrder = 7 },
-      Color = RecipeRadar_Colors.NotApplicable,
+      Color = RRF_Colors.NotApplicable,
    },
 
 }
@@ -186,11 +186,11 @@ local function SetDefault(t, key, value)
 end
 
 -- Called once on ADDON_LOADED, after the saved variables are available.
-function RecipeRadar_Globals_Init()
+function RRF_Globals_Init()
 
-   if (type(RecipeRadar_Options) ~= "table") then RecipeRadar_Options = { } end
-   if (type(RecipeRadar_Filters) ~= "table") then RecipeRadar_Filters = { } end
-   local opts, filters = RecipeRadar_Options, RecipeRadar_Filters
+   if (type(RecipeRadarForever_Options) ~= "table") then RecipeRadarForever_Options = { } end
+   if (type(RecipeRadarForever_Filters) ~= "table") then RecipeRadarForever_Filters = { } end
+   local opts, filters = RecipeRadarForever_Options, RecipeRadarForever_Filters
 
    for _, key in ipairs({ "Teams", "Professions", "RealmAvails", "PersonAvails" }) do
       if (type(filters[key]) ~= "table") then filters[key] = { } end
@@ -199,17 +199,17 @@ function RecipeRadar_Globals_Init()
    -- migration from the 1.x layout (string Version compare, other data sets)
    if ((opts.dbVersion or 1) < DB_VERSION) then
       for prof in pairs(filters.Professions) do
-         if (not RecipeRadar_Professions[prof]) then
+         if (not RRF_Professions[prof]) then
             filters.Professions[prof] = nil
          end
       end
-      if (opts.CurrentRegion and not RecipeRadar_RegionData[opts.CurrentRegion]) then
+      if (opts.CurrentRegion and not RRF_RegionData[opts.CurrentRegion]) then
          opts.CurrentRegion = nil
       end
       opts.PositionDebug = nil
       opts.dbVersion = DB_VERSION
    end
-   opts.Version = RECIPERADAR_VERSION
+   opts.Version = RRF_VERSION
 
    SetDefault(opts, "MinimapButtonPosition", 256)
    SetDefault(opts, "ShowMinimapButton", true)
@@ -221,8 +221,8 @@ function RecipeRadar_Globals_Init()
    SetDefault(opts, "ActiveTab", 1)
    SetDefault(opts, "UseQuestie", true)
 
-   if (not RecipeRadar_IsProfession(opts.CurrentProfession)) then
-      opts.CurrentProfession = RRS("Cooking")
+   if (not RRF_IsProfession(opts.CurrentProfession)) then
+      opts.CurrentProfession = RRF_S("Cooking")
    end
 
 end

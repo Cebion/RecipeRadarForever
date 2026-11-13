@@ -3,10 +3,14 @@
 Target: WoW Forever 1.60.x (`## Interface: 16001`), which runs the Midnight 12.1.5
 Mainline addon API. The TOC also lists `120105` so the addon loads on Midnight.
 
-Kept unchanged: addon name and folder (`RecipeRadar`), SavedVariables
-(`RecipeRadar_SkillDB`, `RecipeRadar_NameCache`, `RecipeRadar_Options`,
-`RecipeRadar_Filters`; 2.1 adds `RecipeRadar_ItemCache`), slash commands
-(`/rrdr`, `/reciperadar`), key binding, the window layout and art.
+Renamed in 2.2 to avoid clashing with the unrelated CurseForge addon "RecipeRadar"
+(rakstar91, also on Forever): folder and TOC `RecipeRadarForever`, title "Recipe Radar
+Forever", SavedVariables `RecipeRadarForever_SkillDB`, `_NameCache`, `_ItemCache`
+(account) and `RecipeRadarForever_Options`, `_Filters` (character), global prefix
+`RRF_` (functions, data tables, frames, the `RRF_S` localization lookup), key binding
+`RECIPERADARFOREVER_TOGGLE`. Saved data from earlier versions is not carried over
+(log in once per character to rebuild it). `/rrdr` is kept, `/reciperadar` was
+dropped. The window layout and art are unchanged.
 
 ## Data (2.1)
 
@@ -25,10 +29,10 @@ Result (QuestieDB 1.0.11, AllTheThings 5.4.11): 768 vendor recipes, 290 vendors,
 ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 
 - 131 recipes have no required skill in the data. It is read from the item tooltip
-  at runtime ("Requires X (N)") and cached in `RecipeRadar_ItemCache`.
+  at runtime ("Requires X (N)") and cached in `RecipeRadarForever_ItemCache`.
 - 123 recipes have no price in the data (mostly new gold-vendor recipes; the gold
   prices on ForeverChanges are not reliable). Opening the vendor's merchant window
-  records the real price or currency, also cached in `RecipeRadar_ItemCache`.
+  records the real price or currency, also cached in `RecipeRadarForever_ItemCache`.
 - 24 classic vendor/recipe pairs that QuestieDB doesn't list for that recipe (for example the
   Vendor-Tron 1000 and Super-Seller 680 robots) are placed at the NPC's Forever spawn.
 - Region keys are English zone names, each with the client `UiMapID`. Region
@@ -85,11 +89,11 @@ AddOn compartment entry, `## IconTexture`.
 
 ## Globals
 
-Besides SavedVariables, slash and binding entries, the addon keeps its original
-`RecipeRadar_*` function names and the `RECIPERADAR_*` constants. They are
-referenced from XML handlers and across files, and they all use the addon's own
-prefix. `RRS` (the localization lookup) is unchanged. `RecipeRadarWorldMapPinMixin`
-is global because the XML pin template names it. Nothing else is added.
+Besides SavedVariables, `SLASH_RECIPERADARFOREVER1`, `SlashCmdList.RECIPERADARFOREVER`
+and the two `BINDING_*` strings, every global uses the `RRF_` / `RRF` prefix: the
+functions referenced from XML handlers and across files, the generated data tables,
+the named frames, and `RRF_S` (localization). `RRFWorldMapPinMixin` is global because
+the XML pin template names it.
 
 ## Combat and secret values
 

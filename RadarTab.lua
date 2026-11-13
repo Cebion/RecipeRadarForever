@@ -6,50 +6,50 @@ local addonName, ns = ...
 local row, last_button = 0, ""
 local has_expanded, has_collapsed = false, false
 
-function RecipeRadar_RadarTab_Init()
+function RRF_RadarTab_Init()
 
-   RecipeRadar_Prof1DropDown:Show()
-   RecipeRadar_Prof2DropDown:Hide()
+   RRF_Prof1DropDown:Show()
+   RRF_Prof2DropDown:Hide()
 
-   RecipeRadar_SetActiveTab(1)
+   RRF_SetActiveTab(1)
 
-   RecipeRadar_RadarTab_Update()
-   RecipeRadarListScrollFrameScrollBar:SetValue(RecipeRadarRadarTabFrame.ScrollValue or 0)
+   RRF_RadarTab_Update()
+   RRFListScrollFrameScrollBar:SetValue(RRFRadarTabFrame.ScrollValue or 0)
 
 end
 
-function RecipeRadar_RadarTab_OnClick()
+function RRF_RadarTab_OnClick()
 
-   if (RecipeRadar_Options.ActiveTab == 1) then return end
+   if (RecipeRadarForever_Options.ActiveTab == 1) then return end
 
    PlaySound(SOUNDKIT.IG_SPELLBOOK_CLOSE)
-   RecipeRadar_RadarTab_Init()
+   RRF_RadarTab_Init()
 
 end
 
-function RecipeRadar_RadarTab_ExpandAll(expand)
+function RRF_RadarTab_ExpandAll(expand)
 
-   local region = RecipeRadar_RegionData[RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[RecipeRadarForever_Options.CurrentRegion]
    if (not region) then return end
 
    for _, vendor in ipairs(region.Vendors) do
       vendor.IsExpanded = expand
    end
 
-   RecipeRadar_SelectFirstRecipe()
-   RecipeRadar_FrameUpdate()
+   RRF_SelectFirstRecipe()
+   RRF_FrameUpdate()
 
 end
 
 local function SetButtonWidths()
 
-   local wide = not RecipeRadarListScrollFrame:IsShown()
-   for i = 1, RECIPERADAR_VENDORS_DISPLAYED do
-      local button = RecipeRadar_GetListButton(i)
+   local wide = not RRFListScrollFrame:IsShown()
+   for i = 1, RRF_VENDORS_DISPLAYED do
+      local button = RRF_GetListButton(i)
       if (i > row) then
          button:Hide()
       elseif (button.Recipe) then
-         button:SetWidth((wide and 384 or 361) - RECIPERADAR_VENDOR_OFFSET)
+         button:SetWidth((wide and 384 or 361) - RRF_VENDOR_OFFSET)
       else
          button:SetWidth(wide and 384 or 361)
       end
@@ -62,15 +62,15 @@ local function AnchorButton(button, index, kind)
 
    button:ClearAllPoints()
    if (index == 1) then
-      local x = (kind == "recipe") and (22 + RECIPERADAR_VENDOR_OFFSET) or 22
-      button:SetPoint("TOPLEFT", RecipeRadarFrame, "TOPLEFT", x, -96)
+      local x = (kind == "recipe") and (22 + RRF_VENDOR_OFFSET) or 22
+      button:SetPoint("TOPLEFT", RRFFrame, "TOPLEFT", x, -96)
    else
-      local prev = RecipeRadar_GetListButton(index - 1)
+      local prev = RRF_GetListButton(index - 1)
       local x = 0
       if (last_button == "recipe" and kind == "vendor") then
-         x = -RECIPERADAR_VENDOR_OFFSET
+         x = -RRF_VENDOR_OFFSET
       elseif (last_button == "vendor" and kind == "recipe") then
-         x = RECIPERADAR_VENDOR_OFFSET
+         x = RRF_VENDOR_OFFSET
       end
       button:SetPoint("TOPLEFT", prev, "BOTTOMLEFT", x, 0)
    end
@@ -82,38 +82,38 @@ end
 local function AddVendor(vendor)
 
    -- don't add the vendor if she or her recipes are filtered
-   if (vendor.IsFiltered or not RecipeRadar_VendorHasRecipes(vendor)) then
+   if (vendor.IsFiltered or not RRF_VendorHasRecipes(vendor)) then
       if (vendor.IsMapped) then
-         RecipeRadar_Maps_RemoveVendor(vendor)
+         RRF_Maps_RemoveVendor(vendor)
       end
       return
    end
 
    row = row + 1
 
-   local offset = FauxScrollFrame_GetOffset(RecipeRadarListScrollFrame)
+   local offset = FauxScrollFrame_GetOffset(RRFListScrollFrame)
    local index = row - offset
 
    -- reset our radio button to red/off in case there are no listed vendors
-   RecipeRadarMapVendorIndicator:SetVertexColor(1.0, 0, 0)
+   RRFMapVendorIndicator:SetVertexColor(1.0, 0, 0)
 
-   local team_color = RecipeRadar_Teams[vendor.Team].Color
+   local team_color = RRF_Teams[vendor.Team].Color
 
-   if (index > 0 and index <= RECIPERADAR_VENDORS_DISPLAYED) then
+   if (index > 0 and index <= RRF_VENDORS_DISPLAYED) then
 
-      local button = RecipeRadar_GetListButton(index)
+      local button = RRF_GetListButton(index)
       AnchorButton(button, index, "vendor")
 
       button:UnlockHighlight()
       button:SetText(vendor.Name)
-      RecipeRadar_SetButtonColors(button, team_color)
+      RRF_SetButtonColors(button, team_color)
       button:SetID(index)
       button:Show()
 
       local subtext = button.SubText
       if (vendor.Notes and vendor.Notes ~= "") then
-         local note = RecipeRadar_FormatVendorNote(vendor.Notes, true)
-         VendorNameDummySubText:SetText(note .. "    ")
+         local note = RRF_FormatVendorNote(vendor.Notes, true)
+         RRFVendorNameDummySubText:SetText(note .. "    ")
          subtext:SetText(note)
          button.r, button.g, button.b = team_color.r, team_color.g, team_color.b
          subtext:SetTextColor(team_color.r, team_color.g, team_color.b)
@@ -127,10 +127,10 @@ local function AddVendor(vendor)
       -- the little "mapped" check mark
       local check = button.Check
       if (vendor.IsMapped) then
-         VendorNameDummyText:SetText(vendor.Name .. "  ")
-         local check_offset = VendorNameDummyText:GetStringWidth() + 24
+         RRFVendorNameDummyText:SetText(vendor.Name .. "  ")
+         local check_offset = RRFVendorNameDummyText:GetStringWidth() + 24
          if (vendor.Notes and vendor.Notes ~= "") then
-            check_offset = check_offset + VendorNameDummySubText:GetStringWidth()
+            check_offset = check_offset + RRFVendorNameDummySubText:GetStringWidth()
          end
          check:SetPoint("TOPLEFT", button, "TOPLEFT", check_offset, 0)
          check:Show()
@@ -163,28 +163,28 @@ local function AddVendor(vendor)
 
    end
 
-   RecipeRadar_SortRecipes(vendor)
+   RRF_SortRecipes(vendor)
 
    for _, recipe in ipairs(vendor.Recipes) do
-      if (not RecipeRadar_IsRecipeFiltered(recipe)) then
+      if (not RRF_IsRecipeFiltered(recipe)) then
 
          row = row + 1
          index = row - offset
 
-         if (index > 0 and index <= RECIPERADAR_VENDORS_DISPLAYED) then
+         if (index > 0 and index <= RRF_VENDORS_DISPLAYED) then
 
-            local button = RecipeRadar_GetListButton(index)
+            local button = RRF_GetListButton(index)
             AnchorButton(button, index, "recipe")
 
-            RecipeRadar_DrawListItem(index, recipe)
+            RRF_DrawListItem(index, recipe)
 
-            button:SetNormalTexture(RecipeRadar_Professions[recipe.Type].Icon)
+            button:SetNormalTexture(RRF_Professions[recipe.Type].Icon)
             button.Check:Hide()
-            button:GetHighlightTexture():SetTexture(RECIPERADAR_IMAGE_ROOT .. "Icons\\Highlight")
+            button:GetHighlightTexture():SetTexture(RRF_IMAGE_ROOT .. "Icons\\Highlight")
 
-            if (RecipeRadarRadarTabFrame.SelectedRecipe == recipe) then
-               RecipeRadarHighlightFrame:SetPoint("TOPLEFT", button, "TOPLEFT", -22, 0)
-               RecipeRadarHighlightFrame:Show()
+            if (RRFRadarTabFrame.SelectedRecipe == recipe) then
+               RRFHighlightFrame:SetPoint("TOPLEFT", button, "TOPLEFT", -22, 0)
+               RRFHighlightFrame:Show()
                button:LockHighlight()
             else
                button:UnlockHighlight()
@@ -197,45 +197,45 @@ local function AddVendor(vendor)
 
 end
 
-function RecipeRadar_RadarTab_Update()
+function RRF_RadarTab_Update()
 
-   if (RecipeRadar_Options.ActiveTab ~= 1) then return end
+   if (RecipeRadarForever_Options.ActiveTab ~= 1) then return end
 
-   local title = RRS("Recipe Radar")
-   if (RecipeRadar_Options.CurrentRegion) then
-      title = title .. " - " .. RecipeRadar_GetRegionDisplayName(RecipeRadar_Options.CurrentRegion)
+   local title = RRF_S("Recipe Radar Forever")
+   if (RecipeRadarForever_Options.CurrentRegion) then
+      title = title .. " - " .. RRF_GetRegionDisplayName(RecipeRadarForever_Options.CurrentRegion)
       local parens = string.find(title, " %(")
       if (parens) then  -- remove parenthesized zone title
          title = string.sub(title, 1, parens - 1)
       end
    end
-   TitleBarText:SetText(title)
+   RRFTitleBarText:SetText(title)
 
    row, last_button = 0, ""
    has_expanded, has_collapsed = false, false
 
-   RecipeRadarHighlightFrame:Hide()
+   RRFHighlightFrame:Hide()
 
-   local region = RecipeRadar_RegionData[RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[RecipeRadarForever_Options.CurrentRegion]
    if (region) then
-      RecipeRadar_SortVendors(region)
+      RRF_SortVendors(region)
       for _, vendor in ipairs(region.Vendors) do
          AddVendor(vendor)
       end
    end
 
-   FauxScrollFrame_Update(RecipeRadarListScrollFrame, row,
-         RECIPERADAR_VENDORS_DISPLAYED, RECIPERADAR_VENDOR_HEIGHT,
-         nil, nil, nil, RecipeRadarHighlightFrame, 361, 384)
+   FauxScrollFrame_Update(RRFListScrollFrame, row,
+         RRF_VENDORS_DISPLAYED, RRF_VENDOR_HEIGHT,
+         nil, nil, nil, RRFHighlightFrame, 361, 384)
 
    SetButtonWidths()
 
-   if (not region or not RecipeRadarRadarTabFrame.SelectedRecipe) then
-      RecipeRadar_HideRecipeDetails()
-   elseif (RecipeRadarRadarTabFrame.SelectedVendor) then
-      RecipeRadar_SetSelection(RecipeRadarRadarTabFrame.SelectedVendor,
-            RecipeRadarRadarTabFrame.SelectedRecipe)
-      RecipeRadar_ShowRecipeDetails()
+   if (not region or not RRFRadarTabFrame.SelectedRecipe) then
+      RRF_HideRecipeDetails()
+   elseif (RRFRadarTabFrame.SelectedVendor) then
+      RRF_SetSelection(RRFRadarTabFrame.SelectedVendor,
+            RRFRadarTabFrame.SelectedRecipe)
+      RRF_ShowRecipeDetails()
    end
 
 end
@@ -243,9 +243,9 @@ end
 local function ToggleMapped(vendor)
 
    if (vendor.IsMapped) then
-      RecipeRadar_Maps_RemoveVendor(vendor)
+      RRF_Maps_RemoveVendor(vendor)
    else
-      RecipeRadar_Maps_AddVendor(vendor, RecipeRadar_Options.CurrentRegion)
+      RRF_Maps_AddVendor(vendor, RecipeRadarForever_Options.CurrentRegion)
    end
 
 end
@@ -254,16 +254,16 @@ local function ShowContextMenu(owner, vendor)
 
    MenuUtil.CreateContextMenu(owner, function(_, root)
       root:CreateTitle(vendor.Name)
-      root:CreateButton(vendor.IsMapped and RRS("Unmap Vendor") or RRS("Map Vendor"), function()
+      root:CreateButton(vendor.IsMapped and RRF_S("Unmap Vendor") or RRF_S("Map Vendor"), function()
          ToggleMapped(vendor)
-         RecipeRadar_FrameUpdate()
+         RRF_FrameUpdate()
       end)
-      local expand = root:CreateButton(RRS("Expand All"), function()
-         RecipeRadar_RadarTab_ExpandAll(true)
+      local expand = root:CreateButton(RRF_S("Expand All"), function()
+         RRF_RadarTab_ExpandAll(true)
       end)
       expand:SetEnabled(has_collapsed)
-      local collapse = root:CreateButton(RRS("Collapse All"), function()
-         RecipeRadar_RadarTab_ExpandAll(false)
+      local collapse = root:CreateButton(RRF_S("Collapse All"), function()
+         RRF_RadarTab_ExpandAll(false)
       end)
       collapse:SetEnabled(has_expanded)
    end)
@@ -272,20 +272,20 @@ end
 
 -- Handles a vendor/recipe button click in the main scroll frame. index is
 -- row + offset in the scroll frame, or -1 to select the first visible recipe.
-function RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
+function RRF_RadarTab_ServiceClickIndex(index, button, owner)
 
-   local region = RecipeRadar_RegionData[RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[RecipeRadarForever_Options.CurrentRegion]
    if (not region) then return end
 
    button = button or "LeftButton"
-   RecipeRadarRadarTabFrame.SelectedIndex = index
+   RRFRadarTabFrame.SelectedIndex = index
 
-   RecipeRadar_SortVendors(region)
+   RRF_SortVendors(region)
    local count = 0
 
    for _, vendor in ipairs(region.Vendors) do
 
-      if (not vendor.IsFiltered and RecipeRadar_VendorHasRecipes(vendor)) then
+      if (not vendor.IsFiltered and RRF_VendorHasRecipes(vendor)) then
 
          count = count + 1
 
@@ -294,7 +294,7 @@ function RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
                if (IsShiftKeyDown()) then
                   ToggleMapped(vendor)  -- shift-click (un)maps the vendor
                else
-                  RecipeRadar_RadarTab_ToggleExpanded(vendor)
+                  RRF_RadarTab_ToggleExpanded(vendor)
                end
             elseif (button == "RightButton" and owner) then
                ShowContextMenu(owner, vendor)
@@ -304,10 +304,10 @@ function RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
 
          if (vendor.IsExpanded ~= false) then
 
-            RecipeRadar_SortRecipes(vendor)
+            RRF_SortRecipes(vendor)
 
             for _, recipe in ipairs(vendor.Recipes) do
-               if (not RecipeRadar_IsRecipeFiltered(recipe)) then
+               if (not RRF_IsRecipeFiltered(recipe)) then
 
                   count = count + 1
 
@@ -317,10 +317,10 @@ function RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
                         if (IsShiftKeyDown()) then
                            ToggleMapped(vendor)
                         end
-                        RecipeRadarRadarTabFrame.SelectedVendor = vendor
-                        RecipeRadarRadarTabFrame.SelectedRecipe = recipe
-                        RecipeRadar_SetSelection(vendor, recipe)
-                        RecipeRadar_ShowRecipeDetails()
+                        RRFRadarTabFrame.SelectedVendor = vendor
+                        RRFRadarTabFrame.SelectedRecipe = recipe
+                        RRF_SetSelection(vendor, recipe)
+                        RRF_ShowRecipeDetails()
                      elseif (button == "RightButton" and owner) then
                         ShowContextMenu(owner, vendor)
                      end
@@ -337,22 +337,22 @@ function RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
    end
 
    -- if the index was not found, select nothing
-   RecipeRadar_RadarTab_ClearSelection()
-   RecipeRadar_HideRecipeDetails()
+   RRF_RadarTab_ClearSelection()
+   RRF_HideRecipeDetails()
 
 end
 
-function RecipeRadar_RadarTab_ToggleExpanded(vendor)
+function RRF_RadarTab_ToggleExpanded(vendor)
 
    vendor.IsExpanded = (vendor.IsExpanded == false)
-   RecipeRadar_RadarTab_ClearSelection()
-   RecipeRadar_FrameUpdate()
+   RRF_RadarTab_ClearSelection()
+   RRF_FrameUpdate()
 
 end
 
-function RecipeRadar_RadarTab_ClearSelection()
+function RRF_RadarTab_ClearSelection()
 
-   RecipeRadarRadarTabFrame.SelectedVendor = nil
-   RecipeRadarRadarTabFrame.SelectedRecipe = nil
+   RRFRadarTabFrame.SelectedVendor = nil
+   RRFRadarTabFrame.SelectedRecipe = nil
 
 end

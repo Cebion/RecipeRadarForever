@@ -5,11 +5,11 @@
    <Script file="Maps.lua"/>
 
    <!-- World map vendor pin (only used when TomTom is not loaded). -->
-   <Frame name="RecipeRadarWorldMapPinTemplate" mixin="RecipeRadarWorldMapPinMixin" enableMouse="true" virtual="true">
+   <Frame name="RRFWorldMapPinTemplate" mixin="RRFWorldMapPinMixin" enableMouse="true" virtual="true">
       <Size x="16" y="16"/>
       <Layers>
          <Layer level="OVERLAY">
-            <Texture parentKey="Icon" setAllPoints="true" file="Interface\AddOns\RecipeRadar\Images\Misc\Scroll"/>
+            <Texture parentKey="Icon" setAllPoints="true" file="Interface\AddOns\RecipeRadarForever\Images\Misc\Scroll"/>
          </Layer>
       </Layers>
    </Frame>

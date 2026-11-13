@@ -4,5490 +4,5490 @@
 
 local addonName, ns = ...
 
-RecipeRadar_RecipeData = {
+RRF_RecipeData = {
 
-[RRS("Alchemy")] = {
+[RRF_S("Alchemy")] = {
    Recipes = {
       {
-         ID = 5640, Type = RRS("Alchemy"), Skill = 60, Cost = 100,
+         ID = 5640, Type = RRF_S("Alchemy"), Skill = 60, Cost = 100,
          Locations = {
-            { Region = "Loch Modan", Vendor = RRS("Xandar Goodbeard"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Hagrus"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Ranik"), Team = "Neutral" },
-            { Region = "Westfall", Vendor = RRS("Defias Profiteer"), Team = "Neutral" },
+            { Region = "Loch Modan", Vendor = RRF_S("Xandar Goodbeard"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Hagrus"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Ranik"), Team = "Neutral" },
+            { Region = "Westfall", Vendor = RRF_S("Defias Profiteer"), Team = "Neutral" },
          },
       },
       {
-         ID = 5642, Type = RRS("Alchemy"), Skill = 150, Cost = 1800,
+         ID = 5642, Type = RRF_S("Alchemy"), Skill = 150, Cost = 1800,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Ulthir"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Ironforge", Vendor = RRS("Soolie Berryfizz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kor'geld"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Ulthir"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Ironforge", Vendor = RRF_S("Soolie Berryfizz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kor'geld"), Team = "Horde" },
          },
       },
       {
-         ID = 5643, Type = RRS("Alchemy"), Skill = 175, Cost = 2000,
+         ID = 5643, Type = RRF_S("Alchemy"), Skill = 175, Cost = 2000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Ulthir"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Hagrus"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Ulthir"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Hagrus"), Team = "Horde" },
          },
       },
       {
-         ID = 6053, Type = RRS("Alchemy"), Skill = 100, Cost = 800,
+         ID = 6053, Type = RRF_S("Alchemy"), Skill = 100, Cost = 800,
          Locations = {
-            { Region = "Duskwood", Vendor = RRS("Kzixx"), Team = "Neutral" },
-            { Region = "Loch Modan", Vendor = RRS("Xandar Goodbeard"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Hula'mahi"), Team = "Horde" },
+            { Region = "Duskwood", Vendor = RRF_S("Kzixx"), Team = "Neutral" },
+            { Region = "Loch Modan", Vendor = RRF_S("Xandar Goodbeard"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Hula'mahi"), Team = "Horde" },
          },
       },
       {
-         ID = 6054, Type = RRS("Alchemy"), Skill = 135, Cost = 900,
+         ID = 6054, Type = RRF_S("Alchemy"), Skill = 135, Cost = 900,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Harklan Moongrove"), Team = "Alliance" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Christoph Jeffcoat"), Team = "Horde" },
+            { Region = "Ashenvale", Vendor = RRF_S("Harklan Moongrove"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Christoph Jeffcoat"), Team = "Horde" },
          },
       },
       {
-         ID = 6055, Type = RRS("Alchemy"), Skill = 165, Cost = 1500,
+         ID = 6055, Type = RRF_S("Alchemy"), Skill = 165, Cost = 1500,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Nandar Branson"), Team = "Alliance" },
-            { Region = "Stonetalon Mountains", Vendor = RRS("Jeeda"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Nandar Branson"), Team = "Alliance" },
+            { Region = "Stonetalon Mountains", Vendor = RRF_S("Jeeda"), Team = "Horde" },
          },
       },
       {
-         ID = 6056, Type = RRS("Alchemy"), Skill = 190, Cost = 2000,
+         ID = 6056, Type = RRF_S("Alchemy"), Skill = 190, Cost = 2000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Drovnar Strongbrew"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Glyx Brewright"), Team = "Neutral" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Drovnar Strongbrew"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Glyx Brewright"), Team = "Neutral" },
          },
       },
       {
-         ID = 6057, Type = RRS("Alchemy"), Skill = 190, Cost = 2000,
+         ID = 6057, Type = RRF_S("Alchemy"), Skill = 190, Cost = 2000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Bronk"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Logannas"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Glyx Brewright"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Alchemist Pestlezugg"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Bronk"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Logannas"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Glyx Brewright"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Alchemist Pestlezugg"), Team = "Neutral" },
          },
       },
       {
-         ID = 6068, Type = RRS("Alchemy"), Skill = 165, Cost = 1500,
+         ID = 6068, Type = RRF_S("Alchemy"), Skill = 165, Cost = 1500,
          Locations = {
-            { Region = "Duskwood", Vendor = RRS("Bliztik"), Team = "Neutral" },
-            { Region = "Thousand Needles", Vendor = RRS("Montarr"), Team = "Horde" },
+            { Region = "Duskwood", Vendor = RRF_S("Bliztik"), Team = "Neutral" },
+            { Region = "Thousand Needles", Vendor = RRF_S("Montarr"), Team = "Horde" },
          },
       },
       {
-         ID = 9300, Type = RRS("Alchemy"), Skill = 250, Cost = 10000,
+         ID = 9300, Type = RRF_S("Alchemy"), Skill = 250, Cost = 10000,
          Locations = {
-            { Region = "Blasted Lands", Vendor = RRS("Nina Lightbrew"), Team = "Alliance" },
-            { Region = "Swamp of Sorrows", Vendor = RRS("Rartar"), Team = "Horde" },
+            { Region = "Blasted Lands", Vendor = RRF_S("Nina Lightbrew"), Team = "Alliance" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Rartar"), Team = "Horde" },
          },
       },
       {
-         ID = 9301, Type = RRS("Alchemy"), Skill = 250, Cost = 10000,
+         ID = 9301, Type = RRF_S("Alchemy"), Skill = 250, Cost = 10000,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Maria Lumere"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Algernon"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Maria Lumere"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Algernon"), Team = "Horde" },
          },
       },
       {
-         ID = 9302, Type = RRS("Alchemy"), Skill = 245, Cost = 9000,
+         ID = 9302, Type = RRF_S("Alchemy"), Skill = 245, Cost = 9000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Bronk"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Logannas"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Bronk"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Logannas"), Team = "Alliance" },
          },
       },
       {
-         ID = 9303, Type = RRS("Alchemy"), Skill = 225, Cost = 8000,
+         ID = 9303, Type = RRF_S("Alchemy"), Skill = 225, Cost = 8000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Alchemist Pestlezugg"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Alchemist Pestlezugg"), Team = "Neutral" },
          },
       },
       {
-         ID = 9304, Type = RRS("Alchemy"), Skill = 225, Cost = 8000,
+         ID = 9304, Type = RRF_S("Alchemy"), Skill = 225, Cost = 8000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Alchemist Pestlezugg"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Alchemist Pestlezugg"), Team = "Neutral" },
          },
       },
       {
-         ID = 9305, Type = RRS("Alchemy"), Skill = 225, Cost = 8000,
+         ID = 9305, Type = RRF_S("Alchemy"), Skill = 225, Cost = 8000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Alchemist Pestlezugg"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Alchemist Pestlezugg"), Team = "Neutral" },
          },
       },
       {
-         ID = 12958, Type = RRS("Alchemy"), Skill = 275, Cost = 50000,
+         ID = 12958, Type = RRF_S("Alchemy"), Skill = 275, Cost = 50000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Alchemist Pestlezugg"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Alchemist Pestlezugg"), Team = "Neutral" },
          },
       },
       {
-         ID = 13477, Type = RRS("Alchemy"), Skill = 260, Cost = 12000,
+         ID = 13477, Type = RRF_S("Alchemy"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Ulthir"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Algernon"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Ulthir"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Algernon"), Team = "Horde" },
          },
       },
       {
-         ID = 13478, Type = RRS("Alchemy"), Skill = 265, Cost = 13000,
+         ID = 13478, Type = RRF_S("Alchemy"), Skill = 265, Cost = 13000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Soolie Berryfizz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kor'geld"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Soolie Berryfizz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kor'geld"), Team = "Horde" },
          },
       },
       {
-         ID = 13480, Type = RRS("Alchemy"), Skill = 275, Cost = 15000,
+         ID = 13480, Type = RRF_S("Alchemy"), Skill = 275, Cost = 15000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Evie Whirlbrew"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Evie Whirlbrew"), Team = "Neutral" },
          },
       },
       {
-         ID = 13482, Type = RRS("Alchemy"), Skill = 275, Cost = 15000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 13482, Type = RRF_S("Alchemy"), Skill = 275, Cost = 15000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 13483, Type = RRS("Alchemy"), Skill = 275, Cost = 15000,
+         ID = 13483, Type = RRF_S("Alchemy"), Skill = 275, Cost = 15000,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Plugger Spazzring"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Plugger Spazzring"), Team = "Neutral" },
          },
       },
       {
-         ID = 13484, Type = RRS("Alchemy"), Skill = 275, Cost = 15000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 5,
+         ID = 13484, Type = RRF_S("Alchemy"), Skill = 275, Cost = 15000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 5,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 13485, Type = RRS("Alchemy"), Skill = 275, Cost = 15000,
+         ID = 13485, Type = RRF_S("Alchemy"), Skill = 275, Cost = 15000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 13501, Type = RRS("Alchemy"), Skill = 295, Cost = 30000,
+         ID = 13501, Type = RRF_S("Alchemy"), Skill = 295, Cost = 30000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 14634, Type = RRS("Alchemy"), Skill = 200, Cost = 2500,
+         ID = 14634, Type = RRF_S("Alchemy"), Skill = 200, Cost = 2500,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Bro'kin"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Bro'kin"), Team = "Neutral" },
          },
       },
       {
-         ID = 20011, Type = RRS("Alchemy"), Skill = 275, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 20011, Type = RRF_S("Alchemy"), Skill = 275, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20012, Type = RRS("Alchemy"), Skill = 275, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 20012, Type = RRF_S("Alchemy"), Skill = 275, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20013, Type = RRS("Alchemy"), Skill = 285, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 8,
+         ID = 20013, Type = RRF_S("Alchemy"), Skill = 285, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 8,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20014, Type = RRS("Alchemy"), Skill = 290, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 20014, Type = RRF_S("Alchemy"), Skill = 290, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20761, Type = RRS("Alchemy"), Skill = 300, Cost = 120000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5,
+         ID = 20761, Type = RRF_S("Alchemy"), Skill = 300, Cost = 120000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 250364, Type = RRS("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250364, Type = RRF_S("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250365, Type = RRS("Alchemy"), Skill = 250, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250365, Type = RRF_S("Alchemy"), Skill = 250, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250367, Type = RRS("Alchemy"), Skill = 95, Currency = 3402, Amount = 45,
+         ID = 250367, Type = RRF_S("Alchemy"), Skill = 95, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250369, Type = RRS("Alchemy"), Skill = 195, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250369, Type = RRF_S("Alchemy"), Skill = 195, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250371, Type = RRS("Alchemy"), Skill = 200, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250371, Type = RRF_S("Alchemy"), Skill = 200, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250372, Type = RRS("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250372, Type = RRF_S("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250373, Type = RRS("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250373, Type = RRF_S("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250374, Type = RRS("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250374, Type = RRF_S("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250376, Type = RRS("Alchemy"), Skill = 75, Currency = 3402, Amount = 45,
+         ID = 250376, Type = RRF_S("Alchemy"), Skill = 75, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250377, Type = RRS("Alchemy"), Skill = 175, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250377, Type = RRF_S("Alchemy"), Skill = 175, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250378, Type = RRS("Alchemy"), Skill = 120, Currency = 3402, Amount = 45,
+         ID = 250378, Type = RRF_S("Alchemy"), Skill = 120, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250379, Type = RRS("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250379, Type = RRF_S("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250381, Type = RRS("Alchemy"), Skill = 65, Currency = 3402, Amount = 45,
+         ID = 250381, Type = RRF_S("Alchemy"), Skill = 65, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250383, Type = RRS("Alchemy"), Skill = 165, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250383, Type = RRF_S("Alchemy"), Skill = 165, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250384, Type = RRS("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250384, Type = RRF_S("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250386, Type = RRS("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250386, Type = RRF_S("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250387, Type = RRS("Alchemy"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 250387, Type = RRF_S("Alchemy"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250388, Type = RRS("Alchemy"), Skill = 95, Currency = 3402, Amount = 45,
+         ID = 250388, Type = RRF_S("Alchemy"), Skill = 95, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250978, Type = RRS("Alchemy"), Skill = 135, Currency = 3402, Amount = 45,
+         ID = 250978, Type = RRF_S("Alchemy"), Skill = 135, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250979, Type = RRS("Alchemy"), Skill = 185, Token = 254432, Amount = 15,
+         ID = 250979, Type = RRF_S("Alchemy"), Skill = 185, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 250981, Type = RRS("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250981, Type = RRF_S("Alchemy"), Skill = 285, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250984, Type = RRS("Alchemy"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 250984, Type = RRF_S("Alchemy"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250985, Type = RRS("Alchemy"), Skill = 190, Token = 254432, Amount = 15,
+         ID = 250985, Type = RRF_S("Alchemy"), Skill = 190, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 250987, Type = RRS("Alchemy"), Skill = 290, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 250987, Type = RRF_S("Alchemy"), Skill = 290, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250990, Type = RRS("Alchemy"), Skill = 130, Currency = 3402, Amount = 45,
+         ID = 250990, Type = RRF_S("Alchemy"), Skill = 130, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250993, Type = RRS("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250993, Type = RRF_S("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250994, Type = RRS("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250994, Type = RRF_S("Alchemy"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250995, Type = RRS("Alchemy"), Skill = 265, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250995, Type = RRF_S("Alchemy"), Skill = 265, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250996, Type = RRS("Alchemy"), Skill = 180, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250996, Type = RRF_S("Alchemy"), Skill = 180, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250997, Type = RRS("Alchemy"), Skill = 245, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250997, Type = RRF_S("Alchemy"), Skill = 245, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 250998, Type = RRS("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 250998, Type = RRF_S("Alchemy"), Skill = 280, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
       {
-         ID = 271621, Type = RRS("Alchemy"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271621, Type = RRF_S("Alchemy"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Nina Surefire"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Apothecary Durelle"), Team = "Horde" },
          },
       },
    },
 },
 
-[RRS("Blacksmithing")] = {
+[RRF_S("Blacksmithing")] = {
    Recipes = {
       {
-         ID = 6047, Type = RRS("Blacksmithing"), Skill = 190, Cost = 4400,
+         ID = 6047, Type = RRF_S("Blacksmithing"), Skill = 190, Cost = 4400,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Krinkle Goodsteel"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Krinkle Goodsteel"), Team = "Neutral" },
          },
       },
       {
-         ID = 7995, Type = RRS("Blacksmithing"), Skill = 215, Cost = 6000,
+         ID = 7995, Type = RRF_S("Blacksmithing"), Skill = 215, Cost = 6000,
          Locations = {
-            { Region = "Swamp of Sorrows", Vendor = RRS("Gharash"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Harggan"), Team = "Alliance" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Gharash"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Harggan"), Team = "Alliance" },
          },
       },
       {
-         ID = 8030, Type = RRS("Blacksmithing"), Skill = 255, Cost = 10000,
+         ID = 8030, Type = RRF_S("Blacksmithing"), Skill = 255, Cost = 10000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 10858, Type = RRS("Blacksmithing"), Skill = 155, Cost = 3000,
+         ID = 10858, Type = RRF_S("Blacksmithing"), Skill = 155, Cost = 3000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Jannos Ironwill"), Team = "Alliance" },
-            { Region = "Badlands", Vendor = RRS("Jazzrik"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Muuran"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Jannos Ironwill"), Team = "Alliance" },
+            { Region = "Badlands", Vendor = RRF_S("Jazzrik"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Muuran"), Team = "Horde" },
          },
       },
       {
-         ID = 12162, Type = RRS("Blacksmithing"), Skill = 160, Cost = 3000,
+         ID = 12162, Type = RRF_S("Blacksmithing"), Skill = 160, Cost = 3000,
          Locations = {
-            { Region = "Orgrimmar", Vendor = RRS("Sumi"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Kaita Deepforge"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Jutak"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Sumi"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kaita Deepforge"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Jutak"), Team = "Neutral" },
          },
       },
       {
-         ID = 12163, Type = RRS("Blacksmithing"), Skill = 180, Cost = 4400,
+         ID = 12163, Type = RRF_S("Blacksmithing"), Skill = 180, Cost = 4400,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Zarena Cromwind"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Zarena Cromwind"), Team = "Neutral" },
          },
       },
       {
-         ID = 12164, Type = RRS("Blacksmithing"), Skill = 185, Cost = 4400,
+         ID = 12164, Type = RRF_S("Blacksmithing"), Skill = 185, Cost = 4400,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Jaquilina Dramet"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Vharr"), Team = "Horde" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Jaquilina Dramet"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Vharr"), Team = "Horde" },
          },
       },
       {
-         ID = 12703, Type = RRS("Blacksmithing"), Skill = 295, Cost = 40000,
+         ID = 12703, Type = RRF_S("Blacksmithing"), Skill = 295, Cost = 40000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 12819, Type = RRS("Blacksmithing"), Skill = 275, Cost = 16000,
+         ID = 12819, Type = RRF_S("Blacksmithing"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 12823, Type = RRS("Blacksmithing"), Skill = 280, Cost = 20000,
+         ID = 12823, Type = RRF_S("Blacksmithing"), Skill = 280, Cost = 20000,
          Locations = {
-            { Region = "Western Plaguelands", Vendor = RRS("Magnus Frostwake"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Magnus Frostwake"), Team = "Neutral" },
          },
       },
       {
-         ID = 17049, Type = RRS("Blacksmithing"), Skill = 295, Cost = 90000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRS("Armorsmith"),
+         ID = 17049, Type = RRF_S("Blacksmithing"), Skill = 295, Cost = 90000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17051, Type = RRS("Blacksmithing"), Skill = 295, Cost = 70000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRS("Armorsmith"),
+         ID = 17051, Type = RRF_S("Blacksmithing"), Skill = 295, Cost = 70000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17052, Type = RRS("Blacksmithing"), Skill = 300, Cost = 180000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Armorsmith"),
+         ID = 17052, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 180000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17053, Type = RRS("Blacksmithing"), Skill = 300, Cost = 200000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Armorsmith"),
+         ID = 17053, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 200000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17059, Type = RRS("Blacksmithing"), Skill = 300, Cost = 220000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRS("Master Swordsmith"),
+         ID = 17059, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 220000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRF_S("Master Swordsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17060, Type = RRS("Blacksmithing"), Skill = 300, Cost = 220000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Master Axesmith"),
+         ID = 17060, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 220000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Master Axesmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19202, Type = RRS("Blacksmithing"), Skill = 290, Cost = 22000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 6,
+         ID = 19202, Type = RRF_S("Blacksmithing"), Skill = 290, Cost = 22000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 6,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19203, Type = RRS("Blacksmithing"), Skill = 290, Cost = 22000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 19203, Type = RRF_S("Blacksmithing"), Skill = 290, Cost = 22000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19204, Type = RRS("Blacksmithing"), Skill = 300, Cost = 40000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 7,
+         ID = 19204, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 40000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 7,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19205, Type = RRS("Blacksmithing"), Skill = 300, Cost = 40000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 7,
+         ID = 19205, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 40000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 7,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19206, Type = RRS("Blacksmithing"), Skill = 300, Cost = 60000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Armorsmith"),
+         ID = 19206, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 60000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19207, Type = RRS("Blacksmithing"), Skill = 300, Cost = 80000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Armorsmith"),
+         ID = 19207, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 80000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19208, Type = RRS("Blacksmithing"), Skill = 300, Cost = 70000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Weaponsmith"),
+         ID = 19208, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 70000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Weaponsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19209, Type = RRS("Blacksmithing"), Skill = 300, Cost = 70000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Weaponsmith"),
+         ID = 19209, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 70000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Weaponsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19210, Type = RRS("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Master Hammersmith"),
+         ID = 19210, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Master Hammersmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19211, Type = RRS("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Master Swordsmith"),
+         ID = 19211, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Master Swordsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19212, Type = RRS("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Master Axesmith"),
+         ID = 19212, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 120000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Master Axesmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19776, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 19776, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19777, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 19777, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19778, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 19778, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19779, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 19779, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19780, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 19780, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19781, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 19781, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20040, Type = RRS("Blacksmithing"), Skill = 300, Cost = 80000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRS("Armorsmith"),
+         ID = 20040, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 80000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 8, Specialty = RRF_S("Armorsmith"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 22209, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 22209, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 22214, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 22214, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 22766, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 22766, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 22767, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 22767, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 22768, Type = RRS("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 22768, Type = RRF_S("Blacksmithing"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 251355, Type = RRS("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 251355, Type = RRF_S("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251356, Type = RRS("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 251356, Type = RRF_S("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251357, Type = RRS("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 251357, Type = RRF_S("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251358, Type = RRS("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 251358, Type = RRF_S("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251359, Type = RRS("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 251359, Type = RRF_S("Blacksmithing"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251360, Type = RRS("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
+         ID = 251360, Type = RRF_S("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251361, Type = RRS("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
+         ID = 251361, Type = RRF_S("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251362, Type = RRS("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
+         ID = 251362, Type = RRF_S("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251363, Type = RRS("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
+         ID = 251363, Type = RRF_S("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251364, Type = RRS("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
+         ID = 251364, Type = RRF_S("Blacksmithing"), Skill = 80, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251365, Type = RRS("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
+         ID = 251365, Type = RRF_S("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251366, Type = RRS("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
+         ID = 251366, Type = RRF_S("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251367, Type = RRS("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
+         ID = 251367, Type = RRF_S("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251368, Type = RRS("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
+         ID = 251368, Type = RRF_S("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251369, Type = RRS("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
+         ID = 251369, Type = RRF_S("Blacksmithing"), Skill = 45, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251370, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 251370, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251371, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 251371, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251372, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 251372, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251373, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 251373, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251374, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 251374, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251375, Type = RRS("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 251375, Type = RRF_S("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251376, Type = RRS("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 251376, Type = RRF_S("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251377, Type = RRS("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 251377, Type = RRF_S("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251378, Type = RRS("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 251378, Type = RRF_S("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251379, Type = RRS("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 251379, Type = RRF_S("Blacksmithing"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251380, Type = RRS("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
+         ID = 251380, Type = RRF_S("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251381, Type = RRS("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
+         ID = 251381, Type = RRF_S("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251382, Type = RRS("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
+         ID = 251382, Type = RRF_S("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251383, Type = RRS("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
+         ID = 251383, Type = RRF_S("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251384, Type = RRS("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
+         ID = 251384, Type = RRF_S("Blacksmithing"), Skill = 95, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251390, Type = RRS("Blacksmithing"), Skill = 175, Token = 254432, Amount = 15,
+         ID = 251390, Type = RRF_S("Blacksmithing"), Skill = 175, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 251413, Type = RRS("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251413, Type = RRF_S("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251414, Type = RRS("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251414, Type = RRF_S("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251415, Type = RRS("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251415, Type = RRF_S("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251416, Type = RRS("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251416, Type = RRF_S("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251417, Type = RRS("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251417, Type = RRF_S("Blacksmithing"), Skill = 240, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251418, Type = RRS("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251418, Type = RRF_S("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251419, Type = RRS("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251419, Type = RRF_S("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251420, Type = RRS("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251420, Type = RRF_S("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251421, Type = RRS("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251421, Type = RRF_S("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251422, Type = RRS("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251422, Type = RRF_S("Blacksmithing"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251423, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251423, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251424, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251424, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251425, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251425, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251426, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251426, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251427, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251427, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251428, Type = RRS("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251428, Type = RRF_S("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251429, Type = RRS("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251429, Type = RRF_S("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251430, Type = RRS("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251430, Type = RRF_S("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251431, Type = RRS("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251431, Type = RRF_S("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251432, Type = RRS("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 251432, Type = RRF_S("Blacksmithing"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251433, Type = RRS("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251433, Type = RRF_S("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251434, Type = RRS("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251434, Type = RRF_S("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251435, Type = RRS("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251435, Type = RRF_S("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251436, Type = RRS("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251436, Type = RRF_S("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251437, Type = RRS("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251437, Type = RRF_S("Blacksmithing"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251447, Type = RRS("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
+         ID = 251447, Type = RRF_S("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251448, Type = RRS("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
+         ID = 251448, Type = RRF_S("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251449, Type = RRS("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
+         ID = 251449, Type = RRF_S("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251458, Type = RRS("Blacksmithing"), Skill = 165, Token = 254432, Amount = 15,
+         ID = 251458, Type = RRF_S("Blacksmithing"), Skill = 165, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 251460, Type = RRS("Blacksmithing"),
+         ID = 251460, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Martha Wellsworth"), Team = "Alliance" },
+            { Region = "Riverglades", Vendor = RRF_S("Martha Wellsworth"), Team = "Alliance" },
          },
       },
       {
-         ID = 251465, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251465, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251466, Type = RRS("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 251466, Type = RRF_S("Blacksmithing"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 251468, Type = RRS("Blacksmithing"),
+         ID = 251468, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
       {
-         ID = 251471, Type = RRS("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
+         ID = 251471, Type = RRF_S("Blacksmithing"), Skill = 300, Currency = 3402, Amount = 120, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 271622, Type = RRS("Blacksmithing"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271622, Type = RRF_S("Blacksmithing"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 273976, Type = RRS("Blacksmithing"),
+         ID = 273976, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273977, Type = RRS("Blacksmithing"),
+         ID = 273977, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273978, Type = RRS("Blacksmithing"),
+         ID = 273978, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273979, Type = RRS("Blacksmithing"),
+         ID = 273979, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273980, Type = RRS("Blacksmithing"),
+         ID = 273980, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273981, Type = RRS("Blacksmithing"),
+         ID = 273981, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273982, Type = RRS("Blacksmithing"),
+         ID = 273982, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273983, Type = RRS("Blacksmithing"),
+         ID = 273983, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273984, Type = RRS("Blacksmithing"),
+         ID = 273984, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273985, Type = RRS("Blacksmithing"),
+         ID = 273985, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273986, Type = RRS("Blacksmithing"),
+         ID = 273986, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273987, Type = RRS("Blacksmithing"),
+         ID = 273987, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274012, Type = RRS("Blacksmithing"),
+         ID = 274012, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274013, Type = RRS("Blacksmithing"),
+         ID = 274013, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274014, Type = RRS("Blacksmithing"),
+         ID = 274014, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274015, Type = RRS("Blacksmithing"),
+         ID = 274015, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274016, Type = RRS("Blacksmithing"),
+         ID = 274016, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274017, Type = RRS("Blacksmithing"),
+         ID = 274017, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274018, Type = RRS("Blacksmithing"),
+         ID = 274018, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274019, Type = RRS("Blacksmithing"),
+         ID = 274019, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 275598, Type = RRS("Blacksmithing"),
+         ID = 275598, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 275599, Type = RRS("Blacksmithing"),
+         ID = 275599, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 275600, Type = RRS("Blacksmithing"),
+         ID = 275600, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 275601, Type = RRS("Blacksmithing"),
+         ID = 275601, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 275602, Type = RRS("Blacksmithing"),
+         ID = 275602, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 275603, Type = RRS("Blacksmithing"),
+         ID = 275603, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Vargus"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Vargus"), Team = "Neutral" },
          },
       },
       {
-         ID = 276976, Type = RRS("Blacksmithing"),
+         ID = 276976, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276977, Type = RRS("Blacksmithing"),
+         ID = 276977, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276984, Type = RRS("Blacksmithing"),
+         ID = 276984, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 276985, Type = RRS("Blacksmithing"),
+         ID = 276985, Type = RRF_S("Blacksmithing"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 285289, Type = RRS("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 285289, Type = RRF_S("Blacksmithing"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 285290, Type = RRS("Blacksmithing"), Skill = 195, Currency = 3402, Amount = 60,
+         ID = 285290, Type = RRF_S("Blacksmithing"), Skill = 195, Currency = 3402, Amount = 60,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
       {
-         ID = 285291, Type = RRS("Blacksmithing"), Skill = 270, Currency = 3402, Amount = 90,
+         ID = 285291, Type = RRF_S("Blacksmithing"), Skill = 270, Currency = 3402, Amount = 90,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Stondry Darkhammer"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gor'mak"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Stondry Darkhammer"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gor'mak"), Team = "Horde" },
          },
       },
    },
 },
 
-[RRS("Cooking")] = {
+[RRF_S("Cooking")] = {
    Recipes = {
       {
-         ID = 728, Type = RRS("Cooking"), Skill = 75, Cost = 200,
+         ID = 728, Type = RRF_S("Cooking"), Skill = 75, Cost = 200,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2697, Type = RRS("Cooking"), Skill = 50, Cost = 400,
+         ID = 2697, Type = RRF_S("Cooking"), Skill = 50, Cost = 400,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2698, Type = RRS("Cooking"), Skill = 85, Cost = 400,
+         ID = 2698, Type = RRF_S("Cooking"), Skill = 85, Cost = 400,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2699, Type = RRS("Cooking"), Skill = 100, Cost = 800,
+         ID = 2699, Type = RRF_S("Cooking"), Skill = 100, Cost = 800,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2700, Type = RRS("Cooking"), Skill = 110, Cost = 400,
+         ID = 2700, Type = RRF_S("Cooking"), Skill = 110, Cost = 400,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2701, Type = RRS("Cooking"), Skill = 100, Cost = 1600,
+         ID = 2701, Type = RRF_S("Cooking"), Skill = 100, Cost = 1600,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 2889, Type = RRS("Cooking"), Skill = 25, Cost = 240,
+         ID = 2889, Type = RRF_S("Cooking"), Skill = 25, Cost = 240,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3678, Type = RRS("Cooking"), Skill = 80, Cost = 400,
+         ID = 3678, Type = RRF_S("Cooking"), Skill = 80, Cost = 400,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3679, Type = RRS("Cooking"), Skill = 60, Cost = 400,
+         ID = 3679, Type = RRF_S("Cooking"), Skill = 60, Cost = 400,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3680, Type = RRS("Cooking"), Skill = 90, Cost = 1600,
+         ID = 3680, Type = RRF_S("Cooking"), Skill = 90, Cost = 1600,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3681, Type = RRS("Cooking"), Skill = 120, Cost = 1600,
+         ID = 3681, Type = RRF_S("Cooking"), Skill = 120, Cost = 1600,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3682, Type = RRS("Cooking"), Skill = 130, Cost = 1600,
+         ID = 3682, Type = RRF_S("Cooking"), Skill = 130, Cost = 1600,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Keena"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Nerrist"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Keena"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Nerrist"), Team = "Horde" },
          },
       },
       {
-         ID = 3683, Type = RRS("Cooking"), Skill = 110, Cost = 1600,
+         ID = 3683, Type = RRF_S("Cooking"), Skill = 110, Cost = 1600,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Kendor Kabonka"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Kendor Kabonka"), Team = "Alliance" },
          },
       },
       {
-         ID = 3734, Type = RRS("Cooking"), Skill = 110, Cost = 1600,
+         ID = 3734, Type = RRF_S("Cooking"), Skill = 110, Cost = 1600,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Ulthaan"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Ashenvale", Vendor = RRF_S("Ulthaan"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
          },
       },
       {
-         ID = 3735, Type = RRS("Cooking"), Skill = 125, Cost = 1800,
+         ID = 3735, Type = RRF_S("Cooking"), Skill = 125, Cost = 1800,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Zargh"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Zargh"), Team = "Horde" },
          },
       },
       {
-         ID = 4609, Type = RRS("Cooking"), Skill = 175, Cost = 1000,
+         ID = 4609, Type = RRF_S("Cooking"), Skill = 175, Cost = 1000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Narj Deepslice"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Narj Deepslice"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
          },
       },
       {
-         ID = 5483, Type = RRS("Cooking"), Skill = 20, Cost = 140,
+         ID = 5483, Type = RRF_S("Cooking"), Skill = 20, Cost = 140,
          Locations = {
-            { Region = "Durotar", Vendor = RRS("Grimtak"), Team = "Horde" },
-            { Region = "Riverglades", Vendor = RRS("Naluk"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Grimtak"), Team = "Horde" },
+            { Region = "Riverglades", Vendor = RRF_S("Naluk"), Team = "Neutral" },
          },
       },
       {
-         ID = 5484, Type = RRS("Cooking"), Skill = 35, Cost = 240,
+         ID = 5484, Type = RRF_S("Cooking"), Skill = 35, Cost = 240,
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Wunna Darkmane"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Wunna Darkmane"), Team = "Horde" },
          },
       },
       {
-         ID = 5485, Type = RRS("Cooking"), Skill = 50, Cost = 400,
+         ID = 5485, Type = RRF_S("Cooking"), Skill = 50, Cost = 400,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Laird"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Laird"), Team = "Alliance" },
          },
       },
       {
-         ID = 5486, Type = RRS("Cooking"), Skill = 50, Cost = 440,
+         ID = 5486, Type = RRF_S("Cooking"), Skill = 50, Cost = 440,
          Locations = {
-            { Region = "The Barrens", Vendor = RRS("Tari'qa"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Tari'qa"), Team = "Horde" },
          },
       },
       {
-         ID = 5488, Type = RRS("Cooking"), Skill = 100, Cost = 400,
+         ID = 5488, Type = RRF_S("Cooking"), Skill = 100, Cost = 400,
          Locations = {
-            { Region = "The Barrens", Vendor = RRS("Tari'qa"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Tari'qa"), Team = "Horde" },
          },
       },
       {
-         ID = 5489, Type = RRS("Cooking"), Skill = 110, Cost = 1200,
+         ID = 5489, Type = RRF_S("Cooking"), Skill = 110, Cost = 1200,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Ulthaan"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Ashenvale", Vendor = RRF_S("Ulthaan"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
          },
       },
       {
-         ID = 5528, Type = RRS("Cooking"), Skill = 90, Cost = 800,
+         ID = 5528, Type = RRF_S("Cooking"), Skill = 90, Cost = 800,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Heldan Galesong"), Team = "Alliance" },
-            { Region = "Westfall", Vendor = RRS("Kriggon Talsone"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Heldan Galesong"), Team = "Alliance" },
+            { Region = "Westfall", Vendor = RRF_S("Kriggon Talsone"), Team = "Alliance" },
          },
       },
       {
-         ID = 6039, Type = RRS("Cooking"), Skill = 175, Cost = 5000,
+         ID = 6039, Type = RRF_S("Cooking"), Skill = 175, Cost = 5000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
          },
       },
       {
-         ID = 6325, Type = RRS("Cooking"), Skill = 1, Cost = 40,
+         ID = 6325, Type = RRF_S("Cooking"), Skill = 1, Cost = 40,
          Locations = {
-            { Region = "Dun Morogh", Vendor = RRS("Gretta Ganter"), Team = "Alliance" },
-            { Region = "Elwynn Forest", Vendor = RRS("Tharynn Bouden"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Khara Deepwater"), Team = "Alliance" },
-            { Region = "Mulgore", Vendor = RRS("Harn Longcast"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Catherine Leland"), Team = "Alliance" },
-            { Region = "Teldrassil", Vendor = RRS("Nyoma"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Sewa Mistrunner"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Martine Tramblay"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Lizbeth Cromwell"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nyalah Brightfire"), Team = "Neutral" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Gretta Ganter"), Team = "Alliance" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Tharynn Bouden"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Khara Deepwater"), Team = "Alliance" },
+            { Region = "Mulgore", Vendor = RRF_S("Harn Longcast"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Catherine Leland"), Team = "Alliance" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nyoma"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Sewa Mistrunner"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Martine Tramblay"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Lizbeth Cromwell"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nyalah Brightfire"), Team = "Neutral" },
          },
       },
       {
-         ID = 6326, Type = RRS("Cooking"), Skill = 1, Cost = 40,
+         ID = 6326, Type = RRF_S("Cooking"), Skill = 1, Cost = 40,
          Locations = {
-            { Region = "Durotar", Vendor = RRS("Zansoa"), Team = "Horde" },
-            { Region = "Ironforge", Vendor = RRS("Tansy Puddlefizz"), Team = "Alliance" },
-            { Region = "Teldrassil", Vendor = RRS("Nessa Shadowsong"), Team = "Alliance" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Martine Tramblay"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Kriggon Talsone"), Team = "Alliance" },
-            { Region = "Zephras Isle", Vendor = RRS("Nyalah Brightfire"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Zansoa"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Tansy Puddlefizz"), Team = "Alliance" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nessa Shadowsong"), Team = "Alliance" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Martine Tramblay"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Kriggon Talsone"), Team = "Alliance" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nyalah Brightfire"), Team = "Neutral" },
          },
       },
       {
-         ID = 6328, Type = RRS("Cooking"), Skill = 50, Cost = 400,
+         ID = 6328, Type = RRF_S("Cooking"), Skill = 50, Cost = 400,
          Locations = {
-            { Region = "Elwynn Forest", Vendor = RRS("Tharynn Bouden"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tansy Puddlefizz"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Khara Deepwater"), Team = "Alliance" },
-            { Region = "Mulgore", Vendor = RRS("Harn Longcast"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Killian Sanatha"), Team = "Horde" },
-            { Region = "Teldrassil", Vendor = RRS("Nyoma"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Naal Mistrunner"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Lizbeth Cromwell"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nyalah Brightfire"), Team = "Neutral" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Tharynn Bouden"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tansy Puddlefizz"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Khara Deepwater"), Team = "Alliance" },
+            { Region = "Mulgore", Vendor = RRF_S("Harn Longcast"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Killian Sanatha"), Team = "Horde" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nyoma"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Naal Mistrunner"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Lizbeth Cromwell"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nyalah Brightfire"), Team = "Neutral" },
          },
       },
       {
-         ID = 6329, Type = RRS("Cooking"), Skill = 50, Cost = 400,
+         ID = 6329, Type = RRF_S("Cooking"), Skill = 50, Cost = 400,
          Locations = {
-            { Region = "Loch Modan", Vendor = RRS("Khara Deepwater"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Khara Deepwater"), Team = "Alliance" },
          },
       },
       {
-         ID = 6330, Type = RRS("Cooking"), Skill = 100, Cost = 1200,
+         ID = 6330, Type = RRF_S("Cooking"), Skill = 100, Cost = 1200,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Derak Nightfall"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Lindea Rabonne"), Team = "Alliance" },
-            { Region = "Riverglades", Vendor = RRS("Gritta Chumwater"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Catherine Leland"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Kilxx"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Naal Mistrunner"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Sewa Mistrunner"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Ronald Burch"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Derak Nightfall"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Lindea Rabonne"), Team = "Alliance" },
+            { Region = "Riverglades", Vendor = RRF_S("Gritta Chumwater"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Catherine Leland"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Kilxx"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Naal Mistrunner"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Sewa Mistrunner"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Ronald Burch"), Team = "Horde" },
          },
       },
       {
-         ID = 6368, Type = RRS("Cooking"), Skill = 50, Cost = 400,
+         ID = 6368, Type = RRF_S("Cooking"), Skill = 50, Cost = 400,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Heldan Galesong"), Team = "Alliance" },
-            { Region = "Durotar", Vendor = RRS("Zansoa"), Team = "Horde" },
-            { Region = "Orgrimmar", Vendor = RRS("Shankys"), Team = "Horde" },
-            { Region = "Riverglades", Vendor = RRS("Gritta Chumwater"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Killian Sanatha"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Catherine Leland"), Team = "Alliance" },
-            { Region = "Teldrassil", Vendor = RRS("Nessa Shadowsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Kilxx"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Ronald Burch"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Kriggon Talsone"), Team = "Alliance" },
-            { Region = "Wetlands", Vendor = RRS("Stuart Fleming"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Heldan Galesong"), Team = "Alliance" },
+            { Region = "Durotar", Vendor = RRF_S("Zansoa"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Shankys"), Team = "Horde" },
+            { Region = "Riverglades", Vendor = RRF_S("Gritta Chumwater"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Killian Sanatha"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Catherine Leland"), Team = "Alliance" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nessa Shadowsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Kilxx"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Ronald Burch"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Kriggon Talsone"), Team = "Alliance" },
+            { Region = "Wetlands", Vendor = RRF_S("Stuart Fleming"), Team = "Alliance" },
          },
       },
       {
-         ID = 6369, Type = RRS("Cooking"), Skill = 175, Cost = 2200,
+         ID = 6369, Type = RRF_S("Cooking"), Skill = 175, Cost = 2200,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Wik'Tar"), Team = "Horde" },
-            { Region = "Darkshore", Vendor = RRS("Heldan Galesong"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Wulan"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Lindea Rabonne"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tansy Puddlefizz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Shankys"), Team = "Horde" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Lizbeth Cromwell"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Stuart Fleming"), Team = "Alliance" },
+            { Region = "Ashenvale", Vendor = RRF_S("Wik'Tar"), Team = "Horde" },
+            { Region = "Darkshore", Vendor = RRF_S("Heldan Galesong"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Wulan"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Lindea Rabonne"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tansy Puddlefizz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Shankys"), Team = "Horde" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Lizbeth Cromwell"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Stuart Fleming"), Team = "Alliance" },
          },
       },
       {
-         ID = 6892, Type = RRS("Cooking"), Skill = 40, Cost = 250,
+         ID = 6892, Type = RRF_S("Cooking"), Skill = 40, Cost = 250,
          Locations = {
-            { Region = "Loch Modan", Vendor = RRS("Drac Roughcut"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Andrew Hilbert"), Team = "Horde" },
+            { Region = "Loch Modan", Vendor = RRF_S("Drac Roughcut"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Andrew Hilbert"), Team = "Horde" },
          },
       },
       {
-         ID = 12226, Type = RRS("Cooking"), Skill = 1, Cost = 25,
+         ID = 12226, Type = RRF_S("Cooking"), Skill = 1, Cost = 25,
          Locations = {
-            { Region = "Tirisfal Glades", Vendor = RRS("Abigail Shiel"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Abigail Shiel"), Team = "Horde" },
          },
       },
       {
-         ID = 12227, Type = RRS("Cooking"), Skill = 125, Cost = 1600,
+         ID = 12227, Type = RRF_S("Cooking"), Skill = 125, Cost = 1600,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
          },
       },
       {
-         ID = 12228, Type = RRS("Cooking"), Skill = 175, Cost = 5000,
+         ID = 12228, Type = RRF_S("Cooking"), Skill = 175, Cost = 5000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Hammon Karwn"), Team = "Alliance" },
-            { Region = "Arathi Highlands", Vendor = RRS("Keena"), Team = "Horde" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Helenia Olden"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ogg'marr"), Team = "Horde" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Corporal Bluth"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Nerrist"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Hammon Karwn"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Keena"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Helenia Olden"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ogg'marr"), Team = "Horde" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Corporal Bluth"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Nerrist"), Team = "Horde" },
          },
       },
       {
-         ID = 12229, Type = RRS("Cooking"), Skill = 175, Cost = 5000,
+         ID = 12229, Type = RRF_S("Cooking"), Skill = 175, Cost = 5000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Feralas", Vendor = RRS("Sheendra Tallgrass"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Vivianna"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Sheendra Tallgrass"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Vivianna"), Team = "Alliance" },
          },
       },
       {
-         ID = 12231, Type = RRS("Cooking"), Skill = 175, Cost = 3000,
+         ID = 12231, Type = RRF_S("Cooking"), Skill = 175, Cost = 3000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Corporal Bluth"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Nerrist"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Corporal Bluth"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Nerrist"), Team = "Horde" },
          },
       },
       {
-         ID = 12232, Type = RRS("Cooking"), Skill = 175, Cost = 5000,
+         ID = 12232, Type = RRF_S("Cooking"), Skill = 175, Cost = 5000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Kireena"), Team = "Horde" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ogg'marr"), Team = "Horde" },
-            { Region = "Swamp of Sorrows", Vendor = RRS("Banalash"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Kireena"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ogg'marr"), Team = "Horde" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Banalash"), Team = "Horde" },
          },
       },
       {
-         ID = 12233, Type = RRS("Cooking"), Skill = 175, Cost = 3000,
+         ID = 12233, Type = RRF_S("Cooking"), Skill = 175, Cost = 3000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Janet Hommers"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Helenia Olden"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Janet Hommers"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Helenia Olden"), Team = "Alliance" },
          },
       },
       {
-         ID = 12239, Type = RRS("Cooking"), Skill = 200, Cost = 7000,
+         ID = 12239, Type = RRF_S("Cooking"), Skill = 200, Cost = 7000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Helenia Olden"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ogg'marr"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Helenia Olden"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ogg'marr"), Team = "Horde" },
          },
       },
       {
-         ID = 12240, Type = RRS("Cooking"), Skill = 200, Cost = 7000,
+         ID = 12240, Type = RRF_S("Cooking"), Skill = 200, Cost = 7000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Janet Hommers"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Kireena"), Team = "Horde" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Janet Hommers"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Kireena"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
          },
       },
       {
-         ID = 13939, Type = RRS("Cooking"), Skill = 225, Cost = 16000,
+         ID = 13939, Type = RRF_S("Cooking"), Skill = 225, Cost = 16000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Gikkix"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Gikkix"), Team = "Neutral" },
          },
       },
       {
-         ID = 13940, Type = RRS("Cooking"), Skill = 225, Cost = 16000,
+         ID = 13940, Type = RRF_S("Cooking"), Skill = 225, Cost = 16000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
          },
       },
       {
-         ID = 13941, Type = RRS("Cooking"), Skill = 225, Cost = 16000,
+         ID = 13941, Type = RRF_S("Cooking"), Skill = 225, Cost = 16000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
          },
       },
       {
-         ID = 13942, Type = RRS("Cooking"), Skill = 240, Cost = 16000,
+         ID = 13942, Type = RRF_S("Cooking"), Skill = 240, Cost = 16000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Gikkix"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Gikkix"), Team = "Neutral" },
          },
       },
       {
-         ID = 13943, Type = RRS("Cooking"), Skill = 240, Cost = 16000,
+         ID = 13943, Type = RRF_S("Cooking"), Skill = 240, Cost = 16000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
          },
       },
       {
-         ID = 13945, Type = RRS("Cooking"), Skill = 250, Cost = 20000,
+         ID = 13945, Type = RRF_S("Cooking"), Skill = 250, Cost = 20000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Gikkix"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Gikkix"), Team = "Neutral" },
          },
       },
       {
-         ID = 13946, Type = RRS("Cooking"), Skill = 250, Cost = 20000,
+         ID = 13946, Type = RRF_S("Cooking"), Skill = 250, Cost = 20000,
          Locations = {
-            { Region = "Tanaris", Vendor = RRS("Gikkix"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Gikkix"), Team = "Neutral" },
          },
       },
       {
-         ID = 13947, Type = RRS("Cooking"), Skill = 275, Cost = 20000,
+         ID = 13947, Type = RRF_S("Cooking"), Skill = 275, Cost = 20000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Sheendra Tallgrass"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Vivianna"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Sheendra Tallgrass"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Vivianna"), Team = "Alliance" },
          },
       },
       {
-         ID = 13948, Type = RRS("Cooking"), Skill = 275, Cost = 20000,
+         ID = 13948, Type = RRF_S("Cooking"), Skill = 275, Cost = 20000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Sheendra Tallgrass"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Vivianna"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Sheendra Tallgrass"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Vivianna"), Team = "Alliance" },
          },
       },
       {
-         ID = 13949, Type = RRS("Cooking"), Skill = 275, Cost = 20000,
+         ID = 13949, Type = RRF_S("Cooking"), Skill = 275, Cost = 20000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Sheendra Tallgrass"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Vivianna"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Sheendra Tallgrass"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Vivianna"), Team = "Alliance" },
          },
       },
       {
-         ID = 16072, Type = RRS("Cooking"), Skill = 125, Cost = 10000,
+         ID = 16072, Type = RRF_S("Cooking"), Skill = 125, Cost = 10000,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Shandrina"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Wulan"), Team = "Horde" },
+            { Region = "Ashenvale", Vendor = RRF_S("Shandrina"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Wulan"), Team = "Horde" },
          },
       },
       {
-         ID = 16110, Type = RRS("Cooking"), Skill = 225, Cost = 12000,
+         ID = 16110, Type = RRF_S("Cooking"), Skill = 225, Cost = 12000,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Bale"), Team = "Horde" },
-            { Region = "Felwood", Vendor = RRS("Malygen"), Team = "Alliance" },
-            { Region = "Winterspring", Vendor = RRS("Himmik"), Team = "Neutral" },
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Bale"), Team = "Horde" },
+            { Region = "Felwood", Vendor = RRF_S("Malygen"), Team = "Alliance" },
+            { Region = "Winterspring", Vendor = RRF_S("Himmik"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 16111, Type = RRS("Cooking"), Skill = 225, Cost = 12000,
+         ID = 16111, Type = RRF_S("Cooking"), Skill = 225, Cost = 12000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Uthok"), Team = "Horde" },
-            { Region = "Swamp of Sorrows", Vendor = RRS("Banalash"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Kriggon Talsone"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Uthok"), Team = "Horde" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Banalash"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Kriggon Talsone"), Team = "Alliance" },
          },
       },
       {
-         ID = 16767, Type = RRS("Cooking"), Skill = 225, Cost = 3000,
+         ID = 16767, Type = RRF_S("Cooking"), Skill = 225, Cost = 3000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Grizzek"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Jabbey"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Grizzek"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Jabbey"), Team = "Neutral" },
          },
       },
       {
-         ID = 17062, Type = RRS("Cooking"), Skill = 175, Cost = 2200,
+         ID = 17062, Type = RRF_S("Cooking"), Skill = 175, Cost = 2200,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Wik'Tar"), Team = "Horde" },
-            { Region = "Darkshore", Vendor = RRS("Heldan Galesong"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Wulan"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Lindea Rabonne"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tansy Puddlefizz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Shankys"), Team = "Horde" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Lizbeth Cromwell"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Stuart Fleming"), Team = "Alliance" },
+            { Region = "Ashenvale", Vendor = RRF_S("Wik'Tar"), Team = "Horde" },
+            { Region = "Darkshore", Vendor = RRF_S("Heldan Galesong"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Wulan"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Lindea Rabonne"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tansy Puddlefizz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Shankys"), Team = "Horde" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Lizbeth Cromwell"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Stuart Fleming"), Team = "Alliance" },
          },
       },
       {
-         ID = 17200, Type = RRS("Cooking"), Skill = 1, Cost = 25,
+         ID = 17200, Type = RRF_S("Cooking"), Skill = 1, Cost = 25,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Wulmort Jinglepocket"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Penney Copperpinch"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Khole Jinglepocket"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Seersa Copperpinch"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Nardstrum Copperpinch"), Team = "Neutral" },
+            { Region = "Ironforge", Vendor = RRF_S("Wulmort Jinglepocket"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Penney Copperpinch"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Khole Jinglepocket"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Seersa Copperpinch"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Nardstrum Copperpinch"), Team = "Neutral" },
          },
       },
       {
-         ID = 17201, Type = RRS("Cooking"), Skill = 35, Cost = 240,
+         ID = 17201, Type = RRF_S("Cooking"), Skill = 35, Cost = 240,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Wulmort Jinglepocket"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Penney Copperpinch"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Khole Jinglepocket"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Seersa Copperpinch"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Nardstrum Copperpinch"), Team = "Neutral" },
+            { Region = "Ironforge", Vendor = RRF_S("Wulmort Jinglepocket"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Penney Copperpinch"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Khole Jinglepocket"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Seersa Copperpinch"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Nardstrum Copperpinch"), Team = "Neutral" },
          },
       },
       {
-         ID = 18046, Type = RRS("Cooking"), Skill = 225, Cost = 12000,
+         ID = 18046, Type = RRF_S("Cooking"), Skill = 225, Cost = 12000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Innkeeper Zizplink"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Dirge Quikcleave"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Innkeeper Fizzgrimble"), Team = "Neutral" },
-            { Region = "The Hinterlands", Vendor = RRS("Truk Wildbeard"), Team = "Alliance" },
+            { Region = "Riverglades", Vendor = RRF_S("Innkeeper Zizplink"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Dirge Quikcleave"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Innkeeper Fizzgrimble"), Team = "Neutral" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Truk Wildbeard"), Team = "Alliance" },
          },
       },
       {
-         ID = 18160, Type = RRS("Cooking"), Skill = 60, Cost = 200, Notes = RRS("Rogue Only"),
+         ID = 18160, Type = RRF_S("Cooking"), Skill = 60, Cost = 200, Notes = RRF_S("Rogue Only"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Smudge Thunderwood"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Smudge Thunderwood"), Team = "Neutral" },
          },
       },
       {
-         ID = 20075, Type = RRS("Cooking"), Skill = 150, Cost = 2000,
+         ID = 20075, Type = RRF_S("Cooking"), Skill = 150, Cost = 2000,
          Locations = {
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ogg'marr"), Team = "Horde" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ogg'marr"), Team = "Horde" },
          },
       },
       {
-         ID = 21099, Type = RRS("Cooking"), Skill = 80, Cost = 500,
+         ID = 21099, Type = RRF_S("Cooking"), Skill = 80, Cost = 500,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Derek Odds"), Team = "Alliance" },
-            { Region = "Alterac Mountains", Vendor = RRS("Paige"), Team = "Neutral" },
-            { Region = "Darkshore", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Darnassus", Vendor = RRS("Fyldan"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Wulan"), Team = "Horde" },
-            { Region = "Dun Morogh", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Durotar", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Elwynn Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Derak Nightfall"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Micha Yance"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Emrul Riknussun"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Xen'to"), Team = "Horde" },
-            { Region = "Redridge Mountains", Vendor = RRS("Gloria Femmel"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Fimbo Greasemitz"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Miranda Turner"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Erika Tate"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Teldrassil", Vendor = RRS("Nyoma"), Team = "Alliance" },
-            { Region = "Teldrassil", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Tarban Hearthgrain"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Otho Moji'ko"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Qujo"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Naal Mistrunner"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Ronald Burch"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Westfall", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Zerril Softbreeze"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Derek Odds"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Paige"), Team = "Neutral" },
+            { Region = "Darkshore", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Fyldan"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Wulan"), Team = "Horde" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Derak Nightfall"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Micha Yance"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Emrul Riknussun"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Xen'to"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Gloria Femmel"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Fimbo Greasemitz"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Miranda Turner"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Erika Tate"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nyoma"), Team = "Alliance" },
+            { Region = "Teldrassil", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Tarban Hearthgrain"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Otho Moji'ko"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Qujo"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Naal Mistrunner"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Ronald Burch"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Westfall", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Zerril Softbreeze"), Team = "Neutral" },
          },
       },
       {
-         ID = 21219, Type = RRS("Cooking"), Skill = 175, Cost = 5000,
+         ID = 21219, Type = RRF_S("Cooking"), Skill = 175, Cost = 5000,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Derek Odds"), Team = "Alliance" },
-            { Region = "Alterac Mountains", Vendor = RRS("Paige"), Team = "Neutral" },
-            { Region = "Darkshore", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Darnassus", Vendor = RRS("Fyldan"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Wulan"), Team = "Horde" },
-            { Region = "Dun Morogh", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Durotar", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Elwynn Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Derak Nightfall"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Micha Yance"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Emrul Riknussun"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Xen'to"), Team = "Horde" },
-            { Region = "Redridge Mountains", Vendor = RRS("Gloria Femmel"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Fimbo Greasemitz"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Miranda Turner"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Erika Tate"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Kelsey Yance"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Teldrassil", Vendor = RRS("Nyoma"), Team = "Alliance" },
-            { Region = "Teldrassil", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Tarban Hearthgrain"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Otho Moji'ko"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Qujo"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Naal Mistrunner"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Ronald Burch"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Westfall", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Zerril Softbreeze"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Derek Odds"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Paige"), Team = "Neutral" },
+            { Region = "Darkshore", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Fyldan"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Wulan"), Team = "Horde" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Derak Nightfall"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Micha Yance"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Emrul Riknussun"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Xen'to"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Gloria Femmel"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Fimbo Greasemitz"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Miranda Turner"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Erika Tate"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Kelsey Yance"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Teldrassil", Vendor = RRF_S("Nyoma"), Team = "Alliance" },
+            { Region = "Teldrassil", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Tarban Hearthgrain"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Otho Moji'ko"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Qujo"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Naal Mistrunner"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Ronald Burch"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Westfall", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Zerril Softbreeze"), Team = "Neutral" },
          },
       },
       {
-         ID = 249885, Type = RRS("Cooking"), Skill = 25, Currency = 3402, Amount = 30,
+         ID = 249885, Type = RRF_S("Cooking"), Skill = 25, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 249886, Type = RRS("Cooking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 249886, Type = RRF_S("Cooking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 249887, Type = RRS("Cooking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 249887, Type = RRF_S("Cooking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 249888, Type = RRS("Cooking"), Skill = 180, Currency = 3402, Amount = 60, FactionID = 2586, Level = 5,
+         ID = 249888, Type = RRF_S("Cooking"), Skill = 180, Currency = 3402, Amount = 60, FactionID = 2586, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 249889, Type = RRS("Cooking"), Skill = 200, Currency = 3402, Amount = 60, FactionID = 2586, Level = 5,
+         ID = 249889, Type = RRF_S("Cooking"), Skill = 200, Currency = 3402, Amount = 60, FactionID = 2586, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 249890, Type = RRS("Cooking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2586, Level = 6,
+         ID = 249890, Type = RRF_S("Cooking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2586, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Kalsey Sanden"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Aza'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Kalsey Sanden"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Aza'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 274415, Type = RRS("Cooking"), Skill = 275, Token = 263439, Amount = 5, FactionID = 2747, Level = 5,
+         ID = 274415, Type = RRF_S("Cooking"), Skill = 275, Token = 263439, Amount = 5, FactionID = 2747, Level = 5,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Dala Fairmaw"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Dala Fairmaw"), Team = "Neutral" },
          },
       },
       {
-         ID = 274977, Type = RRS("Cooking"),
+         ID = 274977, Type = RRF_S("Cooking"),
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Martha Wellsworth"), Team = "Alliance" },
+            { Region = "Riverglades", Vendor = RRF_S("Martha Wellsworth"), Team = "Alliance" },
          },
       },
    },
 },
 
-[RRS("Enchanting")] = {
+[RRF_S("Enchanting")] = {
    Recipes = {
       {
-         ID = 6342, Type = RRS("Enchanting"), Skill = 20, Cost = 300,
+         ID = 6342, Type = RRF_S("Enchanting"), Skill = 20, Cost = 300,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Vaean"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jessara Cordell"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Thaddeus Webb"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Eaysaa Brightgust"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Nasalanna Windsinger"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Vaean"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jessara Cordell"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Thaddeus Webb"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Eaysaa Brightgust"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nasalanna Windsinger"), Team = "Neutral" },
          },
       },
       {
-         ID = 6346, Type = RRS("Enchanting"), Skill = 80, Cost = 400,
+         ID = 6346, Type = RRF_S("Enchanting"), Skill = 80, Cost = 400,
          Locations = {
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
          },
       },
       {
-         ID = 6349, Type = RRS("Enchanting"), Skill = 100, Cost = 500,
+         ID = 6349, Type = RRF_S("Enchanting"), Skill = 100, Cost = 500,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
          },
       },
       {
-         ID = 6377, Type = RRS("Enchanting"), Skill = 125, Cost = 1000,
+         ID = 6377, Type = RRF_S("Enchanting"), Skill = 125, Cost = 1000,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Zixil"), Team = "Neutral" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Zixil"), Team = "Neutral" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
          },
       },
       {
-         ID = 11039, Type = RRS("Enchanting"), Skill = 110, Cost = 800,
+         ID = 11039, Type = RRF_S("Enchanting"), Skill = 110, Cost = 800,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Dalria"), Team = "Alliance" },
-            { Region = "Stonetalon Mountains", Vendor = RRS("Kulwia"), Team = "Horde" },
+            { Region = "Ashenvale", Vendor = RRF_S("Dalria"), Team = "Alliance" },
+            { Region = "Stonetalon Mountains", Vendor = RRF_S("Kulwia"), Team = "Horde" },
          },
       },
       {
-         ID = 11101, Type = RRS("Enchanting"), Skill = 140, Cost = 2500,
+         ID = 11101, Type = RRF_S("Enchanting"), Skill = 140, Cost = 2500,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Dalria"), Team = "Alliance" },
-            { Region = "Stonetalon Mountains", Vendor = RRS("Kulwia"), Team = "Horde" },
+            { Region = "Ashenvale", Vendor = RRF_S("Dalria"), Team = "Alliance" },
+            { Region = "Stonetalon Mountains", Vendor = RRF_S("Kulwia"), Team = "Horde" },
          },
       },
       {
-         ID = 11163, Type = RRS("Enchanting"), Skill = 170, Cost = 3000,
+         ID = 11163, Type = RRF_S("Enchanting"), Skill = 170, Cost = 3000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Keena"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Micha Yance"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Keena"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Micha Yance"), Team = "Alliance" },
          },
       },
       {
-         ID = 11223, Type = RRS("Enchanting"), Skill = 235, Cost = 5800,
+         ID = 11223, Type = RRF_S("Enchanting"), Skill = 235, Cost = 5800,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Mythrin'dir"), Team = "Alliance" },
-            { Region = "Swamp of Sorrows", Vendor = RRS("Banalash"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Mythrin'dir"), Team = "Alliance" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Banalash"), Team = "Horde" },
          },
       },
       {
-         ID = 16217, Type = RRS("Enchanting"), Skill = 265, Cost = 12000,
+         ID = 16217, Type = RRF_S("Enchanting"), Skill = 265, Cost = 12000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Mythrin'dir"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Daniel Bartlett"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Mythrin'dir"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Daniel Bartlett"), Team = "Horde" },
          },
       },
       {
-         ID = 16221, Type = RRS("Enchanting"), Skill = 275, Cost = 16000,
+         ID = 16221, Type = RRF_S("Enchanting"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 16224, Type = RRS("Enchanting"), Skill = 285, Cost = 20000,
+         ID = 16224, Type = RRF_S("Enchanting"), Skill = 285, Cost = 20000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Lorelae Wintersong"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Lorelae Wintersong"), Team = "Neutral" },
          },
       },
       {
-         ID = 16243, Type = RRS("Enchanting"), Skill = 290, Cost = 22000,
+         ID = 16243, Type = RRF_S("Enchanting"), Skill = 290, Cost = 22000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Lorelae Wintersong"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Lorelae Wintersong"), Team = "Neutral" },
          },
       },
       {
-         ID = 19444, Type = RRS("Enchanting"), Skill = 290, Cost = 30000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5,
+         ID = 19444, Type = RRF_S("Enchanting"), Skill = 290, Cost = 30000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19445, Type = RRS("Enchanting"), Skill = 290, Cost = 30000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 6,
+         ID = 19445, Type = RRF_S("Enchanting"), Skill = 290, Cost = 30000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 6,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19446, Type = RRS("Enchanting"), Skill = 290, Cost = 30000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 19446, Type = RRF_S("Enchanting"), Skill = 290, Cost = 30000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19447, Type = RRS("Enchanting"), Skill = 300, Cost = 60000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 7,
+         ID = 19447, Type = RRF_S("Enchanting"), Skill = 300, Cost = 60000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 7,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19448, Type = RRS("Enchanting"), Skill = 300, Cost = 80000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6,
+         ID = 19448, Type = RRF_S("Enchanting"), Skill = 300, Cost = 80000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19449, Type = RRS("Enchanting"), Skill = 300, Cost = 100000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7,
+         ID = 19449, Type = RRF_S("Enchanting"), Skill = 300, Cost = 100000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 20732, Type = RRS("Enchanting"), Skill = 300, Cost = 100000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 20732, Type = RRF_S("Enchanting"), Skill = 300, Cost = 100000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
          },
       },
       {
-         ID = 20733, Type = RRS("Enchanting"), Skill = 300, Cost = 100000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 20733, Type = RRF_S("Enchanting"), Skill = 300, Cost = 100000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
          },
       },
       {
-         ID = 20752, Type = RRS("Enchanting"), Skill = 150, Cost = 750,
+         ID = 20752, Type = RRF_S("Enchanting"), Skill = 150, Cost = 750,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Vaean"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jessara Cordell"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Thaddeus Webb"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nasalanna Windsinger"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Vaean"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jessara Cordell"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Thaddeus Webb"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nasalanna Windsinger"), Team = "Neutral" },
          },
       },
       {
-         ID = 20753, Type = RRS("Enchanting"), Skill = 200, Cost = 1000,
+         ID = 20753, Type = RRF_S("Enchanting"), Skill = 200, Cost = 1000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Vaean"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jessara Cordell"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Thaddeus Webb"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nasalanna Windsinger"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Vaean"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jessara Cordell"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Thaddeus Webb"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nasalanna Windsinger"), Team = "Neutral" },
          },
       },
       {
-         ID = 20754, Type = RRS("Enchanting"), Skill = 250, Cost = 2500,
+         ID = 20754, Type = RRF_S("Enchanting"), Skill = 250, Cost = 2500,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
          },
       },
       {
-         ID = 20755, Type = RRS("Enchanting"), Skill = 275, Cost = 5000,
+         ID = 20755, Type = RRF_S("Enchanting"), Skill = 275, Cost = 5000,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
          },
       },
       {
-         ID = 20756, Type = RRS("Enchanting"), Skill = 300, Cost = 40000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 20756, Type = RRF_S("Enchanting"), Skill = 300, Cost = 40000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20757, Type = RRS("Enchanting"), Skill = 300, Cost = 40000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 20757, Type = RRF_S("Enchanting"), Skill = 300, Cost = 40000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20758, Type = RRS("Enchanting"), Skill = 45, Cost = 125,
+         ID = 20758, Type = RRF_S("Enchanting"), Skill = 45, Cost = 125,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Vaean"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jessara Cordell"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Thaddeus Webb"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nasalanna Windsinger"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Vaean"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jessara Cordell"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Thaddeus Webb"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nasalanna Windsinger"), Team = "Neutral" },
          },
       },
       {
-         ID = 22392, Type = RRS("Enchanting"), Skill = 290, Cost = 25000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 5,
+         ID = 22392, Type = RRF_S("Enchanting"), Skill = 290, Cost = 25000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 5,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 249476, Type = RRS("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
+         ID = 249476, Type = RRF_S("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249477, Type = RRS("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
+         ID = 249477, Type = RRF_S("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249478, Type = RRS("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
+         ID = 249478, Type = RRF_S("Enchanting"), Skill = 130, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249479, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249479, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249480, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249480, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249481, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249481, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249482, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249482, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249483, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249483, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249484, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249484, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249485, Type = RRS("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
+         ID = 249485, Type = RRF_S("Enchanting"), Skill = 140, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249486, Type = RRS("Enchanting"), Skill = 140, Token = 254432, Amount = 60,
+         ID = 249486, Type = RRF_S("Enchanting"), Skill = 140, Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 249489, Type = RRS("Enchanting"), Skill = 205, Token = 254432, Amount = 60,
+         ID = 249489, Type = RRF_S("Enchanting"), Skill = 205, Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 249493, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249493, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249494, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249494, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249495, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249495, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249496, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249496, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249502, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249502, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249503, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249503, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249504, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249504, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249505, Type = RRS("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249505, Type = RRF_S("Enchanting"), Skill = 210, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249506, Type = RRS("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249506, Type = RRF_S("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249507, Type = RRS("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249507, Type = RRF_S("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249508, Type = RRS("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249508, Type = RRF_S("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249509, Type = RRS("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249509, Type = RRF_S("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249510, Type = RRS("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 249510, Type = RRF_S("Enchanting"), Skill = 220, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249525, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249525, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249526, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249526, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249529, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249529, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249530, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249530, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249532, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249532, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249534, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249534, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249535, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249535, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249536, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249536, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249537, Type = RRS("Enchanting"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
+         ID = 249537, Type = RRF_S("Enchanting"), Skill = 275, Currency = 3402, Amount = 180, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249538, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249538, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 249539, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 249539, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 271624, Type = RRS("Enchanting"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271624, Type = RRF_S("Enchanting"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274393, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 274393, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274394, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 274394, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274398, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 274398, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274399, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 274399, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274401, Type = RRS("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
+         ID = 274401, Type = RRF_S("Enchanting"), Skill = 300, Currency = 3402, Amount = 240, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Alynsia"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Beneris"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Alynsia"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Beneris"), Team = "Horde" },
          },
       },
       {
-         ID = 274424, Type = RRS("Enchanting"), Skill = 295, Token = 263439, Amount = 10, FactionID = 2747, Level = 6,
+         ID = 274424, Type = RRF_S("Enchanting"), Skill = 295, Token = 263439, Amount = 10, FactionID = 2747, Level = 6,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Dala Fairmaw"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Dala Fairmaw"), Team = "Neutral" },
          },
       },
    },
 },
 
-[RRS("Engineering")] = {
+[RRF_S("Engineering")] = {
    Recipes = {
       {
-         ID = 7560, Type = RRS("Engineering"), Skill = 125, Cost = 1200,
+         ID = 7560, Type = RRF_S("Engineering"), Skill = 125, Cost = 1200,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Gearcutter Cogspinner"), Team = "Alliance" },
-            { Region = "Thousand Needles", Vendor = RRS("Jinky Twizzlefixxit"), Team = "Neutral" },
+            { Region = "Ironforge", Vendor = RRF_S("Gearcutter Cogspinner"), Team = "Alliance" },
+            { Region = "Thousand Needles", Vendor = RRF_S("Jinky Twizzlefixxit"), Team = "Neutral" },
          },
       },
       {
-         ID = 7561, Type = RRS("Engineering"), Skill = 165, Cost = 2000,
+         ID = 7561, Type = RRF_S("Engineering"), Skill = 165, Cost = 2000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Kzixx"), Team = "Neutral" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Zixil"), Team = "Neutral" },
-            { Region = "Stonetalon Mountains", Vendor = RRS("Veenix"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Kzixx"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Zixil"), Team = "Neutral" },
+            { Region = "Stonetalon Mountains", Vendor = RRF_S("Veenix"), Team = "Neutral" },
          },
       },
       {
-         ID = 7742, Type = RRS("Engineering"), Skill = 200, Cost = 2400,
+         ID = 7742, Type = RRF_S("Engineering"), Skill = 200, Cost = 2400,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Zan Shivsproket"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Zan Shivsproket"), Team = "Neutral" },
          },
       },
       {
-         ID = 10602, Type = RRS("Engineering"), Skill = 210, Cost = 3000,
+         ID = 10602, Type = RRF_S("Engineering"), Skill = 210, Cost = 3000,
          Locations = {
-            { Region = "Burning Steppes", Vendor = RRS("Yuka Screwspigot"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Knaz Blunderflame"), Team = "Neutral" },
+            { Region = "Burning Steppes", Vendor = RRF_S("Yuka Screwspigot"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Knaz Blunderflame"), Team = "Neutral" },
          },
       },
       {
-         ID = 10607, Type = RRS("Engineering"), Skill = 230, Cost = 3600,
+         ID = 10607, Type = RRF_S("Engineering"), Skill = 230, Cost = 3600,
          Locations = {
-            { Region = "Azshara", Vendor = RRS("Jubie Gadgetspring"), Team = "Neutral" },
+            { Region = "Azshara", Vendor = RRF_S("Jubie Gadgetspring"), Team = "Neutral" },
          },
       },
       {
-         ID = 10609, Type = RRS("Engineering"), Skill = 250, Cost = 4000,
+         ID = 10609, Type = RRF_S("Engineering"), Skill = 250, Cost = 4000,
          Locations = {
-            { Region = "The Hinterlands", Vendor = RRS("Ruppo Zipcoil"), Team = "Neutral" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Ruppo Zipcoil"), Team = "Neutral" },
          },
       },
       {
-         ID = 13308, Type = RRS("Engineering"), Skill = 155, Cost = 1800,
+         ID = 13308, Type = RRF_S("Engineering"), Skill = 155, Cost = 1800,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Rizz Loosebolt"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Rizz Loosebolt"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
          },
       },
       {
-         ID = 13309, Type = RRS("Engineering"), Skill = 120, Cost = 1000,
+         ID = 13309, Type = RRF_S("Engineering"), Skill = 120, Cost = 1000,
          Locations = {
-            { Region = "Thousand Needles", Vendor = RRS("Jinky Twizzlefixxit"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Fradd Swiftgear"), Team = "Alliance" },
+            { Region = "Thousand Needles", Vendor = RRF_S("Jinky Twizzlefixxit"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Fradd Swiftgear"), Team = "Alliance" },
          },
       },
       {
-         ID = 13310, Type = RRS("Engineering"), Skill = 180, Cost = 2000,
+         ID = 13310, Type = RRF_S("Engineering"), Skill = 180, Cost = 2000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Mazk Snipeshot"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Mazk Snipeshot"), Team = "Neutral" },
          },
       },
       {
-         ID = 13311, Type = RRS("Engineering"), Skill = 200, Cost = 10000,
+         ID = 13311, Type = RRF_S("Engineering"), Skill = 200, Cost = 10000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Gnaz Blunderflame"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Gnaz Blunderflame"), Team = "Neutral" },
          },
       },
       {
-         ID = 14639, Type = RRS("Engineering"), Skill = 140, Cost = 1500,
+         ID = 14639, Type = RRF_S("Engineering"), Skill = 140, Cost = 1500,
          Locations = {
-            { Region = "Dun Morogh", Vendor = RRS("Namdo Bizzfizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Gagsprocket"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Fradd Swiftgear"), Team = "Alliance" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Namdo Bizzfizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Gagsprocket"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Fradd Swiftgear"), Team = "Alliance" },
          },
       },
       {
-         ID = 16041, Type = RRS("Engineering"), Skill = 260, Cost = 12000,
+         ID = 16041, Type = RRF_S("Engineering"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Gearcutter Cogspinner"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Sovik"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Gearcutter Cogspinner"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Sovik"), Team = "Horde" },
          },
       },
       {
-         ID = 16042, Type = RRS("Engineering"), Skill = 260, Cost = 12000,
+         ID = 16042, Type = RRF_S("Engineering"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Gearcutter Cogspinner"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Sovik"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Gearcutter Cogspinner"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Sovik"), Team = "Horde" },
          },
       },
       {
-         ID = 16046, Type = RRS("Engineering"), Skill = 275, Cost = 16000,
+         ID = 16046, Type = RRF_S("Engineering"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Kor'gar"), Team = "Neutral" },
-            { Region = "Winterspring", Vendor = RRS("Xizzer Fizzbolt"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Kor'gar"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Xizzer Fizzbolt"), Team = "Neutral" },
          },
       },
       {
-         ID = 16047, Type = RRS("Engineering"), Skill = 275, Cost = 16000,
+         ID = 16047, Type = RRF_S("Engineering"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Kor'gar"), Team = "Neutral" },
-            { Region = "Winterspring", Vendor = RRS("Xizzer Fizzbolt"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Kor'gar"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Xizzer Fizzbolt"), Team = "Neutral" },
          },
       },
       {
-         ID = 16050, Type = RRS("Engineering"), Skill = 285, Cost = 20000,
+         ID = 16050, Type = RRF_S("Engineering"), Skill = 285, Cost = 20000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Xizzer Fizzbolt"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Xizzer Fizzbolt"), Team = "Neutral" },
          },
       },
       {
-         ID = 18647, Type = RRS("Engineering"), Skill = 150, Cost = 1800,
+         ID = 18647, Type = RRF_S("Engineering"), Skill = 150, Cost = 1800,
          Locations = {
-            { Region = "Orgrimmar", Vendor = RRS("Sovik"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Sovik"), Team = "Horde" },
          },
       },
       {
-         ID = 18648, Type = RRS("Engineering"), Skill = 150, Cost = 1800,
+         ID = 18648, Type = RRF_S("Engineering"), Skill = 150, Cost = 1800,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Crazk Sparks"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Gagsprocket"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Crazk Sparks"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Gagsprocket"), Team = "Neutral" },
          },
       },
       {
-         ID = 18649, Type = RRS("Engineering"), Skill = 150, Cost = 1800,
+         ID = 18649, Type = RRF_S("Engineering"), Skill = 150, Cost = 1800,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Gearcutter Cogspinner"), Team = "Alliance" },
-            { Region = "Stormwind City", Vendor = RRS("Darian Singh"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Gearcutter Cogspinner"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Darian Singh"), Team = "Alliance" },
          },
       },
       {
-         ID = 18650, Type = RRS("Engineering"), Skill = 200, Cost = 5000,
+         ID = 18650, Type = RRF_S("Engineering"), Skill = 200, Cost = 5000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Fizzix Boomshot"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Blizrik Buckshot"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Fizzix Boomshot"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Blizrik Buckshot"), Team = "Neutral" },
          },
       },
       {
-         ID = 18651, Type = RRS("Engineering"), Skill = 260, Cost = 12000,
+         ID = 18651, Type = RRF_S("Engineering"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Mazk Snipeshot"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Mazk Snipeshot"), Team = "Neutral" },
          },
       },
       {
-         ID = 18652, Type = RRS("Engineering"), Skill = 260, Cost = 12000,
+         ID = 18652, Type = RRF_S("Engineering"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Xizzer Fizzbolt"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Xizzer Fizzbolt"), Team = "Neutral" },
          },
       },
       {
-         ID = 18656, Type = RRS("Engineering"), Skill = 275, Cost = 16000,
+         ID = 18656, Type = RRF_S("Engineering"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Xizzer Fizzbolt"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Xizzer Fizzbolt"), Team = "Neutral" },
          },
       },
       {
-         ID = 19027, Type = RRS("Engineering"), Skill = 250, Cost = 5000,
+         ID = 19027, Type = RRF_S("Engineering"), Skill = 250, Cost = 5000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Zorbin Fandazzle"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Zorbin Fandazzle"), Team = "Neutral" },
          },
       },
       {
-         ID = 20000, Type = RRS("Engineering"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 20000, Type = RRF_S("Engineering"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20001, Type = RRS("Engineering"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 20001, Type = RRF_S("Engineering"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 22729, Type = RRS("Engineering"), Skill = 275, Currency = 515, Amount = 40,
+         ID = 22729, Type = RRF_S("Engineering"), Skill = 275, Currency = 515, Amount = 40,
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Gelvas Grimegate"), Team = "Neutral" },
+            { Region = "Mulgore", Vendor = RRF_S("Gelvas Grimegate"), Team = "Neutral" },
          },
       },
       {
-         ID = 264201, Type = RRS("Engineering"), Skill = 25, Currency = 3402, Amount = 45,
+         ID = 264201, Type = RRF_S("Engineering"), Skill = 25, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264202, Type = RRS("Engineering"), Skill = 25, Currency = 3402, Amount = 45,
+         ID = 264202, Type = RRF_S("Engineering"), Skill = 25, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264203, Type = RRS("Engineering"), Skill = 55, Currency = 3402, Amount = 45,
+         ID = 264203, Type = RRF_S("Engineering"), Skill = 55, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264204, Type = RRS("Engineering"), Skill = 100, Currency = 3402, Amount = 45,
+         ID = 264204, Type = RRF_S("Engineering"), Skill = 100, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264205, Type = RRS("Engineering"), Skill = 130, Currency = 3402, Amount = 45,
+         ID = 264205, Type = RRF_S("Engineering"), Skill = 130, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264206, Type = RRS("Engineering"), Skill = 145, Currency = 3402, Amount = 45,
+         ID = 264206, Type = RRF_S("Engineering"), Skill = 145, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264209, Type = RRS("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 264209, Type = RRF_S("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264211, Type = RRS("Engineering"), Skill = 190, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 264211, Type = RRF_S("Engineering"), Skill = 190, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264216, Type = RRS("Engineering"), Skill = 225, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 264216, Type = RRF_S("Engineering"), Skill = 225, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264217, Type = RRS("Engineering"), Skill = 225, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 264217, Type = RRF_S("Engineering"), Skill = 225, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264220, Type = RRS("Engineering"), Skill = 250, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 264220, Type = RRF_S("Engineering"), Skill = 250, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264221, Type = RRS("Engineering"), Skill = 250, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 264221, Type = RRF_S("Engineering"), Skill = 250, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264222, Type = RRS("Engineering"), Skill = 275, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 264222, Type = RRF_S("Engineering"), Skill = 275, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264232, Type = RRS("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
+         ID = 264232, Type = RRF_S("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264233, Type = RRS("Engineering"),
+         ID = 264233, Type = RRF_S("Engineering"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
       {
-         ID = 264234, Type = RRS("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
+         ID = 264234, Type = RRF_S("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264235, Type = RRS("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
+         ID = 264235, Type = RRF_S("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 264237, Type = RRS("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
+         ID = 264237, Type = RRF_S("Engineering"), Skill = 300, Currency = 3402, Amount = 360, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 269901, Type = RRS("Engineering"), Skill = 190, Token = 254432, Amount = 15,
+         ID = 269901, Type = RRF_S("Engineering"), Skill = 190, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 269903, Type = RRS("Engineering"), Skill = 140, Token = 254432, Amount = 15,
+         ID = 269903, Type = RRF_S("Engineering"), Skill = 140, Token = 254432, Amount = 15,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 271625, Type = RRS("Engineering"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271625, Type = RRF_S("Engineering"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280321, Type = RRS("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280321, Type = RRF_S("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280322, Type = RRS("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280322, Type = RRF_S("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280323, Type = RRS("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280323, Type = RRF_S("Engineering"), Skill = 175, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280325, Type = RRS("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280325, Type = RRF_S("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280326, Type = RRS("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280326, Type = RRF_S("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280327, Type = RRS("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280327, Type = RRF_S("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 280328, Type = RRS("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 280328, Type = RRF_S("Engineering"), Skill = 200, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 285285, Type = RRS("Engineering"), Skill = 85, Currency = 3402, Amount = 45,
+         ID = 285285, Type = RRF_S("Engineering"), Skill = 85, Currency = 3402, Amount = 45,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 285286, Type = RRS("Engineering"), Skill = 165, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
+         ID = 285286, Type = RRF_S("Engineering"), Skill = 165, Currency = 3402, Amount = 180, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 285287, Type = RRS("Engineering"), Skill = 230, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 285287, Type = RRF_S("Engineering"), Skill = 230, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
       {
-         ID = 285288, Type = RRS("Engineering"), Skill = 285, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
+         ID = 285288, Type = RRF_S("Engineering"), Skill = 285, Currency = 3402, Amount = 270, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Fritz Fizzle"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Fizzlefuse"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Fritz Fizzle"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Fizzlefuse"), Team = "Horde" },
          },
       },
    },
 },
 
-[RRS("First Aid")] = {
+[RRF_S("First Aid")] = {
    Recipes = {
       {
-         ID = 16084, Type = RRS("First Aid"), Skill = 125, Cost = 10000,
+         ID = 16084, Type = RRF_S("First Aid"), Skill = 125, Cost = 10000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Deneb Walker"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Balai Lok'Wein"), Team = "Horde" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Deneb Walker"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Balai Lok'Wein"), Team = "Horde" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
          },
       },
       {
-         ID = 16112, Type = RRS("First Aid"), Skill = 180, Cost = 2200,
+         ID = 16112, Type = RRF_S("First Aid"), Skill = 180, Cost = 2200,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Deneb Walker"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Balai Lok'Wein"), Team = "Horde" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Deneb Walker"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Balai Lok'Wein"), Team = "Horde" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
          },
       },
       {
-         ID = 16113, Type = RRS("First Aid"), Skill = 210, Cost = 5000,
+         ID = 16113, Type = RRF_S("First Aid"), Skill = 210, Cost = 5000,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Deneb Walker"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Balai Lok'Wein"), Team = "Horde" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Deneb Walker"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Balai Lok'Wein"), Team = "Horde" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
          },
       },
       {
-         ID = 19442, Type = RRS("First Aid"), Skill = 300, Cost = 100000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 19442, Type = RRF_S("First Aid"), Skill = 300, Cost = 100000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 255729, Type = RRS("First Aid"),
+         ID = 255729, Type = RRF_S("First Aid"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
    },
 },
 
-[RRS("Fishing")] = {
+[RRF_S("Fishing")] = {
    Recipes = {
       {
-         ID = 16083, Type = RRS("Fishing"), Skill = 125, Cost = 10000,
+         ID = 16083, Type = RRF_S("Fishing"), Skill = 125, Cost = 10000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Old Man Heming"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Old Man Heming"), Team = "Neutral" },
          },
       },
    },
 },
 
-[RRS("Leatherworking")] = {
+[RRF_S("Leatherworking")] = {
    Recipes = {
       {
-         ID = 5786, Type = RRS("Leatherworking"), Skill = 90, Cost = 550,
+         ID = 5786, Type = RRF_S("Leatherworking"), Skill = 90, Cost = 550,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Mavralyn"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Andrew Hilbert"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Gina MacGregor"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Mavralyn"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Andrew Hilbert"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Gina MacGregor"), Team = "Alliance" },
          },
       },
       {
-         ID = 5787, Type = RRS("Leatherworking"), Skill = 95, Cost = 600,
+         ID = 5787, Type = RRF_S("Leatherworking"), Skill = 95, Cost = 600,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Mavralyn"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Andrew Hilbert"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Gina MacGregor"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Mavralyn"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Andrew Hilbert"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Gina MacGregor"), Team = "Alliance" },
          },
       },
       {
-         ID = 5788, Type = RRS("Leatherworking"), Skill = 170, Cost = 650,
+         ID = 5788, Type = RRF_S("Leatherworking"), Skill = 170, Cost = 650,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Christoph Jeffcoat"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Micha Yance"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Blixrez Goodstitch"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Christoph Jeffcoat"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Micha Yance"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Blixrez Goodstitch"), Team = "Neutral" },
          },
       },
       {
-         ID = 5789, Type = RRS("Leatherworking"), Skill = 190, Cost = 2800,
+         ID = 5789, Type = RRF_S("Leatherworking"), Skill = 190, Cost = 2800,
          Locations = {
-            { Region = "Dustwallow Marsh", Vendor = RRS("Helenia Olden"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Blixrez Goodstitch"), Team = "Neutral" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Helenia Olden"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Blixrez Goodstitch"), Team = "Neutral" },
          },
       },
       {
-         ID = 5973, Type = RRS("Leatherworking"), Skill = 170, Cost = 650,
+         ID = 5973, Type = RRF_S("Leatherworking"), Skill = 170, Cost = 650,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Hammon Karwn"), Team = "Alliance" },
-            { Region = "Arathi Highlands", Vendor = RRS("Keena"), Team = "Horde" },
-            { Region = "Ashenvale", Vendor = RRS("Lardan"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Thousand Needles", Vendor = RRS("Jandia"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Hammon Karwn"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Keena"), Team = "Horde" },
+            { Region = "Ashenvale", Vendor = RRF_S("Lardan"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Thousand Needles", Vendor = RRF_S("Jandia"), Team = "Horde" },
          },
       },
       {
-         ID = 6474, Type = RRS("Leatherworking"), Skill = 90, Cost = 550,
+         ID = 6474, Type = RRF_S("Leatherworking"), Skill = 90, Cost = 550,
          Locations = {
-            { Region = "The Barrens", Vendor = RRS("Kalldan Felmoon"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Kalldan Felmoon"), Team = "Neutral" },
          },
       },
       {
-         ID = 6475, Type = RRS("Leatherworking"), Skill = 105, Cost = 1500,
+         ID = 6475, Type = RRF_S("Leatherworking"), Skill = 105, Cost = 1500,
          Locations = {
-            { Region = "The Barrens", Vendor = RRS("Kalldan Felmoon"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Kalldan Felmoon"), Team = "Neutral" },
          },
       },
       {
-         ID = 7289, Type = RRS("Leatherworking"), Skill = 100, Cost = 650,
+         ID = 7289, Type = RRF_S("Leatherworking"), Skill = 100, Cost = 650,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Clyde Ranthal"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Clyde Ranthal"), Team = "Alliance" },
          },
       },
       {
-         ID = 7290, Type = RRS("Leatherworking"), Skill = 120, Cost = 1600,
+         ID = 7290, Type = RRF_S("Leatherworking"), Skill = 120, Cost = 1600,
          Locations = {
-            { Region = "Wetlands", Vendor = RRS("Wenna Silkbeard"), Team = "Alliance" },
+            { Region = "Wetlands", Vendor = RRF_S("Wenna Silkbeard"), Team = "Alliance" },
          },
       },
       {
-         ID = 7361, Type = RRS("Leatherworking"), Skill = 135, Cost = 1800,
+         ID = 7361, Type = RRF_S("Leatherworking"), Skill = 135, Cost = 1800,
          Locations = {
-            { Region = "Ashenvale", Vendor = RRS("Harlown Darkweave"), Team = "Alliance" },
+            { Region = "Ashenvale", Vendor = RRF_S("Harlown Darkweave"), Team = "Alliance" },
          },
       },
       {
-         ID = 7362, Type = RRS("Leatherworking"), Skill = 135, Cost = 2000,
+         ID = 7362, Type = RRF_S("Leatherworking"), Skill = 135, Cost = 2000,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Zixil"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Zixil"), Team = "Neutral" },
          },
       },
       {
-         ID = 7451, Type = RRS("Leatherworking"), Skill = 190, Cost = 2800,
+         ID = 7451, Type = RRF_S("Leatherworking"), Skill = 190, Cost = 2800,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Pratt McGrubben"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Joseph Moore"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Pratt McGrubben"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Joseph Moore"), Team = "Horde" },
          },
       },
       {
-         ID = 7613, Type = RRS("Leatherworking"), Skill = 155, Cost = 2000,
+         ID = 7613, Type = RRF_S("Leatherworking"), Skill = 155, Cost = 2000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("George Candarte"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Wenna Silkbeard"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("George Candarte"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Wenna Silkbeard"), Team = "Alliance" },
          },
       },
       {
-         ID = 8385, Type = RRS("Leatherworking"), Skill = 205, Cost = 3500,
+         ID = 8385, Type = RRF_S("Leatherworking"), Skill = 205, Cost = 3500,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Pratt McGrubben"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Pratt McGrubben"), Team = "Alliance" },
          },
       },
       {
-         ID = 8409, Type = RRS("Leatherworking"), Skill = 210, Cost = 4000,
+         ID = 8409, Type = RRF_S("Leatherworking"), Skill = 210, Cost = 4000,
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Worb Strongstitch"), Team = "Horde" },
-            { Region = "The Hinterlands", Vendor = RRS("Nioma"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Worb Strongstitch"), Team = "Horde" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Nioma"), Team = "Alliance" },
          },
       },
       {
-         ID = 13287, Type = RRS("Leatherworking"), Skill = 165, Cost = 2500,
+         ID = 13287, Type = RRF_S("Leatherworking"), Skill = 165, Cost = 2500,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Tunkk"), Team = "Horde" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Tunkk"), Team = "Horde" },
          },
       },
       {
-         ID = 13288, Type = RRS("Leatherworking"), Skill = 165, Cost = 2500,
+         ID = 13288, Type = RRF_S("Leatherworking"), Skill = 165, Cost = 2500,
          Locations = {
-            { Region = "Arathi Highlands", Vendor = RRS("Androd Fadran"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Androd Fadran"), Team = "Alliance" },
          },
       },
       {
-         ID = 14635, Type = RRS("Leatherworking"), Skill = 185, Cost = 3000,
+         ID = 14635, Type = RRF_S("Leatherworking"), Skill = 185, Cost = 3000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Vendor-Tron 1000"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rikqiz"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Vendor-Tron 1000"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rikqiz"), Team = "Neutral" },
          },
       },
       {
-         ID = 15724, Type = RRS("Leatherworking"), Skill = 255, Cost = 12000,
+         ID = 15724, Type = RRF_S("Leatherworking"), Skill = 255, Cost = 12000,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Zannok Hidepiercer"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Zannok Hidepiercer"), Team = "Neutral" },
          },
       },
       {
-         ID = 15725, Type = RRS("Leatherworking"), Skill = 260, Cost = 12000,
+         ID = 15725, Type = RRF_S("Leatherworking"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Tirisfal Glades", Vendor = RRS("Werg Thickblade"), Team = "Horde" },
-            { Region = "Western Plaguelands", Vendor = RRS("Leonard Porter"), Team = "Alliance" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Werg Thickblade"), Team = "Horde" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Leonard Porter"), Team = "Alliance" },
          },
       },
       {
-         ID = 15726, Type = RRS("Leatherworking"), Skill = 260, Cost = 12000, Specialty = RRS("Dragonscale Leatherworking"),
+         ID = 15726, Type = RRF_S("Leatherworking"), Skill = 260, Cost = 12000, Specialty = RRF_S("Dragonscale Leatherworking"),
          Locations = {
-            { Region = "Swamp of Sorrows", Vendor = RRS("Masat T'andr"), Team = "Neutral" },
+            { Region = "Swamp of Sorrows", Vendor = RRF_S("Masat T'andr"), Team = "Neutral" },
          },
       },
       {
-         ID = 15729, Type = RRS("Leatherworking"), Skill = 265, Cost = 12000, Specialty = RRS("Tribal Leatherworking"),
+         ID = 15729, Type = RRF_S("Leatherworking"), Skill = 265, Cost = 12000, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "Azshara", Vendor = RRS("Blimo Gadgetspring"), Team = "Neutral" },
+            { Region = "Azshara", Vendor = RRF_S("Blimo Gadgetspring"), Team = "Neutral" },
          },
       },
       {
-         ID = 15734, Type = RRS("Leatherworking"), Skill = 270, Cost = 14000, Specialty = RRS("Elemental Leatherworking"),
+         ID = 15734, Type = RRF_S("Leatherworking"), Skill = 270, Cost = 14000, Specialty = RRF_S("Elemental Leatherworking"),
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Pratt McGrubben"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Pratt McGrubben"), Team = "Alliance" },
          },
       },
       {
-         ID = 15735, Type = RRS("Leatherworking"), Skill = 270, Cost = 14000, Specialty = RRS("Tribal Leatherworking"),
+         ID = 15735, Type = RRF_S("Leatherworking"), Skill = 270, Cost = 14000, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "The Hinterlands", Vendor = RRS("Gigget Zipcoil"), Team = "Neutral" },
+            { Region = "The Hinterlands", Vendor = RRF_S("Gigget Zipcoil"), Team = "Neutral" },
          },
       },
       {
-         ID = 15740, Type = RRS("Leatherworking"), Skill = 275, Cost = 16000, Specialty = RRS("Tribal Leatherworking"),
+         ID = 15740, Type = RRF_S("Leatherworking"), Skill = 275, Cost = 16000, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 15741, Type = RRS("Leatherworking"), Skill = 275, Cost = 16000, Specialty = RRS("Elemental Leatherworking"),
+         ID = 15741, Type = RRF_S("Leatherworking"), Skill = 275, Cost = 16000, Specialty = RRF_S("Elemental Leatherworking"),
          Locations = {
-            { Region = "Tirisfal Glades", Vendor = RRS("Werg Thickblade"), Team = "Horde" },
-            { Region = "Western Plaguelands", Vendor = RRS("Leonard Porter"), Team = "Alliance" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Werg Thickblade"), Team = "Horde" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Leonard Porter"), Team = "Alliance" },
          },
       },
       {
-         ID = 15751, Type = RRS("Leatherworking"), Skill = 285, Cost = 20000, Specialty = RRS("Dragonscale Leatherworking"),
+         ID = 15751, Type = RRF_S("Leatherworking"), Skill = 285, Cost = 20000, Specialty = RRF_S("Dragonscale Leatherworking"),
          Locations = {
-            { Region = "Azshara", Vendor = RRS("Blimo Gadgetspring"), Team = "Neutral" },
+            { Region = "Azshara", Vendor = RRF_S("Blimo Gadgetspring"), Team = "Neutral" },
          },
       },
       {
-         ID = 15756, Type = RRS("Leatherworking"), Skill = 290, Cost = 22000,
+         ID = 15756, Type = RRF_S("Leatherworking"), Skill = 290, Cost = 22000,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Jase Farlane"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Jase Farlane"), Team = "Neutral" },
          },
       },
       {
-         ID = 15758, Type = RRS("Leatherworking"), Skill = 290, Cost = 22000, Specialty = RRS("Tribal Leatherworking"),
+         ID = 15758, Type = RRF_S("Leatherworking"), Skill = 290, Cost = 22000, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "Un'Goro Crater", Vendor = RRS("Nergal"), Team = "Neutral" },
+            { Region = "Un'Goro Crater", Vendor = RRF_S("Nergal"), Team = "Neutral" },
          },
       },
       {
-         ID = 15759, Type = RRS("Leatherworking"), Skill = 290, Cost = 22000,
+         ID = 15759, Type = RRF_S("Leatherworking"), Skill = 290, Cost = 22000,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Plugger Spazzring"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Plugger Spazzring"), Team = "Neutral" },
          },
       },
       {
-         ID = 15762, Type = RRS("Leatherworking"), Skill = 295, Cost = 25000,
+         ID = 15762, Type = RRF_S("Leatherworking"), Skill = 295, Cost = 25000,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Zannok Hidepiercer"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Zannok Hidepiercer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17022, Type = RRS("Leatherworking"), Skill = 295, Cost = 150000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRS("Tribal Leatherworking"),
+         ID = 17022, Type = RRF_S("Leatherworking"), Skill = 295, Cost = 150000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17023, Type = RRS("Leatherworking"), Skill = 300, Cost = 160000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRS("Elemental Leatherworking"),
+         ID = 17023, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 160000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5, Specialty = RRF_S("Elemental Leatherworking"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17025, Type = RRS("Leatherworking"), Skill = 300, Cost = 160000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRS("Dragonscale Leatherworking"),
+         ID = 17025, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 160000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6, Specialty = RRF_S("Dragonscale Leatherworking"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 18239, Type = RRS("Leatherworking"), Skill = 200, Cost = 3500,
+         ID = 18239, Type = RRF_S("Leatherworking"), Skill = 200, Cost = 3500,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rikqiz"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rikqiz"), Team = "Neutral" },
          },
       },
       {
-         ID = 18731, Type = RRS("Leatherworking"), Skill = 150, Cost = 2000,
+         ID = 18731, Type = RRF_S("Leatherworking"), Skill = 150, Cost = 2000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Bombus Finespindle"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Tamar"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Bombus Finespindle"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Tamar"), Team = "Horde" },
          },
       },
       {
-         ID = 18949, Type = RRS("Leatherworking"), Skill = 155, Cost = 2000,
+         ID = 18949, Type = RRF_S("Leatherworking"), Skill = 155, Cost = 2000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Joseph Moore"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Joseph Moore"), Team = "Horde" },
          },
       },
       {
-         ID = 19326, Type = RRS("Leatherworking"), Skill = 290, Cost = 22000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 6,
+         ID = 19326, Type = RRF_S("Leatherworking"), Skill = 290, Cost = 22000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 6,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19327, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 7,
+         ID = 19327, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 7,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19328, Type = RRS("Leatherworking"), Skill = 290, Cost = 22000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 19328, Type = RRF_S("Leatherworking"), Skill = 290, Cost = 22000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19329, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 7,
+         ID = 19329, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 7,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19330, Type = RRS("Leatherworking"), Skill = 300, Cost = 60000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7,
+         ID = 19330, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 60000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19331, Type = RRS("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Dragonscale Leatherworking"),
+         ID = 19331, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Dragonscale Leatherworking"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19332, Type = RRS("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7,
+         ID = 19332, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19333, Type = RRS("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRS("Elemental Leatherworking"),
+         ID = 19333, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 90000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7, Specialty = RRF_S("Elemental Leatherworking"),
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19769, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 19769, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19770, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 19770, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19771, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 19771, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19772, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 19772, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19773, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 19773, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 20253, Type = RRS("Leatherworking"), Skill = 275, Cost = 16000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 5, Specialty = RRS("Tribal Leatherworking"),
+         ID = 20253, Type = RRF_S("Leatherworking"), Skill = 275, Cost = 16000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 5, Specialty = RRF_S("Tribal Leatherworking"),
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 20254, Type = RRS("Leatherworking"), Skill = 285, Cost = 20000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 5,
+         ID = 20254, Type = RRF_S("Leatherworking"), Skill = 285, Cost = 20000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 5,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 20382, Type = RRS("Leatherworking"), Skill = 300, Cost = 60000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 8, Specialty = RRS("Dragonscale Leatherworking"),
+         ID = 20382, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 60000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 8, Specialty = RRF_S("Dragonscale Leatherworking"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20506, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 20506, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20507, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 20507, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20508, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 20508, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20509, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 20509, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20510, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 20510, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20511, Type = RRS("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 20511, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 40000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 20576, Type = RRS("Leatherworking"), Skill = 100, Cost = 350,
+         ID = 20576, Type = RRF_S("Leatherworking"), Skill = 100, Cost = 350,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Amy Davenport"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Amy Davenport"), Team = "Alliance" },
          },
       },
       {
-         ID = 22769, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 22769, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 22770, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 22770, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 22771, Type = RRS("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 22771, Type = RRF_S("Leatherworking"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Aendel Windspear"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Aendel Windspear"), Team = "Neutral" },
          },
       },
       {
-         ID = 252761, Type = RRS("Leatherworking"),
+         ID = 252761, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252762, Type = RRS("Leatherworking"),
+         ID = 252762, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252763, Type = RRS("Leatherworking"),
+         ID = 252763, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252764, Type = RRS("Leatherworking"),
+         ID = 252764, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252765, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252765, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252766, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252766, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252767, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252767, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252768, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252768, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252769, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252769, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252770, Type = RRS("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 252770, Type = RRF_S("Leatherworking"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252777, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252777, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252778, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252778, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252779, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252779, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252780, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252780, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252781, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252781, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252782, Type = RRS("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 252782, Type = RRF_S("Leatherworking"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252783, Type = RRS("Leatherworking"),
+         ID = 252783, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Ironforge", Vendor = RRS("Bombus Finespindle"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Tamar"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jillian Tanner"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Joseph Moore"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Bombus Finespindle"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Tamar"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jillian Tanner"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Joseph Moore"), Team = "Horde" },
          },
       },
       {
-         ID = 252784, Type = RRS("Leatherworking"),
+         ID = 252784, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Ironforge", Vendor = RRS("Bombus Finespindle"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Tamar"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jillian Tanner"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Joseph Moore"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Bombus Finespindle"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Tamar"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jillian Tanner"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Joseph Moore"), Team = "Horde" },
          },
       },
       {
-         ID = 252786, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252786, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252787, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252787, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252788, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252788, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252789, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252789, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252790, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252790, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252791, Type = RRS("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 252791, Type = RRF_S("Leatherworking"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252798, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252798, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252799, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252799, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252800, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252800, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252801, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252801, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252802, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252802, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252803, Type = RRS("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 252803, Type = RRF_S("Leatherworking"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252805, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252805, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252806, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252806, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252807, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252807, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252808, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252808, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252809, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252809, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252810, Type = RRS("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 252810, Type = RRF_S("Leatherworking"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252811, Type = RRS("Leatherworking"),
+         ID = 252811, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
          },
       },
       {
-         ID = 252812, Type = RRS("Leatherworking"),
+         ID = 252812, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
          },
       },
       {
-         ID = 252820, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252820, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252821, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252821, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252822, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252822, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252823, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252823, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252824, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252824, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252825, Type = RRS("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 252825, Type = RRF_S("Leatherworking"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252826, Type = RRS("Leatherworking"),
+         ID = 252826, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252827, Type = RRS("Leatherworking"),
+         ID = 252827, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252828, Type = RRS("Leatherworking"),
+         ID = 252828, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252829, Type = RRS("Leatherworking"),
+         ID = 252829, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252830, Type = RRS("Leatherworking"),
+         ID = 252830, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252831, Type = RRS("Leatherworking"),
+         ID = 252831, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252832, Type = RRS("Leatherworking"),
+         ID = 252832, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Granny Finespindle"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Granny Finespindle"), Team = "Alliance" },
          },
       },
       {
-         ID = 252833, Type = RRS("Leatherworking"), Skill = 185, Token = 254432, Amount = 60,
+         ID = 252833, Type = RRF_S("Leatherworking"), Skill = 185, Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 252834, Type = RRS("Leatherworking"), Skill = 185, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252834, Type = RRF_S("Leatherworking"), Skill = 185, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252836, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252836, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252837, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252837, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252838, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252838, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252839, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252839, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252840, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252840, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252841, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252841, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252842, Type = RRS("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252842, Type = RRF_S("Leatherworking"), Skill = 175, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252848, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252848, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252849, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252849, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252850, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252850, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252851, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252851, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252852, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252852, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252853, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252853, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252854, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252854, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252855, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252855, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252856, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252856, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252857, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252857, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252860, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252860, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252861, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252861, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252862, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252862, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252863, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252863, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252864, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252864, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252872, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252872, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252873, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252873, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252874, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252874, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252875, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252875, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252876, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252876, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252877, Type = RRS("Leatherworking"),
+         ID = 252877, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
       {
-         ID = 252900, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252900, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252901, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252901, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252902, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252902, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252903, Type = RRS("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 252903, Type = RRF_S("Leatherworking"), Skill = 210, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252904, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252904, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252905, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252905, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252906, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252906, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252907, Type = RRS("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252907, Type = RRF_S("Leatherworking"), Skill = 225, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252910, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252910, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252911, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252911, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252912, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252912, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252913, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252913, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252922, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252922, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252923, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252923, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252924, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252924, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252925, Type = RRS("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252925, Type = RRF_S("Leatherworking"), Skill = 250, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252933, Type = RRS("Leatherworking"),
+         ID = 252933, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
       {
-         ID = 252941, Type = RRS("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 252941, Type = RRF_S("Leatherworking"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 252942, Type = RRS("Leatherworking"),
+         ID = 252942, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Feralas", Vendor = RRS("Jangdor Swiftstrider"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Jangdor Swiftstrider"), Team = "Horde" },
          },
       },
       {
-         ID = 271626, Type = RRS("Leatherworking"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271626, Type = RRF_S("Leatherworking"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Daniel Stitchsong"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Pawani"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Daniel Stitchsong"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Pawani"), Team = "Horde" },
          },
       },
       {
-         ID = 273952, Type = RRS("Leatherworking"),
+         ID = 273952, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273953, Type = RRS("Leatherworking"),
+         ID = 273953, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273954, Type = RRS("Leatherworking"),
+         ID = 273954, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273955, Type = RRS("Leatherworking"),
+         ID = 273955, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273956, Type = RRS("Leatherworking"),
+         ID = 273956, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273957, Type = RRS("Leatherworking"),
+         ID = 273957, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273958, Type = RRS("Leatherworking"),
+         ID = 273958, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273959, Type = RRS("Leatherworking"),
+         ID = 273959, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273960, Type = RRS("Leatherworking"),
+         ID = 273960, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273961, Type = RRS("Leatherworking"),
+         ID = 273961, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273962, Type = RRS("Leatherworking"),
+         ID = 273962, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273963, Type = RRS("Leatherworking"),
+         ID = 273963, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273964, Type = RRS("Leatherworking"),
+         ID = 273964, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273965, Type = RRS("Leatherworking"),
+         ID = 273965, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273966, Type = RRS("Leatherworking"),
+         ID = 273966, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273967, Type = RRS("Leatherworking"),
+         ID = 273967, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273968, Type = RRS("Leatherworking"),
+         ID = 273968, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273969, Type = RRS("Leatherworking"),
+         ID = 273969, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273970, Type = RRS("Leatherworking"),
+         ID = 273970, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273971, Type = RRS("Leatherworking"),
+         ID = 273971, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273996, Type = RRS("Leatherworking"),
+         ID = 273996, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273997, Type = RRS("Leatherworking"),
+         ID = 273997, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273998, Type = RRS("Leatherworking"),
+         ID = 273998, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273999, Type = RRS("Leatherworking"),
+         ID = 273999, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274000, Type = RRS("Leatherworking"),
+         ID = 274000, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274001, Type = RRS("Leatherworking"),
+         ID = 274001, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274002, Type = RRS("Leatherworking"),
+         ID = 274002, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274003, Type = RRS("Leatherworking"),
+         ID = 274003, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274004, Type = RRS("Leatherworking"),
+         ID = 274004, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274005, Type = RRS("Leatherworking"),
+         ID = 274005, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274006, Type = RRS("Leatherworking"),
+         ID = 274006, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274007, Type = RRS("Leatherworking"),
+         ID = 274007, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274491, Type = RRS("Leatherworking"), Token = 254432, Amount = 60,
+         ID = 274491, Type = RRF_S("Leatherworking"), Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 276542, Type = RRS("Leatherworking"), Skill = 300, Token = 274030, Amount = 8,
+         ID = 276542, Type = RRF_S("Leatherworking"), Skill = 300, Token = 274030, Amount = 8,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 276543, Type = RRS("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
+         ID = 276543, Type = RRF_S("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 276544, Type = RRS("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
+         ID = 276544, Type = RRF_S("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 276545, Type = RRS("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
+         ID = 276545, Type = RRF_S("Leatherworking"), Skill = 300, Token = 274030, Amount = 6,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 276978, Type = RRS("Leatherworking"),
+         ID = 276978, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276979, Type = RRS("Leatherworking"),
+         ID = 276979, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276980, Type = RRS("Leatherworking"),
+         ID = 276980, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276981, Type = RRS("Leatherworking"),
+         ID = 276981, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276986, Type = RRS("Leatherworking"),
+         ID = 276986, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 276987, Type = RRS("Leatherworking"),
+         ID = 276987, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 276988, Type = RRS("Leatherworking"),
+         ID = 276988, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 276989, Type = RRS("Leatherworking"),
+         ID = 276989, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 277716, Type = RRS("Leatherworking"),
+         ID = 277716, Type = RRF_S("Leatherworking"),
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Saenorion"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Saenorion"), Team = "Alliance" },
          },
       },
    },
 },
 
-[RRS("Tailoring")] = {
+[RRF_S("Tailoring")] = {
    Recipes = {
       {
-         ID = 4355, Type = RRS("Tailoring"), Skill = 200, Cost = 1500,
+         ID = 4355, Type = RRF_S("Tailoring"), Skill = 200, Cost = 1500,
          Locations = {
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Micha Yance"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Micha Yance"), Team = "Alliance" },
          },
       },
       {
-         ID = 5771, Type = RRS("Tailoring"), Skill = 70, Cost = 200,
+         ID = 5771, Type = RRF_S("Tailoring"), Skill = 70, Cost = 200,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Valdaron"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Andrew Hilbert"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Gina MacGregor"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Valdaron"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Andrew Hilbert"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Gina MacGregor"), Team = "Alliance" },
          },
       },
       {
-         ID = 5772, Type = RRS("Tailoring"), Skill = 115, Cost = 500,
+         ID = 5772, Type = RRF_S("Tailoring"), Skill = 115, Cost = 500,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Valdaron"), Team = "Alliance" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Zixil"), Team = "Neutral" },
-            { Region = "Loch Modan", Vendor = RRS("Rann Flamespinner"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
-            { Region = "Redridge Mountains", Vendor = RRS("Amy Davenport"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Kiknikle"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Wrahk"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Yonada"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Jennabink Powerseam"), Team = "Alliance" },
+            { Region = "Darkshore", Vendor = RRF_S("Valdaron"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Zixil"), Team = "Neutral" },
+            { Region = "Loch Modan", Vendor = RRF_S("Rann Flamespinner"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Amy Davenport"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Kiknikle"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Wrahk"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Yonada"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Jennabink Powerseam"), Team = "Alliance" },
          },
       },
       {
-         ID = 6270, Type = RRS("Tailoring"), Skill = 55, Cost = 200,
+         ID = 6270, Type = RRF_S("Tailoring"), Skill = 55, Cost = 200,
          Locations = {
-            { Region = "Darkshore", Vendor = RRS("Valdaron"), Team = "Alliance" },
-            { Region = "Elwynn Forest", Vendor = RRS("Tharynn Bouden"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Wrahk"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Constance Brisboise"), Team = "Horde" },
+            { Region = "Darkshore", Vendor = RRF_S("Valdaron"), Team = "Alliance" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Tharynn Bouden"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Wrahk"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Constance Brisboise"), Team = "Horde" },
          },
       },
       {
-         ID = 6272, Type = RRS("Tailoring"), Skill = 70, Cost = 300,
+         ID = 6272, Type = RRF_S("Tailoring"), Skill = 70, Cost = 300,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Elynna"), Team = "Alliance" },
-            { Region = "Elwynn Forest", Vendor = RRS("Drake Lindgren"), Team = "Alliance" },
-            { Region = "Silverpine Forest", Vendor = RRS("Andrew Hilbert"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Ranik"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Wrahk"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Elynna"), Team = "Alliance" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Drake Lindgren"), Team = "Alliance" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Andrew Hilbert"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Ranik"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Wrahk"), Team = "Horde" },
          },
       },
       {
-         ID = 6274, Type = RRS("Tailoring"), Skill = 100, Cost = 400,
+         ID = 6274, Type = RRF_S("Tailoring"), Skill = 100, Cost = 400,
          Locations = {
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Mallen Swain"), Team = "Horde" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Alexandra Bolero"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Yonada"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Gina MacGregor"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Mallen Swain"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Alexandra Bolero"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Yonada"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Gina MacGregor"), Team = "Alliance" },
          },
       },
       {
-         ID = 6275, Type = RRS("Tailoring"), Skill = 115, Cost = 800,
+         ID = 6275, Type = RRF_S("Tailoring"), Skill = 115, Cost = 800,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Elynna"), Team = "Alliance" },
-            { Region = "Duskwood", Vendor = RRS("Sheri Zipstitch"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Rann Flamespinner"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Ranik"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Jennabink Powerseam"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Elynna"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Sheri Zipstitch"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Rann Flamespinner"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Ranik"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Jennabink Powerseam"), Team = "Alliance" },
          },
       },
       {
-         ID = 6401, Type = RRS("Tailoring"), Skill = 155, Cost = 1100,
+         ID = 6401, Type = RRF_S("Tailoring"), Skill = 155, Cost = 1100,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Sheri Zipstitch"), Team = "Alliance" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Mallen Swain"), Team = "Horde" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Sheri Zipstitch"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Mallen Swain"), Team = "Horde" },
          },
       },
       {
-         ID = 7087, Type = RRS("Tailoring"), Skill = 180, Cost = 1200,
+         ID = 7087, Type = RRF_S("Tailoring"), Skill = 180, Cost = 1200,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Norvin Alderman"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Xizk Goodstitch"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Norvin Alderman"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Xizk Goodstitch"), Team = "Neutral" },
          },
       },
       {
-         ID = 7088, Type = RRS("Tailoring"), Skill = 205, Cost = 5000,
+         ID = 7088, Type = RRF_S("Tailoring"), Skill = 205, Cost = 5000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Stitch Pinwizzle"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Vizzklick"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Stitch Pinwizzle"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Vizzklick"), Team = "Neutral" },
          },
       },
       {
-         ID = 7089, Type = RRS("Tailoring"), Skill = 175, Cost = 1500,
+         ID = 7089, Type = RRF_S("Tailoring"), Skill = 175, Cost = 1500,
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Norvin Alderman"), Team = "Neutral" },
-            { Region = "Arathi Highlands", Vendor = RRS("Jun'ha"), Team = "Horde" },
-            { Region = "Feralas", Vendor = RRS("Brienna Starglow"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Norvin Alderman"), Team = "Neutral" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Jun'ha"), Team = "Horde" },
+            { Region = "Feralas", Vendor = RRF_S("Brienna Starglow"), Team = "Alliance" },
          },
       },
       {
-         ID = 7114, Type = RRS("Tailoring"), Skill = 145, Cost = 1000,
+         ID = 7114, Type = RRF_S("Tailoring"), Skill = 145, Cost = 1000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Kireena"), Team = "Horde" },
-            { Region = "Wetlands", Vendor = RRS("Wenna Silkbeard"), Team = "Alliance" },
+            { Region = "Desolace", Vendor = RRF_S("Kireena"), Team = "Horde" },
+            { Region = "Wetlands", Vendor = RRF_S("Wenna Silkbeard"), Team = "Alliance" },
          },
       },
       {
-         ID = 10311, Type = RRS("Tailoring"), Skill = 220, Cost = 3000,
+         ID = 10311, Type = RRF_S("Tailoring"), Skill = 220, Cost = 3000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Elynna"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
+            { Region = "Darnassus", Vendor = RRF_S("Elynna"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
          },
       },
       {
-         ID = 10314, Type = RRS("Tailoring"), Skill = 230, Cost = 4000,
+         ID = 10314, Type = RRF_S("Tailoring"), Skill = 230, Cost = 4000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
          },
       },
       {
-         ID = 10317, Type = RRS("Tailoring"), Skill = 235, Cost = 4000,
+         ID = 10317, Type = RRF_S("Tailoring"), Skill = 235, Cost = 4000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
          },
       },
       {
-         ID = 10318, Type = RRS("Tailoring"), Skill = 240, Cost = 7000,
+         ID = 10318, Type = RRF_S("Tailoring"), Skill = 240, Cost = 7000,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Cowardly Crosby"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Cowardly Crosby"), Team = "Neutral" },
          },
       },
       {
-         ID = 10321, Type = RRS("Tailoring"), Skill = 240, Cost = 4500,
+         ID = 10321, Type = RRF_S("Tailoring"), Skill = 240, Cost = 4500,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
          },
       },
       {
-         ID = 10323, Type = RRS("Tailoring"), Skill = 245, Cost = 4500,
+         ID = 10323, Type = RRF_S("Tailoring"), Skill = 245, Cost = 4500,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
          },
       },
       {
-         ID = 10325, Type = RRS("Tailoring"), Skill = 250, Cost = 10000,
+         ID = 10325, Type = RRF_S("Tailoring"), Skill = 250, Cost = 10000,
          Locations = {
-            { Region = "Stormwind City", Vendor = RRS("Alexandra Bolero"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Alexandra Bolero"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
          },
       },
       {
-         ID = 10326, Type = RRS("Tailoring"), Skill = 250, Cost = 5000,
+         ID = 10326, Type = RRF_S("Tailoring"), Skill = 250, Cost = 5000,
          Locations = {
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
          },
       },
       {
-         ID = 10728, Type = RRS("Tailoring"), Skill = 200, Cost = 1500,
+         ID = 10728, Type = RRF_S("Tailoring"), Skill = 200, Cost = 1500,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Narkk"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Narkk"), Team = "Neutral" },
          },
       },
       {
-         ID = 14468, Type = RRS("Tailoring"), Skill = 260, Cost = 12000,
+         ID = 14468, Type = RRF_S("Tailoring"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 14469, Type = RRS("Tailoring"), Skill = 260, Cost = 12000,
+         ID = 14469, Type = RRF_S("Tailoring"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Darnall"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Darnall"), Team = "Neutral" },
          },
       },
       {
-         ID = 14472, Type = RRS("Tailoring"), Skill = 265, Cost = 12000,
+         ID = 14472, Type = RRF_S("Tailoring"), Skill = 265, Cost = 12000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Darnall"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Darnall"), Team = "Neutral" },
          },
       },
       {
-         ID = 14481, Type = RRS("Tailoring"), Skill = 275, Cost = 16000,
+         ID = 14481, Type = RRF_S("Tailoring"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 14483, Type = RRS("Tailoring"), Skill = 275, Cost = 16000,
+         ID = 14483, Type = RRF_S("Tailoring"), Skill = 275, Cost = 16000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Lorelae Wintersong"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Lorelae Wintersong"), Team = "Neutral" },
          },
       },
       {
-         ID = 14488, Type = RRS("Tailoring"), Skill = 280, Cost = 12000,
+         ID = 14488, Type = RRF_S("Tailoring"), Skill = 280, Cost = 12000,
          Locations = {
-            { Region = "Moonglade", Vendor = RRS("Darnall"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Darnall"), Team = "Neutral" },
          },
       },
       {
-         ID = 14526, Type = RRS("Tailoring"), Skill = 250, Cost = 20000,
+         ID = 14526, Type = RRF_S("Tailoring"), Skill = 250, Cost = 20000,
          Locations = {
-            { Region = "Winterspring", Vendor = RRS("Evie Whirlbrew"), Team = "Neutral" },
-            { Region = "Winterspring", Vendor = RRS("Qia"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Evie Whirlbrew"), Team = "Neutral" },
+            { Region = "Winterspring", Vendor = RRF_S("Qia"), Team = "Neutral" },
          },
       },
       {
-         ID = 14627, Type = RRS("Tailoring"), Skill = 135, Cost = 800,
+         ID = 14627, Type = RRF_S("Tailoring"), Skill = 135, Cost = 800,
          Locations = {
-            { Region = "Duskwood", Vendor = RRS("Danielle Zipstitch"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Danielle Zipstitch"), Team = "Alliance" },
          },
       },
       {
-         ID = 14630, Type = RRS("Tailoring"), Skill = 165, Cost = 1000,
+         ID = 14630, Type = RRF_S("Tailoring"), Skill = 165, Cost = 1000,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Super-Seller 680"), Team = "Neutral" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Xizk Goodstitch"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Super-Seller 680"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Xizk Goodstitch"), Team = "Neutral" },
          },
       },
       {
-         ID = 17017, Type = RRS("Tailoring"), Skill = 300, Cost = 180000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6,
+         ID = 17017, Type = RRF_S("Tailoring"), Skill = 300, Cost = 180000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 17018, Type = RRS("Tailoring"), Skill = 300, Cost = 80000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 5,
+         ID = 17018, Type = RRF_S("Tailoring"), Skill = 300, Cost = 80000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 5,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 18487, Type = RRS("Tailoring"), Skill = 300, Cost = 40000,
+         ID = 18487, Type = RRF_S("Tailoring"), Skill = 300, Cost = 40000,
          Locations = {
-            { Region = "Dire Maul", Vendor = RRS("Shen'dralar Provisioner"), Team = "Neutral" },
+            { Region = "Dire Maul", Vendor = RRF_S("Shen'dralar Provisioner"), Team = "Neutral" },
          },
       },
       {
-         ID = 19215, Type = RRS("Tailoring"), Skill = 290, Cost = 22000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 6,
+         ID = 19215, Type = RRF_S("Tailoring"), Skill = 290, Cost = 22000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 6,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19216, Type = RRS("Tailoring"), Skill = 290, Cost = 22000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 6,
+         ID = 19216, Type = RRF_S("Tailoring"), Skill = 290, Cost = 22000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 6,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19217, Type = RRS("Tailoring"), Skill = 300, Cost = 40000, Faction = RRS("Argent Dawn"), FactionID = 529, Level = 7,
+         ID = 19217, Type = RRF_S("Tailoring"), Skill = 300, Cost = 40000, Faction = RRF_S("Argent Dawn"), FactionID = 529, Level = 7,
          Locations = {
-            { Region = "Eastern Plaguelands", Vendor = RRS("Quartermaster Miranda Breechlock"), Team = "Neutral" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Argent Quartermaster Hasana"), Team = "Neutral" },
-            { Region = "Western Plaguelands", Vendor = RRS("Argent Quartermaster Lightspark"), Team = "Neutral" },
+            { Region = "Eastern Plaguelands", Vendor = RRF_S("Quartermaster Miranda Breechlock"), Team = "Neutral" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Argent Quartermaster Hasana"), Team = "Neutral" },
+            { Region = "Western Plaguelands", Vendor = RRF_S("Argent Quartermaster Lightspark"), Team = "Neutral" },
          },
       },
       {
-         ID = 19218, Type = RRS("Tailoring"), Skill = 300, Cost = 40000, Faction = RRS("Timbermaw Hold"), FactionID = 576, Level = 7,
+         ID = 19218, Type = RRF_S("Tailoring"), Skill = 300, Cost = 40000, Faction = RRF_S("Timbermaw Hold"), FactionID = 576, Level = 7,
          Locations = {
-            { Region = "Felwood", Vendor = RRS("Meilosh"), Team = "Neutral" },
+            { Region = "Felwood", Vendor = RRF_S("Meilosh"), Team = "Neutral" },
          },
       },
       {
-         ID = 19219, Type = RRS("Tailoring"), Skill = 300, Cost = 60000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 6,
+         ID = 19219, Type = RRF_S("Tailoring"), Skill = 300, Cost = 60000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 6,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19220, Type = RRS("Tailoring"), Skill = 300, Cost = 90000, Faction = RRS("Thorium Brotherhood"), FactionID = 59, Level = 7,
+         ID = 19220, Type = RRF_S("Tailoring"), Skill = 300, Cost = 90000, Faction = RRF_S("Thorium Brotherhood"), FactionID = 59, Level = 7,
          Locations = {
-            { Region = "Blackrock Depths", Vendor = RRS("Lokhtos Darkbargainer"), Team = "Neutral" },
+            { Region = "Blackrock Depths", Vendor = RRF_S("Lokhtos Darkbargainer"), Team = "Neutral" },
          },
       },
       {
-         ID = 19764, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 7,
+         ID = 19764, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 7,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19765, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 6,
+         ID = 19765, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 6,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 19766, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Zandalar Tribe"), FactionID = 270, Level = 5,
+         ID = 19766, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Zandalar Tribe"), FactionID = 270, Level = 5,
          Locations = {
-            { Region = "Stranglethorn Vale", Vendor = RRS("Rin'wosho the Trader"), Team = "Neutral" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Rin'wosho the Trader"), Team = "Neutral" },
          },
       },
       {
-         ID = 21358, Type = RRS("Tailoring"), Skill = 260, Cost = 12000,
+         ID = 21358, Type = RRF_S("Tailoring"), Skill = 260, Cost = 12000,
          Locations = {
-            { Region = "Riverglades", Vendor = RRS("Stitch Pinwizzle"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Vizzklick"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Stitch Pinwizzle"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Vizzklick"), Team = "Neutral" },
          },
       },
       {
-         ID = 22307, Type = RRS("Tailoring"), Skill = 225, Cost = 6000,
+         ID = 22307, Type = RRF_S("Tailoring"), Skill = 225, Cost = 6000,
          Locations = {
-            { Region = "Darnassus", Vendor = RRS("Vaean"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Tilli Thistlefuzz"), Team = "Alliance" },
-            { Region = "Orgrimmar", Vendor = RRS("Kithas"), Team = "Horde" },
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Leo Sarn"), Team = "Horde" },
-            { Region = "Silverpine Forest", Vendor = RRS("Lilly"), Team = "Horde" },
-            { Region = "Stormwind City", Vendor = RRS("Jessara Cordell"), Team = "Alliance" },
-            { Region = "Thunder Bluff", Vendor = RRS("Nata Dawnstrider"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Thaddeus Webb"), Team = "Horde" },
-            { Region = "Zephras Isle", Vendor = RRS("Nasalanna Windsinger"), Team = "Neutral" },
+            { Region = "Darnassus", Vendor = RRF_S("Vaean"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Tilli Thistlefuzz"), Team = "Alliance" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Kithas"), Team = "Horde" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Leo Sarn"), Team = "Horde" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Lilly"), Team = "Horde" },
+            { Region = "Stormwind City", Vendor = RRF_S("Jessara Cordell"), Team = "Alliance" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Nata Dawnstrider"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Thaddeus Webb"), Team = "Horde" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Nasalanna Windsinger"), Team = "Neutral" },
          },
       },
       {
-         ID = 22308, Type = RRS("Tailoring"), Skill = 275, Cost = 20000,
+         ID = 22308, Type = RRF_S("Tailoring"), Skill = 275, Cost = 20000,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Kania"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Kania"), Team = "Neutral" },
          },
       },
       {
-         ID = 22310, Type = RRS("Tailoring"), Skill = 275, Cost = 20000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 22310, Type = RRF_S("Tailoring"), Skill = 275, Cost = 20000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 22312, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 22312, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 22683, Type = RRS("Tailoring"), Skill = 300, Cost = 90000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 22683, Type = RRF_S("Tailoring"), Skill = 300, Cost = 90000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 22772, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 5,
+         ID = 22772, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 5,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 22773, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 6,
+         ID = 22773, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 6,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 22774, Type = RRS("Tailoring"), Skill = 300, Cost = 50000, Faction = RRS("Cenarion Circle"), FactionID = 609, Level = 7,
+         ID = 22774, Type = RRF_S("Tailoring"), Skill = 300, Cost = 50000, Faction = RRF_S("Cenarion Circle"), FactionID = 609, Level = 7,
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 253665, Type = RRS("Tailoring"),
+         ID = 253665, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Dominique Stefano"), Team = "Alliance" },
-            { Region = "Arathi Highlands", Vendor = RRS("Jun'ha"), Team = "Horde" },
-            { Region = "Darkshore", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Darkshore", Vendor = RRS("Valdaron"), Team = "Alliance" },
-            { Region = "Darnassus", Vendor = RRS("Dani'ill"), Team = "Alliance" },
-            { Region = "Darnassus", Vendor = RRS("Elynna"), Team = "Alliance" },
-            { Region = "Dun Morogh", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Durotar", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Danielle Zipstitch"), Team = "Alliance" },
-            { Region = "Duskwood", Vendor = RRS("Lohgan Eva"), Team = "Alliance" },
-            { Region = "Duskwood", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Sheri Zipstitch"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
-            { Region = "Elwynn Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Feralas", Vendor = RRS("Brienna Starglow"), Team = "Alliance" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Mallen Swain"), Team = "Horde" },
-            { Region = "Ironforge", Vendor = RRS("Ellie Stonebrow"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Poranna Snowbraid"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Rann Flamespinner"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Moonglade", Vendor = RRS("Darnall"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
-            { Region = "Orgrimmar", Vendor = RRS("Darah"), Team = "Horde" },
-            { Region = "Redridge Mountains", Vendor = RRS("Captured Servant of Azora"), Team = "Neutral" },
-            { Region = "Redridge Mountains", Vendor = RRS("Franklin Hamar"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Stitch Pinwizzle"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Alexandra Bolero"), Team = "Alliance" },
-            { Region = "Stormwind City", Vendor = RRS("Antonio Bolero"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Xizk Goodstitch"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Vizzklick"), Team = "Neutral" },
-            { Region = "Teldrassil", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Wrahk"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Yonada"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Boramu"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Angela Ward"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Westfall", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Jennabink Powerseam"), Team = "Alliance" },
-            { Region = "Wetlands", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Othesia Evengale"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Taleen Shimmerthread"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Dominique Stefano"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Jun'ha"), Team = "Horde" },
+            { Region = "Darkshore", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Darkshore", Vendor = RRF_S("Valdaron"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Dani'ill"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Elynna"), Team = "Alliance" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Danielle Zipstitch"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Lohgan Eva"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Sheri Zipstitch"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Brienna Starglow"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Mallen Swain"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Ellie Stonebrow"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Poranna Snowbraid"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Rann Flamespinner"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Darnall"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Darah"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Captured Servant of Azora"), Team = "Neutral" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Franklin Hamar"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Stitch Pinwizzle"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Alexandra Bolero"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Antonio Bolero"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Xizk Goodstitch"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Vizzklick"), Team = "Neutral" },
+            { Region = "Teldrassil", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Wrahk"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Yonada"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Boramu"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Angela Ward"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Westfall", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Jennabink Powerseam"), Team = "Alliance" },
+            { Region = "Wetlands", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Othesia Evengale"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Taleen Shimmerthread"), Team = "Neutral" },
          },
       },
       {
-         ID = 253668, Type = RRS("Tailoring"),
+         ID = 253668, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Dominique Stefano"), Team = "Alliance" },
-            { Region = "Arathi Highlands", Vendor = RRS("Jun'ha"), Team = "Horde" },
-            { Region = "Darkshore", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Darkshore", Vendor = RRS("Valdaron"), Team = "Alliance" },
-            { Region = "Darnassus", Vendor = RRS("Dani'ill"), Team = "Alliance" },
-            { Region = "Darnassus", Vendor = RRS("Elynna"), Team = "Alliance" },
-            { Region = "Dun Morogh", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Durotar", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Danielle Zipstitch"), Team = "Alliance" },
-            { Region = "Duskwood", Vendor = RRS("Lohgan Eva"), Team = "Alliance" },
-            { Region = "Duskwood", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Duskwood", Vendor = RRS("Sheri Zipstitch"), Team = "Alliance" },
-            { Region = "Dustwallow Marsh", Vendor = RRS("Ghok'kah"), Team = "Horde" },
-            { Region = "Elwynn Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Feralas", Vendor = RRS("Brienna Starglow"), Team = "Alliance" },
-            { Region = "Hillsbrad Foothills", Vendor = RRS("Mallen Swain"), Team = "Horde" },
-            { Region = "Ironforge", Vendor = RRS("Ellie Stonebrow"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Outfitter Eric"), Team = "Alliance" },
-            { Region = "Ironforge", Vendor = RRS("Poranna Snowbraid"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Rann Flamespinner"), Team = "Alliance" },
-            { Region = "Loch Modan", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Moonglade", Vendor = RRS("Darnall"), Team = "Neutral" },
-            { Region = "Orgrimmar", Vendor = RRS("Borya"), Team = "Horde" },
-            { Region = "Orgrimmar", Vendor = RRS("Darah"), Team = "Horde" },
-            { Region = "Redridge Mountains", Vendor = RRS("Captured Servant of Azora"), Team = "Neutral" },
-            { Region = "Redridge Mountains", Vendor = RRS("Franklin Hamar"), Team = "Alliance" },
-            { Region = "Redridge Mountains", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Riverglades", Vendor = RRS("Stitch Pinwizzle"), Team = "Neutral" },
-            { Region = "Silverpine Forest", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Stormwind City", Vendor = RRS("Alexandra Bolero"), Team = "Alliance" },
-            { Region = "Stormwind City", Vendor = RRS("Antonio Bolero"), Team = "Alliance" },
-            { Region = "Stranglethorn Vale", Vendor = RRS("Xizk Goodstitch"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Tanaris", Vendor = RRS("Vizzklick"), Team = "Neutral" },
-            { Region = "Teldrassil", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "The Barrens", Vendor = RRS("Wrahk"), Team = "Horde" },
-            { Region = "The Barrens", Vendor = RRS("Yonada"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Boramu"), Team = "Horde" },
-            { Region = "Thunder Bluff", Vendor = RRS("Mahu"), Team = "Horde" },
-            { Region = "Tirisfal Glades", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Undercity", Vendor = RRS("Angela Ward"), Team = "Horde" },
-            { Region = "Undercity", Vendor = RRS("Millie Gregorian"), Team = "Horde" },
-            { Region = "Westfall", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Westfall", Vendor = RRS("Repair Bot"), Team = "Neutral" },
-            { Region = "Wetlands", Vendor = RRS("Jennabink Powerseam"), Team = "Alliance" },
-            { Region = "Wetlands", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Othesia Evengale"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Reagent Bot"), Team = "Neutral" },
-            { Region = "Zephras Isle", Vendor = RRS("Taleen Shimmerthread"), Team = "Neutral" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Dominique Stefano"), Team = "Alliance" },
+            { Region = "Arathi Highlands", Vendor = RRF_S("Jun'ha"), Team = "Horde" },
+            { Region = "Darkshore", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Darkshore", Vendor = RRF_S("Valdaron"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Dani'ill"), Team = "Alliance" },
+            { Region = "Darnassus", Vendor = RRF_S("Elynna"), Team = "Alliance" },
+            { Region = "Dun Morogh", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Durotar", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Danielle Zipstitch"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Lohgan Eva"), Team = "Alliance" },
+            { Region = "Duskwood", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Duskwood", Vendor = RRF_S("Sheri Zipstitch"), Team = "Alliance" },
+            { Region = "Dustwallow Marsh", Vendor = RRF_S("Ghok'kah"), Team = "Horde" },
+            { Region = "Elwynn Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Feralas", Vendor = RRF_S("Brienna Starglow"), Team = "Alliance" },
+            { Region = "Hillsbrad Foothills", Vendor = RRF_S("Mallen Swain"), Team = "Horde" },
+            { Region = "Ironforge", Vendor = RRF_S("Ellie Stonebrow"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Outfitter Eric"), Team = "Alliance" },
+            { Region = "Ironforge", Vendor = RRF_S("Poranna Snowbraid"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Rann Flamespinner"), Team = "Alliance" },
+            { Region = "Loch Modan", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Moonglade", Vendor = RRF_S("Darnall"), Team = "Neutral" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Borya"), Team = "Horde" },
+            { Region = "Orgrimmar", Vendor = RRF_S("Darah"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Captured Servant of Azora"), Team = "Neutral" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Franklin Hamar"), Team = "Alliance" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Riverglades", Vendor = RRF_S("Stitch Pinwizzle"), Team = "Neutral" },
+            { Region = "Silverpine Forest", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Stormwind City", Vendor = RRF_S("Alexandra Bolero"), Team = "Alliance" },
+            { Region = "Stormwind City", Vendor = RRF_S("Antonio Bolero"), Team = "Alliance" },
+            { Region = "Stranglethorn Vale", Vendor = RRF_S("Xizk Goodstitch"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Tanaris", Vendor = RRF_S("Vizzklick"), Team = "Neutral" },
+            { Region = "Teldrassil", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "The Barrens", Vendor = RRF_S("Wrahk"), Team = "Horde" },
+            { Region = "The Barrens", Vendor = RRF_S("Yonada"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Boramu"), Team = "Horde" },
+            { Region = "Thunder Bluff", Vendor = RRF_S("Mahu"), Team = "Horde" },
+            { Region = "Tirisfal Glades", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Undercity", Vendor = RRF_S("Angela Ward"), Team = "Horde" },
+            { Region = "Undercity", Vendor = RRF_S("Millie Gregorian"), Team = "Horde" },
+            { Region = "Westfall", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Westfall", Vendor = RRF_S("Repair Bot"), Team = "Neutral" },
+            { Region = "Wetlands", Vendor = RRF_S("Jennabink Powerseam"), Team = "Alliance" },
+            { Region = "Wetlands", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Othesia Evengale"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Reagent Bot"), Team = "Neutral" },
+            { Region = "Zephras Isle", Vendor = RRF_S("Taleen Shimmerthread"), Team = "Neutral" },
          },
       },
       {
-         ID = 253890, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253890, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253892, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253892, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253894, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253894, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253896, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253896, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253898, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253898, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253900, Type = RRS("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
+         ID = 253900, Type = RRF_S("Tailoring"), Skill = 60, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253914, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253914, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253916, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253916, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253918, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253918, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253920, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253920, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253922, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253922, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253924, Type = RRS("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
+         ID = 253924, Type = RRF_S("Tailoring"), Skill = 75, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253926, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253926, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253928, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253928, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253930, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253930, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253932, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253932, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253934, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253934, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253936, Type = RRS("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
+         ID = 253936, Type = RRF_S("Tailoring"), Skill = 85, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253950, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253950, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253952, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253952, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253954, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253954, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253956, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253956, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253958, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253958, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253960, Type = RRS("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
+         ID = 253960, Type = RRF_S("Tailoring"), Skill = 100, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253962, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253962, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253964, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253964, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253966, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253966, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253968, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253968, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253970, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253970, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253972, Type = RRS("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
+         ID = 253972, Type = RRF_S("Tailoring"), Skill = 110, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253974, Type = RRS("Tailoring"), Skill = 125, Token = 254432, Amount = 60,
+         ID = 253974, Type = RRF_S("Tailoring"), Skill = 125, Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 253988, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253988, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253990, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253990, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253992, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253992, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253994, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253994, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253996, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253996, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 253998, Type = RRS("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
+         ID = 253998, Type = RRF_S("Tailoring"), Skill = 125, Currency = 3402, Amount = 30,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254024, Type = RRS("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254024, Type = RRF_S("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254026, Type = RRS("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254026, Type = RRF_S("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254028, Type = RRS("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254028, Type = RRF_S("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254030, Type = RRS("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254030, Type = RRF_S("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254032, Type = RRS("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254032, Type = RRF_S("Tailoring"), Skill = 165, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254036, Type = RRS("Tailoring"), Skill = 190, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254036, Type = RRF_S("Tailoring"), Skill = 190, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254050, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254050, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254052, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254052, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254054, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254054, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254056, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254056, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254058, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254058, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254060, Type = RRS("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254060, Type = RRF_S("Tailoring"), Skill = 195, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254062, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254062, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254064, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254064, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254066, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254066, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254068, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254068, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254070, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254070, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254072, Type = RRS("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254072, Type = RRF_S("Tailoring"), Skill = 205, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254080, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254080, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254082, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254082, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254084, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254084, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254086, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254086, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254088, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254088, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254090, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254090, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254092, Type = RRS("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
+         ID = 254092, Type = RRF_S("Tailoring"), Skill = 215, Currency = 3402, Amount = 60, FactionID = 2587, Level = 5,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254108, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254108, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254110, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254110, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254112, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254112, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254114, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254114, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254116, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254116, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254118, Type = RRS("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
+         ID = 254118, Type = RRF_S("Tailoring"), Skill = 235, Currency = 3402, Amount = 90, FactionID = 2587, Level = 6,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 254124, Type = RRS("Tailoring"),
+         ID = 254124, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Pexmit"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Pexmit"), Team = "Neutral" },
          },
       },
       {
-         ID = 254134, Type = RRS("Tailoring"), Skill = 255, Token = 263439, Amount = 10, FactionID = 2747, Level = 6,
+         ID = 254134, Type = RRF_S("Tailoring"), Skill = 255, Token = 263439, Amount = 10, FactionID = 2747, Level = 6,
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Dala Fairmaw"), Team = "Neutral" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Dala Fairmaw"), Team = "Neutral" },
          },
       },
       {
-         ID = 254682, Type = RRS("Tailoring"), Skill = 200, Token = 254432, Amount = 60,
+         ID = 254682, Type = RRF_S("Tailoring"), Skill = 200, Token = 254432, Amount = 60,
          Locations = {
-            { Region = "Desolace", Vendor = RRS("Gorhak"), Team = "Neutral" },
-            { Region = "Desolace", Vendor = RRS("Molkar"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Gorhak"), Team = "Neutral" },
+            { Region = "Desolace", Vendor = RRF_S("Molkar"), Team = "Neutral" },
          },
       },
       {
-         ID = 271627, Type = RRS("Tailoring"), Currency = 3402, Amount = 1000, IsCertification = true,
+         ID = 271627, Type = RRF_S("Tailoring"), Currency = 3402, Amount = 1000, IsCertification = true,
          Locations = {
-            { Region = "Redridge Mountains", Vendor = RRS("Mivin Shadowweave"), Team = "Alliance" },
-            { Region = "The Barrens", Vendor = RRS("Jim'bek"), Team = "Horde" },
+            { Region = "Redridge Mountains", Vendor = RRF_S("Mivin Shadowweave"), Team = "Alliance" },
+            { Region = "The Barrens", Vendor = RRF_S("Jim'bek"), Team = "Horde" },
          },
       },
       {
-         ID = 273972, Type = RRS("Tailoring"),
+         ID = 273972, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273973, Type = RRS("Tailoring"),
+         ID = 273973, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273974, Type = RRS("Tailoring"),
+         ID = 273974, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273975, Type = RRS("Tailoring"),
+         ID = 273975, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273988, Type = RRS("Tailoring"),
+         ID = 273988, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273989, Type = RRS("Tailoring"),
+         ID = 273989, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273990, Type = RRS("Tailoring"),
+         ID = 273990, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273991, Type = RRS("Tailoring"),
+         ID = 273991, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273992, Type = RRS("Tailoring"),
+         ID = 273992, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273993, Type = RRS("Tailoring"),
+         ID = 273993, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273994, Type = RRS("Tailoring"),
+         ID = 273994, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 273995, Type = RRS("Tailoring"),
+         ID = 273995, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274008, Type = RRS("Tailoring"),
+         ID = 274008, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274009, Type = RRS("Tailoring"),
+         ID = 274009, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274010, Type = RRS("Tailoring"),
+         ID = 274010, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 274011, Type = RRS("Tailoring"),
+         ID = 274011, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mount Hyjal", Vendor = RRS("Aisarra Nightmeadow"), Team = "Alliance" },
+            { Region = "Mount Hyjal", Vendor = RRF_S("Aisarra Nightmeadow"), Team = "Alliance" },
          },
       },
       {
-         ID = 275580, Type = RRS("Tailoring"),
+         ID = 275580, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 275581, Type = RRS("Tailoring"),
+         ID = 275581, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 275582, Type = RRS("Tailoring"),
+         ID = 275582, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 275583, Type = RRS("Tailoring"),
+         ID = 275583, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 275584, Type = RRS("Tailoring"),
+         ID = 275584, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 275585, Type = RRS("Tailoring"),
+         ID = 275585, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Silithus", Vendor = RRS("Mishta"), Team = "Neutral" },
+            { Region = "Silithus", Vendor = RRF_S("Mishta"), Team = "Neutral" },
          },
       },
       {
-         ID = 276982, Type = RRS("Tailoring"),
+         ID = 276982, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276983, Type = RRS("Tailoring"),
+         ID = 276983, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Mulgore", Vendor = RRS("Sutara Plainstalker"), Team = "Horde" },
+            { Region = "Mulgore", Vendor = RRF_S("Sutara Plainstalker"), Team = "Horde" },
          },
       },
       {
-         ID = 276990, Type = RRS("Tailoring"),
+         ID = 276990, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
       {
-         ID = 276991, Type = RRS("Tailoring"),
+         ID = 276991, Type = RRF_S("Tailoring"),
          Locations = {
-            { Region = "Alterac Mountains", Vendor = RRS("Archmage Alvareaux"), Team = "Alliance" },
+            { Region = "Alterac Mountains", Vendor = RRF_S("Archmage Alvareaux"), Team = "Alliance" },
          },
       },
    },

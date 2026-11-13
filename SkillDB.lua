@@ -1,7 +1,7 @@
 -- SkillDB.lua: per-character database of professions, recipes and reputation
 --
 -- Layout (unchanged from 1.x so existing saved data keeps working):
--- RecipeRadar_SkillDB[realm][character] = {
+-- RecipeRadarForever_SkillDB[realm][character] = {
 --    Team = "Alliance" | "Horde",
 --    Professions = { [profName] = { Rank = n, Specialty = name?, Recipes = { [recipeName] = 1 } } },
 --    Factions = { [factionName] = standingIndex },
@@ -9,25 +9,25 @@
 
 local addonName, ns = ...
 
-function RecipeRadar_SkillDB_Init()
+function RRF_SkillDB_Init()
 
-   if (type(RecipeRadar_SkillDB) ~= "table") then
-      RecipeRadar_SkillDB = { }
+   if (type(RecipeRadarForever_SkillDB) ~= "table") then
+      RecipeRadarForever_SkillDB = { }
    end
-   if (type(RecipeRadar_NameCache) ~= "table") then
-      RecipeRadar_NameCache = { }
+   if (type(RecipeRadarForever_NameCache) ~= "table") then
+      RecipeRadarForever_NameCache = { }
    end
 
    local realm = GetRealmName()
-   if (not RecipeRadar_SkillDB[realm]) then
-      RecipeRadar_SkillDB[realm] = { }
+   if (not RecipeRadarForever_SkillDB[realm]) then
+      RecipeRadarForever_SkillDB[realm] = { }
    end
 
    -- drop professions that this data set does not know about
-   for _, player_info in pairs(RecipeRadar_SkillDB[realm]) do
+   for _, player_info in pairs(RecipeRadarForever_SkillDB[realm]) do
       if (type(player_info.Professions) == "table") then
          for prof in pairs(player_info.Professions) do
-            if (not RecipeRadar_IsProfession(prof)) then
+            if (not RRF_IsProfession(prof)) then
                player_info.Professions[prof] = nil
             end
          end
@@ -38,16 +38,16 @@ end
 
 -- Returns the character's personal database, creating it when needed.
 -- If no player is supplied, the current player is assumed.
-function RecipeRadar_SkillDB_GetSafePlayerDB(player)
+function RRF_SkillDB_GetSafePlayerDB(player)
 
-   if (not RecipeRadar_SkillDB) then
-      RecipeRadar_SkillDB_Init()
+   if (not RecipeRadarForever_SkillDB) then
+      RRF_SkillDB_Init()
    end
 
    local is_me = (not player or player == UnitName("player"))
    if (not player) then player = UnitName("player") end
 
-   local db = RecipeRadar_SkillDB[GetRealmName()]
+   local db = RecipeRadarForever_SkillDB[GetRealmName()]
    if (not db[player]) then db[player] = { } end
    local info = db[player]
 
@@ -59,16 +59,16 @@ function RecipeRadar_SkillDB_GetSafePlayerDB(player)
 
 end
 
-function RecipeRadar_SkillDB_GetPlayerTeam(player)
-   return RecipeRadar_SkillDB_GetSafePlayerDB(player).Team
+function RRF_SkillDB_GetPlayerTeam(player)
+   return RRF_SkillDB_GetSafePlayerDB(player).Team
 end
 
-function RecipeRadar_SkillDB_GetPlayerProfessions(player)
-   return RecipeRadar_SkillDB_GetSafePlayerDB(player).Professions
+function RRF_SkillDB_GetPlayerProfessions(player)
+   return RRF_SkillDB_GetSafePlayerDB(player).Professions
 end
 
-function RecipeRadar_SkillDB_GetPlayerFactions(player)
-   return RecipeRadar_SkillDB_GetSafePlayerDB(player).Factions
+function RRF_SkillDB_GetPlayerFactions(player)
+   return RRF_SkillDB_GetSafePlayerDB(player).Factions
 end
 
 local function GetProfEntry(profs, name)
@@ -85,21 +85,21 @@ end
 
 -- Professions and ranks from the skill list (C_SkillInfo, verified in the
 -- Forever API docs). Professions that are no longer listed get removed.
-function RecipeRadar_SkillDB_ScanSkills()
+function RRF_SkillDB_ScanSkills()
 
    if (not (C_SkillInfo and C_SkillInfo.GetNumSkillLines)) then return end
 
-   local profs = RecipeRadar_SkillDB_GetPlayerProfessions()
+   local profs = RRF_SkillDB_GetPlayerProfessions()
    local seen = { }
 
    for i = 1, C_SkillInfo.GetNumSkillLines() do
       local info = C_SkillInfo.GetSkillLineInfo(i)
-      if (info and not info.isHeader and RecipeRadar_IsProfession(info.name)) then
+      if (info and not info.isHeader and RRF_IsProfession(info.name)) then
          local entry = GetProfEntry(profs, info.name)
          entry.Rank = info.rank
          entry.MaxRank = info.maxRank
          seen[info.name] = true
-         RecipeRadar_SkillDB_HandleSpecialCase(profs, info.name, info.maxRank)
+         RRF_SkillDB_HandleSpecialCase(profs, info.name, info.maxRank)
       end
    end
 
@@ -113,13 +113,13 @@ function RecipeRadar_SkillDB_ScanSkills()
 end
 
 -- Trade specializations, checked by spell ID.
-function RecipeRadar_SkillDB_ScanSpecialties()
+function RRF_SkillDB_ScanSpecialties()
 
    if (not (C_SpellBook and C_SpellBook.IsSpellKnown)) then return end
 
-   local profs = RecipeRadar_SkillDB_GetPlayerProfessions()
+   local profs = RRF_SkillDB_GetPlayerProfessions()
    for spec, spellID in pairs(ns.SpecialtySpells) do
-      local prof = RecipeRadar_Specialties[spec]
+      local prof = RRF_Specialties[spec]
       if (profs[prof]) then
          if (C_SpellBook.IsSpellKnown(spellID)) then
             profs[prof].Specialty = spec
@@ -132,7 +132,7 @@ function RecipeRadar_SkillDB_ScanSpecialties()
 end
 
 -- Standings with the factions that sell recipes.
-function RecipeRadar_SkillDB_ScanReputation()
+function RRF_SkillDB_ScanReputation()
 
    if (not (C_Reputation and C_Reputation.GetNumFactions)) then return end
 
@@ -140,14 +140,14 @@ function RecipeRadar_SkillDB_ScanReputation()
    -- headers in the reputation list don't hide any of them
    if (not ns.neededFactions) then
       ns.neededFactions = { }
-      for _, prof in pairs(RecipeRadar_RecipeData) do
+      for _, prof in pairs(RRF_RecipeData) do
          for _, recipe in ipairs(prof.Recipes) do
             if (recipe.FactionID) then ns.neededFactions[recipe.FactionID] = true end
          end
       end
    end
 
-   local factions = RecipeRadar_SkillDB_GetPlayerFactions()
+   local factions = RRF_SkillDB_GetPlayerFactions()
    for id in pairs(ns.neededFactions) do
       local data = C_Reputation.GetFactionDataByID(id)
       if (data and data.name and data.name ~= "") then
@@ -158,28 +158,28 @@ function RecipeRadar_SkillDB_ScanReputation()
 
 end
 
-function RecipeRadar_SkillDB_ScanAll()
+function RRF_SkillDB_ScanAll()
 
-   RecipeRadar_SkillDB_ScanSkills()
-   RecipeRadar_SkillDB_ScanSpecialties()
-   RecipeRadar_SkillDB_ScanReputation()
+   RRF_SkillDB_ScanSkills()
+   RRF_SkillDB_ScanSpecialties()
+   RRF_SkillDB_ScanReputation()
 
 end
 
 -- Adds unlisted/implied "recipes" (expert books) to the skill DB.
-function RecipeRadar_SkillDB_HandleSpecialCase(profs, prof_name, max_rank)
+function RRF_SkillDB_HandleSpecialCase(profs, prof_name, max_rank)
 
    if (not max_rank or max_rank <= 150) then return end
 
    local books = {
-      [RRS("First Aid")] = 16084,  -- Expert First Aid - Under Wraps
-      [RRS("Fishing")] = 16083,    -- Expert Fishing - The Bass and You
-      [RRS("Cooking")] = 16072,    -- Expert Cookbook
+      [RRF_S("First Aid")] = 16084,  -- Expert First Aid - Under Wraps
+      [RRF_S("Fishing")] = 16083,    -- Expert Fishing - The Bass and You
+      [RRF_S("Cooking")] = 16072,    -- Expert Cookbook
    }
    local id = books[prof_name]
    if (not id) then return end
 
-   local name, _, _, _, _, _, _, cached = RecipeRadar_GetSafeItemInfo(id)
+   local name, _, _, _, _, _, _, cached = RRF_GetSafeItemInfo(id)
    if (cached) then
       GetProfEntry(profs, prof_name).Recipes[name] = 1
    end
@@ -205,20 +205,20 @@ end
 -- Marks as known every recipe that the game flags as "Already known" in its
 -- item tooltip. Only recipes the DB considers learnable by the current
 -- player are checked. Returns true if the DB changed.
-function RecipeRadar_SkillDB_ScanKnownRecipes()
+function RRF_SkillDB_ScanKnownRecipes()
 
    if (not (C_TooltipInfo and C_TooltipInfo.GetItemByID)) then return false end
 
-   local profs = RecipeRadar_SkillDB_GetPlayerProfessions()
+   local profs = RRF_SkillDB_GetPlayerProfessions()
    local changed = false
 
-   for _, prof_data in pairs(RecipeRadar_RecipeData) do
+   for _, prof_data in pairs(RRF_RecipeData) do
       for _, recipe in ipairs(prof_data.Recipes) do
          local p = profs[recipe.Type]
          if (p and p.Recipes and C_Item.GetItemInfo(recipe.ID) and
-               RecipeRadar_Availability_GetKey(recipe) == "LearnableByPlayer" and
+               RRF_Availability_GetKey(recipe) == "LearnableByPlayer" and
                TooltipSaysKnown(recipe.ID)) then
-            local name = RecipeRadar_TrimRecipeLabel(C_Item.GetItemInfo(recipe.ID))
+            local name = RRF_TrimRecipeLabel(C_Item.GetItemInfo(recipe.ID))
             p.Recipes[name] = 1
             changed = true
          end
@@ -230,15 +230,15 @@ function RecipeRadar_SkillDB_ScanKnownRecipes()
 end
 
 -- Schedules one known-recipe scan; bursts of learn events collapse into it.
-function RecipeRadar_SkillDB_RequestKnownScan()
+function RRF_SkillDB_RequestKnownScan()
 
    if (ns.knownScanQueued) then return end
    ns.knownScanQueued = true
    C_Timer.After(1, function()
       ns.knownScanQueued = false
-      RecipeRadar_SkillDB_ScanSkills()
-      RecipeRadar_SkillDB_ScanKnownRecipes()
-      RecipeRadar_RefreshIfShown()
+      RRF_SkillDB_ScanSkills()
+      RRF_SkillDB_ScanKnownRecipes()
+      RRF_RefreshIfShown()
    end)
 
 end
@@ -247,21 +247,21 @@ end
 -- Queries
 -----------------------------------------------------------------------------
 
-function RecipeRadar_SkillDB_GetRank(prof)
+function RRF_SkillDB_GetRank(prof)
 
-   local prof_db = RecipeRadar_SkillDB_GetPlayerProfessions()[prof]
+   local prof_db = RRF_SkillDB_GetPlayerProfessions()[prof]
    if (not prof_db) then return 0 end
    return prof_db.Rank or 0
 
 end
 
 -- Does a character in the DB have the reputation needed for the recipe?
-function RecipeRadar_SkillDB_HasRep(player, recipe)
+function RRF_SkillDB_HasRep(player, recipe)
 
    local key = recipe.FactionID or recipe.Faction
    if (not key or key == "") then return true end
 
-   local factions = RecipeRadar_SkillDB_GetPlayerFactions(player)
+   local factions = RRF_SkillDB_GetPlayerFactions(player)
    local standing = factions[key] or (recipe.Faction and factions[recipe.Faction])
    if (not standing) then return false end
    return standing >= (recipe.Level or 4)
@@ -269,11 +269,11 @@ function RecipeRadar_SkillDB_HasRep(player, recipe)
 end
 
 -- Does a character in the DB have the specialty needed for the recipe?
-function RecipeRadar_SkillDB_HasSpec(player, recipe)
+function RRF_SkillDB_HasSpec(player, recipe)
 
    if (not recipe.Specialty or recipe.Specialty == "") then return true end
 
-   local db = RecipeRadar_SkillDB_GetPlayerProfessions(player)
+   local db = RRF_SkillDB_GetPlayerProfessions(player)
    if (not db[recipe.Type]) then return false end
    return recipe.Specialty == db[recipe.Type].Specialty
 
@@ -283,35 +283,35 @@ end
 -- Debug commands
 -----------------------------------------------------------------------------
 
-function RecipeRadar_SkillDB_Clear(player)
+function RRF_SkillDB_Clear(player)
 
-   local realm_db = RecipeRadar_SkillDB[GetRealmName()]
+   local realm_db = RecipeRadarForever_SkillDB[GetRealmName()]
    if (player and player ~= "" and realm_db[player]) then
-      RecipeRadar_Print("Clearing all known recipes for " .. player .. ".")
+      RRF_Print("Clearing all known recipes for " .. player .. ".")
       realm_db[player] = nil
    else
-      RecipeRadar_Print("Clearing all known recipes on this realm.")
-      RecipeRadar_SkillDB[GetRealmName()] = { }
+      RRF_Print("Clearing all known recipes on this realm.")
+      RecipeRadarForever_SkillDB[GetRealmName()] = { }
    end
-   RecipeRadar_SkillDB_ScanAll()
+   RRF_SkillDB_ScanAll()
 
 end
 
-function RecipeRadar_SkillDB_Print(player)
+function RRF_SkillDB_Print(player)
 
-   RecipeRadar_Print("Realm: " .. GetRealmName())
-   for player_name, info in pairs(RecipeRadar_SkillDB[GetRealmName()]) do
+   RRF_Print("Realm: " .. GetRealmName())
+   for player_name, info in pairs(RecipeRadarForever_SkillDB[GetRealmName()]) do
       if (not player or player == "" or player == player_name) then
-         RecipeRadar_Print("   " .. player_name .. " (" .. tostring(info.Team) .. ")")
+         RRF_Print("   " .. player_name .. " (" .. tostring(info.Team) .. ")")
          for prof_name, prof in pairs(info.Professions or { }) do
             local count = 0
             for _ in pairs(prof.Recipes or { }) do count = count + 1 end
-            RecipeRadar_Print(string.format("      %s %d%s - %d recipes known",
+            RRF_Print(string.format("      %s %d%s - %d recipes known",
                   prof_name, prof.Rank or 0,
                   prof.Specialty and (" [" .. prof.Specialty .. "]") or "", count))
          end
          for faction, standing in pairs(info.Factions or { }) do
-            RecipeRadar_Print("      " .. faction .. ": " ..
+            RRF_Print("      " .. faction .. ": " ..
                   (_G["FACTION_STANDING_LABEL" .. standing] or standing))
          end
       end

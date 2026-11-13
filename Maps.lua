@@ -7,7 +7,7 @@
 
 local addonName, ns = ...
 
--- Region keys in RecipeRadar_RegionData are English zone names; every zone
+-- Region keys in RRF_RegionData are English zone names; every zone
 -- region carries the client's uiMapID (Forever uses the Classic Era map IDs).
 local KALIMDOR_MAP, EASTERN_KINGDOMS_MAP = 1414, 1415
 local continentMapIDs = { [1] = KALIMDOR_MAP, [2] = EASTERN_KINGDOMS_MAP }
@@ -49,9 +49,9 @@ end
 
 -- Adds a region (also used at runtime by the QuestieDB import for zones the
 -- shipped data has no vendors in yet).
-function RecipeRadar_Maps_RegisterRegion(key, region)
+function RRF_Maps_RegisterRegion(key, region)
 
-   RecipeRadar_RegionData[key] = region
+   RRF_RegionData[key] = region
    if (region.UiMapID) then
       regionByMapID[region.UiMapID] = key
       local info = C_Map.GetMapInfo(region.UiMapID)
@@ -60,17 +60,17 @@ function RecipeRadar_Maps_RegisterRegion(key, region)
          region.Continent = ContinentIndexOfMap(region.UiMapID) or 2
       end
    end
-   regionByLocalName[RRS(key)] = key
+   regionByLocalName[RRF_S(key)] = key
    regionByLocalName[key] = key
 
 end
 
-function RecipeRadar_Maps_BuildRegionIndex()
+function RRF_Maps_BuildRegionIndex()
 
    wipe(regionByMapID)
    wipe(regionByLocalName)
-   for key, region in pairs(RecipeRadar_RegionData) do
-      RecipeRadar_Maps_RegisterRegion(key, region)
+   for key, region in pairs(RRF_RegionData) do
+      RRF_Maps_RegisterRegion(key, region)
    end
 
    -- every zone of both continents, for the options dropdown
@@ -86,42 +86,42 @@ function RecipeRadar_Maps_BuildRegionIndex()
       zonesByContinent[index] = list
    end
    local instances = { }
-   for key, region in pairs(RecipeRadar_RegionData) do
+   for key, region in pairs(RRF_RegionData) do
       if (region.Continent == 0) then
-         table.insert(instances, { name = RecipeRadar_GetRegionDisplayName(key), key = key })
+         table.insert(instances, { name = RRF_GetRegionDisplayName(key), key = key })
       end
    end
    table.sort(instances, function(a, b) return a.name < b.name end)
    zonesByContinent[0] = instances
 
    indexBuilt = true
-   RecipeRadar_Maps_RestorePins()
+   RRF_Maps_RestorePins()
 
 end
 
 local function EnsureIndex()
-   if (not indexBuilt) then RecipeRadar_Maps_BuildRegionIndex() end
+   if (not indexBuilt) then RRF_Maps_BuildRegionIndex() end
 end
 
-function RecipeRadar_Maps_GetRegionMapID(region_key)
+function RRF_Maps_GetRegionMapID(region_key)
 
-   local region = RecipeRadar_RegionData[region_key]
+   local region = RRF_RegionData[region_key]
    return region and region.UiMapID
 
 end
 
 -- Localized name for a region key (falls back to the localization table).
-function RecipeRadar_GetRegionDisplayName(region_key)
+function RRF_GetRegionDisplayName(region_key)
 
-   local region = RecipeRadar_RegionData[region_key]
+   local region = RRF_RegionData[region_key]
    local info = region and region.UiMapID and C_Map.GetMapInfo(region.UiMapID)
-   return (info and info.name) or RRS(region_key)
+   return (info and info.name) or RRF_S(region_key)
 
 end
 
 -- Region key (or the plain localized zone name if the zone has no vendors)
 -- for the player's current location.
-function RecipeRadar_Maps_GetPlayerRegion()
+function RRF_Maps_GetPlayerRegion()
 
    EnsureIndex()
    local mapID = C_Map.GetBestMapForUnit("player")
@@ -136,39 +136,39 @@ function RecipeRadar_Maps_GetPlayerRegion()
 
 end
 
-function RecipeRadar_Maps_GetContinentIndex(region_key)
+function RRF_Maps_GetContinentIndex(region_key)
 
-   local region = RecipeRadar_RegionData[region_key]
+   local region = RRF_RegionData[region_key]
    return region and region.Continent
 
 end
 
 -- Zones of a continent index (0 = instances) for the options dropdown.
-function RecipeRadar_Maps_GetZones(continent)
+function RRF_Maps_GetZones(continent)
 
    EnsureIndex()
    return zonesByContinent[continent] or { }
 
 end
 
-function RecipeRadar_Maps_PrintRegionIndex()
+function RRF_Maps_PrintRegionIndex()
 
    EnsureIndex()
    local missing, count = { }, 0
-   for key, region in pairs(RecipeRadar_RegionData) do
+   for key, region in pairs(RRF_RegionData) do
       count = count + 1
       if (region.Continent ~= 0 and not (region.UiMapID and C_Map.GetMapInfo(region.UiMapID))) then
          table.insert(missing, key)
       end
    end
    table.sort(missing)
-   RecipeRadar_Print(string.format("Recipe Radar: %d regions.", count))
+   RRF_Print(string.format("Recipe Radar: %d regions.", count))
    if (#missing == 0) then
-      RecipeRadar_Print("All vendor regions resolved to a game map.")
+      RRF_Print("All vendor regions resolved to a game map.")
    else
-      RecipeRadar_Print("Regions without a game map: " .. table.concat(missing, ", "))
+      RRF_Print("Regions without a game map: " .. table.concat(missing, ", "))
    end
-   RecipeRadar_Print("Pins: " .. (HasTomTom() and "TomTom" or "world map + Blizzard waypoint"))
+   RRF_Print("Pins: " .. (HasTomTom() and "TomTom" or "world map + Blizzard waypoint"))
 
 end
 
@@ -179,7 +179,7 @@ end
 local tilePool = { }
 
 -- Draws the art of uiMapID stretched over `frame`. Returns true if it has art.
-function RecipeRadar_Maps_DrawZoneArt(frame, mapID)
+function RRF_Maps_DrawZoneArt(frame, mapID)
 
    for _, tex in ipairs(tilePool) do tex:Hide() end
    local layers = mapID and C_Map.GetMapArtLayers(mapID)
@@ -219,7 +219,7 @@ function RecipeRadar_Maps_DrawZoneArt(frame, mapID)
 
 end
 
-function RecipeRadar_Maps_HideZoneArt()
+function RRF_Maps_HideZoneArt()
 
    for _, tex in ipairs(tilePool) do tex:Hide() end
 
@@ -232,29 +232,29 @@ end
 -- Global because the XML pin template names it. The MapCanvas base methods
 -- are copied in when the world map is first used (Blizzard_MapCanvas is a
 -- load-on-demand dependency of the world map).
-RecipeRadarWorldMapPinMixin = { }
+RRFWorldMapPinMixin = { }
 
-function RecipeRadarWorldMapPinMixin:OnLoad()
+function RRFWorldMapPinMixin:OnLoad()
    self:UseFrameLevelType("PIN_FRAME_LEVEL_AREA_POI")
    self:SetScalingLimits(1, 1.0, 1.2)
 end
 
-function RecipeRadarWorldMapPinMixin:OnAcquired(vendor, x, y)
+function RRFWorldMapPinMixin:OnAcquired(vendor, x, y)
    self.Vendor = vendor
    self:SetPosition(x, y)
 end
 
-function RecipeRadarWorldMapPinMixin:OnMouseEnter()
-   RecipeRadar_Maps_SetTooltip(GameTooltip, self)
+function RRFWorldMapPinMixin:OnMouseEnter()
+   RRF_Maps_SetTooltip(GameTooltip, self)
 end
 
-function RecipeRadarWorldMapPinMixin:OnMouseLeave()
+function RRFWorldMapPinMixin:OnMouseLeave()
    GameTooltip:Hide()
 end
 
-function RecipeRadarWorldMapPinMixin:OnClick(button)
+function RRFWorldMapPinMixin:OnClick(button)
    if (button == "RightButton") then
-      RecipeRadar_Maps_ShowContextMenu(self, self.Vendor)
+      RRF_Maps_ShowContextMenu(self, self.Vendor)
    end
 end
 
@@ -265,7 +265,7 @@ local provider = { }
 local function CompleteMixins()
    if (not (MapCanvasPinMixin and MapCanvasDataProviderMixin)) then return false end
    for k, v in pairs(MapCanvasPinMixin) do
-      if (RecipeRadarWorldMapPinMixin[k] == nil) then RecipeRadarWorldMapPinMixin[k] = v end
+      if (RRFWorldMapPinMixin[k] == nil) then RRFWorldMapPinMixin[k] = v end
    end
    for k, v in pairs(MapCanvasDataProviderMixin) do
       if (provider[k] == nil) then provider[k] = v end
@@ -274,7 +274,7 @@ local function CompleteMixins()
 end
 
 function provider:RemoveAllData()
-   self:GetMap():RemoveAllPinsByTemplate("RecipeRadarWorldMapPinTemplate")
+   self:GetMap():RemoveAllPinsByTemplate("RRFWorldMapPinTemplate")
 end
 
 function provider:RefreshAllData()
@@ -287,7 +287,7 @@ function provider:RefreshAllData()
 
    for vendor, entry in pairs(mapped) do
       local coords = vendor.Coordinates and vendor.Coordinates[1]
-      local zoneID = RecipeRadar_Maps_GetRegionMapID(entry.region)
+      local zoneID = RRF_Maps_GetRegionMapID(entry.region)
       if (coords and zoneID) then
          local x, y
          if (zoneID == shownMap) then
@@ -301,7 +301,7 @@ function provider:RefreshAllData()
             end
          end
          if (x and y and x >= 0 and x <= 1 and y >= 0 and y <= 1) then
-            self:GetMap():AcquirePin("RecipeRadarWorldMapPinTemplate", vendor, x, y)
+            self:GetMap():AcquirePin("RRFWorldMapPinTemplate", vendor, x, y)
          end
       end
    end
@@ -328,7 +328,7 @@ end
 local function SetBlizzardWaypoint(vendor, region)
 
    local coords = vendor.Coordinates and vendor.Coordinates[1]
-   local mapID = RecipeRadar_Maps_GetRegionMapID(region)
+   local mapID = RRF_Maps_GetRegionMapID(region)
    if (not coords or not mapID) then return end
    if (not C_Map.CanSetUserWaypointOnMap(mapID)) then return end
 
@@ -353,7 +353,7 @@ end
 -- Public mapping API (used by the tabs and the auto-map option)
 -----------------------------------------------------------------------------
 
-function RecipeRadar_Maps_Init()
+function RRF_Maps_Init()
 
    wipe(mapped)
 
@@ -362,7 +362,7 @@ end
 local function ShowVendor(vendor, entry)
 
    local coords = vendor.Coordinates and vendor.Coordinates[1]
-   local mapID = RecipeRadar_Maps_GetRegionMapID(entry.region)
+   local mapID = RRF_Maps_GetRegionMapID(entry.region)
    if (not coords or not mapID) then return end
 
    if (HasTomTom()) then
@@ -378,7 +378,7 @@ local function ShowVendor(vendor, entry)
 end
 
 -- Re-creates waypoints after the region index becomes available.
-function RecipeRadar_Maps_RestorePins()
+function RRF_Maps_RestorePins()
 
    for vendor, entry in pairs(mapped) do
       ShowVendor(vendor, entry)
@@ -388,10 +388,10 @@ function RecipeRadar_Maps_RestorePins()
 end
 
 -- Add the given vendor to the list of mapped vendors.
-function RecipeRadar_Maps_AddVendor(vendor, region)
+function RRF_Maps_AddVendor(vendor, region)
 
    if (vendor.IsMapped) then return end
-   local region_data = RecipeRadar_RegionData[region]
+   local region_data = RRF_RegionData[region]
    if (not region_data or region_data.Continent == 0) then return end  -- instance vendor
    if (not vendor.Coordinates) then return end
 
@@ -405,7 +405,7 @@ function RecipeRadar_Maps_AddVendor(vendor, region)
 end
 
 -- Unmap the vendor.
-function RecipeRadar_Maps_RemoveVendor(vendor)
+function RRF_Maps_RemoveVendor(vendor)
 
    local entry = mapped[vendor]
    if (entry and entry.uid and HasTomTom() and TomTom.RemoveWaypoint) then
@@ -424,7 +424,7 @@ end
 -----------------------------------------------------------------------------
 
 -- Fills a tooltip for a map icon. frame.Vendor must be set.
-function RecipeRadar_Maps_SetTooltip(tooltip, frame)
+function RRF_Maps_SetTooltip(tooltip, frame)
 
    local vendor = frame.Vendor
    if (not vendor) then return end
@@ -432,12 +432,12 @@ function RecipeRadar_Maps_SetTooltip(tooltip, frame)
    local count = #vendor.Recipes
    local line2
    if (count == 1) then
-      line2 = RRS("1 recipe")
+      line2 = RRF_S("1 recipe")
    else
-      line2 = string.format(RRS("%d recipes"), count)
+      line2 = string.format(RRF_S("%d recipes"), count)
    end
-   line2 = line2 .. " " .. RecipeRadar_Parens(string.format(RRS("%d learnable"),
-         RecipeRadar_CountLearnableRecipes(vendor.Recipes)))
+   line2 = line2 .. " " .. RRF_Parens(string.format(RRF_S("%d learnable"),
+         RRF_CountLearnableRecipes(vendor.Recipes)))
 
    local anchor = "ANCHOR_BOTTOMLEFT"
    if ((frame:GetLeft() or 0) < 200) then
@@ -445,22 +445,22 @@ function RecipeRadar_Maps_SetTooltip(tooltip, frame)
    end
 
    tooltip:SetOwner(frame, anchor)
-   tooltip:SetText(RecipeRadar_GetColoredTeamString(vendor.Team, vendor.Name))
+   tooltip:SetText(RRF_GetColoredTeamString(vendor.Team, vendor.Name))
    tooltip:AddLine(line2)
    if (vendor.Notes and vendor.Notes ~= "") then
-      tooltip:AddLine(RecipeRadar_FormatVendorNote(vendor.Notes, true))
+      tooltip:AddLine(RRF_FormatVendorNote(vendor.Notes, true))
    end
    tooltip:Show()
 
 end
 
-function RecipeRadar_Maps_ShowContextMenu(owner, vendor)
+function RRF_Maps_ShowContextMenu(owner, vendor)
 
    MenuUtil.CreateContextMenu(owner, function(_, root)
       root:CreateTitle(vendor.Name)
-      root:CreateButton(RRS("Unmap Vendor"), function()
-         RecipeRadar_Maps_RemoveVendor(vendor)
-         RecipeRadar_FrameUpdate()
+      root:CreateButton(RRF_S("Unmap Vendor"), function()
+         RRF_Maps_RemoveVendor(vendor)
+         RRF_FrameUpdate()
       end)
    end)
 

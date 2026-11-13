@@ -4,18 +4,18 @@
 
    <Script file="MinimapButton.lua"/>
 
-   <Button name="RecipeRadarMinimapButton" parent="Minimap" frameStrata="MEDIUM" frameLevel="8">
+   <Button name="RRFMinimapButton" parent="Minimap" frameStrata="MEDIUM" frameLevel="8">
       <Size x="32" y="32"/>
       <Anchors>
          <Anchor point="CENTER" relativeTo="Minimap" relativePoint="BOTTOMLEFT"/>
       </Anchors>
-      <NormalTexture file="Interface\AddOns\RecipeRadar\Images\Misc\MinimapButtonUp"/>
-      <PushedTexture file="Interface\AddOns\RecipeRadar\Images\Misc\MinimapButtonDown"/>
+      <NormalTexture file="Interface\AddOns\RecipeRadarForever\Images\Misc\MinimapButtonUp"/>
+      <PushedTexture file="Interface\AddOns\RecipeRadarForever\Images\Misc\MinimapButtonDown"/>
       <HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
       <Scripts>
-         <OnLoad function="RecipeRadar_MinimapButton_OnLoad"/>
-         <OnClick function="RecipeRadar_MinimapButton_OnClick"/>
-         <OnEnter function="RecipeRadar_MinimapButton_OnEnter"/>
+         <OnLoad function="RRF_MinimapButton_OnLoad"/>
+         <OnClick function="RRF_MinimapButton_OnClick"/>
+         <OnEnter function="RRF_MinimapButton_OnEnter"/>
          <OnLeave function="GameTooltip_Hide"/>
       </Scripts>
    </Button>

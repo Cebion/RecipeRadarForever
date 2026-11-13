@@ -529,7 +529,7 @@ def main():
 
 
 def recipe_fields(rid, r):
-    parts = ["ID = %d" % rid, "Type = RRS(%s)" % lua_str(r["type"])]
+    parts = ["ID = %d" % rid, "Type = RRF_S(%s)" % lua_str(r["type"])]
     if r.get("skill"):
         parts.append("Skill = %d" % r["skill"])
     if r.get("cost"):
@@ -539,13 +539,13 @@ def recipe_fields(rid, r):
     if r.get("token"):
         parts.append("Token = %d, Amount = %d" % (r["token"], r["amount"]))
     if r.get("faction"):
-        parts.append("Faction = RRS(%s)" % lua_str(r["faction"]))
+        parts.append("Faction = RRF_S(%s)" % lua_str(r["faction"]))
     if r.get("faction_id"):
         parts.append("FactionID = %d, Level = %d" % (r["faction_id"], r.get("level", 4)))
     if r.get("specialty"):
-        parts.append("Specialty = RRS(%s)" % lua_str(r["specialty"]))
+        parts.append("Specialty = RRF_S(%s)" % lua_str(r["specialty"]))
     if r.get("notes"):
-        parts.append("Notes = RRS(%s)" % lua_str(r["notes"]))
+        parts.append("Notes = RRF_S(%s)" % lua_str(r["notes"]))
     if r.get("certification"):
         parts.append("IsCertification = true")
     return ", ".join(parts)
@@ -563,7 +563,7 @@ local addonName, ns = ...
 def write_region(path, regions, recipes, version):
     out = io.StringIO()
     out.write(HEADER % ("RegionData.lua", version))
-    out.write("RecipeRadar_RegionData = {\n\n")
+    out.write("RRF_RegionData = {\n\n")
     for rn, reg in regions.items():
         out.write("[%s] = {\n" % lua_str(rn))
         if reg["continent"] is not None:
@@ -572,9 +572,9 @@ def write_region(path, regions, recipes, version):
             out.write("   UiMapID = %d,\n" % reg["map"])
         out.write("   Vendors = {\n")
         for v in sorted(reg["vendors"], key=lambda v: v["name"]):
-            out.write("      {\n         Name = RRS(%s),\n         Team = %s,\n" % (lua_str(v["name"]), lua_str(v["team"])))
+            out.write("      {\n         Name = RRF_S(%s),\n         Team = %s,\n" % (lua_str(v["name"]), lua_str(v["team"])))
             if v.get("notes"):
-                out.write("         Notes = RRS(%s),\n" % lua_str(v["notes"]))
+                out.write("         Notes = RRF_S(%s),\n" % lua_str(v["notes"]))
             if v["coords"]:
                 out.write("         Coordinates = {\n")
                 for x, y in v["coords"]:
@@ -585,7 +585,7 @@ def write_region(path, regions, recipes, version):
                 out.write("            { %s },\n" % recipe_fields(rid, recipes[rid]))
             out.write("         },\n      },\n")
         out.write("   },\n},\n\n")
-    out.write("}\n\nRecipeRadar_MaxVendorCoordinates = %d\n" % MAX_COORDS)
+    out.write("}\n\nRRF_MaxVendorCoordinates = %d\n" % MAX_COORDS)
     io.open(path, "w", encoding="utf-8", newline="\n").write(out.getvalue())
 
 
@@ -600,13 +600,13 @@ def write_recipes(path, regions, recipes, version):
         by_prof[recipes[rid]["type"]].append(rid)
     out = io.StringIO()
     out.write(HEADER % ("RecipeData.lua", version))
-    out.write("RecipeRadar_RecipeData = {\n\n")
+    out.write("RRF_RecipeData = {\n\n")
     for prof in sorted(by_prof):
-        out.write("[RRS(%s)] = {\n   Recipes = {\n" % lua_str(prof))
+        out.write("[RRF_S(%s)] = {\n   Recipes = {\n" % lua_str(prof))
         for rid in sorted(by_prof[prof]):
             out.write("      {\n         %s,\n         Locations = {\n" % recipe_fields(rid, recipes[rid]))
             for rn, vn, team in sorted(set(locations[rid])):
-                out.write("            { Region = %s, Vendor = RRS(%s), Team = %s },\n" % (lua_str(rn), lua_str(vn), lua_str(team)))
+                out.write("            { Region = %s, Vendor = RRF_S(%s), Team = %s },\n" % (lua_str(rn), lua_str(vn), lua_str(team)))
             out.write("         },\n      },\n")
         out.write("   },\n},\n\n")
     out.write("}\n")

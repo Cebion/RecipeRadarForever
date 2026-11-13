@@ -2,7 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
 
-   <Button name="RecipeRadarVendorButtonTemplate" hidden="true" virtual="true">
+   <Button name="RRFVendorButtonTemplate" hidden="true" virtual="true">
       <Size>
          <AbsDimension x="393" y="16"/>
       </Size>
@@ -29,10 +29,10 @@
             self:RegisterForClicks("LeftButtonUp", "RightButtonUp")
          </OnLoad>
          <OnClick>
-            RecipeRadar_VendorButton_OnClick(self, button)
+            RRF_VendorButton_OnClick(self, button)
          </OnClick>
-         <OnEnter function="RecipeRadar_VendorButton_OnEnter"/>
-         <OnLeave function="RecipeRadar_VendorButton_OnLeave"/>
+         <OnEnter function="RRF_VendorButton_OnEnter"/>
+         <OnLeave function="RRF_VendorButton_OnLeave"/>
          <OnMouseDown>
             self.SubText:SetPoint("LEFT", self:GetFontString(), "RIGHT", 11, -1)
          </OnMouseDown>
@@ -77,7 +77,7 @@
          </Anchors>
       </DisabledTexture>
       <!-- One font object for every state; the hover tint is applied in
-           RecipeRadar_VendorButton_OnEnter so shared font objects stay untouched. -->
+           RRF_VendorButton_OnEnter so shared font objects stay untouched. -->
       <ButtonText name="$parentText" parentKey="Text" justifyH="LEFT">
          <Anchors>
             <Anchor point="LEFT" relativeTo="$parentHighlight" relativePoint="RIGHT" x="2" y="1"/>
@@ -88,25 +88,25 @@
       <DisabledFont style="GameFontDisable"/>
    </Button>
 
-   <Button name="RecipeRadarScrollTemplate" hidden="true" virtual="true">
+   <Button name="RRFScrollTemplate" hidden="true" virtual="true">
       <Size>
          <AbsDimension x="16" y="16"/>
       </Size>
       <Anchors>
-         <Anchor point="CENTER" relativeTo="RecipeRadarMapFrame" relativePoint="TOPLEFT"/>
+         <Anchor point="CENTER" relativeTo="RRFMapFrame" relativePoint="TOPLEFT"/>
       </Anchors>
       <Scripts>
          <OnEnter>
-            RecipeRadar_Maps_SetTooltip(GameTooltip, self)
+            RRF_Maps_SetTooltip(GameTooltip, self)
          </OnEnter>
          <OnLeave>
             GameTooltip:Hide()
          </OnLeave>
       </Scripts>
-      <NormalTexture file="Interface\AddOns\RecipeRadar\Images\Misc\Scroll"/>
+      <NormalTexture file="Interface\AddOns\RecipeRadarForever\Images\Misc\Scroll"/>
    </Button>
 
-   <ScrollFrame name="RecipeRadarListScrollFrameTemplate" inherits="FauxScrollFrameTemplate" virtual="true">
+   <ScrollFrame name="RRFListScrollFrameTemplate" inherits="FauxScrollFrameTemplate" virtual="true">
       <Layers>
          <Layer level="BACKGROUND">
             <Texture file="Interface\ClassTrainerFrame\UI-ClassTrainer-ScrollBar">
@@ -139,7 +139,7 @@
       </Layers>
    </ScrollFrame>
 
-   <Button name="RecipeRadarTabButtonTemplate" virtual="true">
+   <Button name="RRFTabButtonTemplate" virtual="true">
       <Size>
          <AbsDimension x="53" y="29"/>
       </Size>

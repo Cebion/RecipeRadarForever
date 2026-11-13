@@ -2,7 +2,7 @@
 
 local addonName, ns = ...
 
-local frame = CreateFrame("Frame", "RecipeRadarOptionsFrame", UIParent, "BackdropTemplate")
+local frame = CreateFrame("Frame", "RRFOptionsFrame", UIParent, "BackdropTemplate")
 frame:SetSize(330, 384)
 frame:SetPoint("CENTER")
 frame:SetFrameStrata("DIALOG")
@@ -14,7 +14,7 @@ frame:SetScript("OnDragStart", frame.StartMoving)
 frame:SetScript("OnDragStop", frame.StopMovingOrSizing)
 frame:SetBackdrop(BACKDROP_DIALOG_32_32)
 frame:Hide()
-tinsert(UISpecialFrames, "RecipeRadarOptionsFrame")
+tinsert(UISpecialFrames, "RRFOptionsFrame")
 
 local header = frame:CreateTexture(nil, "ARTWORK")
 header:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Header")
@@ -22,7 +22,7 @@ header:SetSize(256, 64)
 header:SetPoint("TOP", 0, 12)
 local headerText = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 headerText:SetPoint("TOP", header, "TOP", 0, -14)
-headerText:SetText(RRS("Recipe Radar"))
+headerText:SetText(RRF_S("Recipe Radar Forever"))
 
 local function PlayCheckSound(checked)
    PlaySound(checked and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON or SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
@@ -39,12 +39,12 @@ local function CreateCheck(label, anchorTo, x, y, onClick)
    return check
 end
 
-local realmCheck = CreateCheck(RRS("Check Availability for Alts"), frame, 24, -30, function()
-   RecipeRadar_Availability_Toggle()
+local realmCheck = CreateCheck(RRF_S("Check Availability for Alts"), frame, 24, -30, function()
+   RRF_Availability_Toggle()
 end)
 
-local minimapCheck = CreateCheck(RRS("Show Minimap Button"), realmCheck, 0, -2, function()
-   RecipeRadar_MinimapButton_Toggle()
+local minimapCheck = CreateCheck(RRF_S("Show Minimap Button"), realmCheck, 0, -2, function()
+   RRF_MinimapButton_Toggle()
 end)
 
 local slider = CreateFrame("Slider", nil, frame, "UISliderTemplateWithLabels")
@@ -53,22 +53,22 @@ slider:SetSize(200, 17)
 slider:SetMinMaxValues(0, 360)
 slider:SetValueStep(1)
 slider:SetObeyStepOnDrag(true)
-slider.Text:SetText(RRS("Minimap Button Position"))
+slider.Text:SetText(RRF_S("Minimap Button Position"))
 slider.Low:SetText("")
 slider.High:SetText("")
 slider:SetScript("OnValueChanged", function(self, value, userInput)
    if (userInput) then
-      RecipeRadar_Options.MinimapButtonPosition = value
-      RecipeRadar_MinimapButton_UpdatePosition()
+      RecipeRadarForever_Options.MinimapButtonPosition = value
+      RRF_MinimapButton_UpdatePosition()
    end
 end)
 
 local continentDropDown, regionDropDown
 
-local autoRegionCheck = CreateCheck(RRS("Auto-select Current Region"), frame, 24, -150, function(checked)
-   RecipeRadar_Options.AutoSelectRegion = checked
+local autoRegionCheck = CreateCheck(RRF_S("Auto-select Current Region"), frame, 24, -150, function(checked)
+   RecipeRadarForever_Options.AutoSelectRegion = checked
    if (checked) then
-      RecipeRadar_NewRegion(RecipeRadar_Maps_GetPlayerRegion())
+      RRF_NewRegion(RRF_Maps_GetPlayerRegion())
    end
    continentDropDown:SetEnabled(not checked)
    regionDropDown:SetEnabled(not checked)
@@ -84,7 +84,7 @@ continentDropDown:SetSize(200, 22)
 continentDropDown:SetPoint("TOPLEFT", autoRegionCheck, "BOTTOMLEFT", 30, -4)
 continentDropDown:SetupMenu(function(_, root)
    for index = 0, 2 do
-      root:CreateRadio(RecipeRadar_Continents[index],
+      root:CreateRadio(RRF_Continents[index],
             function(i) return i == shownContinent end,
             function(i)
                shownContinent = i
@@ -98,16 +98,16 @@ end)
 regionDropDown = CreateFrame("DropdownButton", nil, frame, "WowStyle1DropdownTemplate")
 regionDropDown:SetSize(200, 22)
 regionDropDown:SetPoint("TOPLEFT", continentDropDown, "BOTTOMLEFT", 0, -6)
-regionDropDown:SetDefaultText(RRS("Region"))
+regionDropDown:SetDefaultText(RRF_S("Region"))
 regionDropDown:SetupMenu(function(_, root)
-   for _, zone in ipairs(RecipeRadar_Maps_GetZones(shownContinent or 0)) do
+   for _, zone in ipairs(RRF_Maps_GetZones(shownContinent or 0)) do
       -- zones without vendors are listed too (grayed), keyed by their name
       local key = zone.key or zone.name
       local radio = root:CreateRadio(zone.name,
-            function(k) return k == RecipeRadar_Options.CurrentRegion end,
+            function(k) return k == RecipeRadarForever_Options.CurrentRegion end,
             function(k)
-               RecipeRadar_NewRegion(k)
-               RecipeRadarListScrollFrameScrollBar:SetValue(0)
+               RRF_NewRegion(k)
+               RRFListScrollFrameScrollBar:SetValue(0)
             end,
             key)
       if (not zone.key) then
@@ -119,19 +119,19 @@ regionDropDown:SetupMenu(function(_, root)
    root:SetScrollMode(400)
 end)
 
-local autoMapCheck = CreateCheck(RRS("Auto-map Contributive Vendors"), frame, 24, -250, function(checked)
-   RecipeRadar_Options.AutoMapVendors = checked
+local autoMapCheck = CreateCheck(RRF_S("Auto-map Contributive Vendors"), frame, 24, -250, function(checked)
+   RecipeRadarForever_Options.AutoMapVendors = checked
    if (checked) then
-      RecipeRadar_InitVendorFilters()
-      RecipeRadar_FrameUpdate()
+      RRF_InitVendorFilters()
+      RRF_FrameUpdate()
    end
 end)
 
-local seasonalCheck = CreateCheck(RRS("Hide Seasonal Vendors/Recipes"), autoMapCheck, 0, -2, function(checked)
-   RecipeRadar_Options.HideSeasonal = checked
-   RecipeRadar_InitVendorFilters()
-   RecipeRadar_InitRecipeFilters()
-   RecipeRadar_FrameUpdate()
+local seasonalCheck = CreateCheck(RRF_S("Hide Seasonal Vendors/Recipes"), autoMapCheck, 0, -2, function(checked)
+   RecipeRadarForever_Options.HideSeasonal = checked
+   RRF_InitVendorFilters()
+   RRF_InitRecipeFilters()
+   RRF_FrameUpdate()
 end)
 
 local okay = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
@@ -144,21 +144,21 @@ okay:SetScript("OnClick", function()
 end)
 
 frame:SetScript("OnShow", function()
-   local opts = RecipeRadar_Options
+   local opts = RecipeRadarForever_Options
    realmCheck:SetChecked(opts.RealmAvailability)
    minimapCheck:SetChecked(opts.ShowMinimapButton)
    slider:SetValue(opts.MinimapButtonPosition or 256)
    autoRegionCheck:SetChecked(opts.AutoSelectRegion)
    autoMapCheck:SetChecked(opts.AutoMapVendors)
    seasonalCheck:SetChecked(opts.HideSeasonal)
-   shownContinent = opts.CurrentContinent or RecipeRadar_GetCurrentContinent()
+   shownContinent = opts.CurrentContinent or RRF_GetCurrentContinent()
    continentDropDown:SetEnabled(not opts.AutoSelectRegion)
    regionDropDown:SetEnabled(not opts.AutoSelectRegion)
    continentDropDown:GenerateMenu()
    regionDropDown:GenerateMenu()
 end)
 
-function RecipeRadar_OptionsFrame_Toggle()
+function RRF_OptionsFrame_Toggle()
 
    frame:SetShown(not frame:IsShown())
 
@@ -168,19 +168,19 @@ end
 -- Settings > AddOns entry: a small page with a button that opens the dialog
 -----------------------------------------------------------------------------
 
-function RecipeRadar_Options_RegisterSettings()
+function RRF_Options_RegisterSettings()
 
    if (not (Settings and Settings.RegisterCanvasLayoutCategory)) then return end
 
    local panel = CreateFrame("Frame")
    local title = panel:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
    title:SetPoint("TOPLEFT", 16, -16)
-   title:SetText(RRS("Recipe Radar") .. " " .. RECIPERADAR_VERSION)
+   title:SetText(RRF_S("Recipe Radar Forever") .. " " .. RRF_VERSION)
 
    local open = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
    open:SetSize(180, 24)
    open:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -12)
-   open:SetText(RRS("Options"))
+   open:SetText(RRF_S("Options"))
    open:SetScript("OnClick", function()
       if (SettingsPanel and SettingsPanel:IsShown()) then
          SettingsPanel:Close()
@@ -191,15 +191,15 @@ function RecipeRadar_Options_RegisterSettings()
    local toggle = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
    toggle:SetSize(180, 24)
    toggle:SetPoint("TOPLEFT", open, "BOTTOMLEFT", 0, -6)
-   toggle:SetText(RRS("Toggle Recipe Radar"))
+   toggle:SetText(RRF_S("Toggle Recipe Radar"))
    toggle:SetScript("OnClick", function()
       if (SettingsPanel and SettingsPanel:IsShown()) then
          SettingsPanel:Close()
       end
-      RecipeRadar_Toggle()
+      RRF_Toggle()
    end)
 
-   local category = Settings.RegisterCanvasLayoutCategory(panel, RRS("Recipe Radar"))
+   local category = Settings.RegisterCanvasLayoutCategory(panel, RRF_S("Recipe Radar Forever"))
    Settings.RegisterAddOnCategory(category)
 
 end

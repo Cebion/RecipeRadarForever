@@ -3,66 +3,66 @@
 local addonName, ns = ...
 
 -- Lookup helpers for the numbered list buttons defined in RecipeRadar.xml.
-function RecipeRadar_GetListButton(index)
-   return _G["RecipeRadarVendor" .. index]
+function RRF_GetListButton(index)
+   return _G["RRFVendor" .. index]
 end
 
-function RecipeRadar_GetMapScroll(index)
-   return _G["RecipeRadarScroll" .. index]
+function RRF_GetMapScroll(index)
+   return _G["RRFScroll" .. index]
 end
 
-function RecipeRadar_MainFrame_Init()
+function RRF_MainFrame_Init()
 
-   RecipeRadarFrame:RegisterForDrag("LeftButton")
+   RRFFrame:RegisterForDrag("LeftButton")
 
-   RecipeRadarListScrollFrameScrollBar:SetMinMaxValues(0, 0)
-   RecipeRadarListScrollFrameScrollBar:SetValue(0)
+   RRFListScrollFrameScrollBar:SetMinMaxValues(0, 0)
+   RRFListScrollFrameScrollBar:SetValue(0)
 
-   RecipeRadarOptionsButton:SetText(RRS("Options"))
-   RecipeRadarMapVendorIndicatorText:SetText(RRS("Locate Vendor on Map"))
-   RecipeRadar_UpdateLock()
+   RRFOptionsButton:SetText(RRF_S("Options"))
+   RRFMapVendorIndicatorText:SetText(RRF_S("Locate Vendor on Map"))
+   RRF_UpdateLock()
 
-   if (RecipeRadar_Options.ActiveTab == 2) then
-      RecipeRadar_RecipesTab_Init()
+   if (RecipeRadarForever_Options.ActiveTab == 2) then
+      RRF_RecipesTab_Init()
    else
-      RecipeRadar_RadarTab_Init()
+      RRF_RadarTab_Init()
    end
 
 end
 
 -- Also the TOC AddonCompartmentFunc and the key binding.
-function RecipeRadar_Toggle()
+function RRF_Toggle()
 
-   if (RecipeRadarFrame:IsShown()) then
-      RecipeRadarFrame:Hide()
+   if (RRFFrame:IsShown()) then
+      RRFFrame:Hide()
    else
-      RecipeRadar_Frame_Show()
+      RRF_Frame_Show()
    end
 
 end
 
-function RecipeRadar_Frame_Show()
+function RRF_Frame_Show()
 
-   RecipeRadarFrame:Show()
+   RRFFrame:Show()
 
    -- the scanners are cheap; run them so the lists are current on open
-   RecipeRadar_SkillDB_ScanAll()
-   RecipeRadar_SkillDB_ScanKnownRecipes()
+   RRF_SkillDB_ScanAll()
+   RRF_SkillDB_ScanKnownRecipes()
 
-   RecipeRadar_InitVendorFilters()
-   RecipeRadar_InitRecipeFilters()
-   RecipeRadar_FrameUpdate()
+   RRF_InitVendorFilters()
+   RRF_InitRecipeFilters()
+   RRF_FrameUpdate()
 
 end
 
-function RecipeRadar_FrameUpdate()
+function RRF_FrameUpdate()
 
-   if (not RecipeRadarFrame:IsShown()) then return end
+   if (not RRFFrame:IsShown()) then return end
 
-   if (RecipeRadar_Options.ActiveTab == 1) then
-      RecipeRadar_RadarTab_Update()
+   if (RecipeRadarForever_Options.ActiveTab == 1) then
+      RRF_RadarTab_Update()
    else
-      RecipeRadar_RecipesTab_Update()
+      RRF_RecipesTab_Update()
    end
 
 end
@@ -72,33 +72,33 @@ end
 ------------------------------------------------------------------------
 
 -- Draws the borders around each tab according to which is active.
-function RecipeRadar_SetActiveTab(id)
+function RRF_SetActiveTab(id)
 
    local active_tab_height, background_tab_height = 33, 29
 
    if (id == 1) then
-      RecipeRadarRadarTabFrameMiddle:SetHeight(active_tab_height)
-      RecipeRadarRadarTabFrameRight:SetHeight(active_tab_height)
-      RecipeRadarRecipesTabFrameLeft:SetHeight(background_tab_height)
-      RecipeRadarRecipesTabFrameMiddle:SetHeight(background_tab_height)
-      RecipeRadarRecipesTabFrameRight:SetHeight(background_tab_height)
+      RRFRadarTabFrameMiddle:SetHeight(active_tab_height)
+      RRFRadarTabFrameRight:SetHeight(active_tab_height)
+      RRFRecipesTabFrameLeft:SetHeight(background_tab_height)
+      RRFRecipesTabFrameMiddle:SetHeight(background_tab_height)
+      RRFRecipesTabFrameRight:SetHeight(background_tab_height)
    else
-      RecipeRadarRadarTabFrameMiddle:SetHeight(background_tab_height)
-      RecipeRadarRadarTabFrameRight:SetHeight(background_tab_height)
-      RecipeRadarRecipesTabFrameLeft:SetHeight(active_tab_height)
-      RecipeRadarRecipesTabFrameMiddle:SetHeight(active_tab_height)
-      RecipeRadarRecipesTabFrameRight:SetHeight(active_tab_height)
+      RRFRadarTabFrameMiddle:SetHeight(background_tab_height)
+      RRFRadarTabFrameRight:SetHeight(background_tab_height)
+      RRFRecipesTabFrameLeft:SetHeight(active_tab_height)
+      RRFRecipesTabFrameMiddle:SetHeight(active_tab_height)
+      RRFRecipesTabFrameRight:SetHeight(active_tab_height)
    end
-   RecipeRadar_Options.ActiveTab = id
+   RecipeRadarForever_Options.ActiveTab = id
 
 end
 
 local function Brighten(v)
-   return math.min(1, v + RecipeRadar_Colors.Highlight)
+   return math.min(1, v + RRF_Colors.Highlight)
 end
 
 -- Sets the button text color; the hover tint is derived from it.
-function RecipeRadar_SetButtonColors(button, text_color)
+function RRF_SetButtonColors(button, text_color)
 
    button.textColor = text_color
    local tint = button.isHovered and Brighten or function(v) return v end
@@ -106,7 +106,7 @@ function RecipeRadar_SetButtonColors(button, text_color)
 
 end
 
-function RecipeRadar_VendorButton_OnEnter(self)
+function RRF_VendorButton_OnEnter(self)
 
    self.isHovered = true
    local c = self.textColor
@@ -116,15 +116,15 @@ function RecipeRadar_VendorButton_OnEnter(self)
    if (self.r) then
       self.SubText:SetTextColor(Brighten(self.r), Brighten(self.g), Brighten(self.b))
    end
-   if (RecipeRadar_Options.RealmAvailability and self.Recipe) then
-      RecipeRadar_AvailabilityTooltip_Hide()
-      RecipeRadar_Availability_CreateTooltip(self.Recipe)
-      RecipeRadar_AvailabilityTooltip_Show(self)
+   if (RecipeRadarForever_Options.RealmAvailability and self.Recipe) then
+      RRF_AvailabilityTooltip_Hide()
+      RRF_Availability_CreateTooltip(self.Recipe)
+      RRF_AvailabilityTooltip_Show(self)
    end
 
 end
 
-function RecipeRadar_VendorButton_OnLeave(self)
+function RRF_VendorButton_OnLeave(self)
 
    self.isHovered = false
    local c = self.textColor
@@ -134,26 +134,26 @@ function RecipeRadar_VendorButton_OnLeave(self)
    if (self.r) then
       self.SubText:SetTextColor(self.r, self.g, self.b)
    end
-   RecipeRadarAvailabilityTooltip:Hide()
+   RRFAvailabilityTooltip:Hide()
 
 end
 
 -- Common drawing code for list items in the scroll frame.
-function RecipeRadar_DrawListItem(index, recipe)
+function RRF_DrawListItem(index, recipe)
 
-   local button = RecipeRadar_GetListButton(index)
+   local button = RRF_GetListButton(index)
 
    -- get and set the text color according to recipe availability
-   local name, _, _, _, _, _, _, cached = RecipeRadar_GetSafeItemInfo(recipe.ID)
-   local indicator = RecipeRadar_Availability_GetIndicator(recipe)
+   local name, _, _, _, _, _, _, cached = RRF_GetSafeItemInfo(recipe.ID)
+   local indicator = RRF_Availability_GetIndicator(recipe)
 
    if (not cached) then
-      RecipeRadar_SetButtonColors(button, RecipeRadar_Colors.UncachedRecipe)
+      RRF_SetButtonColors(button, RRF_Colors.UncachedRecipe)
    else
-      RecipeRadar_SetButtonColors(button, RecipeRadar_Colors.LightGray)
+      RRF_SetButtonColors(button, RRF_Colors.LightGray)
    end
 
-   if (RecipeRadar_Options.RealmAvailability) then
+   if (RecipeRadarForever_Options.RealmAvailability) then
       button:SetText(name .. indicator)
    else
       button:SetText(name)
@@ -163,10 +163,10 @@ function RecipeRadar_DrawListItem(index, recipe)
 
    -- drawing code for the little subtext field
    local subtext = button.SubText
-   if (not RecipeRadar_Options.RealmAvailability) then
-      local avail = RecipeRadar_Availability_GetKey(recipe)
-      local color = avail and RecipeRadar_Availabilities[avail].Color
-            or RecipeRadar_Colors.UncachedRecipe
+   if (not RecipeRadarForever_Options.RealmAvailability) then
+      local avail = RRF_Availability_GetKey(recipe)
+      local color = avail and RRF_Availabilities[avail].Color
+            or RRF_Colors.UncachedRecipe
       button.r, button.g, button.b = color.r, color.g, color.b
       subtext:SetText(indicator)
       subtext:SetTextColor(button.r, button.g, button.b)
@@ -187,34 +187,34 @@ end
 ------------------------------------------------------------------------
 
 -- OnClick handler for the vendor/recipe buttons in the scroll frame.
-function RecipeRadar_VendorButton_OnClick(self, button)
+function RRF_VendorButton_OnClick(self, button)
 
-   local offset = FauxScrollFrame_GetOffset(RecipeRadarListScrollFrame)
+   local offset = FauxScrollFrame_GetOffset(RRFListScrollFrame)
    local index = self:GetID() + offset
 
-   RecipeRadar_ServiceClickIndex(index, button, self)
+   RRF_ServiceClickIndex(index, button, self)
 
    if (button == "LeftButton") then
-      RecipeRadar_FrameUpdate()
+      RRF_FrameUpdate()
    end
 
 end
 
 -- Selects the first visible recipe (not vendor).
-function RecipeRadar_SelectFirstRecipe()
+function RRF_SelectFirstRecipe()
 
-   RecipeRadar_ServiceClickIndex(-1)
+   RRF_ServiceClickIndex(-1)
 
 end
 
 -- Abstracts front for click handlers. owner is the clicked list button
 -- (used to anchor context menus).
-function RecipeRadar_ServiceClickIndex(index, button, owner)
+function RRF_ServiceClickIndex(index, button, owner)
 
-   if (RecipeRadar_Options.ActiveTab == 1) then
-      RecipeRadar_RadarTab_ServiceClickIndex(index, button, owner)
+   if (RecipeRadarForever_Options.ActiveTab == 1) then
+      RRF_RadarTab_ServiceClickIndex(index, button, owner)
    else
-      RecipeRadar_RecipesTab_ServiceClickIndex(index, button, owner)
+      RRF_RecipesTab_ServiceClickIndex(index, button, owner)
    end
 
 end
@@ -224,123 +224,123 @@ end
 ------------------------------------------------------------------------
 
 -- Text shown instead of the money frame for non-gold or unknown prices.
-function RecipeRadar_GetCostText()
+function RRF_GetCostText()
 
    if (not ns.costText) then
-      ns.costText = RecipeRadarDetailFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
-      ns.costText:SetPoint("LEFT", RecipeDetailCostText, "RIGHT", 5, 0)
+      ns.costText = RRFDetailFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+      ns.costText:SetPoint("LEFT", RRFRecipeDetailCostText, "RIGHT", 5, 0)
       ns.costText:Hide()
    end
    return ns.costText
 
 end
 
-function RecipeRadar_ShowRecipeDetails()
+function RRF_ShowRecipeDetails()
 
-   RecipeDetailName:Show()
-   RecipeDetailIcon:Show()
-   RecipeDetailCostText:Show()
+   RRFRecipeDetailName:Show()
+   RRFRecipeDetailIcon:Show()
+   RRFRecipeDetailCostText:Show()
 
 end
 
-function RecipeRadar_HideRecipeDetails()
+function RRF_HideRecipeDetails()
 
-   RecipeDetailName:Hide()
-   RecipeDetailIcon:Hide()
-   RecipeDetailCostText:Hide()
-   RecipeDetailMoneyFrame:Hide()
-   RecipeRadar_GetCostText():Hide()
-   RecipeDetailNoteText:Hide()
-   RecipeDetailRequirements:Hide()
-   RecipeRadarRegionMap:Hide()
-   RecipeRadar_Maps_HideZoneArt()
+   RRFRecipeDetailName:Hide()
+   RRFRecipeDetailIcon:Hide()
+   RRFRecipeDetailCostText:Hide()
+   RRFRecipeDetailMoneyFrame:Hide()
+   RRF_GetCostText():Hide()
+   RRFRecipeDetailNoteText:Hide()
+   RRFRecipeDetailRequirements:Hide()
+   RRFRegionMap:Hide()
+   RRF_Maps_HideZoneArt()
 
    -- reset the mapped indicator to red/off
-   RecipeRadarMapVendorIndicator:SetVertexColor(1.0, 0, 0)
+   RRFMapVendorIndicator:SetVertexColor(1.0, 0, 0)
 
-   for i = 1, RecipeRadar_MaxVendorCoordinates do
-      RecipeRadar_GetMapScroll(i):Hide()
+   for i = 1, RRF_MaxVendorCoordinates do
+      RRF_GetMapScroll(i):Hide()
    end
 
 end
 
 -- When a recipe is actually selected, this function handles the
 -- subsequent drawing in the lower details and map frames.
-function RecipeRadar_SetSelection(vendor, recipe, region_name)
+function RRF_SetSelection(vendor, recipe, region_name)
 
    local name, link, colorcode, _, _, _, texture, cached =
-         RecipeRadar_GetSafeItemInfo(recipe.ID)
+         RRF_GetSafeItemInfo(recipe.ID)
 
-   RecipeDetailName:SetText(name)
+   RRFRecipeDetailName:SetText(name)
 
-   RecipeDetailIcon:SetNormalTexture(texture)
-   RecipeDetailIcon.NeedsUpdate = not cached
-   RecipeDetailIcon.ItemID = recipe.ID
-   RecipeDetailIcon.Hyperlink = RecipeRadar_GetHyperlinkByParts(name, link, colorcode)
+   RRFRecipeDetailIcon:SetNormalTexture(texture)
+   RRFRecipeDetailIcon.NeedsUpdate = not cached
+   RRFRecipeDetailIcon.ItemID = recipe.ID
+   RRFRecipeDetailIcon.Hyperlink = RRF_GetHyperlinkByParts(name, link, colorcode)
 
    -- gold price in the money frame; currencies, tokens and unknown prices as text
-   local cost = RecipeRadar_GetRecipeCost(recipe)
+   local cost = RRF_GetRecipeCost(recipe)
    if (type(cost) == "number") then
-      SetMoneyFrameColor("RecipeDetailMoneyFrame", GetMoney() >= cost and "default" or "red")
-      MoneyFrame_Update("RecipeDetailMoneyFrame", cost)
-      RecipeDetailMoneyFrame:Show()
-      RecipeRadar_GetCostText():Hide()
+      SetMoneyFrameColor("RRFRecipeDetailMoneyFrame", GetMoney() >= cost and "default" or "red")
+      MoneyFrame_Update("RRFRecipeDetailMoneyFrame", cost)
+      RRFRecipeDetailMoneyFrame:Show()
+      RRF_GetCostText():Hide()
    else
-      RecipeDetailMoneyFrame:Hide()
-      RecipeRadar_GetCostText():SetText(cost)
-      RecipeRadar_GetCostText():Show()
+      RRFRecipeDetailMoneyFrame:Hide()
+      RRF_GetCostText():SetText(cost)
+      RRF_GetCostText():Show()
    end
 
    -- some vendors have special requirements
-   local reqs = RecipeRadar_GetRecipeReqsString(recipe)
+   local reqs = RRF_GetRecipeReqsString(recipe)
    if (reqs) then
-      RecipeDetailRequirements:SetText(reqs)
-      RecipeDetailNoteText:Show()
-      RecipeDetailRequirements:Show()
+      RRFRecipeDetailRequirements:SetText(reqs)
+      RRFRecipeDetailNoteText:Show()
+      RRFRecipeDetailRequirements:Show()
    else
-      RecipeDetailNoteText:Hide()
-      RecipeDetailRequirements:Hide()
+      RRFRecipeDetailNoteText:Hide()
+      RRFRecipeDetailRequirements:Hide()
    end
 
    if (vendor.IsMapped) then
-      RecipeRadarMapVendorIndicator:SetVertexColor(0, 1.0, 0)
+      RRFMapVendorIndicator:SetVertexColor(0, 1.0, 0)
    else
-      RecipeRadarMapVendorIndicator:SetVertexColor(1.0, 0, 0)
+      RRFMapVendorIndicator:SetVertexColor(1.0, 0, 0)
    end
 
-   local region = RecipeRadar_RegionData[region_name or RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[region_name or RecipeRadarForever_Options.CurrentRegion]
 
    if (vendor.Coordinates and region and
-         RecipeRadar_Maps_DrawZoneArt(RecipeRadarMapFrame, region.UiMapID)) then
+         RRF_Maps_DrawZoneArt(RRFMapFrame, region.UiMapID)) then
 
       -- one icon per known location (roaming vendors have several)
-      for i = 1, RecipeRadar_MaxVendorCoordinates do
-         local scroll_icon = RecipeRadar_GetMapScroll(i)
+      for i = 1, RRF_MaxVendorCoordinates do
+         local scroll_icon = RRF_GetMapScroll(i)
          local coords = vendor.Coordinates[i]
          if (not coords) then
             scroll_icon:Hide()
          else
-            local x = RecipeRadarMapFrame:GetWidth() * coords.x
-            local y = RecipeRadarMapFrame:GetHeight() * -coords.y
+            local x = RRFMapFrame:GetWidth() * coords.x
+            local y = RRFMapFrame:GetHeight() * -coords.y
             scroll_icon.Vendor = vendor
             scroll_icon:ClearAllPoints()
-            scroll_icon:SetPoint("CENTER", RecipeRadarMapFrame, "TOPLEFT", x, y)
+            scroll_icon:SetPoint("CENTER", RRFMapFrame, "TOPLEFT", x, y)
             scroll_icon:Show()
          end
       end
 
    else  -- no coordinates or no map art (instances): no map
 
-      RecipeRadar_Maps_HideZoneArt()
-      for i = 1, RecipeRadar_MaxVendorCoordinates do
-         RecipeRadar_GetMapScroll(i):Hide()
+      RRF_Maps_HideZoneArt()
+      for i = 1, RRF_MaxVendorCoordinates do
+         RRF_GetMapScroll(i):Hide()
       end
 
    end
 
 end
 
-function RecipeRadar_RecipeDetailIcon_OnEnter(self)
+function RRF_RecipeDetailIcon_OnEnter(self)
 
    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
    if (self.ItemID) then
@@ -350,17 +350,17 @@ function RecipeRadar_RecipeDetailIcon_OnEnter(self)
 
 end
 
-function RecipeRadar_RecipeDetailIcon_OnLeave(self)
+function RRF_RecipeDetailIcon_OnLeave(self)
 
    if (self.NeedsUpdate) then
       self.NeedsUpdate = false
-      RecipeRadar_FrameUpdate()
+      RRF_FrameUpdate()
    end
    GameTooltip:Hide()
 
 end
 
-function RecipeRadar_RecipeDetailIcon_OnClick(self, button)
+function RRF_RecipeDetailIcon_OnClick(self, button)
 
    if (button == "LeftButton" and IsModifiedClick("CHATLINK") and self.Hyperlink) then
       ChatFrameUtil.InsertLink(self.Hyperlink)
@@ -372,29 +372,29 @@ end
 -- Frame Movement
 -------------------------------------------------------------------------
 
-function RecipeRadar_ToggleLock()
+function RRF_ToggleLock()
 
-   RecipeRadar_Options.Locked = not RecipeRadar_Options.Locked
-   RecipeRadar_UpdateLock()
+   RecipeRadarForever_Options.Locked = not RecipeRadarForever_Options.Locked
+   RRF_UpdateLock()
 
 end
 
-function RecipeRadar_UpdateLock()
+function RRF_UpdateLock()
 
-   if (RecipeRadar_Options.Locked) then
-      RecipeRadarLockNormal:SetTexture(RECIPERADAR_IMAGE_ROOT .. "Frame\\LockButton-Locked-Up")
-      RecipeRadarLockPushed:SetTexture(RECIPERADAR_IMAGE_ROOT .. "Frame\\LockButton-Locked-Down")
+   if (RecipeRadarForever_Options.Locked) then
+      RRFLockNormal:SetTexture(RRF_IMAGE_ROOT .. "Frame\\LockButton-Locked-Up")
+      RRFLockPushed:SetTexture(RRF_IMAGE_ROOT .. "Frame\\LockButton-Locked-Down")
    else
-      RecipeRadarLockNormal:SetTexture(RECIPERADAR_IMAGE_ROOT .. "Frame\\LockButton-Unlocked-Up")
-      RecipeRadarLockPushed:SetTexture(RECIPERADAR_IMAGE_ROOT .. "Frame\\LockButton-Unlocked-Down")
+      RRFLockNormal:SetTexture(RRF_IMAGE_ROOT .. "Frame\\LockButton-Unlocked-Up")
+      RRFLockPushed:SetTexture(RRF_IMAGE_ROOT .. "Frame\\LockButton-Unlocked-Down")
    end
 
 end
 
-function RecipeRadar_StartMoving()
+function RRF_StartMoving()
 
-   if (not RecipeRadar_Options.Locked) then
-      RecipeRadarFrame:StartMoving()
+   if (not RecipeRadarForever_Options.Locked) then
+      RRFFrame:StartMoving()
    end
 
 end

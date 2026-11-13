@@ -1,11 +1,15 @@
-# Recipe Radar for WoW Forever
+# Recipe Radar Forever
 
-Recipe Radar shows every profession recipe sold by a vendor in **WoW Forever**,
+Recipe Radar Forever shows every profession recipe sold by a vendor in **WoW Forever**,
 who sells it, where they stand, what it costs, and which of your characters can
 learn it. Use it to see which vendor recipes you're still missing.
 
-This is a port of **Recipe Radar** by **Jay Miller** to WoW Forever (client 1.60.x,
-the Midnight addon API). It also loads on Midnight retail.
+This is a port of the 2006 addon **Recipe Radar** by **Jay Miller** to WoW Forever
+(client 1.60.x, the Midnight addon API). It also loads on Midnight retail.
+
+It is not related to the CurseForge addon "RecipeRadar" by rakstar91. The two use
+different folders, saved variables and slash commands, so they can be installed side
+by side.
 
 ## What's in it
 
@@ -38,14 +42,14 @@ Things the data can't know yet fill themselves in as you play:
 
 ## Installation
 
-Copy or link the `RecipeRadar` folder into
+Copy or link the `RecipeRadarForever` folder into
 `World of Warcraft\_forever_\Interface\AddOns\`.
 
 ## Usage
 
 | Command | Action |
 |---|---|
-| `/rrdr` or `/reciperadar` | Toggle the window |
+| `/rrdr` | Toggle the window |
 | `/rrdr options` | Options dialog |
 | `/rrdr radar` | Print the vendors in your current zone to chat |
 | `/rrdr verify` | Ask the server about every recipe item and fill in required skills |
@@ -57,7 +61,7 @@ Copy or link the `RecipeRadar` folder into
 | `/rrdr debug clear [name]` | Forget stored data for one character or the realm |
 
 The window also opens from the minimap button, the AddOn compartment, or a key
-binding (Key Bindings > AddOns > Recipe Radar). Right-click the minimap button
+binding (Key Bindings > AddOns > Recipe Radar Forever). Right-click the minimap button
 for the options.
 
 ## Updating the data

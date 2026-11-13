@@ -6,13 +6,12 @@ local addonName, ns = ...
 -- Events
 -----------------------------------------------------------------------------
 
-function RecipeRadar_OnLoad(self)
+function RRF_OnLoad(self)
 
-   tinsert(UISpecialFrames, "RecipeRadarFrame")
+   tinsert(UISpecialFrames, "RRFFrame")
 
-   SLASH_RecipeRadar1 = "/rrdr"
-   SLASH_RecipeRadar2 = "/reciperadar"
-   SlashCmdList["RecipeRadar"] = RecipeRadar_SlashHandler
+   SLASH_RECIPERADARFOREVER1 = "/rrdr"
+   SlashCmdList["RECIPERADARFOREVER"] = RRF_SlashHandler
 
    self:RegisterEvent("ADDON_LOADED")
    self:RegisterEvent("PLAYER_LOGIN")
@@ -28,52 +27,52 @@ end
 
 local function OnNewZone()
 
-   local zone = RecipeRadar_Maps_GetPlayerRegion()
-   if (RecipeRadar_RegionHasLearnableRecipe(zone)) then
-      RecipeRadar_MinimapButton_Flash()
+   local zone = RRF_Maps_GetPlayerRegion()
+   if (RRF_RegionHasLearnableRecipe(zone)) then
+      RRF_MinimapButton_Flash()
    end
-   if (RecipeRadar_Options.AutoSelectRegion) then
-      RecipeRadar_NewRegion(zone)
+   if (RecipeRadarForever_Options.AutoSelectRegion) then
+      RRF_NewRegion(zone)
    end
 
 end
 
-function RecipeRadar_OnEvent(self, event, ...)
+function RRF_OnEvent(self, event, ...)
 
    if (event == "ADDON_LOADED") then
 
       if (... ~= addonName) then return end
       self:UnregisterEvent("ADDON_LOADED")
 
-      RecipeRadar_Globals_Init()
-      RecipeRadar_SkillDB_Init()
-      RecipeRadar_MinimapButton_Init()
-      RecipeRadar_Availability_Init()
-      RecipeRadar_Maps_Init()
-      RecipeRadar_MainFrame_Init()
-      RecipeRadar_DropDowns_Init()
-      RecipeRadar_Options_RegisterSettings()
+      RRF_Globals_Init()
+      RRF_SkillDB_Init()
+      RRF_MinimapButton_Init()
+      RRF_Availability_Init()
+      RRF_Maps_Init()
+      RRF_MainFrame_Init()
+      RRF_DropDowns_Init()
+      RRF_Options_RegisterSettings()
 
    elseif (event == "PLAYER_LOGIN") then
 
-      if (RecipeRadar_Filters.Teams["Horde"] == nil) then
+      if (RecipeRadarForever_Filters.Teams["Horde"] == nil) then
          -- first run of the addon on this character: hide the other faction
          local faction = UnitFactionGroup("player")
          if (faction == "Alliance" or faction == "Horde") then
-            RecipeRadar_Filters.Teams[faction] = false
-            RecipeRadar_Filters.Teams[RecipeRadar_GetOpposingFaction()] = true
+            RecipeRadarForever_Filters.Teams[faction] = false
+            RecipeRadarForever_Filters.Teams[RRF_GetOpposingFaction()] = true
          end
       end
 
-      RecipeRadar_ItemData_ApplyCache()
-      RecipeRadar_Maps_BuildRegionIndex()
-      RecipeRadar_SkillDB_ScanAll()
+      RRF_ItemData_ApplyCache()
+      RRF_Maps_BuildRegionIndex()
+      RRF_SkillDB_ScanAll()
       -- item data for the tooltip scans may still be loading right after login
-      C_Timer.After(5, RecipeRadar_SkillDB_RequestKnownScan)
-      C_Timer.After(8, function() RecipeRadar_ItemData_ResolveSkills(RecipeRadar_RefreshIfShown) end)
+      C_Timer.After(5, RRF_SkillDB_RequestKnownScan)
+      C_Timer.After(8, function() RRF_ItemData_ResolveSkills(RRF_RefreshIfShown) end)
       -- newer vendor data from an installed QuestieDB, read in small batches
-      C_Timer.After(3, RecipeRadar_Import_Start)
-      RecipeRadar_SelectFirstRecipe()
+      C_Timer.After(3, RRF_Import_Start)
+      RRF_SelectFirstRecipe()
 
    elseif (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA") then
 
@@ -81,30 +80,30 @@ function RecipeRadar_OnEvent(self, event, ...)
 
    elseif (event == "SKILL_LINES_CHANGED") then
 
-      RecipeRadar_SkillDB_ScanSkills()
-      RecipeRadar_SkillDB_ScanSpecialties()
-      RecipeRadar_RefreshIfShown()
+      RRF_SkillDB_ScanSkills()
+      RRF_SkillDB_ScanSpecialties()
+      RRF_RefreshIfShown()
 
    elseif (event == "UPDATE_FACTION") then
 
-      RecipeRadar_SkillDB_ScanReputation()
+      RRF_SkillDB_ScanReputation()
 
    elseif (event == "NEW_RECIPE_LEARNED" or event == "LEARNED_SPELL_IN_SKILL_LINE"
          or event == "TRADE_SKILL_SHOW") then
 
-      RecipeRadar_SkillDB_RequestKnownScan()
+      RRF_SkillDB_RequestKnownScan()
 
    end
 
 end
 
-function RecipeRadar_OnShow(self)
+function RRF_OnShow(self)
 
    PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN)
 
 end
 
-function RecipeRadar_OnHide(self)
+function RRF_OnHide(self)
 
    PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE)
    self:StopMovingOrSizing()
@@ -112,13 +111,13 @@ function RecipeRadar_OnHide(self)
 end
 
 -- Recomputes cached filters and redraws, but only if the window is open
--- (RecipeRadar_Frame_Show does the same work when it opens).
-function RecipeRadar_RefreshIfShown()
+-- (RRF_Frame_Show does the same work when it opens).
+function RRF_RefreshIfShown()
 
-   if (RecipeRadarFrame and RecipeRadarFrame:IsShown()) then
-      RecipeRadar_InitVendorFilters()
-      RecipeRadar_InitRecipeFilters()
-      RecipeRadar_FrameUpdate()
+   if (RRFFrame and RRFFrame:IsShown()) then
+      RRF_InitVendorFilters()
+      RRF_InitRecipeFilters()
+      RRF_FrameUpdate()
    end
 
 end
@@ -127,7 +126,7 @@ end
 -- Slash command
 -----------------------------------------------------------------------------
 
-function RecipeRadar_SlashHandler(msg)
+function RRF_SlashHandler(msg)
 
    local cmd, sub, rest = string.match(msg or "", "^(%w*)%s*(%w*)%s*(.*)$")
    cmd = string.lower(cmd or "")
@@ -135,31 +134,31 @@ function RecipeRadar_SlashHandler(msg)
    if (cmd == "debug") then
 
       if (sub == "skills") then
-         RecipeRadar_SkillDB_Print(rest)
+         RRF_SkillDB_Print(rest)
       elseif (sub == "clear") then
-         RecipeRadar_SkillDB_Clear(rest)
+         RRF_SkillDB_Clear(rest)
       elseif (sub == "maps") then
-         RecipeRadar_Maps_PrintRegionIndex()
+         RRF_Maps_PrintRegionIndex()
       elseif (sub == "scan") then
-         RecipeRadar_SkillDB_ScanAll()
-         RecipeRadar_SkillDB_ScanKnownRecipes()
-         RecipeRadar_Print("Recipe Radar: rescanned skills, reputation and known recipes.")
+         RRF_SkillDB_ScanAll()
+         RRF_SkillDB_ScanKnownRecipes()
+         RRF_Print("Recipe Radar: rescanned skills, reputation and known recipes.")
       elseif (sub == "import") then
-         RecipeRadar_Import_PrintStatus()
+         RRF_Import_PrintStatus()
       elseif (sub == "where") then
          -- stand on a vendor and compare with the database coordinates
-         local zone = RecipeRadar_Maps_GetPlayerRegion()
+         local zone = RRF_Maps_GetPlayerRegion()
          local mapID = C_Map.GetBestMapForUnit("player")
          local pos = mapID and C_Map.GetPlayerMapPosition(mapID, "player")
          if (pos) then
             local x, y = pos:GetXY()
-            RecipeRadar_Print(string.format("%s (uiMapID %d, index %s): x = %.3f, y = %.3f",
-                  zone, mapID, tostring(RecipeRadar_Maps_GetRegionMapID(zone)), x, y))
+            RRF_Print(string.format("%s (uiMapID %d, index %s): x = %.3f, y = %.3f",
+                  zone, mapID, tostring(RRF_Maps_GetRegionMapID(zone)), x, y))
          else
-            RecipeRadar_Print(zone .. ": no map position here.")
+            RRF_Print(zone .. ": no map position here.")
          end
       else
-         RecipeRadar_Print("/rrdr debug skills [name] | clear [name] | maps | scan | import | where")
+         RRF_Print("/rrdr debug skills [name] | clear [name] | maps | scan | import | where")
       end
       return
 
@@ -167,7 +166,7 @@ function RecipeRadar_SlashHandler(msg)
 
    if (cmd == "radar") then
 
-      local region = RecipeRadar_RegionData[RecipeRadar_Maps_GetPlayerRegion()]
+      local region = RRF_RegionData[RRF_Maps_GetPlayerRegion()]
       if (not region) then return end
 
       for _, vendor in ipairs(region.Vendors) do
@@ -177,13 +176,13 @@ function RecipeRadar_SlashHandler(msg)
          if (coords) then
             where = string.format(" (%d, %d)", coords.x * 100, coords.y * 100)
          end
-         RecipeRadar_Print(RecipeRadar_GetColoredTeamString(
+         RRF_Print(RRF_GetColoredTeamString(
                vendor.Team, vendor.Name) .. where .. ":")
 
-         table.sort(vendor.Recipes, RecipeRadar_CompareSkills)
+         table.sort(vendor.Recipes, RRF_CompareSkills)
          for _, recipe in ipairs(vendor.Recipes) do
-            RecipeRadar_Print("   " .. RecipeRadar_GetHyperlinkByID(recipe.ID) ..
-                  ", " .. RecipeRadar_GetGSCString(recipe.Cost))
+            RRF_Print("   " .. RRF_GetHyperlinkByID(recipe.ID) ..
+                  ", " .. RRF_GetGSCString(recipe.Cost))
          end
 
       end
@@ -192,26 +191,26 @@ function RecipeRadar_SlashHandler(msg)
    end
 
    if (cmd == "verify") then
-      RecipeRadar_ItemData_Verify()
+      RRF_ItemData_Verify()
       return
    end
 
    if (cmd == "questie") then
       if (sub == "on" or sub == "off") then
-         RecipeRadar_Options.UseQuestie = (sub == "on")
-         RecipeRadar_Print("Recipe Radar: QuestieDB import " .. sub .. " (takes effect after /reload).")
+         RecipeRadarForever_Options.UseQuestie = (sub == "on")
+         RRF_Print("Recipe Radar: QuestieDB import " .. sub .. " (takes effect after /reload).")
       else
-         RecipeRadar_Import_PrintStatus()
+         RRF_Import_PrintStatus()
       end
       return
    end
 
    if (cmd == "options" or cmd == "config") then
-      RecipeRadar_OptionsFrame_Toggle()
+      RRF_OptionsFrame_Toggle()
       return
    end
 
-   RecipeRadar_Toggle()
+   RRF_Toggle()
 
 end
 
@@ -221,28 +220,28 @@ end
 
 -- Function to be called on selecting a new region to initialize the
 -- main frame and any active filters.
-function RecipeRadar_NewRegion(region)
+function RRF_NewRegion(region)
 
    if (not region or region == "") then return end
 
-   RecipeRadar_Options.CurrentRegion = region
-   RecipeRadar_Options.CurrentContinent = RecipeRadar_GetCurrentContinent()
-   RecipeRadar_InitVendorFilters()
-   RecipeRadar_SelectFirstRecipe()
-   RecipeRadar_FrameUpdate()
+   RecipeRadarForever_Options.CurrentRegion = region
+   RecipeRadarForever_Options.CurrentContinent = RRF_GetCurrentContinent()
+   RRF_InitVendorFilters()
+   RRF_SelectFirstRecipe()
+   RRF_FrameUpdate()
 
 end
 
 -- Returns whether the given region contains at least one recipe that
 -- is learnable by the player or (optionally) alts
-function RecipeRadar_RegionHasLearnableRecipe(region_name)
+function RRF_RegionHasLearnableRecipe(region_name)
 
-   local region_data = RecipeRadar_RegionData[region_name]
+   local region_data = RRF_RegionData[region_name]
    if (not region_data) then return false end
 
    for _, vendor in ipairs(region_data.Vendors) do
       for _, recipe in ipairs(vendor.Recipes) do
-         if (RecipeRadar_Availability_IsLearnable(recipe)) then
+         if (RRF_Availability_IsLearnable(recipe)) then
             return true
          end
       end
@@ -254,13 +253,13 @@ end
 
 -- Given a table of recipes, returns the number of recipes that are
 -- learnable by the player or (optionally) alts.
-function RecipeRadar_CountLearnableRecipes(recipes)
+function RRF_CountLearnableRecipes(recipes)
 
    if (not recipes) then return 0 end
 
    local total = 0
    for _, recipe in ipairs(recipes) do
-      if (RecipeRadar_Availability_IsLearnable(recipe)) then
+      if (RRF_Availability_IsLearnable(recipe)) then
          total = total + 1
       end
    end
@@ -270,14 +269,14 @@ end
 
 -- Returns the index of the current region's continent (1 Kalimdor,
 -- 2 Eastern Kingdoms), or 0 for instances and unknown zones.
-function RecipeRadar_GetCurrentContinent()
+function RRF_GetCurrentContinent()
 
-   local name = RecipeRadar_Options.CurrentRegion
-   local region = RecipeRadar_RegionData[name]
+   local name = RecipeRadarForever_Options.CurrentRegion
+   local region = RRF_RegionData[name]
    if (region) then
       return region.Continent
    end
-   return RecipeRadar_Maps_GetContinentIndex(name) or 0
+   return RRF_Maps_GetContinentIndex(name) or 0
 
 end
 
@@ -286,15 +285,15 @@ end
 -----------------------------------------------------------------------------
 
 -- Returns a string describing an item link from an item ID.
-function RecipeRadar_GetHyperlinkByID(id)
+function RRF_GetHyperlinkByID(id)
 
-   local name, link, color = RecipeRadar_GetSafeItemInfo(id)
-   return RecipeRadar_GetHyperlinkByParts(name, link, color)
+   local name, link, color = RRF_GetSafeItemInfo(id)
+   return RRF_GetHyperlinkByParts(name, link, color)
 
 end
 
 -- Returns a string describing an item link from link components.
-function RecipeRadar_GetHyperlinkByParts(name, link, color)
+function RRF_GetHyperlinkByParts(name, link, color)
 
    if (string.find(link, "^|c")) then
       return link  -- already a full hyperlink from C_Item.GetItemInfo
@@ -316,14 +315,14 @@ local function RequestItem(id)
       pendingItems[id] = nil
       local name = C_Item.GetItemInfo(id)
       if (name) then
-         RecipeRadar_NameCache[id] = name
+         RecipeRadarForever_NameCache[id] = name
       end
       -- coalesce the burst of redraws when many items arrive together
       if (not ns.redrawQueued) then
          ns.redrawQueued = true
          C_Timer.After(0.5, function()
             ns.redrawQueued = false
-            RecipeRadar_RefreshIfShown()
+            RRF_RefreshIfShown()
          end)
       end
    end)
@@ -333,24 +332,24 @@ end
 -- Returns name, link, colorcode, r, g, b, texture, is_cached for an item.
 -- Items that are not in the client cache yet are requested; until then a
 -- placeholder (or the name seen in an earlier session) is returned.
-function RecipeRadar_GetSafeItemInfo(id)
+function RRF_GetSafeItemInfo(id)
 
-   if (type(RecipeRadar_NameCache) ~= "table") then RecipeRadar_NameCache = { } end
+   if (type(RecipeRadarForever_NameCache) ~= "table") then RecipeRadarForever_NameCache = { } end
 
    local name, link, rarity, _, _, _, _, _, _, texture = C_Item.GetItemInfo(id)
 
    if (name == nil) then
 
       RequestItem(id)
-      name = RecipeRadar_NameCache[id] or RRS("Uncached Recipe")
-      local c = RecipeRadar_Colors.UncachedRecipe
-      return name, "item:" .. id, RecipeRadar_ColorToCode(c), c.r, c.g, c.b,
-            C_Item.GetItemIconByID(id) or (RECIPERADAR_IMAGE_ROOT .. "Misc\\QuestionMark"),
+      name = RecipeRadarForever_NameCache[id] or RRF_S("Uncached Recipe")
+      local c = RRF_Colors.UncachedRecipe
+      return name, "item:" .. id, RRF_ColorToCode(c), c.r, c.g, c.b,
+            C_Item.GetItemIconByID(id) or (RRF_IMAGE_ROOT .. "Misc\\QuestionMark"),
             false
 
    end
 
-   RecipeRadar_NameCache[id] = name
+   RecipeRadarForever_NameCache[id] = name
    local r, g, b, colorcode = C_Item.GetItemQualityColor(rarity or 1)
    return name, link, "|c" .. colorcode, r, g, b, texture, true
 
@@ -358,24 +357,24 @@ end
 
 -- Formats the subtext that applies to a few vendors.  include_parens is
 -- a boolean that specifies whether the string should be in parens.
-function RecipeRadar_FormatVendorNote(note, include_parens)
+function RRF_FormatVendorNote(note, include_parens)
 
    if (include_parens) then
-      return RecipeRadar_Parens(format(RRS("%s Vendor"), note))
+      return RRF_Parens(format(RRF_S("%s Vendor"), note))
    end
-   return format(RRS("%s Vendor"), note)
+   return format(RRF_S("%s Vendor"), note)
 
 end
 
 -- Wraps a value in parentheses using the client's localized template.
-function RecipeRadar_Parens(s)
+function RRF_Parens(s)
 
    return format(PARENS_TEMPLATE or "(%s)", tostring(s))
 
 end
 
 -- Get gold, silver, copper from total copper.
-function RecipeRadar_GetGSC(copper)
+function RRF_GetGSC(copper)
 
    copper = copper or 0
    local g = math.floor(copper / 10000)
@@ -386,7 +385,7 @@ function RecipeRadar_GetGSC(copper)
 end
 
 -- Format text by color for gold, silver and copper.
-function RecipeRadar_GetGSCString(copper)
+function RRF_GetGSCString(copper)
 
    local GSC_GOLD = "ffd100"
    local GSC_SILVER = "e6e6e6"
@@ -394,7 +393,7 @@ function RecipeRadar_GetGSCString(copper)
    local GSC_FMT = "|cff%s%d|r"
    local GSC_PART = ".|cff%s%02d|r"
 
-   local g, s, c = RecipeRadar_GetGSC(copper)
+   local g, s, c = RRF_GetGSC(copper)
 
    if (g > 0) then
       local gsc = string.format(GSC_FMT, GSC_GOLD, g)
@@ -420,7 +419,7 @@ end
 -----------------------------------------------------------------------------
 
 -- Returns the name of the player's opposing faction.
-function RecipeRadar_GetOpposingFaction()
+function RRF_GetOpposingFaction()
 
    local faction = UnitFactionGroup("player")
    if (faction == "Alliance") then
@@ -433,25 +432,25 @@ function RecipeRadar_GetOpposingFaction()
 end
 
 -- Formats a string in the color specified by the key 'team'.
-function RecipeRadar_GetColoredTeamString(team, s)
+function RRF_GetColoredTeamString(team, s)
 
-   if (not RecipeRadar_Teams[team]) then return s end
-   return RecipeRadar_ColorToCode(RecipeRadar_Teams[team].Color) ..
+   if (not RRF_Teams[team]) then return s end
+   return RRF_ColorToCode(RRF_Teams[team].Color) ..
          s .. FONT_COLOR_CODE_CLOSE
 
 end
 
 -- Returns whether the skill is an applicable profession.
-function RecipeRadar_IsProfession(skill_name)
+function RRF_IsProfession(skill_name)
 
-   return skill_name ~= nil and RecipeRadar_Professions[skill_name] ~= nil
+   return skill_name ~= nil and RRF_Professions[skill_name] ~= nil
 
 end
 
 -- Returns whether the supplied faction is one that Recipe Radar cares about.
-function RecipeRadar_IsKnownFaction(faction)
+function RRF_IsKnownFaction(faction)
 
-   for _, name in ipairs(RecipeRadar_Factions) do
+   for _, name in ipairs(RRF_Factions) do
       if (name == faction) then
          return true
       end
@@ -461,10 +460,10 @@ function RecipeRadar_IsKnownFaction(faction)
 end
 
 -- Returns whether the given vendor has at least one unfiltered recipe.
-function RecipeRadar_VendorHasRecipes(vendor)
+function RRF_VendorHasRecipes(vendor)
 
    for _, recipe in ipairs(vendor.Recipes) do
-      if (not RecipeRadar_IsRecipeFiltered(recipe)) then
+      if (not RRF_IsRecipeFiltered(recipe)) then
          return true
       end
    end
@@ -473,7 +472,7 @@ function RecipeRadar_VendorHasRecipes(vendor)
 end
 
 -- Returns whether the given recipe has at least one unfiltered location.
-function RecipeRadar_RecipeHasLocations(recipe)
+function RRF_RecipeHasLocations(recipe)
 
    for _, location in ipairs(recipe.Locations) do
       if (not location.IsFiltered) then
@@ -486,7 +485,7 @@ end
 
 -- Returns a string describing the requirements to buy the given recipe
 -- according to the recipe's Notes/Faction member, or nil.
-function RecipeRadar_GetRecipeReqsString(recipe)
+function RRF_GetRecipeReqsString(recipe)
 
    if (recipe.Notes and recipe.Notes ~= "") then
       return recipe.Notes
@@ -504,7 +503,7 @@ function RecipeRadar_GetRecipeReqsString(recipe)
 end
 
 -- Given a recipe name of the form 'Label: Name', returns 'Name'.
-function RecipeRadar_TrimRecipeLabel(recipe_name)
+function RRF_TrimRecipeLabel(recipe_name)
 
    local label_end = string.find(recipe_name, ":")
    if (label_end) then
@@ -518,32 +517,32 @@ end
 -- Sorting
 -----------------------------------------------------------------------------
 
-function RecipeRadar_SortVendors(region_data)
+function RRF_SortVendors(region_data)
 
    if (region_data.IsVendorTableSorted) then return end
-   table.sort(region_data.Vendors, RecipeRadar_CompareNames)
+   table.sort(region_data.Vendors, RRF_CompareNames)
    region_data.IsVendorTableSorted = true
 
 end
 
-function RecipeRadar_SortRecipes(container)
+function RRF_SortRecipes(container)
 
    if (container.IsRecipeTableSorted) then return end
-   table.sort(container.Recipes, RecipeRadar_CompareSkills)
+   table.sort(container.Recipes, RRF_CompareSkills)
    container.IsRecipeTableSorted = true
 
 end
 
-function RecipeRadar_SortLocations(recipe_data)
+function RRF_SortLocations(recipe_data)
 
    if (recipe_data.IsLocationsTableSorted) then return end
-   table.sort(recipe_data.Locations, RecipeRadar_CompareRegions)
+   table.sort(recipe_data.Locations, RRF_CompareRegions)
    recipe_data.IsLocationsTableSorted = true
 
 end
 
 -- Required skill first, then the recipe's ID (deterministic order).
-function RecipeRadar_CompareSkills(recipe1, recipe2)
+function RRF_CompareSkills(recipe1, recipe2)
 
    local s1, s2 = recipe1.Skill or 0, recipe2.Skill or 0
    if (s1 == s2) then
@@ -553,13 +552,13 @@ function RecipeRadar_CompareSkills(recipe1, recipe2)
 
 end
 
-function RecipeRadar_CompareNames(vendor1, vendor2)
+function RRF_CompareNames(vendor1, vendor2)
 
    return vendor1.Name < vendor2.Name
 
 end
 
-function RecipeRadar_CompareRegions(location1, location2)
+function RRF_CompareRegions(location1, location2)
 
    if (location1.Region == location2.Region) then
       return location1.Vendor < location2.Vendor
@@ -572,7 +571,7 @@ end
 -- Colors and output
 -----------------------------------------------------------------------------
 
-function RecipeRadar_ColorToCode(color)
+function RRF_ColorToCode(color)
 
    return string.format("|cff%02x%02x%02x",
          255 * color.r, 255 * color.g, 255 * color.b)
@@ -580,21 +579,21 @@ function RecipeRadar_ColorToCode(color)
 end
 
 -- Returns the given string surrounded by the highlighted version of base_color.
-function RecipeRadar_HighlightString(s, base_color)
+function RRF_HighlightString(s, base_color)
 
    local highlight = {
-         r = math.min(1.0, base_color.r + RecipeRadar_Colors.Highlight),
-         g = math.min(1.0, base_color.g + RecipeRadar_Colors.Highlight),
-         b = math.min(1.0, base_color.b + RecipeRadar_Colors.Highlight), }
-   return RecipeRadar_ColorToCode(highlight) .. s .. FONT_COLOR_CODE_CLOSE
+         r = math.min(1.0, base_color.r + RRF_Colors.Highlight),
+         g = math.min(1.0, base_color.g + RRF_Colors.Highlight),
+         b = math.min(1.0, base_color.b + RRF_Colors.Highlight), }
+   return RRF_ColorToCode(highlight) .. s .. FONT_COLOR_CODE_CLOSE
 
 end
 
-function RecipeRadar_Print(msg, r, g, b)
+function RRF_Print(msg, r, g, b)
 
    DEFAULT_CHAT_FRAME:AddMessage(msg,
-         (r or RecipeRadar_Colors.MainFont.r),
-         (g or RecipeRadar_Colors.MainFont.g),
-         (b or RecipeRadar_Colors.MainFont.b))
+         (r or RRF_Colors.MainFont.r),
+         (g or RRF_Colors.MainFont.g),
+         (b or RRF_Colors.MainFont.b))
 
 end

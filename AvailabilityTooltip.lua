@@ -4,8 +4,8 @@ local addonName, ns = ...
 
 local MAX_LINES = 24
 
--- Named because other files reference it (RecipeRadarAvailabilityTooltip:Hide()).
-local tip = CreateFrame("Frame", "RecipeRadarAvailabilityTooltip", UIParent, "TooltipBackdropTemplate")
+-- Named because other files reference it (RRFAvailabilityTooltip:Hide()).
+local tip = CreateFrame("Frame", "RRFAvailabilityTooltip", UIParent, "TooltipBackdropTemplate")
 tip:SetFrameStrata("TOOLTIP")
 tip:SetClampedToScreen(true)
 tip:Hide()
@@ -25,10 +25,10 @@ for i = 1, MAX_LINES do
 end
 
 tip:SetScript("OnHide", function()
-   RecipeRadar_AvailabilityTooltip_Hide()
+   RRF_AvailabilityTooltip_Hide()
 end)
 
-function RecipeRadar_AvailabilityTooltip_AddLine(msg, color)
+function RRF_AvailabilityTooltip_AddLine(msg, color)
 
    if (tip.Lines >= MAX_LINES) then return end
 
@@ -52,10 +52,10 @@ function RecipeRadar_AvailabilityTooltip_AddLine(msg, color)
 
 end
 
-function RecipeRadar_AvailabilityTooltip_Show(frame)
+function RRF_AvailabilityTooltip_Show(frame)
 
    if (not frame or tip.Lines == 0) then
-      RecipeRadar_AvailabilityTooltip_Hide()
+      RRF_AvailabilityTooltip_Hide()
       return
    end
 
@@ -74,12 +74,12 @@ function RecipeRadar_AvailabilityTooltip_Show(frame)
    local space_right = GetScreenWidth() - (frame:GetRight() or 0) - width
 
    local offset = 0
-   if (RecipeRadar_Options.ActiveTab == 2) then
-      offset = RECIPERADAR_VENDOR_OFFSET
+   if (RecipeRadarForever_Options.ActiveTab == 2) then
+      offset = RRF_VENDOR_OFFSET
    end
 
    if (space_left < space_right) then
-      if (RecipeRadarListScrollFrame:IsShown()) then
+      if (RRFListScrollFrame:IsShown()) then
          tip:SetPoint("TOPLEFT", frame, "TOPRIGHT", 35, 0)
       else
          tip:SetPoint("TOPLEFT", frame, "TOPRIGHT", 13, 0)
@@ -92,7 +92,7 @@ function RecipeRadar_AvailabilityTooltip_Show(frame)
 
 end
 
-function RecipeRadar_AvailabilityTooltip_Hide()
+function RRF_AvailabilityTooltip_Hide()
 
    for i = 1, tip.Lines do
       tip.Texts[i]:Hide()

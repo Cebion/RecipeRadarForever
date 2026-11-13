@@ -14,7 +14,7 @@ local function SetupCheckboxDropdown(dropdown, title, getEntries, isFiltered, se
                function(key) return not isFiltered(key) end,
                function(key)
                   setFiltered(key, not isFiltered(key))
-                  RecipeRadarListScrollFrameScrollBar:SetValue(0)
+                  RRFListScrollFrameScrollBar:SetValue(0)
                end,
                entry.key)
       end
@@ -34,63 +34,63 @@ end
 local function AvailabilityEntries(order_field)
 
    local entries = { }
-   for key, info in pairs(RecipeRadar_Availabilities) do
+   for key, info in pairs(RRF_Availabilities) do
       local order = info.DropDown[order_field]
       if (order) then
          entries[order] = { key = key,
-               text = RecipeRadar_ColorToCode(info.Color) .. info.Text .. FONT_COLOR_CODE_CLOSE }
+               text = RRF_ColorToCode(info.Color) .. info.Text .. FONT_COLOR_CODE_CLOSE }
       end
    end
    return entries
 
 end
 
-function RecipeRadar_DropDowns_Init()
+function RRF_DropDowns_Init()
 
-   SetupCheckboxDropdown(RecipeRadar_RealmAvailDropDown, RRS("Availability"),
+   SetupCheckboxDropdown(RRF_RealmAvailDropDown, RRF_S("Availability"),
          function() return AvailabilityEntries("ROrder") end,
-         RecipeRadar_IsRealmAvailFiltered, RecipeRadar_SetRealmAvailFilter)
+         RRF_IsRealmAvailFiltered, RRF_SetRealmAvailFilter)
 
-   SetupCheckboxDropdown(RecipeRadar_PersonAvailDropDown, RRS("Availability"),
+   SetupCheckboxDropdown(RRF_PersonAvailDropDown, RRF_S("Availability"),
          function() return AvailabilityEntries("POrder") end,
-         RecipeRadar_IsPersonAvailFiltered, RecipeRadar_SetPersonAvailFilter)
+         RRF_IsPersonAvailFiltered, RRF_SetPersonAvailFilter)
 
-   SetupCheckboxDropdown(RecipeRadar_TeamDropDown, RRS("Factions"),
+   SetupCheckboxDropdown(RRF_TeamDropDown, RRF_S("Factions"),
          function()
             local entries = { }
-            for _, key in ipairs(SortedKeys(RecipeRadar_Teams)) do
-               local info = RecipeRadar_Teams[key]
+            for _, key in ipairs(SortedKeys(RRF_Teams)) do
+               local info = RRF_Teams[key]
                table.insert(entries, { key = key,
-                     text = RecipeRadar_ColorToCode(info.Color) .. info.Name .. FONT_COLOR_CODE_CLOSE })
+                     text = RRF_ColorToCode(info.Color) .. info.Name .. FONT_COLOR_CODE_CLOSE })
             end
             return entries
          end,
-         RecipeRadar_IsTeamFiltered, RecipeRadar_SetTeamFilter)
+         RRF_IsTeamFiltered, RRF_SetTeamFilter)
 
-   SetupCheckboxDropdown(RecipeRadar_Prof1DropDown, RRS("Professions"),
+   SetupCheckboxDropdown(RRF_Prof1DropDown, RRF_S("Professions"),
          function()
             local entries = { }
-            for _, key in ipairs(SortedKeys(RecipeRadar_Professions)) do
-               table.insert(entries, { key = key, text = RecipeRadar_Professions[key].Name })
+            for _, key in ipairs(SortedKeys(RRF_Professions)) do
+               table.insert(entries, { key = key, text = RRF_Professions[key].Name })
             end
             return entries
          end,
-         RecipeRadar_IsProfFiltered, RecipeRadar_SetProfFilter)
+         RRF_IsProfFiltered, RRF_SetProfFilter)
 
    -- single-select profession list for the recipes tab
-   RecipeRadar_Prof2DropDown:SetupMenu(function(_, root)
-      for _, key in ipairs(SortedKeys(RecipeRadar_Professions)) do
-         root:CreateRadio(RecipeRadar_Professions[key].Name,
-               RecipeRadar_IsCurrentProfession,
+   RRF_Prof2DropDown:SetupMenu(function(_, root)
+      for _, key in ipairs(SortedKeys(RRF_Professions)) do
+         root:CreateRadio(RRF_Professions[key].Name,
+               RRF_IsCurrentProfession,
                function(prof)
-                  RecipeRadar_SetProf2Filter(prof)
-                  RecipeRadarListScrollFrameScrollBar:SetValue(0)
+                  RRF_SetProf2Filter(prof)
+                  RRFListScrollFrameScrollBar:SetValue(0)
                end,
                key)
       end
    end)
 
-   RecipeRadar_SetProf2Filter(RecipeRadar_Options.CurrentProfession)
+   RRF_SetProf2Filter(RecipeRadarForever_Options.CurrentProfession)
 
 end
 
@@ -98,78 +98,78 @@ end
 -- Filter state
 -----------------------------------------------------------------------------
 
-function RecipeRadar_IsRealmAvailFiltered(avail)
-   return RecipeRadar_Filters.RealmAvails[avail]
+function RRF_IsRealmAvailFiltered(avail)
+   return RecipeRadarForever_Filters.RealmAvails[avail]
 end
 
-function RecipeRadar_SetRealmAvailFilter(avail, is_filtered)
+function RRF_SetRealmAvailFilter(avail, is_filtered)
 
-   RecipeRadar_Filters.RealmAvails[avail] = is_filtered
-   RecipeRadar_FilterVendors("avail", avail, is_filtered)
-   RecipeRadar_FilterRecipes("avail", avail, is_filtered)
-   RecipeRadar_FrameUpdate()
+   RecipeRadarForever_Filters.RealmAvails[avail] = is_filtered
+   RRF_FilterVendors("avail", avail, is_filtered)
+   RRF_FilterRecipes("avail", avail, is_filtered)
+   RRF_FrameUpdate()
 
 end
 
-function RecipeRadar_IsPersonAvailFiltered(avail)
-   return RecipeRadar_Filters.PersonAvails[avail]
+function RRF_IsPersonAvailFiltered(avail)
+   return RecipeRadarForever_Filters.PersonAvails[avail]
 end
 
-function RecipeRadar_SetPersonAvailFilter(avail, is_filtered)
+function RRF_SetPersonAvailFilter(avail, is_filtered)
 
-   RecipeRadar_Filters.PersonAvails[avail] = is_filtered
-   RecipeRadar_FilterVendors("avail", avail, is_filtered)
-   RecipeRadar_FilterRecipes("avail", avail, is_filtered)
-   RecipeRadar_FrameUpdate()
+   RecipeRadarForever_Filters.PersonAvails[avail] = is_filtered
+   RRF_FilterVendors("avail", avail, is_filtered)
+   RRF_FilterRecipes("avail", avail, is_filtered)
+   RRF_FrameUpdate()
 
 end
 
 -- Generic tester for those who don't care about the current mode.
-function RecipeRadar_IsAvailabilityFiltered(avail)
+function RRF_IsAvailabilityFiltered(avail)
 
-   if (RecipeRadar_Options.RealmAvailability) then
-      return RecipeRadar_IsRealmAvailFiltered(avail)
+   if (RecipeRadarForever_Options.RealmAvailability) then
+      return RRF_IsRealmAvailFiltered(avail)
    end
-   return RecipeRadar_IsPersonAvailFiltered(avail)
+   return RRF_IsPersonAvailFiltered(avail)
 
 end
 
-function RecipeRadar_IsTeamFiltered(team)
-   return RecipeRadar_Filters.Teams[team]
+function RRF_IsTeamFiltered(team)
+   return RecipeRadarForever_Filters.Teams[team]
 end
 
-function RecipeRadar_SetTeamFilter(team, is_filtered)
+function RRF_SetTeamFilter(team, is_filtered)
 
-   RecipeRadar_Filters.Teams[team] = is_filtered
-   RecipeRadar_FilterVendors("team", team, is_filtered)
-   RecipeRadar_FilterRecipes("team", team, is_filtered)
-   RecipeRadar_FrameUpdate()
-
-end
-
-function RecipeRadar_IsProfFiltered(prof)
-   return RecipeRadar_Filters.Professions[prof]
-end
-
-function RecipeRadar_SetProfFilter(prof, is_filtered)
-
-   RecipeRadar_Filters.Professions[prof] = is_filtered
-   RecipeRadar_FilterVendors("prof", prof, is_filtered)
-   RecipeRadar_FrameUpdate()
+   RecipeRadarForever_Filters.Teams[team] = is_filtered
+   RRF_FilterVendors("team", team, is_filtered)
+   RRF_FilterRecipes("team", team, is_filtered)
+   RRF_FrameUpdate()
 
 end
 
-function RecipeRadar_IsCurrentProfession(prof)
-   return RecipeRadar_Options.CurrentProfession == prof
+function RRF_IsProfFiltered(prof)
+   return RecipeRadarForever_Filters.Professions[prof]
 end
 
-function RecipeRadar_SetProf2Filter(prof)
+function RRF_SetProfFilter(prof, is_filtered)
 
-   if (not RecipeRadar_Professions[prof]) then return end
-   RecipeRadarRecipesTabFrame:SetNormalTexture(RecipeRadar_Professions[prof].Icon)
-   RecipeRadar_Options.CurrentProfession = prof
-   RecipeRadar_InitRecipeFilters()
-   RecipeRadar_FrameUpdate()
+   RecipeRadarForever_Filters.Professions[prof] = is_filtered
+   RRF_FilterVendors("prof", prof, is_filtered)
+   RRF_FrameUpdate()
+
+end
+
+function RRF_IsCurrentProfession(prof)
+   return RecipeRadarForever_Options.CurrentProfession == prof
+end
+
+function RRF_SetProf2Filter(prof)
+
+   if (not RRF_Professions[prof]) then return end
+   RRFRecipesTabFrame:SetNormalTexture(RRF_Professions[prof].Icon)
+   RecipeRadarForever_Options.CurrentProfession = prof
+   RRF_InitRecipeFilters()
+   RRF_FrameUpdate()
 
 end
 
@@ -177,7 +177,7 @@ end
 -- Radar tab filtering code
 -----------------------------------------------------------------------------
 
-function RecipeRadar_IsRecipeFiltered(recipe)
+function RRF_IsRecipeFiltered(recipe)
 
    return recipe.IsFilteredByTeam or recipe.IsFilteredByProfession or
          recipe.IsFilteredByAvailability
@@ -186,9 +186,9 @@ end
 
 -- Sets the filter state on the current region's vendors or recipes.
 -- filter_type is 'team', 'prof' or 'avail'; filter_on is the key (eg. "Horde").
-function RecipeRadar_FilterVendors(filter_type, filter_on, is_filtered)
+function RRF_FilterVendors(filter_type, filter_on, is_filtered)
 
-   local region = RecipeRadar_RegionData[RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[RecipeRadarForever_Options.CurrentRegion]
    if (not region) then return end
 
    for _, vendor in ipairs(region.Vendors) do
@@ -196,8 +196,8 @@ function RecipeRadar_FilterVendors(filter_type, filter_on, is_filtered)
       if (filter_type == "team" and filter_on == vendor.Team) then
 
          vendor.IsFiltered = is_filtered
-         if (RecipeRadarRadarTabFrame.SelectedVendor == vendor) then
-            RecipeRadar_RadarTab_ClearSelection()
+         if (RRFRadarTabFrame.SelectedVendor == vendor) then
+            RRF_RadarTab_ClearSelection()
          end
 
       elseif (filter_type == "prof" or filter_type == "avail") then
@@ -207,7 +207,7 @@ function RecipeRadar_FilterVendors(filter_type, filter_on, is_filtered)
             if (filter_type == "prof") then
                matches = (filter_on == recipe.Type)
             else
-               matches = (filter_on == RecipeRadar_Availability_GetKey(recipe))
+               matches = (filter_on == RRF_Availability_GetKey(recipe))
             end
             if (matches) then
                if (filter_type == "prof") then
@@ -215,8 +215,8 @@ function RecipeRadar_FilterVendors(filter_type, filter_on, is_filtered)
                else
                   recipe.IsFilteredByAvailability = is_filtered
                end
-               if (RecipeRadarRadarTabFrame.SelectedRecipe == recipe) then
-                  RecipeRadar_RadarTab_ClearSelection()
+               if (RRFRadarTabFrame.SelectedRecipe == recipe) then
+                  RRF_RadarTab_ClearSelection()
                end
             end
          end
@@ -228,25 +228,25 @@ function RecipeRadar_FilterVendors(filter_type, filter_on, is_filtered)
 end
 
 local function IsSeasonalHidden(vendor)
-   return RecipeRadar_Options.HideSeasonal and vendor and vendor.Notes == RRS("Seasonal")
+   return RecipeRadarForever_Options.HideSeasonal and vendor and vendor.Notes == RRF_S("Seasonal")
 end
 
 -- Initializes vendor/recipe filters according to saved filter settings.
-function RecipeRadar_InitVendorFilters()
+function RRF_InitVendorFilters()
 
-   local region = RecipeRadar_RegionData[RecipeRadar_Options.CurrentRegion]
+   local region = RRF_RegionData[RecipeRadarForever_Options.CurrentRegion]
    if (not region) then return end
 
    for _, vendor in ipairs(region.Vendors) do
 
-      vendor.IsFiltered = RecipeRadar_IsTeamFiltered(vendor.Team) or IsSeasonalHidden(vendor)
+      vendor.IsFiltered = RRF_IsTeamFiltered(vendor.Team) or IsSeasonalHidden(vendor)
 
       for _, recipe in ipairs(vendor.Recipes) do
-         recipe.IsFilteredByProfession = RecipeRadar_IsProfFiltered(recipe.Type)
+         recipe.IsFilteredByProfession = RRF_IsProfFiltered(recipe.Type)
          -- sets the availability filter and auto-maps if requested
-         if (RecipeRadar_Availability_IsLearnable(recipe, true) and
-               RecipeRadar_Options.AutoMapVendors) then
-            RecipeRadar_Maps_AddVendor(vendor, RecipeRadar_Options.CurrentRegion)
+         if (RRF_Availability_IsLearnable(recipe, true) and
+               RecipeRadarForever_Options.AutoMapVendors) then
+            RRF_Maps_AddVendor(vendor, RecipeRadarForever_Options.CurrentRegion)
          end
       end
 
@@ -258,19 +258,19 @@ end
 -- Recipes tab filtering code
 -----------------------------------------------------------------------------
 
-function RecipeRadar_FilterRecipes(filter_type, filter_on, is_filtered)
+function RRF_FilterRecipes(filter_type, filter_on, is_filtered)
 
-   local prof = RecipeRadar_RecipeData[RecipeRadar_Options.CurrentProfession]
+   local prof = RRF_RecipeData[RecipeRadarForever_Options.CurrentProfession]
    if (not prof) then return end
 
    for _, recipe in ipairs(prof.Recipes) do
 
       if (filter_type == "avail" and
-            filter_on == RecipeRadar_Availability_GetKey(recipe)) then
+            filter_on == RRF_Availability_GetKey(recipe)) then
 
          recipe.IsFilteredByAvailability = is_filtered
-         if (RecipeRadarRecipesTabFrame.SelectedRecipe == recipe) then
-            RecipeRadar_RecipesTab_ClearSelection()
+         if (RRFRecipesTabFrame.SelectedRecipe == recipe) then
+            RRF_RecipesTab_ClearSelection()
          end
 
       elseif (filter_type == "team") then
@@ -278,8 +278,8 @@ function RecipeRadar_FilterRecipes(filter_type, filter_on, is_filtered)
          for _, location in ipairs(recipe.Locations) do
             if (filter_on == location.Team) then
                location.IsFiltered = is_filtered
-               if (RecipeRadarRecipesTabFrame.SelectedLocation == location.Region) then
-                  RecipeRadar_RecipesTab_ClearSelection()
+               if (RRFRecipesTabFrame.SelectedLocation == location.Region) then
+                  RRF_RecipesTab_ClearSelection()
                end
             end
          end
@@ -290,18 +290,18 @@ function RecipeRadar_FilterRecipes(filter_type, filter_on, is_filtered)
 
 end
 
-function RecipeRadar_InitRecipeFilters()
+function RRF_InitRecipeFilters()
 
-   local prof = RecipeRadar_RecipeData[RecipeRadar_Options.CurrentProfession]
+   local prof = RRF_RecipeData[RecipeRadarForever_Options.CurrentProfession]
    if (not prof) then return end
 
    for _, recipe in ipairs(prof.Recipes) do
 
-      RecipeRadar_Availability_SetAvailabilityFilter(recipe)
+      RRF_Availability_SetAvailabilityFilter(recipe)
 
       for _, location in ipairs(recipe.Locations) do
-         local vendor = RecipeRadar_RecipesTab_FindVendor(location.Region, location.Vendor)
-         location.IsFiltered = RecipeRadar_IsTeamFiltered(location.Team) or IsSeasonalHidden(vendor)
+         local vendor = RRF_RecipesTab_FindVendor(location.Region, location.Vendor)
+         location.IsFiltered = RRF_IsTeamFiltered(location.Team) or IsSeasonalHidden(vendor)
       end
 
    end

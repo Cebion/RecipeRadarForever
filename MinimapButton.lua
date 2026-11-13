@@ -5,42 +5,42 @@ local addonName, ns = ...
 local FLASH_HALF_PERIOD = 0.5
 local FLASH_DURATION = 4
 
-function RecipeRadar_MinimapButton_OnLoad(self)
+function RRF_MinimapButton_OnLoad(self)
 
    self:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 
 end
 
-function RecipeRadar_MinimapButton_OnClick(self, button)
+function RRF_MinimapButton_OnClick(self, button)
 
    if (button == "RightButton") then
-      RecipeRadar_OptionsFrame_Toggle()
+      RRF_OptionsFrame_Toggle()
    else
-      RecipeRadar_Toggle()
+      RRF_Toggle()
    end
 
 end
 
-function RecipeRadar_MinimapButton_OnEnter(self)
+function RRF_MinimapButton_OnEnter(self)
 
    GameTooltip:SetOwner(self, "ANCHOR_LEFT")
-   GameTooltip:SetText(RRS("Recipe Radar"))
-   GameTooltip:AddLine(RRS("Left-click: open") .. "\n" .. RRS("Right-click: options"), 1, 1, 1)
+   GameTooltip:SetText(RRF_S("Recipe Radar Forever"))
+   GameTooltip:AddLine(RRF_S("Left-click: open") .. "\n" .. RRF_S("Right-click: options"), 1, 1, 1)
    GameTooltip:Show()
 
 end
 
-function RecipeRadar_MinimapButton_Init()
+function RRF_MinimapButton_Init()
 
-   RecipeRadarMinimapButton:SetShown(RecipeRadar_Options.ShowMinimapButton)
-   RecipeRadar_MinimapButton_UpdatePosition()
+   RRFMinimapButton:SetShown(RecipeRadarForever_Options.ShowMinimapButton)
+   RRF_MinimapButton_UpdatePosition()
 
 end
 
-function RecipeRadar_MinimapButton_Toggle()
+function RRF_MinimapButton_Toggle()
 
-   RecipeRadar_Options.ShowMinimapButton = not RecipeRadarMinimapButton:IsShown()
-   RecipeRadarMinimapButton:SetShown(RecipeRadar_Options.ShowMinimapButton)
+   RecipeRadarForever_Options.ShowMinimapButton = not RRFMinimapButton:IsShown()
+   RRFMinimapButton:SetShown(RecipeRadarForever_Options.ShowMinimapButton)
 
 end
 
@@ -63,9 +63,9 @@ local function FlashOnUpdate(self, elapsed)
 
 end
 
-function RecipeRadar_MinimapButton_Flash()
+function RRF_MinimapButton_Flash()
 
-   local button = RecipeRadarMinimapButton
+   local button = RRFMinimapButton
    button.flashTotal, button.flashPhase, button.flashOn = 0, 0, true
    button:LockHighlight()
    button:SetScript("OnUpdate", FlashOnUpdate)
@@ -73,13 +73,13 @@ function RecipeRadar_MinimapButton_Flash()
 end
 
 -- Places the button on the minimap edge at the configured angle (degrees).
-function RecipeRadar_MinimapButton_UpdatePosition()
+function RRF_MinimapButton_UpdatePosition()
 
-   local angle = math.rad(RecipeRadar_Options.MinimapButtonPosition or 256)
+   local angle = math.rad(RecipeRadarForever_Options.MinimapButtonPosition or 256)
    local radius = (Minimap:GetWidth() / 2) + 5
    local x, y = math.cos(angle) * radius, math.sin(angle) * radius
 
-   RecipeRadarMinimapButton:ClearAllPoints()
-   RecipeRadarMinimapButton:SetPoint("CENTER", Minimap, "CENTER", x, y)
+   RRFMinimapButton:ClearAllPoints()
+   RRFMinimapButton:SetPoint("CENTER", Minimap, "CENTER", x, y)
 
 end

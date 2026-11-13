@@ -1,17 +1,17 @@
 ## Interface: 16001, 120105
-## Title: Recipe Radar
+## Title: Recipe Radar Forever
 ## Notes: Locates vendors who sell recipes in the current region or by profession.
 ## Notes-ruRU: Показывает вендоров, которые продают рецепты в данной территории или все свитки профессии.
 ## Notes-deDE: Lokalisiert Händler, die Rezepte im aktuellen Gebiet oder nach Beruf verkaufen.
 ## Notes-frFR: Localise les marchands qui vendent des recettes dans la région courante ou par profession.
 ## Notes-esES: Localiza a vendedores que venden recetas en la región actual o por profesión.
 ## Author: Jay Miller (original), ported to WoW Forever
-## Version: 2.1.0-forever
-## IconTexture: Interface\AddOns\RecipeRadar\Images\Misc\Radar
+## Version: 2.2.0
+## IconTexture: Interface\AddOns\RecipeRadarForever\Images\Misc\Radar
 ## OptionalDeps: TomTom, QuestieDB
-## SavedVariables: RecipeRadar_SkillDB, RecipeRadar_NameCache, RecipeRadar_ItemCache
-## SavedVariablesPerCharacter: RecipeRadar_Options, RecipeRadar_Filters
-## AddonCompartmentFunc: RecipeRadar_Toggle
+## SavedVariables: RecipeRadarForever_SkillDB, RecipeRadarForever_NameCache, RecipeRadarForever_ItemCache
+## SavedVariablesPerCharacter: RecipeRadarForever_Options, RecipeRadarForever_Filters
+## AddonCompartmentFunc: RRF_Toggle
 
 Localization.lua
 Globals.lua

@@ -7,31 +7,31 @@ local addonName, ns = ...
 -- Generic, abstracted availability entry points
 -----------------------------------------------------------------------------
 
-function RecipeRadar_Availability_Init()
+function RRF_Availability_Init()
 
-   if (RecipeRadar_Options.RealmAvailability) then
-      RecipeRadar_RealmAvailDropDown:Show()
-      RecipeRadar_PersonAvailDropDown:Hide()
+   if (RecipeRadarForever_Options.RealmAvailability) then
+      RRF_RealmAvailDropDown:Show()
+      RRF_PersonAvailDropDown:Hide()
    else
-      RecipeRadar_PersonAvailDropDown:Show()
-      RecipeRadar_RealmAvailDropDown:Hide()
+      RRF_PersonAvailDropDown:Show()
+      RRF_RealmAvailDropDown:Hide()
    end
 
 end
 
-function RecipeRadar_Availability_Toggle()
+function RRF_Availability_Toggle()
 
-   if (RecipeRadar_RealmAvailDropDown:IsVisible()) then
-      RecipeRadar_PersonAvailDropDown:Show()
-      RecipeRadar_RealmAvailDropDown:Hide()
-      RecipeRadar_Options.RealmAvailability = false
+   if (RRF_RealmAvailDropDown:IsVisible()) then
+      RRF_PersonAvailDropDown:Show()
+      RRF_RealmAvailDropDown:Hide()
+      RecipeRadarForever_Options.RealmAvailability = false
    else
-      RecipeRadar_RealmAvailDropDown:Show()
-      RecipeRadar_PersonAvailDropDown:Hide()
-      RecipeRadar_Options.RealmAvailability = true
+      RRF_RealmAvailDropDown:Show()
+      RRF_PersonAvailDropDown:Hide()
+      RecipeRadarForever_Options.RealmAvailability = true
    end
    
-   RecipeRadar_FrameUpdate()
+   RRF_FrameUpdate()
 
 end
 
@@ -40,31 +40,31 @@ end
 -----------------------------------------------------------------------------
 
 -- Returns a colored indication of a recipe's availability.
-function RecipeRadar_Availability_GetIndicator(recipe)
+function RRF_Availability_GetIndicator(recipe)
 
-   if (RecipeRadar_Options.RealmAvailability) then
-      return RecipeRadar_RealmAvail_GetIndicator(recipe)
+   if (RecipeRadarForever_Options.RealmAvailability) then
+      return RRF_RealmAvail_GetIndicator(recipe)
    else
-      return RecipeRadar_PersonAvail_GetIndicator(recipe)
+      return RRF_PersonAvail_GetIndicator(recipe)
    end
 
 end
 
 -- Returns a string with the recipe's skill in parens.
-function RecipeRadar_PersonAvail_GetIndicator(recipe)
+function RRF_PersonAvail_GetIndicator(recipe)
 
-   return RecipeRadar_Parens(recipe.Skill or "?")
+   return RRF_Parens(recipe.Skill or "?")
 
 end
 
 -- Returns a string with a little colored realm-wide availability
 -- indicator for the main vendor/recipe list.
-function RecipeRadar_RealmAvail_GetIndicator(recipe)
+function RRF_RealmAvail_GetIndicator(recipe)
 
-   local key = RecipeRadar_Availability_GetKey(recipe)
+   local key = RRF_Availability_GetKey(recipe)
    if (not key) then return "" end
 
-   return RecipeRadar_ColorToCode(RecipeRadar_Availabilities[key].Color) ..
+   return RRF_ColorToCode(RRF_Availabilities[key].Color) ..
          "*" .. FONT_COLOR_CODE_CLOSE
    
 end
@@ -74,20 +74,20 @@ end
 -----------------------------------------------------------------------------
 
 -- Populates the tooltip that displays on recipe button mouseover.
-function RecipeRadar_Availability_CreateTooltip(recipe)
+function RRF_Availability_CreateTooltip(recipe)
 
-   local recipe_name = RecipeRadar_GetSafeItemInfo(recipe.ID)
+   local recipe_name = RRF_GetSafeItemInfo(recipe.ID)
 
-   if (recipe_name == RRS("Uncached Recipe")) then
+   if (recipe_name == RRF_S("Uncached Recipe")) then
 
       -- the client is still loading this item from the server
       local tooltip = {
-            { text = RRS("Uncached Recipe"), color = RecipeRadar_Colors.UncachedRecipe },
+            { text = RRF_S("Uncached Recipe"), color = RRF_Colors.UncachedRecipe },
             { text = "", color = nil },
-            { text = RRS("Item data is loading,"), color = RecipeRadar_Colors.TooltipHeading },
-            { text = RRS("hover again in a moment."), color = RecipeRadar_Colors.TooltipHeading }, }
+            { text = RRF_S("Item data is loading,"), color = RRF_Colors.TooltipHeading },
+            { text = RRF_S("hover again in a moment."), color = RRF_Colors.TooltipHeading }, }
       for _, line in ipairs(tooltip) do
-         RecipeRadar_AvailabilityTooltip_AddLine(line.text, line.color)
+         RRF_AvailabilityTooltip_AddLine(line.text, line.color)
       end
       return
 
@@ -97,10 +97,10 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
    local num_avail, num_prosp, num_known = 0, 0, 0
 
    -- recipe labels are not saved in the skill database
-   recipe_name = RecipeRadar_TrimRecipeLabel(recipe_name)
+   recipe_name = RRF_TrimRecipeLabel(recipe_name)
 
    -- iterate through each character on this realm
-   for player, player_info in pairs(RecipeRadar_SkillDB[GetRealmName()]) do
+   for player, player_info in pairs(RecipeRadarForever_SkillDB[GetRealmName()]) do
 
       -- do the rest only if the character has the profession
       if (player_info.Professions and player_info.Professions[recipe.Type] and
@@ -125,17 +125,17 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
          end
 
          -- now test all of the possible recipe statuses
-         if (RecipeRadar_Availability_IsAvailable(player, recipe)) then
+         if (RRF_Availability_IsAvailable(player, recipe)) then
             num_avail = num_avail + 1
             avail[num_avail] = {
                   Name = player, Rank = rank, Rep = rep, Spec = spec }
 
-         elseif (RecipeRadar_Availability_IsProspect(player, recipe)) then
+         elseif (RRF_Availability_IsProspect(player, recipe)) then
             num_prosp = num_prosp + 1
             prosp[num_prosp] = {
                   Name = player, Rank = rank, Rep = rep, Spec = spec }
 
-         elseif (RecipeRadar_Availability_IsKnown(player, recipe)) then
+         elseif (RRF_Availability_IsKnown(player, recipe)) then
             num_known = num_known + 1
             known[num_known] = {
                   Name = player, Rank = rank, Rep = rep, Spec = spec }
@@ -149,25 +149,25 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
    -- populate the "available now" entries
    if (num_avail > 0) then
 
-      RecipeRadar_AvailabilityTooltip_AddLine(
-            RecipeRadar_Availabilities["LearnableByPlayer"].Tooltip.Heading,
-            RecipeRadar_Colors.TooltipHeading)
-      table.sort(avail, RecipeRadar_Availability_NameSort)
+      RRF_AvailabilityTooltip_AddLine(
+            RRF_Availabilities["LearnableByPlayer"].Tooltip.Heading,
+            RRF_Colors.TooltipHeading)
+      table.sort(avail, RRF_Availability_NameSort)
 
       for _, line in ipairs(avail) do
 
-         local color = RecipeRadar_Colors.LearnableByAlt
+         local color = RRF_Colors.LearnableByAlt
          if (line.Name == UnitName("player")) then
-            color = RecipeRadar_Colors.LearnableByPlayer
+            color = RRF_Colors.LearnableByPlayer
          end
 
          local rank_suffix = line.Rank
          if (line.Rep) then  -- reputation is relevant to this line
             rank_suffix = rank_suffix .. " - " .. line.Rep
          end
-         rank_suffix = RecipeRadar_Parens(rank_suffix)
+         rank_suffix = RRF_Parens(rank_suffix)
 
-         RecipeRadar_AvailabilityTooltip_AddLine(
+         RRF_AvailabilityTooltip_AddLine(
                "   " .. line.Name .. " " .. rank_suffix, color)
 
       end
@@ -178,33 +178,33 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
    if (num_prosp > 0) then
 
       if (num_avail > 0) then
-         RecipeRadar_AvailabilityTooltip_AddLine()
+         RRF_AvailabilityTooltip_AddLine()
       end
-      RecipeRadar_AvailabilityTooltip_AddLine(
-            RecipeRadar_Availabilities["ProspectForPlayer"].Tooltip.Heading,
-            RecipeRadar_Colors.TooltipHeading)
-      table.sort(prosp, RecipeRadar_Availability_NameSort)
+      RRF_AvailabilityTooltip_AddLine(
+            RRF_Availabilities["ProspectForPlayer"].Tooltip.Heading,
+            RRF_Colors.TooltipHeading)
+      table.sort(prosp, RRF_Availability_NameSort)
 
       for _, line in ipairs(prosp) do
 
-         local color = RecipeRadar_Colors.ProspectForAlt
+         local color = RRF_Colors.ProspectForAlt
          if (line.Name == UnitName("player")) then
-            color = RecipeRadar_Colors.ProspectForPlayer
+            color = RRF_Colors.ProspectForPlayer
          end
 
-         local factors = RecipeRadar_Availability_GetLimitingFactors(
+         local factors = RRF_Availability_GetLimitingFactors(
                line.Name, recipe)
 
-         local rank = string.format(RRS("%d of %s"), line.Rank, tostring(recipe.Skill or "?"))
+         local rank = string.format(RRF_S("%d of %s"), line.Rank, tostring(recipe.Skill or "?"))
          if (factors["rank"]) then
-            rank = RecipeRadar_HighlightString(rank, color)
+            rank = RRF_HighlightString(rank, color)
          end
          local suffix = rank  -- always include rank in the tooltip
 
          if (line.Rep) then
             local rep = line.Rep
             if (factors["rep"]) then
-               rep = RecipeRadar_HighlightString(rep, color)
+               rep = RRF_HighlightString(rep, color)
             end
             suffix = suffix .. " - " .. rep
          end
@@ -212,13 +212,13 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
          if (line.Spec) then
             local spec = line.Spec
             if (factors["spec"]) then
-               spec = RecipeRadar_HighlightString(spec, color)
+               spec = RRF_HighlightString(spec, color)
             end
             suffix = suffix .. " - " .. spec
          end
 
-         suffix = RecipeRadar_Parens(suffix)
-         RecipeRadar_AvailabilityTooltip_AddLine(
+         suffix = RRF_Parens(suffix)
+         RRF_AvailabilityTooltip_AddLine(
                "   " .. line.Name .. " " .. suffix, color)
                
       end
@@ -229,27 +229,27 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
    if (num_known > 0) then
 
       if (num_prosp > 0 or num_avail > 0) then
-         RecipeRadar_AvailabilityTooltip_AddLine()
+         RRF_AvailabilityTooltip_AddLine()
       end
-      RecipeRadar_AvailabilityTooltip_AddLine(
-            RecipeRadar_Availabilities["KnownByPlayer"].Tooltip.Heading,
-            RecipeRadar_Colors.TooltipHeading)
-      table.sort(known, RecipeRadar_Availability_NameSort)
+      RRF_AvailabilityTooltip_AddLine(
+            RRF_Availabilities["KnownByPlayer"].Tooltip.Heading,
+            RRF_Colors.TooltipHeading)
+      table.sort(known, RRF_Availability_NameSort)
 
       for _, line in ipairs(known) do
 
-         local color = RecipeRadar_Colors.KnownByAlt
+         local color = RRF_Colors.KnownByAlt
          if (line.Name == UnitName("player")) then
-            color = RecipeRadar_Colors.KnownByPlayer
+            color = RRF_Colors.KnownByPlayer
          end
 
          local rank_suffix = line.Rank
          if (line.Rep) then  -- reputation is relevant to this line
             rank_suffix = rank_suffix .. " - " .. line.Rep
          end
-         rank_suffix = RecipeRadar_Parens(rank_suffix)
+         rank_suffix = RRF_Parens(rank_suffix)
 
-         RecipeRadar_AvailabilityTooltip_AddLine(
+         RRF_AvailabilityTooltip_AddLine(
                "   " .. line.Name .. " " .. rank_suffix, color)
 
       end
@@ -259,7 +259,7 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
 end
 
 -- Boolean test for availability used by CreateTooltip(), above
-function RecipeRadar_Availability_NameSort(line1, line2)
+function RRF_Availability_NameSort(line1, line2)
 
    return line1.Name < line2.Name
 
@@ -267,17 +267,17 @@ end
 
 -- Returns a set of booleans from which one can derive the availability
 -- of any recipe relative to any player.
-function RecipeRadar_Availability_GetBooleans(player, recipe)
+function RRF_Availability_GetBooleans(player, recipe)
 
-   local info = RecipeRadar_SkillDB_GetSafePlayerDB(player)
+   local info = RRF_SkillDB_GetSafePlayerDB(player)
 
    -- if the player doesn't even have the profession, just return
    if (not info.Professions[recipe.Type]) then return false end
 
-   local recipe_name = RecipeRadar_GetSafeItemInfo(recipe.ID)
-   recipe_name = RecipeRadar_TrimRecipeLabel(recipe_name)
+   local recipe_name = RRF_GetSafeItemInfo(recipe.ID)
+   recipe_name = RRF_TrimRecipeLabel(recipe_name)
 
-   if (recipe_name == RRS("Uncached Recipe")) then
+   if (recipe_name == RRF_S("Uncached Recipe")) then
       return nil
    end
 
@@ -285,28 +285,28 @@ function RecipeRadar_Availability_GetBooleans(player, recipe)
    local has_rec = (info.Professions[recipe.Type].Recipes or { })[recipe_name]
    -- unknown required skill (not resolved from the tooltip yet) counts as met
    local has_rank = (info.Professions[recipe.Type].Rank or 0) >= (recipe.Skill or 0)
-   local has_rep = RecipeRadar_SkillDB_HasRep(player, recipe)
-   local has_spec = RecipeRadar_SkillDB_HasSpec(player, recipe)
+   local has_rep = RRF_SkillDB_HasRep(player, recipe)
+   local has_spec = RRF_SkillDB_HasSpec(player, recipe)
 
    return true, has_rec, has_rank, has_rep, has_spec
 
 end
 
 -- Boolean test for availability used by CreateTooltip() and GetKey()
-function RecipeRadar_Availability_IsAvailable(player, recipe)
+function RRF_Availability_IsAvailable(player, recipe)
 
    local has_prof, has_rec, has_rank, has_rep, has_spec =
-         RecipeRadar_Availability_GetBooleans(player, recipe)
+         RRF_Availability_GetBooleans(player, recipe)
 
    return (has_prof and not has_rec and has_rank and has_rep and has_spec)
 
 end
 
 -- Boolean test for availability used by CreateTooltip() and GetKey()
-function RecipeRadar_Availability_IsProspect(player, recipe)
+function RRF_Availability_IsProspect(player, recipe)
 
    local has_prof, has_rec, has_rank, has_rep, has_spec =
-         RecipeRadar_Availability_GetBooleans(player, recipe)
+         RRF_Availability_GetBooleans(player, recipe)
          
    return (has_prof and not has_rec and
          (not has_rank or not has_rep or not has_spec))
@@ -314,10 +314,10 @@ function RecipeRadar_Availability_IsProspect(player, recipe)
 end
 
 -- Boolean test for availability used by CreateTooltip() and GetKey()
-function RecipeRadar_Availability_IsKnown(player, recipe)
+function RRF_Availability_IsKnown(player, recipe)
 
    local has_prof, has_rec, has_rank, has_rep, has_spec =
-         RecipeRadar_Availability_GetBooleans(player, recipe)
+         RRF_Availability_GetBooleans(player, recipe)
 
    return (has_prof and has_rec and has_rank and has_rep and has_spec)
 
@@ -325,10 +325,10 @@ end
 
 -- Returns a table of strings that specify why the given recipe is not
 -- available to the given player.
-function RecipeRadar_Availability_GetLimitingFactors(player, recipe)
+function RRF_Availability_GetLimitingFactors(player, recipe)
 
    local has_prof, has_rec, has_rank, has_rep, has_spec =
-         RecipeRadar_Availability_GetBooleans(player, recipe)
+         RRF_Availability_GetBooleans(player, recipe)
    local factors = { }
          
    if (not has_prof) then factors["prof"] = 1 end
@@ -347,17 +347,17 @@ end
 
 -- This function tests whether the recipe is learnable either by
 -- the player or an alt if realm-wide availability is on.
-function RecipeRadar_Availability_IsLearnable(recipe, set_filter)
+function RRF_Availability_IsLearnable(recipe, set_filter)
 
-   local avail = RecipeRadar_Availability_GetKey(recipe)
+   local avail = RRF_Availability_GetKey(recipe)
    if (not avail) then return false end
    
    if (set_filter) then
       recipe.IsFilteredByAvailability =
-            RecipeRadar_IsAvailabilityFiltered(avail)
+            RRF_IsAvailabilityFiltered(avail)
    end
    
-   if (RecipeRadar_Options.RealmAvailability) then
+   if (RecipeRadarForever_Options.RealmAvailability) then
       return avail == "LearnableByPlayer" or avail == "LearnableByAlt"
    else
       return avail == "LearnableByPlayer"
@@ -366,38 +366,38 @@ function RecipeRadar_Availability_IsLearnable(recipe, set_filter)
 end
 
 -- Wrapper for the above that makes its functionality clearer.
-function RecipeRadar_Availability_SetAvailabilityFilter(recipe)
+function RRF_Availability_SetAvailabilityFilter(recipe)
 
-   RecipeRadar_Availability_IsLearnable(recipe, true)
+   RRF_Availability_IsLearnable(recipe, true)
 
 end
 
--- Generic function returns the key to the RecipeRadar_Availabilities
+-- Generic function returns the key to the RRF_Availabilities
 -- table so the caller can get whatever related info she needs.
-function RecipeRadar_Availability_GetKey(recipe)
+function RRF_Availability_GetKey(recipe)
 
-   if (RecipeRadar_Availability_IsAvailable(nil, recipe)) then
+   if (RRF_Availability_IsAvailable(nil, recipe)) then
       return "LearnableByPlayer"
 
-   elseif (RecipeRadar_Options.RealmAvailability and
-         RecipeRadar_Availability_IsSatisfiedByAlt(recipe,
-         RecipeRadar_Availability_IsAvailable)) then
+   elseif (RecipeRadarForever_Options.RealmAvailability and
+         RRF_Availability_IsSatisfiedByAlt(recipe,
+         RRF_Availability_IsAvailable)) then
       return "LearnableByAlt"
 
-   elseif (RecipeRadar_Availability_IsProspect(nil, recipe)) then
+   elseif (RRF_Availability_IsProspect(nil, recipe)) then
       return "ProspectForPlayer"
 
-   elseif (RecipeRadar_Options.RealmAvailability and
-         RecipeRadar_Availability_IsSatisfiedByAlt(recipe,
-         RecipeRadar_Availability_IsProspect)) then
+   elseif (RecipeRadarForever_Options.RealmAvailability and
+         RRF_Availability_IsSatisfiedByAlt(recipe,
+         RRF_Availability_IsProspect)) then
       return "ProspectForAlt"
 
-   elseif (RecipeRadar_Availability_IsKnown(nil, recipe)) then
+   elseif (RRF_Availability_IsKnown(nil, recipe)) then
       return "KnownByPlayer"
 
-   elseif (RecipeRadar_Options.RealmAvailability and
-         RecipeRadar_Availability_IsSatisfiedByAlt(recipe,
-         RecipeRadar_Availability_IsKnown)) then
+   elseif (RecipeRadarForever_Options.RealmAvailability and
+         RRF_Availability_IsSatisfiedByAlt(recipe,
+         RRF_Availability_IsKnown)) then
       return "KnownByAlt"
 
    else
@@ -407,11 +407,11 @@ function RecipeRadar_Availability_GetKey(recipe)
 end
 
 -- Boolean test for availability used by GetKey(), above.
-function RecipeRadar_Availability_IsSatisfiedByAlt(recipe, sat_func)
+function RRF_Availability_IsSatisfiedByAlt(recipe, sat_func)
 
-   for player, player_info in pairs(RecipeRadar_SkillDB[GetRealmName()]) do
+   for player, player_info in pairs(RecipeRadarForever_SkillDB[GetRealmName()]) do
 
-      if (player_info.Team ~= RecipeRadar_GetOpposingFaction("player") and
+      if (player_info.Team ~= RRF_GetOpposingFaction("player") and
             player ~= UnitName("player") and
             sat_func(player, recipe)) then
          return true

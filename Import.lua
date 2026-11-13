@@ -59,12 +59,12 @@ local TEAMS = { A = "Alliance", H = "Horde" }
 -- region key for a uiMapID, creating a region for zones without vendors yet
 local function RegionForMap(mapID)
 
-   for key, region in pairs(RecipeRadar_RegionData) do
+   for key, region in pairs(RRF_RegionData) do
       if (region.UiMapID == mapID) then return key end
    end
    local info = C_Map.GetMapInfo(mapID)
    if (not info or info.mapType ~= Enum.UIMapType.Zone) then return nil end
-   RecipeRadar_Maps_RegisterRegion(info.name, { UiMapID = mapID, Vendors = { } })
+   RRF_Maps_RegisterRegion(info.name, { UiMapID = mapID, Vendors = { } })
    return info.name
 
 end
@@ -90,7 +90,7 @@ end
 -- copies the shipped facts (price, reputation...) of a recipe when present
 local function NewRecipe(id, prof, template)
 
-   local recipe = { ID = id, Type = RRS(prof) }
+   local recipe = { ID = id, Type = RRF_S(prof) }
    if (template) then
       for _, k in ipairs({ "Skill", "Cost", "Currency", "Token", "Amount", "Faction",
             "FactionID", "Level", "Specialty", "Notes", "IsCertification" }) do
@@ -103,10 +103,10 @@ end
 
 local function Merge(lib, areaMap, id, prof, vendorIDs, stats)
 
-   local profData = RecipeRadar_RecipeData[RRS(prof)]
+   local profData = RRF_RecipeData[RRF_S(prof)]
    if (not profData) then
       profData = { Recipes = { } }
-      RecipeRadar_RecipeData[RRS(prof)] = profData
+      RRF_RecipeData[RRF_S(prof)] = profData
    end
    local master = FindRecipe(profData.Recipes, id)
 
@@ -118,12 +118,12 @@ local function Merge(lib, areaMap, id, prof, vendorIDs, stats)
          for area, points in pairs(spawns) do
             local mapID = areaMap[area]
             local key = mapID and RegionForMap(mapID)
-            local region = key and RecipeRadar_RegionData[key]
+            local region = key and RRF_RegionData[key]
             if (region) then
                local vendor = FindVendor(region, name)
                if (not vendor) then
                   vendor = { Name = name, Team = team, Coordinates = { }, Recipes = { } }
-                  for i = 1, math.min(#points, RecipeRadar_MaxVendorCoordinates) do
+                  for i = 1, math.min(#points, RRF_MaxVendorCoordinates) do
                      local p = points[i]
                      if (type(p) == "table" and p[1] and p[1] >= 0) then
                         table.insert(vendor.Coordinates, { x = p[1] / 100, y = p[2] / 100 })
@@ -156,9 +156,9 @@ local function Merge(lib, areaMap, id, prof, vendorIDs, stats)
 
 end
 
-function RecipeRadar_Import_Start()
+function RRF_Import_Start()
 
-   if (RecipeRadar_Options.UseQuestie == false or ns.importRunning) then return end
+   if (RecipeRadarForever_Options.UseQuestie == false or ns.importRunning) then return end
    local lib = GetLib()
    if (not lib) then return end
 
@@ -190,35 +190,35 @@ function RecipeRadar_Import_Start()
          ns.importRunning = false
          ns.importStats = stats
          if (stats.pairs > 0) then
-            RecipeRadar_ItemData_Reindex()
-            RecipeRadar_ItemData_ApplyCache()
-            RecipeRadar_ItemData_ResolveSkills(RecipeRadar_RefreshIfShown)
-            RecipeRadar_RefreshIfShown()
+            RRF_ItemData_Reindex()
+            RRF_ItemData_ApplyCache()
+            RRF_ItemData_ResolveSkills(RRF_RefreshIfShown)
+            RRF_RefreshIfShown()
          end
       end
    end)
 
 end
 
-function RecipeRadar_Import_PrintStatus()
+function RRF_Import_PrintStatus()
 
    local lib = GetLib()
    if (not lib) then
-      RecipeRadar_Print("Recipe Radar: QuestieDB not found (or incompatible); using the shipped data only.")
-   elseif (RecipeRadar_Options.UseQuestie == false) then
-      RecipeRadar_Print("Recipe Radar: QuestieDB import is off (/rrdr questie on).")
+      RRF_Print("Recipe Radar: QuestieDB not found (or incompatible); using the shipped data only.")
+   elseif (RecipeRadarForever_Options.UseQuestie == false) then
+      RRF_Print("Recipe Radar: QuestieDB import is off (/rrdr questie on).")
    elseif (ns.importRunning) then
-      RecipeRadar_Print("Recipe Radar: QuestieDB import is running.")
+      RRF_Print("Recipe Radar: QuestieDB import is running.")
    elseif (ns.importStats) then
       local s = ns.importStats
-      RecipeRadar_Print(string.format(
+      RRF_Print(string.format(
             "Recipe Radar: QuestieDB %s added %d recipes, %d vendors, %d vendor/recipe pairs beyond the shipped data.",
             tostring(C_AddOns.GetAddOnMetadata("QuestieDB", "Version")), s.recipes, s.vendors, s.pairs))
-      for i = 1, math.min(#s.list, 20) do RecipeRadar_Print("   " .. s.list[i]) end
-      if (#s.list > 20) then RecipeRadar_Print(string.format("   ... and %d more", #s.list - 20)) end
+      for i = 1, math.min(#s.list, 20) do RRF_Print("   " .. s.list[i]) end
+      if (#s.list > 20) then RRF_Print(string.format("   ... and %d more", #s.list - 20)) end
    end
    if (ns.importError) then
-      RecipeRadar_Print("Recipe Radar: first import error: " .. tostring(ns.importError))
+      RRF_Print("Recipe Radar: first import error: " .. tostring(ns.importError))
    end
 
 end
