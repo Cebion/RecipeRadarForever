@@ -1,0 +1,23 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
+
+   <Script file="MinimapButton.lua"/>
+
+   <Button name="RecipeRadarMinimapButton" parent="Minimap" frameStrata="MEDIUM" frameLevel="8">
+      <Size x="32" y="32"/>
+      <Anchors>
+         <Anchor point="CENTER" relativeTo="Minimap" relativePoint="BOTTOMLEFT"/>
+      </Anchors>
+      <NormalTexture file="Interface\AddOns\RecipeRadar\Images\Misc\MinimapButtonUp"/>
+      <PushedTexture file="Interface\AddOns\RecipeRadar\Images\Misc\MinimapButtonDown"/>
+      <HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+      <Scripts>
+         <OnLoad function="RecipeRadar_MinimapButton_OnLoad"/>
+         <OnClick function="RecipeRadar_MinimapButton_OnClick"/>
+         <OnEnter function="RecipeRadar_MinimapButton_OnEnter"/>
+         <OnLeave function="GameTooltip_Hide"/>
+      </Scripts>
+   </Button>
+
+</Ui>
