@@ -409,7 +409,7 @@ RecipeRadar_RecipeData = {
          },
       },
       {
-         ID = 250996, Type = RRS("Alchemy"), Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
+         ID = 250996, Type = RRS("Alchemy"), Skill = 180, Currency = 3402, Amount = 120, FactionID = 2587, Level = 5,
          Locations = {
             { Region = "Redridge Mountains", Vendor = RRS("Nina Surefire"), Team = "Alliance" },
             { Region = "The Barrens", Vendor = RRS("Apothecary Durelle"), Team = "Horde" },
@@ -2565,7 +2565,7 @@ RecipeRadar_RecipeData = {
       {
          ID = 14639, Type = RRS("Engineering"), Skill = 140, Cost = 1500,
          Locations = {
-            { Region = "Gnomeregan", Vendor = RRS("Namdo Bizzfizzle"), Team = "Alliance" },
+            { Region = "Dun Morogh", Vendor = RRS("Namdo Bizzfizzle"), Team = "Alliance" },
             { Region = "The Barrens", Vendor = RRS("Gagsprocket"), Team = "Neutral" },
             { Region = "Wetlands", Vendor = RRS("Fradd Swiftgear"), Team = "Alliance" },
          },

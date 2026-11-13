@@ -19,8 +19,8 @@ Kept unchanged: addon name and folder (`RecipeRadar`), SavedVariables
 | AllTheThings Forever data, installed copy | required skill, Merchant's Favor and token costs, reputation (FactionID), 13 vendor items QuestieDB lacks (certifications, token patterns, Darkmoon Faire schematic, 3 newer Favor plans) |
 | `tools/data/overrides.json` | excluded items (two Season of Discovery leftovers in QuestieDB), continents of new zones |
 
-Result (QuestieDB 1.0.11, AllTheThings 5.4.11): 768 vendor recipes, 301 vendors,
-50 regions. 462 recipes are new in Forever, 320 cost Merchant's Favor (including the
+Result (QuestieDB 1.0.11, AllTheThings 5.4.11): 768 vendor recipes, 290 vendors,
+49 regions. 462 recipes are new in Forever, 320 cost Merchant's Favor (including the
 6 certifications), 19 cost token items. Merchant's Favor counts per profession match
 ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 
@@ -29,8 +29,8 @@ ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 - 123 recipes have no price in the data (mostly new gold-vendor recipes; the gold
   prices on ForeverChanges are not reliable). Opening the vendor's merchant window
   records the real price or currency, also cached in `RecipeRadar_ItemCache`.
-- 26 classic vendor/recipe pairs that QuestieDB doesn't list (for example the
-  Vendor-Tron 1000 and Super-Seller 680 robots) keep their original coordinates.
+- 24 classic vendor/recipe pairs that QuestieDB doesn't list for that recipe (for example the
+  Vendor-Tron 1000 and Super-Seller 680 robots) are placed at the NPC's Forever spawn.
 - Region keys are English zone names, each with the client `UiMapID`. Region
   names in the UI come from `C_Map.GetMapInfo`, so they are localized everywhere.
 - The in-window zone map is drawn from the client's map tiles

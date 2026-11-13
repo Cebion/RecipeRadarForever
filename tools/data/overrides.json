@@ -6,5 +6,9 @@
   "continents": {
     "Mount Hyjal": 1,
     "Riverglades": 2
-  }
+  },
+  "skills": {
+    "250996": 180
+  },
+  "_skills_note": "Required skill where neither AllTheThings nor the item tooltip has it (250996 Alchemy Certification, per ForeverChanges)."
 }

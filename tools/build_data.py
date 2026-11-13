@@ -100,7 +100,10 @@ class QuestieDB:
         if not r:
             return None
         spawns = self.field("Npc", nid, 7)
-        if not isinstance(spawns, dict):
+        if isinstance(spawns, list):
+            # a Lua table keyed 1..n (e.g. only area 1, Dun Morogh) serializes as a CBOR array
+            spawns = {i + 1: pts for i, pts in enumerate(spawns) if pts}
+        elif not isinstance(spawns, dict):
             spawns = {}
         return {"name": r.get(1), "faction": r.get(13), "spawns": spawns}
 
@@ -368,6 +371,9 @@ def main():
         if a.get("rep") and not r.get("faction_id"):
             r["faction_id"], r["level"] = a["rep"]
         r["att_vendors"] = a["vendors"]
+    for rid, skill in overrides.get("skills", {}).items():
+        if int(rid) in recipes and not recipes[int(rid)].get("skill"):
+            recipes[int(rid)]["skill"] = int(skill)
     for rid, r in recipes.items():
         if r.get("faction") and not r.get("faction_id"):
             r["faction_id"] = CLASSIC_FACTION_IDS.get(r["faction"])
@@ -377,6 +383,8 @@ def main():
     npc_cache = {}
 
     def add_vendor(region, key, name, team, coords, rid, notes=None):
+        # one entry per vendor name and region, whatever source it came from
+        key = ("vendor", name)
         reg = regions[region]
         v = reg.get(key)
         if not v:
@@ -386,6 +394,38 @@ def main():
                 v["coords"].append(c)
         if rid not in v["recipes"]:
             v["recipes"].append(rid)
+        if notes and not v.get("notes"):
+            v["notes"] = notes
+
+    def spawn_spots(npc):
+        spots = []
+        for area, pts in npc["spawns"].items():
+            zone = areas.get(int(area))
+            if zone:
+                coords = [(round(p[0] / 100, 4), round(p[1] / 100, 4)) for p in pts
+                          if isinstance(p, list) and len(p) >= 2 and p[0] >= 0]
+                spots.append((zone[1], coords, team_of(npc["faction"])))
+        return spots
+
+    npc_spawns_by_name = {}
+    _all_names = {}
+
+    def all_npcs_by_name():
+        if not _all_names:
+            for k in qdb.meta:
+                m = re.match(r'^X-Npc-(\d+)-S$', k)
+                if m:
+                    row = qdb.row("Npc", int(m.group(1)))
+                    if row and row.get(1):
+                        _all_names.setdefault(row[1], int(m.group(1)))
+        return _all_names
+    for r in recipes.values():
+        for nid in r.get("qdb_vendors", []):
+            if nid not in npc_cache:
+                npc_cache[nid] = qdb.npc(nid)
+            npc = npc_cache[nid]
+            if npc and npc["name"] and npc["spawns"] and npc["name"] not in npc_spawns_by_name:
+                npc_spawns_by_name[npc["name"]] = spawn_spots(npc)
 
     stats = defaultdict(int)
     for rid, r in sorted(recipes.items()):
@@ -411,12 +451,13 @@ def main():
                 placed = True
         # AllTheThings vendors not known to QuestieDB for this item
         for nid, hdr in (r.get("att_vendors") or {}).items():
-            if any(rid in reg[("npc", nid)]["recipes"] for reg in regions.values() if ("npc", nid) in reg):
-                continue
             if nid not in npc_cache:
                 npc_cache[nid] = qdb.npc(nid)
             npc = npc_cache[nid]
             name = npc["name"] if npc else None
+            if name and any(rid in reg[("vendor", name)]["recipes"]
+                            for reg in regions.values() if ("vendor", name) in reg):
+                continue
             for map_id, x, y in hdr["coords"]:
                 zone = map_to_zone.get(map_id)
                 if zone and name:
@@ -432,9 +473,20 @@ def main():
                 if any(rv["name"] == v["name"] and rid in rv["recipes"]
                        for reg in regions.values() for rv in reg.values()):
                     continue
-                add_vendor(rn, ("classic", v["name"]), v["name"], v["team"], v["coords"], rid, v.get("notes"))
+                spots = npc_spawns_by_name.get(v["name"])
+                if spots is None:
+                    # not a recipe vendor in QuestieDB: look the NPC up by name
+                    nid = all_npcs_by_name().get(v["name"])
+                    npc = nid and qdb.npc(nid)
+                    spots = npc_spawns_by_name[v["name"]] = (spawn_spots(npc) if npc and npc["spawns"] else [])
+                if spots:
+                    for zone, coords, team in spots:
+                        add_vendor(zone, None, v["name"], team, coords, rid, v.get("notes"))
+                    stats["classic_pair_moved_to_forever_spawn"] += 1
+                else:
+                    add_vendor(rn, None, v["name"], v["team"], v["coords"], rid, v.get("notes"))
+                    stats["classic_only"] += 1
                 placed = True
-                stats["classic_only"] += 1
         stats["placed" if placed else "unplaced"] += 1
 
     # region metadata
