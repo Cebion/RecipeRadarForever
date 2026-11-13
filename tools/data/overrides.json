@@ -1,0 +1,10 @@
+{
+  "exclude_items": {
+    "211247": "Pattern: Phoenix Bindings - Season of Discovery item listed in QuestieDB, not sold in Forever",
+    "215155": "Plans: Tempered Interference-Negating Helmet - Season of Discovery item, vendor unknown in Forever"
+  },
+  "continents": {
+    "Mount Hyjal": 1,
+    "Riverglades": 2
+  }
+}

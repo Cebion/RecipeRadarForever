@@ -1,33 +1,45 @@
 # Recipe Radar for WoW Forever
 
-Recipe Radar is a World of Warcraft addon that helps you find recipes. It knows
-which vendors sell recipes in each zone or for each profession, tracks which
-recipes your characters already know, and can mark vendors on the map.
+Recipe Radar shows every profession recipe sold by a vendor in **WoW Forever**,
+who sells it, where they stand, what it costs, and which of your characters can
+learn it. Use it to see which vendor recipes you're still missing.
 
-This is a port of **Recipe Radar** by **Jay Miller** to **WoW Forever**
-(client 1.60.x, the Midnight addon API). It also loads on Midnight retail.
+This is a port of **Recipe Radar** by **Jay Miller** to WoW Forever (client 1.60.x,
+the Midnight addon API). It also loads on Midnight retail.
 
-## Features
+## What's in it
 
-- **Radar tab**: every recipe vendor in the selected zone, with their recipes.
-- **Recipes tab**: every vendor recipe for one profession, with all locations.
-- Filters by faction, profession and availability (learnable now, future
-  prospect, already known, other professions).
-- Availability across all characters on the realm, including your alts'
-  skill ranks, reputation and specializations.
-- Vendor locations shown on a zone map inside the window. Shift-click a vendor
-  to mark it on the world map and minimap.
-- Optional: hide seasonal vendors and auto-map vendors with learnable recipes.
+- **768 vendor recipes** across Alchemy, Blacksmithing, Cooking, Enchanting,
+  Engineering, First Aid, Fishing, Leatherworking and Tailoring:
+  - the original vanilla vendor recipes,
+  - **462 Forever-new recipes**, including all **320 Merchant's Favor** recipes and
+    certifications from the trade camps (Azeroth Commerce Authority in Redridge,
+    Durotar Supply and Logistics in the Barrens), the Skyforged quartermasters,
+    Mount Hyjal, Riverglades and Zephras Isle vendors, and new city recipe vendors.
+- Costs in gold, **Merchant's Favor** or token items.
+- **Radar tab**: every recipe vendor in a zone. **Recipes tab**: every vendor recipe
+  of one profession with all its locations.
+- Filters by faction, profession and availability (learnable now, future prospect,
+  already known), across all characters on the realm.
+- Zone maps drawn from the game's own map art, so the new Forever zones work too.
+- Shift-click a vendor to mark it on the world map and minimap (TomTom if
+  installed, otherwise world map pins plus the Blizzard waypoint).
+
+## Always up to date with Questie
+
+The addon works standalone with its built-in data. If **Questie** (QuestieDB) is
+installed, Recipe Radar also reads its current vendor data after login and adds
+anything newer, such as recipes or vendors added in a patch. `/rrdr questie off`
+turns this off.
+
+Things the data can't know yet fill themselves in as you play:
+- **Required skill** for new recipes is read from the item tooltip.
+- **Prices** are recorded whenever you open the vendor's merchant window.
 
 ## Installation
 
 Copy or link the `RecipeRadar` folder into
 `World of Warcraft\_forever_\Interface\AddOns\`.
-
-**Map pins:** if [TomTom](https://www.curseforge.com/wow/addons/tomtom) is
-installed, Recipe Radar uses it for minimap and world map pins plus the arrow.
-Without TomTom, mapped vendors show on the world map and the most recently mapped
-vendor gets the built-in Blizzard waypoint.
 
 ## Usage
 
@@ -36,20 +48,30 @@ vendor gets the built-in Blizzard waypoint.
 | `/rrdr` or `/reciperadar` | Toggle the window |
 | `/rrdr options` | Options dialog |
 | `/rrdr radar` | Print the vendors in your current zone to chat |
-| `/rrdr debug skills [name]` | Show stored professions, specializations and reputation |
+| `/rrdr verify` | Ask the server about every recipe item and fill in required skills |
+| `/rrdr questie [on\|off]` | QuestieDB import status, or turn it on/off |
+| `/rrdr debug skills [name]` | Stored professions, specializations and reputation |
 | `/rrdr debug scan` | Rescan skills, reputation and known recipes |
-| `/rrdr debug maps` | Show which zones resolved to a game map |
+| `/rrdr debug maps` | Check that every zone resolves to a game map |
 | `/rrdr debug where` | Print your map position (for checking vendor coordinates) |
 | `/rrdr debug clear [name]` | Forget stored data for one character or the realm |
 
-You can also open the window from the minimap button, the AddOn compartment, or a
-key binding (Key Bindings > AddOns > Recipe Radar). Right-click the minimap
-button to open the options.
+The window also opens from the minimap button, the AddOn compartment, or a key
+binding (Key Bindings > AddOns > Recipe Radar). Right-click the minimap button
+for the options.
 
-Log in once on each character so that your alts show up in the availability
-tooltips.
+## Updating the data
 
-## Credits
+`tools/build_data.py` regenerates `RegionData.lua` and `RecipeData.lua` from an
+installed QuestieDB and AllTheThings:
 
-- Original addon and vendor database: Jay Miller.
-- See `PORTING.md` for what changed in the WoW Forever port.
+```
+pip install cbor2
+python tools/build_data.py --questiedb ".../AddOns/QuestieDB/QuestieDB_Forever.toc" \
+    --att ".../AddOns/AllTheThings/db/Camelot/Categories"
+```
+
+## License and credits
+
+GPLv3, see `LICENSE.md`. Original addon and vanilla vendor database by Jay Miller.
+Forever vendor data from QuestieDB and AllTheThings; see `NOTICE.md`.

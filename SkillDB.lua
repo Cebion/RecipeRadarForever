@@ -136,11 +136,23 @@ function RecipeRadar_SkillDB_ScanReputation()
 
    if (not (C_Reputation and C_Reputation.GetNumFactions)) then return end
 
+   -- look up exactly the factions the recipe data needs, so collapsed
+   -- headers in the reputation list don't hide any of them
+   if (not ns.neededFactions) then
+      ns.neededFactions = { }
+      for _, prof in pairs(RecipeRadar_RecipeData) do
+         for _, recipe in ipairs(prof.Recipes) do
+            if (recipe.FactionID) then ns.neededFactions[recipe.FactionID] = true end
+         end
+      end
+   end
+
    local factions = RecipeRadar_SkillDB_GetPlayerFactions()
-   for i = 1, C_Reputation.GetNumFactions() do
-      local data = C_Reputation.GetFactionDataByIndex(i)
-      if (data and not data.isHeader and RecipeRadar_IsKnownFaction(data.name)) then
-         factions[data.name] = data.reaction
+   for id in pairs(ns.neededFactions) do
+      local data = C_Reputation.GetFactionDataByID(id)
+      if (data and data.name and data.name ~= "") then
+         factions[id] = data.reaction
+         factions[data.name] = data.reaction  -- 1.x layout, keyed by name
       end
    end
 
@@ -246,11 +258,13 @@ end
 -- Does a character in the DB have the reputation needed for the recipe?
 function RecipeRadar_SkillDB_HasRep(player, recipe)
 
-   if (not recipe.Faction or recipe.Faction == "") then return true end
+   local key = recipe.FactionID or recipe.Faction
+   if (not key or key == "") then return true end
 
    local factions = RecipeRadar_SkillDB_GetPlayerFactions(player)
-   if (not factions[recipe.Faction]) then return false end
-   return factions[recipe.Faction] >= recipe.Level
+   local standing = factions[key] or (recipe.Faction and factions[recipe.Faction])
+   if (not standing) then return false end
+   return standing >= (recipe.Level or 4)
 
 end
 

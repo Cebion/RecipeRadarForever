@@ -28,7 +28,7 @@ end
 
 local function OnNewZone()
 
-   local zone = GetRealZoneText()
+   local zone = RecipeRadar_Maps_GetPlayerRegion()
    if (RecipeRadar_RegionHasLearnableRecipe(zone)) then
       RecipeRadar_MinimapButton_Flash()
    end
@@ -65,10 +65,14 @@ function RecipeRadar_OnEvent(self, event, ...)
          end
       end
 
+      RecipeRadar_ItemData_ApplyCache()
       RecipeRadar_Maps_BuildRegionIndex()
       RecipeRadar_SkillDB_ScanAll()
-      -- item data for the tooltip scan may still be loading right after login
+      -- item data for the tooltip scans may still be loading right after login
       C_Timer.After(5, RecipeRadar_SkillDB_RequestKnownScan)
+      C_Timer.After(8, function() RecipeRadar_ItemData_ResolveSkills(RecipeRadar_RefreshIfShown) end)
+      -- newer vendor data from an installed QuestieDB, read in small batches
+      C_Timer.After(3, RecipeRadar_Import_Start)
       RecipeRadar_SelectFirstRecipe()
 
    elseif (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA") then
@@ -140,9 +144,11 @@ function RecipeRadar_SlashHandler(msg)
          RecipeRadar_SkillDB_ScanAll()
          RecipeRadar_SkillDB_ScanKnownRecipes()
          RecipeRadar_Print("Recipe Radar: rescanned skills, reputation and known recipes.")
+      elseif (sub == "import") then
+         RecipeRadar_Import_PrintStatus()
       elseif (sub == "where") then
          -- stand on a vendor and compare with the database coordinates
-         local zone = GetRealZoneText()
+         local zone = RecipeRadar_Maps_GetPlayerRegion()
          local mapID = C_Map.GetBestMapForUnit("player")
          local pos = mapID and C_Map.GetPlayerMapPosition(mapID, "player")
          if (pos) then
@@ -153,7 +159,7 @@ function RecipeRadar_SlashHandler(msg)
             RecipeRadar_Print(zone .. ": no map position here.")
          end
       else
-         RecipeRadar_Print("/rrdr debug skills [name] | clear [name] | maps | scan | where")
+         RecipeRadar_Print("/rrdr debug skills [name] | clear [name] | maps | scan | import | where")
       end
       return
 
@@ -161,7 +167,7 @@ function RecipeRadar_SlashHandler(msg)
 
    if (cmd == "radar") then
 
-      local region = RecipeRadar_RegionData[GetRealZoneText()]
+      local region = RecipeRadar_RegionData[RecipeRadar_Maps_GetPlayerRegion()]
       if (not region) then return end
 
       for _, vendor in ipairs(region.Vendors) do
@@ -183,6 +189,21 @@ function RecipeRadar_SlashHandler(msg)
       end
       return
 
+   end
+
+   if (cmd == "verify") then
+      RecipeRadar_ItemData_Verify()
+      return
+   end
+
+   if (cmd == "questie") then
+      if (sub == "on" or sub == "off") then
+         RecipeRadar_Options.UseQuestie = (sub == "on")
+         RecipeRadar_Print("Recipe Radar: QuestieDB import " .. sub .. " (takes effect after /reload).")
+      else
+         RecipeRadar_Import_PrintStatus()
+      end
+      return
    end
 
    if (cmd == "options" or cmd == "config") then
@@ -470,9 +491,13 @@ function RecipeRadar_GetRecipeReqsString(recipe)
    if (recipe.Notes and recipe.Notes ~= "") then
       return recipe.Notes
    end
-   if (recipe.Faction and recipe.Faction ~= "") then
-      return recipe.Faction .. ", " ..
-            (_G["FACTION_STANDING_LABEL" .. recipe.Level] or "")
+   local faction = recipe.Faction
+   if (recipe.FactionID) then
+      local data = C_Reputation.GetFactionDataByID(recipe.FactionID)
+      faction = (data and data.name ~= "" and data.name) or faction
+   end
+   if (faction and faction ~= "") then
+      return faction .. ", " .. (_G["FACTION_STANDING_LABEL" .. (recipe.Level or 4)] or "")
    end
    return nil
 
@@ -520,10 +545,11 @@ end
 -- Required skill first, then the recipe's ID (deterministic order).
 function RecipeRadar_CompareSkills(recipe1, recipe2)
 
-   if (recipe1.Skill == recipe2.Skill) then
+   local s1, s2 = recipe1.Skill or 0, recipe2.Skill or 0
+   if (s1 == s2) then
       return recipe1.ID < recipe2.ID
    end
-   return recipe1.Skill < recipe2.Skill
+   return s1 < s2
 
 end
 

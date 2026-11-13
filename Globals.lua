@@ -5,7 +5,7 @@ local addonName, ns = ...
 RECIPERADAR_VERSION = C_AddOns.GetAddOnMetadata(addonName, "Version") or "?"
 
 -- bump this when the saved variable layout changes (see RecipeRadar_Globals_Init)
-local DB_VERSION = 2
+local DB_VERSION = 3
 
 RECIPERADAR_VENDORS_DISPLAYED = 8
 RECIPERADAR_VENDOR_HEIGHT = 16
@@ -219,6 +219,7 @@ function RecipeRadar_Globals_Init()
    SetDefault(opts, "AutoMapVendors", false)
    SetDefault(opts, "HideSeasonal", false)
    SetDefault(opts, "ActiveTab", 1)
+   SetDefault(opts, "UseQuestie", true)
 
    if (not RecipeRadar_IsProfession(opts.CurrentProfession)) then
       opts.CurrentProfession = RRS("Cooking")

@@ -1,4 +1,4 @@
--- Maps.lua: region -> uiMapID index and vendor map pins
+-- Maps.lua: region index, in-window zone map art and vendor map pins
 --
 -- Pins are shown through TomTom when it is loaded (minimap + world map +
 -- arrow). Without TomTom the addon draws its own world map pins through a
@@ -7,9 +7,14 @@
 
 local addonName, ns = ...
 
--- region name -> uiMapID, continent index (1 Kalimdor, 2 Eastern Kingdoms) -> uiMapID
-local regionMapIDs, continentMapIDs, continentOfZone = { }, { }, { }
-local zonesByContinent = { [1] = { }, [2] = { } }
+-- Region keys in RecipeRadar_RegionData are English zone names; every zone
+-- region carries the client's uiMapID (Forever uses the Classic Era map IDs).
+local KALIMDOR_MAP, EASTERN_KINGDOMS_MAP = 1414, 1415
+local continentMapIDs = { [1] = KALIMDOR_MAP, [2] = EASTERN_KINGDOMS_MAP }
+
+local regionByMapID = { }          -- uiMapID -> region key
+local regionByLocalName = { }      -- localized zone/instance name -> region key
+local zonesByContinent = { }       -- continent index -> sorted { { name = localized, key = region key or nil } }
 local indexBuilt = false
 
 -- vendor table -> { region = name, uid = TomTom uid }
@@ -34,84 +39,189 @@ local function FindAncestor(mapID, mapType)
    return nil
 end
 
--- Builds the index from the world the player is in, so that only the maps
--- the client actually uses for this game are matched by name.
+local function ContinentIndexOfMap(mapID)
+   local cont = FindAncestor(mapID, Enum.UIMapType.Continent)
+   for index, id in pairs(continentMapIDs) do
+      if (id == cont) then return index end
+   end
+   return nil
+end
+
+-- Adds a region (also used at runtime by the QuestieDB import for zones the
+-- shipped data has no vendors in yet).
+function RecipeRadar_Maps_RegisterRegion(key, region)
+
+   RecipeRadar_RegionData[key] = region
+   if (region.UiMapID) then
+      regionByMapID[region.UiMapID] = key
+      local info = C_Map.GetMapInfo(region.UiMapID)
+      if (info) then regionByLocalName[info.name] = key end
+      if (region.Continent == nil) then
+         region.Continent = ContinentIndexOfMap(region.UiMapID) or 2
+      end
+   end
+   regionByLocalName[RRS(key)] = key
+   regionByLocalName[key] = key
+
+end
+
 function RecipeRadar_Maps_BuildRegionIndex()
 
-   local playerMap = C_Map.GetBestMapForUnit("player")
-   local worldID = FindAncestor(playerMap, Enum.UIMapType.World)
-         or FindAncestor(playerMap, Enum.UIMapType.Cosmic)
-   if (not worldID) then return end  -- try again on the next zone change
-
-   local kalimdor, eastern = RRS("Kalimdor"), RRS("Eastern Kingdoms")
-   for _, cont in ipairs(C_Map.GetMapChildrenInfo(worldID, Enum.UIMapType.Continent, true) or { }) do
-      if (cont.name == kalimdor) then
-         continentMapIDs[1] = cont.mapID
-      elseif (cont.name == eastern) then
-         continentMapIDs[2] = cont.mapID
-      end
+   wipe(regionByMapID)
+   wipe(regionByLocalName)
+   for key, region in pairs(RecipeRadar_RegionData) do
+      RecipeRadar_Maps_RegisterRegion(key, region)
    end
 
+   -- every zone of both continents, for the options dropdown
    for index, contID in pairs(continentMapIDs) do
+      local list, seen = { }, { }
       for _, zone in ipairs(C_Map.GetMapChildrenInfo(contID, Enum.UIMapType.Zone, true) or { }) do
-         -- first match wins: direct children are listed before deeper maps
-         if (not regionMapIDs[zone.name]) then
-            regionMapIDs[zone.name] = zone.mapID
-            continentOfZone[zone.name] = index
-            table.insert(zonesByContinent[index], zone.name)
+         if (not seen[zone.name]) then
+            seen[zone.name] = true
+            table.insert(list, { name = zone.name, key = regionByMapID[zone.mapID] })
          end
       end
-      table.sort(zonesByContinent[index])
+      table.sort(list, function(a, b) return a.name < b.name end)
+      zonesByContinent[index] = list
    end
-
-   indexBuilt = next(regionMapIDs) ~= nil
-   if (indexBuilt) then
-      RecipeRadar_Maps_RestorePins()
+   local instances = { }
+   for key, region in pairs(RecipeRadar_RegionData) do
+      if (region.Continent == 0) then
+         table.insert(instances, { name = RecipeRadar_GetRegionDisplayName(key), key = key })
+      end
    end
+   table.sort(instances, function(a, b) return a.name < b.name end)
+   zonesByContinent[0] = instances
+
+   indexBuilt = true
+   RecipeRadar_Maps_RestorePins()
 
 end
 
-function RecipeRadar_Maps_GetRegionMapID(region_name)
-
+local function EnsureIndex()
    if (not indexBuilt) then RecipeRadar_Maps_BuildRegionIndex() end
-   return regionMapIDs[region_name]
+end
+
+function RecipeRadar_Maps_GetRegionMapID(region_key)
+
+   local region = RecipeRadar_RegionData[region_key]
+   return region and region.UiMapID
 
 end
 
-function RecipeRadar_Maps_GetContinentIndex(region_name)
+-- Localized name for a region key (falls back to the localization table).
+function RecipeRadar_GetRegionDisplayName(region_key)
 
-   if (not indexBuilt) then RecipeRadar_Maps_BuildRegionIndex() end
-   return continentOfZone[region_name]
+   local region = RecipeRadar_RegionData[region_key]
+   local info = region and region.UiMapID and C_Map.GetMapInfo(region.UiMapID)
+   return (info and info.name) or RRS(region_key)
 
 end
 
--- Sorted zone names of a continent index, for the options dropdown.
+-- Region key (or the plain localized zone name if the zone has no vendors)
+-- for the player's current location.
+function RecipeRadar_Maps_GetPlayerRegion()
+
+   EnsureIndex()
+   local mapID = C_Map.GetBestMapForUnit("player")
+   local info = mapID and C_Map.GetMapInfo(mapID)
+   while (info) do
+      if (regionByMapID[info.mapID]) then return regionByMapID[info.mapID] end
+      if (info.mapType <= Enum.UIMapType.Zone) then break end
+      info = info.parentMapID and info.parentMapID ~= 0 and C_Map.GetMapInfo(info.parentMapID)
+   end
+   local zone = GetRealZoneText()
+   return regionByLocalName[zone] or zone
+
+end
+
+function RecipeRadar_Maps_GetContinentIndex(region_key)
+
+   local region = RecipeRadar_RegionData[region_key]
+   return region and region.Continent
+
+end
+
+-- Zones of a continent index (0 = instances) for the options dropdown.
 function RecipeRadar_Maps_GetZones(continent)
 
-   if (not indexBuilt) then RecipeRadar_Maps_BuildRegionIndex() end
+   EnsureIndex()
    return zonesByContinent[continent] or { }
 
 end
 
 function RecipeRadar_Maps_PrintRegionIndex()
 
-   if (not indexBuilt) then RecipeRadar_Maps_BuildRegionIndex() end
-   RecipeRadar_Print(string.format("Recipe Radar maps: Kalimdor=%s, Eastern Kingdoms=%s",
-         tostring(continentMapIDs[1]), tostring(continentMapIDs[2])))
-
-   local missing = { }
-   for name, region in pairs(RecipeRadar_RegionData) do
-      if (region.Continent ~= 0 and not regionMapIDs[name]) then
-         table.insert(missing, name)
+   EnsureIndex()
+   local missing, count = { }, 0
+   for key, region in pairs(RecipeRadar_RegionData) do
+      count = count + 1
+      if (region.Continent ~= 0 and not (region.UiMapID and C_Map.GetMapInfo(region.UiMapID))) then
+         table.insert(missing, key)
       end
    end
    table.sort(missing)
+   RecipeRadar_Print(string.format("Recipe Radar: %d regions.", count))
    if (#missing == 0) then
-      RecipeRadar_Print("All vendor regions resolved to a map.")
+      RecipeRadar_Print("All vendor regions resolved to a game map.")
    else
-      RecipeRadar_Print("Regions without a map: " .. table.concat(missing, ", "))
+      RecipeRadar_Print("Regions without a game map: " .. table.concat(missing, ", "))
    end
    RecipeRadar_Print("Pins: " .. (HasTomTom() and "TomTom" or "world map + Blizzard waypoint"))
+
+end
+
+-----------------------------------------------------------------------------
+-- In-window zone map, drawn from the client's own map tiles
+-----------------------------------------------------------------------------
+
+local tilePool = { }
+
+-- Draws the art of uiMapID stretched over `frame`. Returns true if it has art.
+function RecipeRadar_Maps_DrawZoneArt(frame, mapID)
+
+   for _, tex in ipairs(tilePool) do tex:Hide() end
+   local layers = mapID and C_Map.GetMapArtLayers(mapID)
+   local layer = layers and layers[1]
+   if (not layer) then return false end
+
+   local textures = C_Map.GetMapArtLayerTextures(mapID, 1)
+   if (not textures or #textures == 0) then return false end
+
+   local cols = math.ceil(layer.layerWidth / layer.tileWidth)
+   local rows = math.ceil(layer.layerHeight / layer.tileHeight)
+   local scaleX = frame:GetWidth() / layer.layerWidth
+   local scaleY = frame:GetHeight() / layer.layerHeight
+
+   local n = 0
+   for row = 1, rows do
+      for col = 1, cols do
+         n = n + 1
+         local tex = tilePool[n]
+         if (not tex) then
+            tex = frame:CreateTexture(nil, "BACKGROUND", nil, -7)
+            tilePool[n] = tex
+         end
+         -- crop the last column/row to the layer size instead of overflowing
+         local w = math.min(layer.tileWidth, layer.layerWidth - (col - 1) * layer.tileWidth)
+         local h = math.min(layer.tileHeight, layer.layerHeight - (row - 1) * layer.tileHeight)
+         tex:SetTexture(textures[(row - 1) * cols + col], nil, nil, "TRILINEAR")
+         tex:SetTexCoord(0, w / layer.tileWidth, 0, h / layer.tileHeight)
+         tex:SetSize(w * scaleX, h * scaleY)
+         tex:ClearAllPoints()
+         tex:SetPoint("TOPLEFT", frame, "TOPLEFT",
+               (col - 1) * layer.tileWidth * scaleX, -(row - 1) * layer.tileHeight * scaleY)
+         tex:Show()
+      end
+   end
+   return true
+
+end
+
+function RecipeRadar_Maps_HideZoneArt()
+
+   for _, tex in ipairs(tilePool) do tex:Hide() end
 
 end
 

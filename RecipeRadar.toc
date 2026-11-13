@@ -6,16 +6,17 @@
 ## Notes-frFR: Localise les marchands qui vendent des recettes dans la région courante ou par profession.
 ## Notes-esES: Localiza a vendedores que venden recetas en la región actual o por profesión.
 ## Author: Jay Miller (original), ported to WoW Forever
-## Version: 2.0.0-forever
+## Version: 2.1.0-forever
 ## IconTexture: Interface\AddOns\RecipeRadar\Images\Misc\Radar
-## OptionalDeps: TomTom
-## SavedVariables: RecipeRadar_SkillDB, RecipeRadar_NameCache
+## OptionalDeps: TomTom, QuestieDB
+## SavedVariables: RecipeRadar_SkillDB, RecipeRadar_NameCache, RecipeRadar_ItemCache
 ## SavedVariablesPerCharacter: RecipeRadar_Options, RecipeRadar_Filters
 ## AddonCompartmentFunc: RecipeRadar_Toggle
 
 Localization.lua
 Globals.lua
 SkillDB.lua
+ItemData.lua
 AvailabilityTooltip.lua
 Availability.lua
 Maps.xml
@@ -23,3 +24,4 @@ MinimapButton.xml
 FrameTemplates.xml
 RecipeRadar.xml
 OptionsFrame.lua
+Import.lua

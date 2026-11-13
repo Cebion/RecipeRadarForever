@@ -68,7 +68,7 @@ local continentDropDown, regionDropDown
 local autoRegionCheck = CreateCheck(RRS("Auto-select Current Region"), frame, 24, -150, function(checked)
    RecipeRadar_Options.AutoSelectRegion = checked
    if (checked) then
-      RecipeRadar_NewRegion(GetRealZoneText())
+      RecipeRadar_NewRegion(RecipeRadar_Maps_GetPlayerRegion())
    end
    continentDropDown:SetEnabled(not checked)
    regionDropDown:SetEnabled(not checked)
@@ -94,32 +94,23 @@ continentDropDown:SetupMenu(function(_, root)
    end
 end)
 
-local function RegionsOf(continent)
-   if (continent == 0) then
-      local regions = { }
-      for name, data in pairs(RecipeRadar_RegionData) do
-         if (data.Continent == 0) then table.insert(regions, name) end
-      end
-      table.sort(regions)
-      return regions
-   end
-   return RecipeRadar_Maps_GetZones(continent)
-end
 
 regionDropDown = CreateFrame("DropdownButton", nil, frame, "WowStyle1DropdownTemplate")
 regionDropDown:SetSize(200, 22)
 regionDropDown:SetPoint("TOPLEFT", continentDropDown, "BOTTOMLEFT", 0, -6)
 regionDropDown:SetDefaultText(RRS("Region"))
 regionDropDown:SetupMenu(function(_, root)
-   for _, name in ipairs(RegionsOf(shownContinent or 0)) do
-      local radio = root:CreateRadio(name,
-            function(n) return n == RecipeRadar_Options.CurrentRegion end,
-            function(n)
-               RecipeRadar_NewRegion(n)
+   for _, zone in ipairs(RecipeRadar_Maps_GetZones(shownContinent or 0)) do
+      -- zones without vendors are listed too (grayed), keyed by their name
+      local key = zone.key or zone.name
+      local radio = root:CreateRadio(zone.name,
+            function(k) return k == RecipeRadar_Options.CurrentRegion end,
+            function(k)
+               RecipeRadar_NewRegion(k)
                RecipeRadarListScrollFrameScrollBar:SetValue(0)
             end,
-            name)
-      if (not RecipeRadar_RegionData[name]) then
+            key)
+      if (not zone.key) then
          radio:AddInitializer(function(button)
             button.fontString:SetTextColor(GRAY_FONT_COLOR:GetRGB())
          end)

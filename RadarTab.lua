@@ -203,7 +203,7 @@ function RecipeRadar_RadarTab_Update()
 
    local title = RRS("Recipe Radar")
    if (RecipeRadar_Options.CurrentRegion) then
-      title = title .. " - " .. RecipeRadar_Options.CurrentRegion
+      title = title .. " - " .. RecipeRadar_GetRegionDisplayName(RecipeRadar_Options.CurrentRegion)
       local parens = string.find(title, " %(")
       if (parens) then  -- remove parenthesized zone title
          title = string.sub(title, 1, parens - 1)

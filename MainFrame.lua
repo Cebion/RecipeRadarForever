@@ -223,12 +223,23 @@ end
 -- Recipe details and map frames
 ------------------------------------------------------------------------
 
+-- Text shown instead of the money frame for non-gold or unknown prices.
+function RecipeRadar_GetCostText()
+
+   if (not ns.costText) then
+      ns.costText = RecipeRadarDetailFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+      ns.costText:SetPoint("LEFT", RecipeDetailCostText, "RIGHT", 5, 0)
+      ns.costText:Hide()
+   end
+   return ns.costText
+
+end
+
 function RecipeRadar_ShowRecipeDetails()
 
    RecipeDetailName:Show()
    RecipeDetailIcon:Show()
    RecipeDetailCostText:Show()
-   RecipeDetailMoneyFrame:Show()
 
 end
 
@@ -238,9 +249,11 @@ function RecipeRadar_HideRecipeDetails()
    RecipeDetailIcon:Hide()
    RecipeDetailCostText:Hide()
    RecipeDetailMoneyFrame:Hide()
+   RecipeRadar_GetCostText():Hide()
    RecipeDetailNoteText:Hide()
    RecipeDetailRequirements:Hide()
    RecipeRadarRegionMap:Hide()
+   RecipeRadar_Maps_HideZoneArt()
 
    -- reset the mapped indicator to red/off
    RecipeRadarMapVendorIndicator:SetVertexColor(1.0, 0, 0)
@@ -265,12 +278,18 @@ function RecipeRadar_SetSelection(vendor, recipe, region_name)
    RecipeDetailIcon.ItemID = recipe.ID
    RecipeDetailIcon.Hyperlink = RecipeRadar_GetHyperlinkByParts(name, link, colorcode)
 
-   if (GetMoney() >= recipe.Cost) then
-      SetMoneyFrameColor("RecipeDetailMoneyFrame", "default")
+   -- gold price in the money frame; currencies, tokens and unknown prices as text
+   local cost = RecipeRadar_GetRecipeCost(recipe)
+   if (type(cost) == "number") then
+      SetMoneyFrameColor("RecipeDetailMoneyFrame", GetMoney() >= cost and "default" or "red")
+      MoneyFrame_Update("RecipeDetailMoneyFrame", cost)
+      RecipeDetailMoneyFrame:Show()
+      RecipeRadar_GetCostText():Hide()
    else
-      SetMoneyFrameColor("RecipeDetailMoneyFrame", "red")
+      RecipeDetailMoneyFrame:Hide()
+      RecipeRadar_GetCostText():SetText(cost)
+      RecipeRadar_GetCostText():Show()
    end
-   MoneyFrame_Update("RecipeDetailMoneyFrame", recipe.Cost)
 
    -- some vendors have special requirements
    local reqs = RecipeRadar_GetRecipeReqsString(recipe)
@@ -291,10 +310,8 @@ function RecipeRadar_SetSelection(vendor, recipe, region_name)
 
    local region = RecipeRadar_RegionData[region_name or RecipeRadar_Options.CurrentRegion]
 
-   if (vendor.Coordinates and region and region.MapFile) then
-
-      RecipeRadarRegionMap:SetTexture(RECIPERADAR_IMAGE_ROOT .. "Regions\\" .. region.MapFile)
-      RecipeRadarRegionMap:Show()
+   if (vendor.Coordinates and region and
+         RecipeRadar_Maps_DrawZoneArt(RecipeRadarMapFrame, region.UiMapID)) then
 
       -- one icon per known location (roaming vendors have several)
       for i = 1, RecipeRadar_MaxVendorCoordinates do
@@ -312,9 +329,9 @@ function RecipeRadar_SetSelection(vendor, recipe, region_name)
          end
       end
 
-   else  -- no vendor coordinates means no map
+   else  -- no coordinates or no map art (instances): no map
 
-      RecipeRadarRegionMap:Hide()
+      RecipeRadar_Maps_HideZoneArt()
       for i = 1, RecipeRadar_MaxVendorCoordinates do
          RecipeRadar_GetMapScroll(i):Hide()
       end

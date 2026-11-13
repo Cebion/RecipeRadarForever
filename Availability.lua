@@ -53,7 +53,7 @@ end
 -- Returns a string with the recipe's skill in parens.
 function RecipeRadar_PersonAvail_GetIndicator(recipe)
 
-   return RecipeRadar_Parens(recipe.Skill)
+   return RecipeRadar_Parens(recipe.Skill or "?")
 
 end
 
@@ -111,11 +111,13 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
          
          -- get player's relevant faction standing, if any
          local rep = nil
-         if (recipe.Faction and player_info.Factions[recipe.Faction]) then
-            rep = _G["FACTION_STANDING_LABEL" ..
-                  player_info.Factions[recipe.Faction]]
+         local rep_key = recipe.FactionID or recipe.Faction
+         local standing = rep_key and (player_info.Factions[rep_key]
+               or (recipe.Faction and player_info.Factions[recipe.Faction]))
+         if (standing) then
+            rep = _G["FACTION_STANDING_LABEL" .. standing]
          end
-         
+
          -- get player's specialty, if any
          local spec = nil
          if (recipe.Specialty) then
@@ -193,7 +195,7 @@ function RecipeRadar_Availability_CreateTooltip(recipe)
          local factors = RecipeRadar_Availability_GetLimitingFactors(
                line.Name, recipe)
 
-         local rank = string.format(RRS("%d of %d"), line.Rank, recipe.Skill)
+         local rank = string.format(RRS("%d of %s"), line.Rank, tostring(recipe.Skill or "?"))
          if (factors["rank"]) then
             rank = RecipeRadar_HighlightString(rank, color)
          end
@@ -281,7 +283,8 @@ function RecipeRadar_Availability_GetBooleans(player, recipe)
 
    -- otherwise, get the other relevant booleans
    local has_rec = (info.Professions[recipe.Type].Recipes or { })[recipe_name]
-   local has_rank = (info.Professions[recipe.Type].Rank or 0) >= recipe.Skill
+   -- unknown required skill (not resolved from the tooltip yet) counts as met
+   local has_rank = (info.Professions[recipe.Type].Rank or 0) >= (recipe.Skill or 0)
    local has_rep = RecipeRadar_SkillDB_HasRep(player, recipe)
    local has_spec = RecipeRadar_SkillDB_HasSpec(player, recipe)
 
