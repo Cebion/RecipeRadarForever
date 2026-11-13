@@ -68,9 +68,13 @@ end
 -----------------------------------------------------------------------------
 
 -- "Requires %s (%d)" -> Lua pattern capturing the skill name and rank
-local SKILL_PATTERN = "^" .. (ITEM_MIN_SKILL or "Requires %s (%d)")
-      :gsub("([%(%)%.%-%+%[%]%^%$%?%*])", "%%%1")
-      :gsub("%%%%s", "(.+)"):gsub("%%%%d", "(%%d+)") .. "$"
+local function BuildSkillPattern(fmt)
+   -- escape magic characters except %, then turn %s / %d into captures
+   local p = fmt:gsub("([%(%)%.%-%+%[%]%^%$%?%*])", "%%%1")
+   p = p:gsub("%%s", "(.+)"):gsub("%%d", "(%%d+)")
+   return "^" .. p .. "$"
+end
+local SKILL_PATTERN = BuildSkillPattern(ITEM_MIN_SKILL or "Requires %s (%d)")
 
 function RecipeRadar_GetSkill(recipe)
 
@@ -82,7 +86,8 @@ local function ReadSkillFromTooltip(id)
 
    local data = C_TooltipInfo.GetItemByID(id)
    for _, line in ipairs(data and data.lines or { }) do
-      local text = line.leftText
+      -- unmet requirements are colored red: strip |cAARRGGBB ... |r first
+      local text = line.leftText and line.leftText:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
       if (text) then
          local _, rank = string.match(text, SKILL_PATTERN)
          if (rank) then return tonumber(rank) end

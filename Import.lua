@@ -22,12 +22,12 @@ local EXCLUDED = { [211247] = true, [215155] = true }
 
 local function GetLib()
 
+   -- QuestieDB publishes its entity readers as LibQuestieDB.Item / .Npc
    local lib = rawget(_G, "LibQuestieDB")
-   if (type(lib) ~= "table" or not lib.ItemDB or not lib.NpcDB) then return nil end
-   if (lib.RequireContract) then
-      local ok = lib.RequireContract(CONTRACT)
-      if (not ok) then return nil end
-   end
+   if (type(lib) ~= "table" or type(lib.RequireContract) ~= "function") then return nil end
+   local ok, good = pcall(lib.RequireContract, CONTRACT)
+   if (not ok or not good) then return nil end
+   if (type(lib.Item) ~= "table" or type(lib.Npc) ~= "table") then return nil end
    return lib
 
 end
@@ -111,10 +111,10 @@ local function Merge(lib, areaMap, id, prof, vendorIDs, stats)
    local master = FindRecipe(profData.Recipes, id)
 
    for _, npcID in ipairs(vendorIDs) do
-      local name = lib.NpcDB.Get(npcID, "name")
-      local spawns = lib.NpcDB.Get(npcID, "spawns")
+      local name = lib.Npc.Get(npcID, "name")
+      local spawns = lib.Npc.Get(npcID, "spawns")
       if (type(name) == "string" and type(spawns) == "table") then
-         local team = TEAMS[lib.NpcDB.Get(npcID, "friendlyToFaction") or ""] or "Neutral"
+         local team = TEAMS[lib.Npc.Get(npcID, "friendlyToFaction") or ""] or "Neutral"
          for area, points in pairs(spawns) do
             local mapID = areaMap[area]
             local key = mapID and RegionForMap(mapID)
@@ -162,7 +162,7 @@ function RecipeRadar_Import_Start()
 
    ns.importRunning = true
    local areaMap = AreaToMapTable(lib)
-   local ids = lib.ItemDB.GetAllIds()
+   local ids = lib.Item.GetAllIds()
    local stats = { recipes = 0, vendors = 0, pairs = 0 }
    local index = 1
 
@@ -171,9 +171,9 @@ function RecipeRadar_Import_Start()
       local last = math.min(index + BATCH - 1, #ids)
       for i = index, last do
          local id = ids[i]
-         if (not EXCLUDED[id] and lib.ItemDB.Get(id, "class") == 9) then
-            local prof = PROFESSIONS[lib.ItemDB.Get(id, "subClass") or 0]
-            local vendors = prof and lib.ItemDB.Get(id, "vendors")
+         if (not EXCLUDED[id] and lib.Item.Get(id, "class") == 9) then
+            local prof = PROFESSIONS[lib.Item.Get(id, "subClass") or 0]
+            local vendors = prof and lib.Item.Get(id, "vendors")
             if (type(vendors) == "table" and #vendors > 0) then
                local ok, err = pcall(Merge, lib, areaMap, id, prof, vendors, stats)
                if (not ok and not ns.importError) then
