@@ -69,7 +69,9 @@ ForeverChanges exactly (Blacksmithing has 3 more, newer than that site's list).
 | Minimap button | shape checks for third-party minimap addons, permanent `OnUpdate` | Round placement only. `OnUpdate` exists only while the button flashes. Right-click opens the options |
 | Saved data | String compare of `Options.Version` | numeric `RecipeRadarForever_Options.dbVersion` for future migrations (unknown professions and regions are dropped on load) |
 
-New: `/rrf options`, `/rrf debug maps`, `/rrf debug scan`, `/rrf debug where`,
+New: search box, delete stored character data (options), "Report a problem" window
+(`/rrf report`, vendor menus; GitHub issue templates in `.github/`), drag the minimap
+button, `/rrf options`, `/rrf debug maps`, `/rrf debug scan`, `/rrf debug where`,
 AddOn compartment entry, `## IconTexture`.
 
 ## Removed and why
@@ -126,4 +128,11 @@ Map waypoints and window show/hide are not protected.
 9. Dropdowns: the checkbox menus keep open while you click, filters apply, and
    the recipes tab radio list switches profession.
 10. Seasonal vendors hide or show with the option.
+12. Search: typing filters both tabs (recipe, vendor, zone); clearing restores the
+   list; mapped vendors keep their pins while searching. Check that the search box does
+   not overlap the radio icon or the dropdowns.
+13. Options > Stored character data: delete an alt, confirm, it disappears from the
+   availability tooltips. The options window's new rows don't overlap.
+14. `/rrf report` and right-click a vendor > Report data problem: link and details
+   appear and can be copied with Ctrl+C.
 11. A fresh install creates the RecipeRadarForever_* saved variables without errors, and alts appear after one login each.

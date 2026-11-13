@@ -23,6 +23,7 @@ by side.
 - Costs in gold, **Merchant's Favor** or token items.
 - **Radar tab**: every recipe vendor in a zone. **Recipes tab**: every vendor recipe
   of one profession with all its locations.
+- A search box: filter both tabs by recipe, vendor or zone name.
 - Filters by faction, profession and availability (learnable now, future prospect,
   already known), across all characters on the realm.
 - Zone maps drawn from the game's own map art, so the new Forever zones work too.
@@ -53,6 +54,7 @@ Copy or link the `RecipeRadarForever` folder into
 | `/rrf options` | Options dialog |
 | `/rrf radar` | Print the vendors in your current zone to chat |
 | `/rrf verify` | Ask the server about every recipe item and fill in required skills |
+| `/rrf report` | Open the "Report a problem" window (GitHub issue link and details to copy) |
 | `/rrf questie [on\|off]` | QuestieDB import status, or turn it on/off |
 | `/rrf debug skills [name]` | Stored professions, specializations and reputation |
 | `/rrf debug scan` | Rescan skills, reputation and known recipes |
@@ -63,6 +65,14 @@ Copy or link the `RecipeRadarForever` folder into
 The window also opens from the minimap button, the AddOn compartment, or a key
 binding (Key Bindings > AddOns > Recipe Radar Forever). Right-click the minimap button
 for the options.
+
+## Stored data and reporting problems
+
+- Options > "Stored character data" deletes what the addon remembers about one of
+  your characters on the current realm.
+- Found a bug or a wrong vendor, location or price? Use "Report a problem" in the
+  options, `/rrf report`, or right-click a vendor > "Report data problem". It shows
+  the GitHub issue link and a details block to paste into the issue.
 
 ## Updating the data
 
