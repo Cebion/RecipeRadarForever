@@ -1,0 +1,13 @@
+package-as: RecipeRadarForever
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+ignore:
+  - tools
+  - docs
+  - PORTING.md
+  - .github
+  - .gitignore
+  - .gitattributes

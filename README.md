@@ -1,3 +1,5 @@
+<img src=".github/media/logo.png" alt="Recipe Radar Forever logo" width="128" align="right">
+
 # Recipe Radar Forever
 
 Recipe Radar Forever shows every profession recipe sold by a vendor in **WoW Forever**,

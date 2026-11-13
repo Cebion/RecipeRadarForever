@@ -1,0 +1,29 @@
+# Packages the addon and uploads it to CurseForge and GitHub Releases when a
+# version tag (for example v2.2.0) is pushed. Tags with -beta / -alpha are
+# uploaded as beta / alpha files.
+#
+# Setup: repository Settings > Secrets and variables > Actions > New repository
+# secret "CF_API_KEY" (CurseForge API token), and Settings > Actions > General >
+# Workflow permissions > "Read and write permissions".
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: BigWigsMods/packager@v2
