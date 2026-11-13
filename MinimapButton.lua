@@ -5,14 +5,38 @@ local addonName, ns = ...
 local FLASH_HALF_PERIOD = 0.5
 local FLASH_DURATION = 4
 
+-- While dragging: follow the cursor around the minimap edge and save the angle.
+local function DragOnUpdate(self)
+
+   local mx, my = Minimap:GetCenter()
+   local px, py = GetCursorPosition()
+   local scale = Minimap:GetEffectiveScale()
+   local angle = math.deg(math.atan2(py / scale - my, px / scale - mx)) % 360
+   RecipeRadarForever_Options.MinimapButtonPosition = angle
+   RRF_MinimapButton_UpdatePosition()
+
+end
+
 function RRF_MinimapButton_OnLoad(self)
 
    self:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+   self:RegisterForDrag("LeftButton")
+   self:SetScript("OnDragStart", function(btn)
+      btn.isDragging = true
+      GameTooltip:Hide()
+      btn:SetScript("OnUpdate", DragOnUpdate)
+   end)
+   self:SetScript("OnDragStop", function(btn)
+      btn:SetScript("OnUpdate", nil)
+      -- swallow the click that some clients send right after a drag
+      C_Timer.After(0, function() btn.isDragging = false end)
+   end)
 
 end
 
 function RRF_MinimapButton_OnClick(self, button)
 
+   if (self.isDragging) then return end
    if (button == "RightButton") then
       RRF_OptionsFrame_Toggle()
    else
