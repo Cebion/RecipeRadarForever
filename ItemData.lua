@@ -199,11 +199,15 @@ function RecipeRadar_ItemData_Verify()
       RecipeRadar_Print("Unknown item IDs: " .. table.concat(unknown, ", "))
    end
    RecipeRadar_ItemData_ResolveSkills(function()
-      local missing = 0
-      for _, list in pairs(Index()) do
-         if (not list[1].Skill) then missing = missing + 1 end
+      local missing = { }
+      for id, list in pairs(Index()) do
+         if (not list[1].Skill) then
+            table.insert(missing, string.format("%d %s", id, C_Item.GetItemInfo(id) or "?"))
+         end
       end
-      RecipeRadar_Print(string.format("Recipe Radar: required skill known for all but %d recipes.", missing))
+      table.sort(missing)
+      RecipeRadar_Print(string.format("Recipe Radar: required skill known for all but %d recipes.", #missing))
+      for _, line in ipairs(missing) do RecipeRadar_Print("   " .. line) end
       RecipeRadar_RefreshIfShown()
    end)
 

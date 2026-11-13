@@ -146,6 +146,8 @@ local function Merge(lib, areaMap, id, prof, vendorIDs, stats)
                   table.insert(master.Locations, { Region = key, Vendor = name, Team = team })
                   master.IsLocationsTableSorted = false
                   stats.pairs = stats.pairs + 1
+                  table.insert(stats.list, string.format("%s (npc %d, area %s -> %s): item %d",
+                        name, npcID, tostring(area), key, id))
                end
             end
          end
@@ -163,7 +165,7 @@ function RecipeRadar_Import_Start()
    ns.importRunning = true
    local areaMap = AreaToMapTable(lib)
    local ids = lib.Item.GetAllIds()
-   local stats = { recipes = 0, vendors = 0, pairs = 0 }
+   local stats = { recipes = 0, vendors = 0, pairs = 0, list = { } }
    local index = 1
 
    local ticker
@@ -212,6 +214,8 @@ function RecipeRadar_Import_PrintStatus()
       RecipeRadar_Print(string.format(
             "Recipe Radar: QuestieDB %s added %d recipes, %d vendors, %d vendor/recipe pairs beyond the shipped data.",
             tostring(C_AddOns.GetAddOnMetadata("QuestieDB", "Version")), s.recipes, s.vendors, s.pairs))
+      for i = 1, math.min(#s.list, 20) do RecipeRadar_Print("   " .. s.list[i]) end
+      if (#s.list > 20) then RecipeRadar_Print(string.format("   ... and %d more", #s.list - 20)) end
    end
    if (ns.importError) then
       RecipeRadar_Print("Recipe Radar: first import error: " .. tostring(ns.importError))
