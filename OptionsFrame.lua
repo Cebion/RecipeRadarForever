@@ -104,7 +104,7 @@ regionDropDown:SetupMenu(function(_, root)
       -- zones without vendors are listed too (grayed), keyed by their name
       local key = zone.key or zone.name
       local radio = root:CreateRadio(zone.name,
-            function(k) return k == RecipeRadarForever_Options.CurrentRegion end,
+            function(k) return RecipeRadarForever_Options ~= nil and k == RecipeRadarForever_Options.CurrentRegion end,
             function(k)
                RRF_NewRegion(k)
                RRFListScrollFrameScrollBar:SetValue(0)
@@ -150,7 +150,9 @@ charDropDown:SetPoint("TOPLEFT", charLabel, "BOTTOMLEFT", 0, -6)
 charDropDown:SetDefaultText(RRF_S("Choose a character"))
 charDropDown:SetupMenu(function(_, root)
    local names = { }
-   for name in pairs(RecipeRadarForever_SkillDB[GetRealmName()] or { }) do
+   -- SetupMenu builds the menu at file load, before SavedVariables exist
+   local db = RecipeRadarForever_SkillDB
+   for name in pairs(db and db[GetRealmName()] or { }) do
       table.insert(names, name)
    end
    table.sort(names)
